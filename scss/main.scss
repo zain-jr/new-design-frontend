@@ -138,8 +138,28 @@ h1 {
   position: relative;
 }
 #header {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
   width: 100%;
+  transition: position 0.5s ease, z-index 0.5s ease, background 0.5s ease;
+  -webkit-transition: position 0.5s ease, z-index 0.5s ease, background 0.5s ease;
+  -moz-transition: position 0.5s ease, z-index 0.5s ease, background 0.5s ease;
+
+  &.fixed {
+    position: fixed;
+    z-index: 9999;
+    background: $white;
+
+    .top-bar {
+      padding: 20px 12px 24px;
+    }
+    .social-icons {
+      padding: 26px 0 0;
+    }
+  }
 
   .top-bar {
     position: relative;
@@ -147,6 +167,10 @@ h1 {
     display: block;
     @extend %clearfix;
     padding: 20px 12px 0;
+    transition: padding 0.5s ease;
+    -webkit-transition: padding 0.5s ease;
+    -moz-transition: padding 0.5s ease;
+    -ms-transition: padding 0.5s ease;
   }
   .social-icons {
     float: left;
@@ -182,12 +206,20 @@ h1 {
   top: -40px;
   @extend %layout;
 
+  .fixed & {
+    max-width: 300px;
+    position: fixed;
+    top: 9px;
+    left: 0;
+    right: 0;
+  }
+
   img{ @extend %img-res;}
   a{ display: block;}
 }
 .social-icons {
   @extend %listreset;
-  @include align-reset(top, 25,25);
+  @include align-reset(top, 33,33);
   margin: 0 -10px;
 
   li {
@@ -256,6 +288,7 @@ h1 {
   background-size: cover;
   position: relative;
   z-index: 1;
+  padding: 230px 0 113px;
 
   &:after {
     position: absolute;
@@ -455,8 +488,13 @@ h1 {
 #nav{
   width: 100%;
   display: block;
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
   @extend %text-left;
+  @extend %container;
 
   .main-navigation {
     @extend %listreset;
@@ -1030,10 +1068,6 @@ h1 {
   .input-holder{
     width: 33.33%;
     padding: 0 10px 20px;
-
-    &.full-width {
-      width: 100%;
-    }
   }
   textarea,
   input[type="text"],input[type="email"],input[type="password"]{

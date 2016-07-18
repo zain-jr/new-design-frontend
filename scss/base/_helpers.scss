@@ -102,3 +102,12 @@
 
 %hidden-xs{ @include media('<tablet'){ display: none !important;} }
 .hidden-xs { @extend %hidden-xs;}
+
+%full-width {
+  width: 100%;
+  display: block;
+  clear: both;
+}
+.full-width{
+  @extend %full-width;
+}

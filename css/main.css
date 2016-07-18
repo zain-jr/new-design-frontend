@@ -529,7 +529,7 @@ th {
   display: block;
 }
 
-.container {
+.container, #nav {
   max-width: 1170px;
   margin: 0 auto;
   padding: 0 15px;
@@ -588,6 +588,12 @@ th {
   .hidden-xs {
     display: none !important;
   }
+}
+
+.full-width {
+  width: 100%;
+  display: block;
+  clear: both;
 }
 
 html {
@@ -1550,8 +1556,29 @@ h1 span {
 }
 
 #header {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
   width: 100%;
+  transition: position 0.5s ease, z-index 0.5s ease, background 0.5s ease;
+  -webkit-transition: position 0.5s ease, z-index 0.5s ease, background 0.5s ease;
+  -moz-transition: position 0.5s ease, z-index 0.5s ease, background 0.5s ease;
+}
+
+#header.fixed {
+  position: fixed;
+  z-index: 9999;
+  background: #fff;
+}
+
+#header.fixed .top-bar {
+  padding: 20px 12px 24px;
+}
+
+#header.fixed .social-icons {
+  padding: 26px 0 0;
 }
 
 #header .top-bar {
@@ -1559,6 +1586,10 @@ h1 span {
   width: 100%;
   display: block;
   padding: 20px 12px 0;
+  transition: padding 0.5s ease;
+  -webkit-transition: padding 0.5s ease;
+  -moz-transition: padding 0.5s ease;
+  -ms-transition: padding 0.5s ease;
 }
 
 #header .social-icons {
@@ -1598,6 +1629,14 @@ h1 span {
   top: -40px;
 }
 
+.fixed .logo {
+  max-width: 300px;
+  position: fixed;
+  top: 9px;
+  left: 0;
+  right: 0;
+}
+
 .logo a {
   display: block;
 }
@@ -1612,8 +1651,8 @@ h1 span {
 .social-icons > * {
   display: inline-block;
   vertical-align: top;
-  font-size: 25px;
-  line-height: 25px;
+  font-size: 33px;
+  line-height: 33px;
   letter-spacing: 0;
 }
 
@@ -1690,6 +1729,7 @@ h1 span {
   background-size: cover;
   position: relative;
   z-index: 1;
+  padding: 230px 0 113px;
 }
 
 .main-bg-holder:after {
@@ -1945,7 +1985,11 @@ h1 span {
 #nav {
   width: 100%;
   display: block;
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
 }
 
 #nav .main-navigation {
@@ -2484,10 +2528,6 @@ h1 span {
 .submit-query .input-holder {
   width: 33.33%;
   padding: 0 10px 20px;
-}
-
-.submit-query .input-holder.full-width {
-  width: 100%;
 }
 
 .submit-query textarea,
