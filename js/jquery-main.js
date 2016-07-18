@@ -2,21 +2,11 @@ $(document).ready(function() {
   $(".js-example-basic-single").select2();
 });
 
-$(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-    var headerHeight = $("#header").height() / 2;
-
-    if (scroll >= headerHeight) {
-        $(".fixed-scroll-block").addClass("fixed");
-    } else {
-        $(".fixed-scroll-block").removeClass("fixed");
-    }
-});
-
 // page init
 jQuery(function(){
   initCarousel();
 	initSlideShow();
+	initFixedScrollBlock();
 });
 
 // slideshow init
@@ -67,5 +57,12 @@ function initCarousel() {
 		stretchSlideToMask: true,
 		switchTime: 2000,
 		animSpeed: 600
+	});
+}
+
+// initialize fixed blocks on scroll
+function initFixedScrollBlock() {
+	jQuery('#wrapper').fixedScrollBlock({
+		slideBlock: '#header, #nav'
 	});
 }
