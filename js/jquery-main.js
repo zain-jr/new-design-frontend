@@ -7,6 +7,7 @@ jQuery(function(){
   initCarousel();
 	initSlideShow();
 	initFixedScrollBlock();
+	initAccordion();
 });
 
 // slideshow init
@@ -64,5 +65,15 @@ function initCarousel() {
 function initFixedScrollBlock() {
 	jQuery('#wrapper').fixedScrollBlock({
 		slideBlock: '#header, #nav'
+	});
+}
+
+// accordion init
+function initAccordion() {
+	jQuery('.accordion').slideAccordion({
+		opener:'>a.opener',
+		slider:'>.slide',
+		collapsible:false,
+		animSpeed: 300
 	});
 }

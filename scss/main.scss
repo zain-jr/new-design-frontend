@@ -52,16 +52,19 @@ h1 {
     background: lighten( $p42-color, 10%);
   }
 }
+.customCheckbox,
 .customRadio {
   @include align(middle);
 
-  input[type="radio"]{
+  input[type="checkbox"], input[type="radio"]{
     position: fixed;
     top: -999px;
     left: -999px;
     opacity: 0;
+    z-index: -1;
 
     &:checked ~ {
+      .fake-checkbox,
       .fake-radio {
         &:after{ bottom: 0;}
       }
@@ -71,10 +74,10 @@ h1 {
   span {
     @include align(middle);
   }
+  .fake-checkbox,
   .fake-radio {
     @include squar(22px, 22px);
     border: 3px solid $p42-color;
-    cursor: pointer;
     position: relative;
 
     &:after {
@@ -93,7 +96,6 @@ h1 {
   }
   .fake-label {
     padding: 0 0 0 10px;
-    cursor: pointer;
   }
 }
 .select2-container{
@@ -147,6 +149,7 @@ h1 {
   -webkit-transition: position 0.5s ease, z-index 0.5s ease, background 0.5s ease;
   -moz-transition: position 0.5s ease, z-index 0.5s ease, background 0.5s ease;
 
+  .byDefault-fixed &,
   &.fixed-position {
     position: fixed !important;
     z-index: 999 !important;
@@ -210,6 +213,7 @@ h1 {
   -moz-transition: position 0.5s ease, top 0.5s ease,  max-width 0.54s ease;
   -ms-transition: position 0.5s ease, top 0.5s ease,  max-width 0.54s ease;
 
+  .byDefault-fixed &,
   .fixed-position & {
     max-width: 300px;
     position: fixed;
@@ -293,6 +297,10 @@ h1 {
   position: relative;
   z-index: 999;
   padding: 230px 0 113px;
+
+  &.byDefault-fixed {
+    padding: 120px 0 0;
+  }
 
   &:after {
     position: absolute;
@@ -504,6 +512,7 @@ h1 {
   @extend %text-left;
   @extend %container;
 
+  .byDefault-fixed &,
   &.fixed-position {
     position: fixed !important;
     bottom: 0 !important;
@@ -1116,5 +1125,19 @@ h1 {
     color: #838487;
     text-decoration: none;
     &:hover { color: $p42-color;}
+  }
+}
+.listing-page {
+  @extend %layout;
+  position: relative;
+  padding: 5px;
+
+  #aside {
+    width: 35%;
+    @extend .pull-left;
+  }
+  #content {
+    width: 65%;
+    @extend .pull-left;
   }
 }
