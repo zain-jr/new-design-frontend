@@ -580,7 +580,7 @@ th {
   overflow: hidden;
 }
 
-.hidden, #nav.fixed-position .main-navigation li a:after, #nav.fixed-position .main-navigation li a:before {
+.hidden {
   display: none !important;
 }
 
@@ -1567,6 +1567,7 @@ h1 span {
   position: fixed !important;
   z-index: 999 !important;
   background: #fff !important;
+  box-shadow: 0 0 20px -1px rgba(0, 0, 0, 0.5);
 }
 
 #header.fixed-position .top-bar {
@@ -2010,6 +2011,7 @@ h1 span {
 }
 
 #nav.fixed-position .main-navigation li a {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   padding: 10px;
   transition: padding 0.5s ease;
   -webkit-transition: padding 0.5s ease;
@@ -2029,7 +2031,7 @@ h1 span {
 }
 
 #nav.fixed-position .main-navigation li a:hover span[class^="icon-"], #nav.fixed-position .main-navigation li a:hover span[class*="icon-"] {
-  height: auto;
+  height: 42px;
   padding: 0 0 10px;
 }
 
@@ -2702,13 +2704,13 @@ h1 span {
 
 #footer {
   background: #dee1e3;
-  padding: 21px 20px;
+  padding: 7px 20px;
 }
 
 .copyright {
   display: block;
   color: #838487;
-  font-size: 24px;
+  font-size: 19px;
   line-height: 28px;
   font-weight: 400;
 }

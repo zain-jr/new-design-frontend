@@ -151,6 +151,7 @@ h1 {
     position: fixed !important;
     z-index: 999 !important;
     background: $white !important;
+    box-shadow: 0 0 20px -1px rgba($black, 0.5);
 
     .top-bar {
       padding: 20px 12px 24px;
@@ -461,7 +462,7 @@ h1 {
         width: 65%;
 
         .select2-container {
-          width: 262px !important;
+          width: 262px !important;  
         }
       }
     }
@@ -512,16 +513,18 @@ h1 {
     z-index: 999 !important;
 
     .main-navigation {
+
       li {
+        
         vertical-align: bottom;
+        
         a{
+          box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
           padding: 10px;
           transition: padding 0.5s ease;
           -webkit-transition: padding 0.5s ease;
           -moz-transition: padding 0.5s ease;
 
-          &:after, &:before { @extend %hidden;}
-          
           span[class^="icon-"],span[class*="icon-"]{
             height: 0;
             @extend %layout;
@@ -535,7 +538,7 @@ h1 {
             padding: 25px 10px;
 
             span[class^="icon-"],span[class*="icon-"]{
-              height: auto;
+              height: 42px;
               padding: 0 0 10px;
             }
           }
@@ -872,99 +875,6 @@ h1 {
       }
     }
   }
-
-  // .cols-holder {
-  //   @extend %layout;
-  //   @include align-reset(top, 18, 21);
-
-  //   .col{
-  //     width: 35%;
-
-  //     &:first-child{
-  //       width: 65%;
-  //     }
-  //   }
-  //   .grid {
-  //     padding: 0 5px 10px;
-  //     @extend %text-center;
-
-  //     &.landscape {
-  //       width: 67.5%;
-  //     }
-  //     &.squar{
-  //       width: 32.5%;
-  //     }
-
-  //     &.portrait {
-  //       width: 35%;
-
-  //       a {
-  //         height: 610px;
-
-  //         &:after {
-  //           height: 610px;
-  //         }
-  //       }
-  //     }
-
-  //     a{
-  //       display: block;
-  //       background: $white;
-  //       height: 300px;
-  //       white-space: nowrap;
-
-  //       &:after {
-  //         content: '';
-  //         @include align(middle);
-  //         width: 1px;
-  //         margin: 0 0 0 -5px;
-  //         height: 300px;
-  //         @extend %layout;
-  //       }
-  //       img {
-  //         @include align(middle);
-  //         white-space: normal;
-  //         margin: 0 0 0 -5px;
-  //         max-width: 240px;
-
-  //       }
-  //     }
-  //   }
-  //   .blocks{
-  //     @extend %listreset;
-  //     width: 65%;
-  //     @include align-reset(top, 18, 21);
-      
-  //     li {
-  //       padding: 0 5px 10px;
-  //       width: 50%;
-
-  //       a{
-  //         display: block;
-  //         background: $white;
-  //         height: 300px;
-  //         white-space: nowrap;
-  //         @extend %text-center;
-
-  //         &:after {
-  //           content: '';
-  //           @include align(middle);
-  //           width: 1px;
-  //           margin: 0 0 0 -5px;
-  //           height: 300px;
-  //           @extend %layout;
-  //         }
-  //         img {
-  //           @include align(middle);
-  //           white-space: normal;
-  //           margin: 0 0 0 -5px;
-  //           max-width: 240px;
-
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
 }
 .agents {
   background: $white;
@@ -1190,7 +1100,7 @@ h1 {
 #footer {
   background: $p42-background;
   @extend %layout;
-  padding: 21px 20px;
+  padding: 7px 20px;
 
   .copyright{
     @extend %text-right;
@@ -1199,7 +1109,7 @@ h1 {
 .copyright{
   display: block;
   color: #838487;
-  @include font(24, 28);
+  @include font(19, 28);
   font-weight: 400;
 
   a{
