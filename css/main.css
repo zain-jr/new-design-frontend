@@ -591,7 +591,7 @@ th {
   content: "\e907";
 }
 
-.social-icons, .loginRegister, .main-visualSection .number-of-properties, .mainSearch-form .typeOfBuying, .mainSearch-form .subTypes, .mainSearch-form .inputsHolder, #nav .main-navigation, .news-carousel .pagination ul, .topSocities-holder .socities, .topSocities-holder .socities li .caption .numberOfproperties, .agents-logo {
+.social-icons, .loginRegister, .main-visualSection .number-of-properties, .mainSearch-form .typeOfBuying, .mainSearch-form .subTypes, .mainSearch-form .inputsHolder, #nav .main-navigation, .news-carousel .pagination ul, .topSocities-holder .socities, .topSocities-holder .socities li .caption .numberOfproperties, .agents-logo, .listing-page .filters-links {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -656,7 +656,7 @@ th {
   float: right !important;
 }
 
-.layout, #wrapper, .logo, .main-bg-holder, .main-visualSection, #main, .mainSearch-form .form-holder, .mainSearch-form .inputsHolder li .input-holder, .byDefault-fixed #nav .main-navigation li a span[class^="icon-"], .byDefault-fixed #nav .main-navigation li a span[class*="icon-"], #nav.fixed-position .main-navigation li a span[class^="icon-"], #nav.fixed-position .main-navigation li a span[class*="icon-"], .generic-section, .news-sliderHolder, .news-slideshow, .news-slideshow .mask, .news-slideshow .slideset, .news-carousel, .news-carousel .mask, .news-carousel .pagination ul a, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .listing-page {
+.layout, #wrapper, .logo, .main-bg-holder, .main-visualSection, #main, .mainSearch-form .form-holder, .mainSearch-form .inputsHolder li .input-holder, .byDefault-fixed #nav .main-navigation li a span[class^="icon-"], .byDefault-fixed #nav .main-navigation li a span[class*="icon-"], #nav.fixed-position .main-navigation li a span[class^="icon-"], #nav.fixed-position .main-navigation li a span[class*="icon-"], .generic-section, .news-sliderHolder, .news-slideshow, .news-slideshow .mask, .news-slideshow .slideset, .news-carousel, .news-carousel .mask, .news-carousel .pagination ul a, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .listing-page, .listing-page .filter-form, .listing-page .filters-links li .slide {
   overflow: hidden;
 }
 
@@ -2831,9 +2831,37 @@ h1 span {
 }
 
 .listing-page #aside {
-  width: 35%;
+  width: 25%;
+  padding: 10px;
+  box-shadow: 0 0 20px -9px rgba(0, 0, 0, 0.5);
 }
 
 .listing-page #content {
-  width: 65%;
+  width: 75%;
+}
+
+.listing-page .filter-form {
+  position: relative;
+}
+
+.listing-page .filters-links {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.listing-page .filters-links li {
+  display: block;
+}
+
+.listing-page .filters-links li a {
+  font-weight: 700;
+  text-decoration: none;
+  display: block;
+  color: #555;
+  position: relative;
+}
+
+.listing-page .filters-links li .slide {
+  background: #fff;
+  padding: 20px;
 }

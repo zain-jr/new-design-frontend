@@ -1133,11 +1133,38 @@ h1 {
   padding: 5px;
 
   #aside {
-    width: 35%;
+    width: 25%;
+    padding: 10px;
     @extend .pull-left;
+    box-shadow: 0 0 20px -9px rgba($black, 0.5);
   }
   #content {
-    width: 65%;
+    width: 75%;
     @extend .pull-left;
+  }
+  .filter-form {
+    position: relative;
+    @extend %layout;
+  }
+  .filters-links {
+    @extend %listreset;
+    @include font(14,17);
+
+    li {
+      display: block;
+
+      a {
+        font-weight: 700;
+        text-decoration: none;
+        display: block;
+        color: $dark-grey;
+        position: relative;
+      }
+      .slide {
+        @extend %layout;
+        background: $white;
+        padding: 20px;
+      }
+    }
   }
 }
