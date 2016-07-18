@@ -7,6 +7,7 @@ fieldset {
   border-style: none;
 }
 
+input[type='number'],
 input[type='text'],
 input[type='tel'],
 input[type='email'],
@@ -32,7 +33,13 @@ textarea {
 
   @include placeholder {
     color: $placeholder-color;
+    opacity: 1;
   }
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  -ms-appearance: textfield;
 }
 
 select {
@@ -42,6 +49,8 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   background: transparent;
+  outline: none;
+  box-shadow: none; 
 }
 
 textarea {

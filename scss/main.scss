@@ -98,6 +98,44 @@ h1 {
     padding: 0 0 0 10px;
   }
 }
+.fake-select {
+  width: 100%;
+  @extend %layout;
+  border: 1px solid $p42-color;
+  display: block;
+  position: relative;
+  z-index: 1;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 28px;
+    background: $p42-color;
+    content: '';
+  }
+
+  &:before {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    border: 4px solid transparent;
+    border-top: 4px solid $black;
+    content: '';
+    z-index: 1;
+    margin: -2px 0 0; 
+  }
+
+  select {
+    width: 100%;
+    background: $white;
+    border: 0;
+    padding: 0 10px;
+    @include font(14, 28);
+    height: 28px;
+  }
+}
 .select2-container{
 
   .select2-selection--single { position: relative; }
@@ -119,7 +157,7 @@ h1 {
 .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b{ border-color: transparent transparent $white;}
 .select2-container .select2-selection--single .select2-selection__rendered{
   padding: 0 30px 0 9px;
-  color: rgba($dark-grey, 0.5);
+  color: rgba($dark-grey, 0.9);
   @extend %text-capital;
 }
 .select2-container--default .select2-selection--single{  border: 0;}
@@ -1159,12 +1197,89 @@ h1 {
         display: block;
         color: $dark-grey;
         position: relative;
+        padding: 10px;
+        transition: color 0.5s ease, background 0.5s ease;
+        -webkit-transition: color 0.5s ease, background 0.5s ease;
+        -moz-transition: color 0.5s ease, background 0.5s ease;
+        -ms-transition: color 0.5s ease, background 0.5s ease;
+
+        &:after {
+          position: absolute;
+          top: 50%;
+          right: 10px;
+          content: "\e91b";
+          font-family: 'icomoon';
+          @include font(27,27);
+          margin: -14px 0 0;
+          color: $p42-color;
+          transition: color 0.5s ease;
+          -webkit-transition: color 0.5s ease;
+          -moz-transition: color 0.5s ease;
+          -ms-transition: color 0.5s ease;
+        }
       }
       .slide {
         @extend %layout;
         background: $white;
         padding: 20px;
       }
+    }
+  }
+  .filterChecks {
+    @extend %listreset;
+
+    li {
+      display: block;
+      padding: 0 0 10px;
+
+      .select2-container {
+        width: 100% !important;
+        border: 1px solid $p42-color;
+      }
+    }
+  }
+  .fake-select {
+    margin: 0 0 10px;
+    color: rgba($dark-grey, 0.9);
+  }
+  .fromTo {
+    @extend %layout;
+    @include align-reset(top, 14, 17);
+    position: relative;
+    padding: 0 31px 0 0;
+
+    .field-holder {
+      width: 50%;
+      padding: 3px;
+    }
+    input[type="number"]{
+      @include squar(100%, 26px);
+      @include font(12,15);
+      padding: 4px;
+      font-family: $open-sans;
+      display: block;
+      border: 2px solid $p42-background;
+      color: $dark-grey;
+
+      @include placeholder{ color: $dark-grey;}
+    }
+    button{
+      @include align(top);
+      position: absolute;
+      top: 3px;
+      right: 3px;
+      bottom: 3px;
+      @include font(12,15);
+      color: $white;
+      background: $p42-color;
+      border: 0;
+      padding: 5px;
+      transition: background 0.5s ease;
+      -webkit-transition: background 0.5s ease;
+      -moz-transition: background 0.5s ease;
+      -ms-transition: background 0.5s ease;
+
+      &:hover { background: $green;}
     }
   }
 }

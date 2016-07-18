@@ -591,7 +591,7 @@ th {
   content: "\e907";
 }
 
-.social-icons, .loginRegister, .main-visualSection .number-of-properties, .mainSearch-form .typeOfBuying, .mainSearch-form .subTypes, .mainSearch-form .inputsHolder, #nav .main-navigation, .news-carousel .pagination ul, .topSocities-holder .socities, .topSocities-holder .socities li .caption .numberOfproperties, .agents-logo, .listing-page .filters-links {
+.social-icons, .loginRegister, .main-visualSection .number-of-properties, .mainSearch-form .typeOfBuying, .mainSearch-form .subTypes, .mainSearch-form .inputsHolder, #nav .main-navigation, .news-carousel .pagination ul, .topSocities-holder .socities, .topSocities-holder .socities li .caption .numberOfproperties, .agents-logo, .listing-page .filters-links, .listing-page .filterChecks {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -656,7 +656,7 @@ th {
   float: right !important;
 }
 
-.layout, #wrapper, .logo, .main-bg-holder, .main-visualSection, #main, .mainSearch-form .form-holder, .mainSearch-form .inputsHolder li .input-holder, .byDefault-fixed #nav .main-navigation li a span[class^="icon-"], .byDefault-fixed #nav .main-navigation li a span[class*="icon-"], #nav.fixed-position .main-navigation li a span[class^="icon-"], #nav.fixed-position .main-navigation li a span[class*="icon-"], .generic-section, .news-sliderHolder, .news-slideshow, .news-slideshow .mask, .news-slideshow .slideset, .news-carousel, .news-carousel .mask, .news-carousel .pagination ul a, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .listing-page, .listing-page .filter-form, .listing-page .filters-links li .slide {
+.layout, .fake-select, #wrapper, .logo, .main-bg-holder, .main-visualSection, #main, .mainSearch-form .form-holder, .mainSearch-form .inputsHolder li .input-holder, .byDefault-fixed #nav .main-navigation li a span[class^="icon-"], .byDefault-fixed #nav .main-navigation li a span[class*="icon-"], #nav.fixed-position .main-navigation li a span[class^="icon-"], #nav.fixed-position .main-navigation li a span[class*="icon-"], .generic-section, .news-sliderHolder, .news-slideshow, .news-slideshow .mask, .news-slideshow .slideset, .news-carousel, .news-carousel .mask, .news-carousel .pagination ul a, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .listing-page, .listing-page .filter-form, .listing-page .filters-links li .slide, .listing-page .fromTo {
   overflow: hidden;
 }
 
@@ -766,6 +766,7 @@ fieldset {
   border-style: none;
 }
 
+input[type='number'],
 input[type='text'],
 input[type='tel'],
 input[type='email'],
@@ -782,6 +783,7 @@ textarea {
   padding: 0.4em 0.7em;
 }
 
+input[type='number']:focus,
 input[type='text']:focus,
 input[type='tel']:focus,
 input[type='email']:focus,
@@ -793,6 +795,7 @@ textarea:focus {
   border-color: #000;
 }
 
+input[type='number']::-webkit-input-placeholder,
 input[type='text']::-webkit-input-placeholder,
 input[type='tel']::-webkit-input-placeholder,
 input[type='email']::-webkit-input-placeholder,
@@ -802,8 +805,10 @@ input[type='url']::-webkit-input-placeholder,
 input[type='date']::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   color: #999;
+  opacity: 1;
 }
 
+input[type='number']::-moz-placeholder,
 input[type='text']::-moz-placeholder,
 input[type='tel']::-moz-placeholder,
 input[type='email']::-moz-placeholder,
@@ -814,8 +819,10 @@ input[type='date']::-moz-placeholder,
 textarea::-moz-placeholder {
   opacity: 1;
   color: #999;
+  opacity: 1;
 }
 
+input[type='number']:-moz-placeholder,
 input[type='text']:-moz-placeholder,
 input[type='tel']:-moz-placeholder,
 input[type='email']:-moz-placeholder,
@@ -825,8 +832,10 @@ input[type='url']:-moz-placeholder,
 input[type='date']:-moz-placeholder,
 textarea:-moz-placeholder {
   color: #999;
+  opacity: 1;
 }
 
+input[type='number']:-ms-input-placeholder,
 input[type='text']:-ms-input-placeholder,
 input[type='tel']:-ms-input-placeholder,
 input[type='email']:-ms-input-placeholder,
@@ -836,8 +845,10 @@ input[type='url']:-ms-input-placeholder,
 input[type='date']:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   color: #999;
+  opacity: 1;
 }
 
+input[type='number'].placeholder,
 input[type='text'].placeholder,
 input[type='tel'].placeholder,
 input[type='email'].placeholder,
@@ -847,6 +858,13 @@ input[type='url'].placeholder,
 input[type='date'].placeholder,
 textarea.placeholder {
   color: #999;
+  opacity: 1;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  -ms-appearance: textfield;
 }
 
 select {
@@ -856,6 +874,8 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   background: transparent;
+  outline: none;
+  box-shadow: none;
 }
 
 textarea {
@@ -1598,6 +1618,45 @@ h1 {
   padding: 0 0 0 10px;
 }
 
+.fake-select {
+  width: 100%;
+  border: 1px solid #2092d0;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.fake-select:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 28px;
+  background: #2092d0;
+  content: '';
+}
+
+.fake-select:before {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  border: 4px solid transparent;
+  border-top: 4px solid #000;
+  content: '';
+  z-index: 1;
+  margin: -2px 0 0;
+}
+
+.fake-select select {
+  width: 100%;
+  background: #fff;
+  border: 0;
+  padding: 0 10px;
+  font-size: 14px;
+  line-height: 28px;
+  height: 28px;
+}
+
 .select2-container .select2-selection--single {
   position: relative;
 }
@@ -1625,7 +1684,7 @@ h1 {
 
 .select2-container .select2-selection--single .select2-selection__rendered {
   padding: 0 30px 0 9px;
-  color: rgba(85, 85, 85, 0.5);
+  color: rgba(85, 85, 85, 0.9);
 }
 
 .select2-container--default .select2-selection--single {
@@ -2859,9 +2918,122 @@ h1 span {
   display: block;
   color: #555;
   position: relative;
+  padding: 10px;
+  transition: color 0.5s ease, background 0.5s ease;
+  -webkit-transition: color 0.5s ease, background 0.5s ease;
+  -moz-transition: color 0.5s ease, background 0.5s ease;
+  -ms-transition: color 0.5s ease, background 0.5s ease;
+}
+
+.listing-page .filters-links li a:after {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  content: "\e91b";
+  font-family: 'icomoon';
+  font-size: 27px;
+  line-height: 27px;
+  margin: -14px 0 0;
+  color: #2092d0;
+  transition: color 0.5s ease;
+  -webkit-transition: color 0.5s ease;
+  -moz-transition: color 0.5s ease;
+  -ms-transition: color 0.5s ease;
 }
 
 .listing-page .filters-links li .slide {
   background: #fff;
   padding: 20px;
+}
+
+.listing-page .filterChecks li {
+  display: block;
+  padding: 0 0 10px;
+}
+
+.listing-page .filterChecks li .select2-container {
+  width: 100% !important;
+  border: 1px solid #2092d0;
+}
+
+.listing-page .fake-select {
+  margin: 0 0 10px;
+  color: rgba(85, 85, 85, 0.9);
+}
+
+.listing-page .fromTo {
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+  position: relative;
+  padding: 0 31px 0 0;
+}
+
+.listing-page .fromTo > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0;
+}
+
+.listing-page .fromTo .field-holder {
+  width: 50%;
+  padding: 3px;
+}
+
+.listing-page .fromTo input[type="number"] {
+  width: 100%;
+  height: 26px;
+  font-size: 12px;
+  line-height: 15px;
+  padding: 4px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  display: block;
+  border: 2px solid #dee1e3;
+  color: #555;
+}
+
+.listing-page .fromTo input[type="number"]::-webkit-input-placeholder {
+  color: #555;
+}
+
+.listing-page .fromTo input[type="number"]::-moz-placeholder {
+  opacity: 1;
+  color: #555;
+}
+
+.listing-page .fromTo input[type="number"]:-moz-placeholder {
+  color: #555;
+}
+
+.listing-page .fromTo input[type="number"]:-ms-input-placeholder {
+  color: #555;
+}
+
+.listing-page .fromTo input[type="number"].placeholder {
+  color: #555;
+}
+
+.listing-page .fromTo button {
+  display: inline-block;
+  vertical-align: top;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  bottom: 3px;
+  font-size: 12px;
+  line-height: 15px;
+  color: #fff;
+  background: #2092d0;
+  border: 0;
+  padding: 5px;
+  transition: background 0.5s ease;
+  -webkit-transition: background 0.5s ease;
+  -moz-transition: background 0.5s ease;
+  -ms-transition: background 0.5s ease;
+}
+
+.listing-page .fromTo button:hover {
+  background: #30ce20;
 }
