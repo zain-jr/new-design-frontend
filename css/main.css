@@ -395,8 +395,8 @@ th {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?p7pdze");
-  src: url("../fonts/icomoon.eot?p7pdze#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?p7pdze") format("truetype"), url("../fonts/icomoon.woff?p7pdze") format("woff"), url("../fonts/icomoon.svg?p7pdze#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?vpcvrl");
+  src: url("../fonts/icomoon.eot?vpcvrl#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?vpcvrl") format("truetype"), url("../fonts/icomoon.woff?vpcvrl") format("woff"), url("../fonts/icomoon.svg?vpcvrl#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -413,6 +413,27 @@ th {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-fav .path1:before {
+  content: "\e917";
+  color: black;
+}
+
+.icon-fav .path2:before {
+  content: "\e918";
+  margin-left: -0.9208984375em;
+  color: black;
+}
+
+.icon-fav .path3:before {
+  content: "\e919";
+  margin-left: -0.9208984375em;
+  color: white;
+}
+
+.icon-empty-envelop:before {
+  content: "\e91f";
 }
 
 .icon-bath:before {
@@ -468,23 +489,6 @@ th {
 
 .icon-Vector-Smart-Object:before {
   content: "\e916";
-}
-
-.icon-Vector-Smart-Object31 .path1:before {
-  content: "\e917";
-  color: #dd352e;
-}
-
-.icon-Vector-Smart-Object31 .path2:before {
-  content: "\e918";
-  margin-left: -0.9208984375em;
-  color: #b02721;
-}
-
-.icon-Vector-Smart-Object31 .path3:before {
-  content: "\e919";
-  margin-left: -0.9208984375em;
-  color: white;
 }
 
 .icon-right-arrow:before {
@@ -597,7 +601,7 @@ th {
   list-style: none;
 }
 
-.clearfix:after, #header .top-bar:after, .mainSearch-form:after {
+.clearfix:after, #header .top-bar:after, .mainSearch-form:after, .listing-page .publicProperty-post .image-holder:after {
   content: '';
   display: block;
   clear: both;
@@ -648,7 +652,7 @@ th {
   text-transform: capitalize;
 }
 
-.pull-left, .listing-page #aside, .listing-page #content, .news-slideshow, .agents .left-side {
+.pull-left, .listing-page #aside, .listing-page #content, .listing-page .publicProperty-post .image-holder, .news-slideshow, .agents .left-side {
   float: left !important;
 }
 
@@ -656,7 +660,7 @@ th {
   float: right !important;
 }
 
-.layout, .fake-select, #wrapper, .logo, .main-bg-holder, .main-visualSection, #main, .mainSearch-form .form-holder, .mainSearch-form .inputsHolder li .input-holder, .byDefault-fixed #nav .main-navigation li a span[class^="icon-"], .byDefault-fixed #nav .main-navigation li a span[class*="icon-"], #nav.fixed-position .main-navigation li a span[class^="icon-"], #nav.fixed-position .main-navigation li a span[class*="icon-"], .generic-section, .news-sliderHolder, .news-slideshow, .news-slideshow .mask, .news-slideshow .slideset, .news-carousel, .news-carousel .mask, .news-carousel .pagination ul a, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .listing-page, .listing-page .filter-form, .listing-page .filters-links li .slide, .listing-page .fromTo {
+.layout, .fake-select, #wrapper, .logo, .main-bg-holder, .main-visualSection, #main, .mainSearch-form .form-holder, .mainSearch-form .inputsHolder li .input-holder, .byDefault-fixed #nav .main-navigation li a span[class^="icon-"], .byDefault-fixed #nav .main-navigation li a span[class*="icon-"], #nav.fixed-position .main-navigation li a span[class^="icon-"], #nav.fixed-position .main-navigation li a span[class*="icon-"], .generic-section, .news-sliderHolder, .news-slideshow, .news-slideshow .mask, .news-slideshow .slideset, .news-carousel, .news-carousel .mask, .news-carousel .pagination ul a, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .listing-page, .listing-page .filter-form, .listing-page .filters-links li .slide, .listing-page .fromTo, .listing-page .publicProperty-post, .listing-page .publicProperty-post .caption {
   overflow: hidden;
 }
 
@@ -1890,7 +1894,8 @@ h1 span {
 }
 
 .main-bg-holder.byDefault-fixed {
-  padding: 120px 0 0;
+  padding: 110px 0 0;
+  margin: 0 0 50px;
 }
 
 .main-bg-holder:after {
@@ -2897,6 +2902,7 @@ h1 span {
 
 .listing-page #content {
   width: 75%;
+  padding: 0 0 0 20px;
 }
 
 .listing-page .filter-form {
@@ -3036,4 +3042,28 @@ h1 span {
 
 .listing-page .fromTo button:hover {
   background: #30ce20;
+}
+
+.listing-page .publicProperty-post {
+  background: #fff;
+  padding: 5px;
+}
+
+.listing-page .publicProperty-post .image-holder {
+  position: relative;
+}
+
+.listing-page .publicProperty-post .image-holder .add-to-favorite {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #dee1e3;
+  text-decoration: none;
+}
+
+.listing-page .publicProperty-post .image-holder img {
+  max-height: 208px;
+  min-height: 208px;
+  min-width: 208px;
+  max-width: 208px;
 }
