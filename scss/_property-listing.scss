@@ -41,7 +41,7 @@
           position: absolute;
           top: 50%;
           right: 10px;
-          content: "\e91b";
+          content: "\e91a";
           font-family: 'icomoon';
           @include font(27,27);
           margin: -14px 0 0;
@@ -119,12 +119,15 @@
   .publicProperty-post {
     @extend %layout;
     background: $white;
-    padding: 5px;
+    padding: 5px 5px 0;
+    margin: 0 0 20px;
 
     .image-holder {
       @extend .pull-left;
       position: relative;
       @extend %clearfix;
+
+      a{ display: block;}
 
       .add-to-favorite {
         position: absolute;
@@ -177,8 +180,16 @@
         margin: 0 0 15px;
         font-weight: 700;
         color: $p42-color;
-        @include font(21,24);
+        @include font(18,21);
         @extend %text-left;
+
+        a {
+          @include align(top);
+          color: $p42-color;
+          text-decoration: none;
+
+          &:hover { color: $green;}
+        }
       }
 
       .left-area {

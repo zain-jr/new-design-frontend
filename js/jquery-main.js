@@ -6,7 +6,11 @@ $(document).ready(function() {
 jQuery(function(){
   initCarousel();
 	initSlideShow();
-	initFixedScrollBlock();
+
+	if(screen.width >= 768){
+		initFixedScrollBlock();
+	}
+
 	initAccordion();
 });
 
@@ -29,18 +33,20 @@ function initSlideShow() {
 // scroll gallery init
 function initCarousel() {
 	jQuery('.news-carousel').scrollGallery({
-		mask: '.mask',
-		slider: '.slideset',
-		slides: '.slide',
+		mask: '.news-mask',
+		slider: '.news-slideset',
+		slides: '.news-slide',
 		currentNumber: 'span.cur-num',
 		totalNumber: 'span.all-num',
 		disableWhileAnimating: true,
-		generatePagination: '.pagination',
+		generatePagination: '.news-pagination',
 		circularRotation: true,
 		pauseOnHover: true,
 		autoRotation: true,
 		maskAutoSize: true,
 		stretchSlideToMask: true,
+		btnPrev: '.news-btn-prev',
+		btnNext: '.news-btn-next',
 		switchTime: 2000,
 		animSpeed: 600
 	});

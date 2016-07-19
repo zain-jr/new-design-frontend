@@ -4,7 +4,7 @@ $breakpoints: (
   'tablet': 768px,
   'desktop': 1024px,
   'widescreen': 1200px,
-  'tvscreen':1550px
+  'tvscreen':1540px,
 );
 
 // keywords
@@ -37,6 +37,11 @@ $media-expressions: (
 h1 {
   margin: 0 0 30px;
   width: 100%;
+
+  @include media('<tablet'){
+    margin: 0 0 15px;
+    @include font(25,28);
+  }
 }
 .btn-default{
   @include align(top);
@@ -190,13 +195,26 @@ h1 {
   -webkit-transition: position 0.5s ease, z-index 0.5s ease, background 0.5s ease;
   -moz-transition: position 0.5s ease, z-index 0.5s ease, background 0.5s ease;
 
+  @include media('<tablet'){
+    position: fixed !important;
+    z-index: 999 !important;
+    background: $white !important;
+    box-shadow: 0 0 20px -1px rgba($black, 0.5);
+    
+    .social-icons {
+      @include media('<tablet'){
+        display: none;
+      }
+    }
+  }
+
   .byDefault-fixed &,
   &.fixed-position {
     position: fixed !important;
     z-index: 999 !important;
     background: $white !important;
     box-shadow: 0 0 20px -1px rgba($black, 0.5);
-
+    
     .top-bar {
       padding: 20px 12px 24px;
 
@@ -217,6 +235,7 @@ h1 {
     }
     .social-icons {
       padding: 26px 0 0;
+
        @include media('<desktop'){
          padding: 10px 0 0;
       }
@@ -233,6 +252,10 @@ h1 {
     -webkit-transition: padding 0.5s ease;
     -moz-transition: padding 0.5s ease;
     -ms-transition: padding 0.5s ease;
+
+    @include media('<tablet'){
+      padding: 10px 5px 3px;
+    }
   }
   .social-icons {
     float: left;
@@ -246,11 +269,14 @@ h1 {
     @include media('<tvscreen'){
       width: 30%;
     }
-    @include media('<tvscreen'){
+    @include media('<widescreen'){
       width: 33%;
     }
     @include media('<desktop'){
       width: 50%;
+    }
+    @include media('<tablet'){
+      width: 35%;
     }
 
     .mail {
@@ -263,6 +289,10 @@ h1 {
       -moz-transition: color 0.4s ease;
       -ms-transition: color 0.4s ease;
       margin: 0 20px 10px 0;
+
+      @include media('<tablet'){
+        display: none;
+      }
 
       &:hover {
         color: $p42-color;
@@ -292,6 +322,15 @@ h1 {
     top: 0;
     position: static;
     margin: 20px auto 0;
+  }
+  
+  @include media('<tablet'){
+    max-width: 130px;
+    position: fixed;
+    top: 9px;
+    left: 0;
+    right: 60px;
+    margin: 0 auto;
   }
 
   .byDefault-fixed &,
@@ -372,6 +411,13 @@ h1 {
     &:first-child {
       a{
         background: $p42-default-grey;
+
+        .hidden{
+          @include media('<tablet'){
+            display: inline-block !important;
+            vertical-align: top;
+          }
+        }
       }
     }
 
@@ -392,6 +438,11 @@ h1 {
         padding: 10px 20px 10px 5px;
       }
 
+      @include media('<tablet'){
+        padding:5px;
+        min-height: 40px;
+      }
+
       span[class^="icon-"],span[class*="icon-"]{
         position: absolute;
         top: 50%;
@@ -399,6 +450,12 @@ h1 {
         font-size: 14px;
         line-height: 1;
         margin: -7px 0 0;
+
+        @include media('<tablet'){
+          position: static;
+          @include font(25,30);
+          margin: 0;
+        }
       }
       &:hover {
         background: $orange;
@@ -412,8 +469,16 @@ h1 {
   background-attachment: fixed;
   background-size: cover;
   position: relative;
-  z-index: 999;
+  z-index: 9;
   padding: 230px 0 113px;
+
+  @include media('<desktop'){
+    background-size: 100% 100%;
+  }
+  @include media('<tablet'){
+    padding: 80px 0 0;
+    z-index: auto;
+  }
 
   &.byDefault-fixed {
     padding: 110px 0 0;
@@ -436,6 +501,12 @@ h1 {
   @extend %layout;
   @extend %text-center;
   padding: 0 50px;
+
+  @include media('<tablet'){
+    padding: 0;
+
+    .container { padding: 0 8px;}
+  }
 
   .main-heading {
     display: block;
@@ -484,11 +555,16 @@ h1 {
 #main {
   @extend %layout;
   position: relative;
+  z-index: 9;
 }
 .mainSearch-form {
   max-width: 675px;
   margin: 0 auto 30px;
   @extend %clearfix;
+
+  @include media('<tablet'){
+    margin: 0 auto 15px;
+  }
 
   .typeOfBuying {
     @extend %listreset;
@@ -526,6 +602,7 @@ h1 {
         padding: 5px;
         position: relative;
         z-index: 1;
+        background: rgba($p42-background, 0.8);
 
         &:after {
           position: absolute;
@@ -549,17 +626,30 @@ h1 {
     @extend %layout;
     box-shadow:0 10px 20px -15px rgba($black, 0.5);
     padding: 20px;
+
+    @include media('<tablet'){
+      padding: 7px;
+    }
   }
   .subTypes{
     @extend %listreset;
     @include align-reset(top, 14, 18);
     @extend %text-capital;
 
+    @include media('<tablet'){
+      text-align: left;
+    }
+
     li {
       width: 25%;
       font-weight: bold;
       color: $dark-grey;
       margin: 0 0 20px;
+
+      @include media('<tablet'){
+        width: 50%;
+        margin: 0 0 10px;
+      }
     }
   }
   .inputsHolder {
@@ -570,28 +660,56 @@ h1 {
     color: $dark-grey;
     margin: 0 -12px;
 
+    @include media('<tablet'){
+      margin: 0 auto;
+      max-width: 300px;
+    }
+
     li {
       padding: 0 12px;
       width: 35%;
+
+      @include media('<tablet'){
+        width: 100%;
+        display: block;
+        padding: 0 0 10px;
+      }
 
       &:first-child{
         width: 65%;
          @include align-reset(top, 14, 18);
          margin: 7px 0 0;
+
+         @include media('<tablet'){
+          width: 100%;
+          display: block;
+        }
       }
 
       .label {
         width: 35%;
+        
+        @include media('<tablet'){ display: none;}
       }
       .input-holder {
         @extend %layout;
         width: 65%;
+
+
+        @include media('<tablet'){
+          width: 100%;
+          display: block;
+          text-align: center;
+        }
 
         .select2-container {
           width: 262px !important;
 
           @include media('<desktop'){
             width: 245px !important;
+          } 
+          @include media('<desktop'){
+            margin: 0 auto !important;
           }  
         }
       }
@@ -612,6 +730,13 @@ h1 {
     -webkit-transition: background 0.5s ease;
     -moz-transition: background 0.5s ease;
     -ms-transition: background 0.5s ease;
+
+    @include media('<tablet'){
+      @include font(16, 18);
+      padding: 5px;
+      width: 245px;
+      margin: 0 auto;
+    }
 
     &:hover {
       background: $green;
@@ -635,6 +760,18 @@ h1 {
   @extend %container;
 
   @include media('<desktop'){ padding: 0;}
+  
+  @include media('<tablet'){
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    height: 100vh !important;
+    overflow: auto !important;
+    z-index: 9999 !important;
+    background: rgba($p42-default-grey, 0.90);
+  }
 
   .byDefault-fixed &,
   &.fixed-position {
@@ -648,7 +785,6 @@ h1 {
     .main-navigation {
 
       li {
-        
         vertical-align: bottom;
         
         a{
@@ -690,6 +826,14 @@ h1 {
       @extend %text-center;
       border-left: 1px solid #b6b6b6;
 
+      @include media('<tablet'){
+        width: 100%;
+        border: 0;
+        display: block;
+        background: none;
+        padding: 0 20px;
+      }
+
       &:first-child{ border: 0;}
 
       &.active {
@@ -698,6 +842,10 @@ h1 {
           background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 61%, rgba(251,251,251,1) 75%, rgba(236,236,236,1) 100%);
           background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 61%,rgba(251,251,251,1) 75%,rgba(236,236,236,1) 100%);
           background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 61%,rgba(251,251,251,1) 75%,rgba(236,236,236,1) 100%);
+
+          @include media('<tablet'){
+            background: none;
+          }
 
           &:after {
             left: 0;
@@ -722,6 +870,14 @@ h1 {
         -ms-transition: background 0.5s ease;
         position: relative;
 
+        @include media('<tablet'){
+          background: none;
+          box-shadow: none;
+          color: $white;
+          padding: 15px 0;
+          border-bottom: 2px solid $white;
+        }
+
         &:after {
           position: absolute;
           top: 0;
@@ -734,6 +890,8 @@ h1 {
           -webkit-transition: left 0.5s ease, right 0.5s ease;
           -moz-transition: left 0.5s ease, right 0.5s ease;
           -ms-transition: left 0.5s ease, right 0.5s ease;
+          
+          @include media('<tablet'){ display: none;}
         }
         &:before {
           position: absolute;
@@ -747,6 +905,8 @@ h1 {
           -webkit-transition: opacity 0.5s ease;
           -ms-transition: opacity 0.5s ease;
           -moz-transition: opacity 0.5s ease;
+
+          @include media('<tablet'){ display: none;}
         }
 
         span{ display: block;}
@@ -755,6 +915,8 @@ h1 {
           font-size: 32px;
           line-height: 1;
           padding: 0 0 10px;
+
+          @include media('<tablet'){ display: none;}
         }
 
         &:hover {
@@ -762,6 +924,10 @@ h1 {
           background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 61%, rgba(251,251,251,1) 75%, rgba(236,236,236,1) 100%);
           background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 61%,rgba(251,251,251,1) 75%,rgba(236,236,236,1) 100%);
           background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 61%,rgba(251,251,251,1) 75%,rgba(236,236,236,1) 100%);
+
+          @include media('<tablet'){
+            background: none;
+          }
 
           &:after {
             left: 0;
@@ -776,16 +942,19 @@ h1 {
 .generic-section {
   padding: 50px 0;
   @extend %layout;
+  
+  @include media('<tablet'){
+    padding: 20px 0 0;
+  }
 }
 .news-sliderHolder  {
   @extend %layout;
   padding: 20px 0 0;
+
+  @include media('<tablet'){ padding: 0;}
 }
 .news-slideshow {
   @extend %layout;
-  @extend %pull-left;
-  width: 50%;
-  padding: 0 50px 0 0;
 
   .mask {
     position: relative;
@@ -805,6 +974,22 @@ h1 {
     @include font(19, 37);
     z-index: -1 !important;
 
+    @include media('<tablet'){
+      @include font(16,25);
+    }
+
+    .caption {
+      width: 50%;
+      @extend %pull-left;
+      padding: 0 20px 0 0;
+
+      @include media('<desktop'){
+        width: 100%;
+        float: none !important;
+        padding: 0;
+      }
+    }
+
     &.active {
       z-index: 5 !important;
     }
@@ -816,7 +1001,14 @@ h1 {
   @extend %pull-right;
   width: 50%;
 
-  .mask {
+  @include media('<desktop'){
+    width: 100%;
+    float: none !important;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .news-mask {
     @extend %layout;
     position: relative;
     width: 100%;
@@ -824,14 +1016,14 @@ h1 {
     margin: 0 auto;
 
     @include media('<widescreen'){
-      max-width: 400px;
+      max-width: 360px;
     }
   }
-  .slideset{
+  .news-slideset{
     float: left;
     width: 99999px;
   }
-  .slide{
+  .news-slide{
 	  float: left;
     width: 100%;
     
@@ -850,7 +1042,7 @@ h1 {
       }
     }
   }
-  .pagination {
+  .news-pagination {
     padding: 28px 0 0;
     ul{
       @extend %listreset;
@@ -882,12 +1074,14 @@ h1 {
       }
     }
   }
-  .btn-prev, .btn-next {
+  .news-btn-prev, .news-btn-next {
     text-decoration: none;
     color: $dim-grey;
     position: absolute;
     bottom: 50px;
     left: 0;
+
+    @include media('<tablet'){ display: none;}
 
     &:hover{
       color: $p42-color;
@@ -900,7 +1094,7 @@ h1 {
       }
     }
   }
-  .btn-next {
+  .news-btn-next {
     left: auto;
     right: 0;
   }
@@ -908,6 +1102,10 @@ h1 {
 .topSocities-holder {
   padding: 0 30px;
   @extend %layout;
+
+  @include media('<tablet'){
+    padding: 0 5px;
+  }
 
   .socities {
     @extend %listreset;
@@ -921,12 +1119,21 @@ h1 {
       @include media('<desktop'){
         width: 33.33%;
       }
+      
+      @include media('<tablet'){
+        width: 50%;
+        padding: 0 2px 4px;
+      }
+
 
       &.double-width {
         width: 50%;
 
         @include media('<desktop'){
           width: 33.33%;
+        }
+         @include media('<tablet'){
+          width: 50%;
         }
       }
 
@@ -941,6 +1148,9 @@ h1 {
 
         @include media('<desktop'){
           height: 255px;
+        }
+        @include media('<tablet'){
+          height: 150px;
         }
         
         &:hover {
@@ -969,6 +1179,9 @@ h1 {
           @include media('<desktop'){
             height: 255px;
           }
+          @include media('<desktop'){
+            height: 150px;
+          }
         }
         img {
           @include align(middle);
@@ -990,6 +1203,9 @@ h1 {
           @include media('<desktop'){
             max-width: 150px;
           }
+          @include media('<tablet'){
+            max-width: 100px;
+          }
         }
       }
       .caption{
@@ -1010,6 +1226,10 @@ h1 {
         -moz-transition: opacity 0.6s ease,visibility 0.6s ease,z-index 0.6s ease;
         -ms-transition: opacity 0.6s ease,visibility 0.6s ease,z-index 0.6s ease;
 
+        @include media('<tablet'){
+          padding: 5px;
+        }
+
         .heading {
           display: block;
           @extend %text-center;
@@ -1022,6 +1242,10 @@ h1 {
           }
           @include media('<widescreen'){
             @include font(30,35);
+          }
+          @include media('<tablet'){
+            @include font(20,22);
+            margin: 0 0 10px;
           }
         }
         .numberOfproperties {
@@ -1038,6 +1262,10 @@ h1 {
             
             @include media('<widescreen'){
                @include align-reset(top, 16,20);
+            }
+            @include media('<widescreen'){
+               @include align-reset(top, 14,18);
+               padding: 0 0 5px;
             }
 
             span {
@@ -1137,6 +1365,9 @@ h1 {
     @include media('<desktop'){
       left: 10px;
     }
+    @include media('<tablet'){
+      display: none;
+    }
 
     &:hover{
       color: $p42-color;
@@ -1229,6 +1460,9 @@ h1 {
         @include media('<widescreen'){
           max-width: 100px;
         }
+        @include media('<tablet'){
+          max-width: 70px;
+        }
       }
     }
   }
@@ -1236,13 +1470,26 @@ h1 {
 .about-us {
   @include font(18,30);
   padding: 150px 0;
+
+  @include media('<tablet'){
+    padding: 20px 0;
+    @include font(13,19);
+  }
 }
 .questions {
   background: $white;
   @include font(18,30);
+
+  @include media('<tablet'){
+    @include font(13,19);
+  }
 }
 .submit-query {
   @extend %layout;
+
+  @include media('<tablet'){
+    margin: 0 0 20px;
+  }
 
   .layout{
     @include align-reset(top, 18, 21);
@@ -1251,6 +1498,12 @@ h1 {
   .input-holder{
     width: 33.33%;
     padding: 0 10px 20px;
+    
+    @include media('<tablet'){
+      width: 100%;
+      display: block;
+      padding: 0 0 5px;
+    }
 
     &.full-width {
       @extend %full-width;
@@ -1303,6 +1556,10 @@ h1 {
    margin: 0 auto;
    background: transparent;
 
+   @include media('<tablet'){
+     width: 100%;
+   }
+
    span {
      display: block;
      position: relative;
@@ -1329,6 +1586,8 @@ h1 {
 
   .copyright{
     @extend %text-right;
+
+    @include media('<tablet'){ text-align: center;}
   }
 }
 .copyright{
@@ -1355,5 +1614,37 @@ h1 {
 
   span {
     font-weight: 400;
+  }
+}
+.nav-opener {
+  @include squar(33px, 30px);
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 7px;
+  margin: -16px 0 0;
+  background: darken($p42-default-grey, 10%);
+  border-radius: 4px;
+
+  @include media('>=tablet'){ display: none;}
+
+  span,
+  &:after, &:before {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    right: 20%;
+    height: 2px;
+    background: $white;
+    content: '';
+  }
+  &:before{
+    top: auto;
+    bottom: 25%;
+  }
+  span {
+    top: 50%;
+    right: 40%;
+    margin: -2px 0 0;
   }
 }
