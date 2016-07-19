@@ -3,7 +3,8 @@ $breakpoints: (
   'phone': 480px,
   'tablet': 768px,
   'desktop': 1024px,
-  'widescreen': 1200px
+  'widescreen': 1200px,
+  'tvscreen':1550px
 );
 
 // keywords
@@ -198,9 +199,27 @@ h1 {
 
     .top-bar {
       padding: 20px 12px 24px;
+
+      @include media('<tvscreen'){
+        padding: 15px 12px 20px;
+      }
+      @include media('<widescreen'){
+        padding:9px 12px 17px;
+      }
+      @include media('<desktop'){
+        padding:9px 12px;
+      }
+    }
+    .right-sideTop {
+      @include media('<desktop'){
+        width: 30%;
+      }
     }
     .social-icons {
       padding: 26px 0 0;
+       @include media('<desktop'){
+         padding: 10px 0 0;
+      }
     }
   }
 
@@ -223,6 +242,16 @@ h1 {
     float: right;
     @include font(14,17);
     width: 25%;
+
+    @include media('<tvscreen'){
+      width: 30%;
+    }
+    @include media('<tvscreen'){
+      width: 33%;
+    }
+    @include media('<desktop'){
+      width: 50%;
+    }
 
     .mail {
       @include align(top);
@@ -253,6 +282,18 @@ h1 {
   -moz-transition: position 0.5s ease, top 0.5s ease,  max-width 0.54s ease;
   -ms-transition: position 0.5s ease, top 0.5s ease,  max-width 0.54s ease;
 
+  @include media('<tvscreen'){
+    max-width: 400px;
+  }
+  @include media('<widescreen'){
+    max-width: 325px;
+  }
+  @include media('<desktop'){
+    top: 0;
+    position: static;
+    margin: 20px auto 0;
+  }
+
   .byDefault-fixed &,
   .fixed-position & {
     max-width: 300px;
@@ -260,6 +301,18 @@ h1 {
     top: 9px;
     left: 0;
     right: 0;
+
+    @include media('<tvscreen'){
+      max-width: 280px;
+    }
+    @include media('<widescreen'){
+      max-width: 250px;
+    }
+    @include media('<widescreen'){
+      max-width: 250px;
+      top: 11px;
+      margin: 0 auto;
+    }
   }
 
   img{ @extend %img-res;}
@@ -270,9 +323,24 @@ h1 {
   @include align-reset(top, 33,33);
   margin: 0 -10px;
 
+  @include media('<tvscreen'){
+    @include align-reset(top, 28,28);
+  }
+  @include media('<widescreen'){
+    @include align-reset(top, 20,20);
+  }
+  @include media('<desktop'){
+    margin: 0 -5px;
+    @include align-reset(top, 25,25);
+  }
+
   li {
     padding: 0 10px;
     margin: 0 0 10px;
+
+    @include media('<desktop'){
+      padding: 0 5px;
+    }
 
     a{
       text-decoration: none;
@@ -290,6 +358,11 @@ h1 {
   width: 100%;
   margin: 0 -3px;
 
+  @include media('<tvscreen'){
+    @include align-reset(top,12,15);
+    font-weight: 600;
+  }
+
   li {
     width: 50%;
     padding: 0 3px;
@@ -305,7 +378,7 @@ h1 {
     a {
       display: block;
       text-decoration: none;
-      padding: 10px 5px;
+      padding: 10px 25px 10px 5px;
       color: $white;
       background: $p42-color;
       border-radius: 3px;
@@ -314,6 +387,10 @@ h1 {
       -webkit-transition: background 0.5s ease;
       -moz-transition: background 0.5s ease;
       -ms-transition: background 0.5s ease;
+
+      @include media('<tvscreen'){
+        padding: 10px 20px 10px 5px;
+      }
 
       span[class^="icon-"],span[class*="icon-"]{
         position: absolute;
@@ -511,7 +588,11 @@ h1 {
         width: 65%;
 
         .select2-container {
-          width: 262px !important;  
+          width: 262px !important;
+
+          @include media('<desktop'){
+            width: 245px !important;
+          }  
         }
       }
     }
@@ -545,13 +626,15 @@ h1 {
 #nav{
   width: 100%;
   display: block;
-  position: absolute;
+  position: absolute !important;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 99;
   @extend %text-left;
   @extend %container;
+
+  @include media('<desktop'){ padding: 0;}
 
   .byDefault-fixed &,
   &.fixed-position {
@@ -739,6 +822,10 @@ h1 {
     width: 100%;
     max-width: 460px;
     margin: 0 auto;
+
+    @include media('<widescreen'){
+      max-width: 400px;
+    }
   }
   .slideset{
     float: left;
@@ -754,6 +841,13 @@ h1 {
       max-height: 340px;
       min-width: 460px;
       min-height: 340px;
+
+      @include media('<widescreen'){
+        max-width: 400px;
+        max-height: 300px;
+        min-width: 400px;
+        min-height: 300px;
+      }
     }
   }
   .pagination {
@@ -824,8 +918,16 @@ h1 {
       padding: 0 5px 10px;
       overflow: hidden;
 
+      @include media('<desktop'){
+        width: 33.33%;
+      }
+
       &.double-width {
         width: 50%;
+
+        @include media('<desktop'){
+          width: 33.33%;
+        }
       }
 
       a{
@@ -837,6 +939,10 @@ h1 {
         position: relative;
         overflow: hidden;
 
+        @include media('<desktop'){
+          height: 255px;
+        }
+        
         &:hover {
           .caption{
             opacity: 1;
@@ -859,6 +965,10 @@ h1 {
           margin: 0 0 0 -5px;
           height: 300px;
           @extend %layout;
+
+          @include media('<desktop'){
+            height: 255px;
+          }
         }
         img {
           @include align(middle);
@@ -873,6 +983,13 @@ h1 {
           -webkit-transition: transform 0.5s ease;
           -moz-transition: transform 0.5s ease;
           -ms-transition: transform 0.5s ease;
+
+          @include media('<widescreen'){
+            max-width: 200px;
+          }
+          @include media('<desktop'){
+            max-width: 150px;
+          }
         }
       }
       .caption{
@@ -899,6 +1016,13 @@ h1 {
           @include font(50,55);
           font-weight: 500;
           margin: 0 0 20px;
+
+          @include media('<tvscreen'){
+            @include font(40,45);
+          }
+          @include media('<widescreen'){
+            @include font(30,35);
+          }
         }
         .numberOfproperties {
           @extend %listreset;
@@ -911,6 +1035,10 @@ h1 {
             @include align-reset(top, 18,22);
             width:  100%;
             padding: 0 0 10px;
+            
+            @include media('<widescreen'){
+               @include align-reset(top, 16,20);
+            }
 
             span {
               font-weight: 700;
@@ -937,6 +1065,12 @@ h1 {
     height: 450px;
     white-space: nowrap;
 
+    @include media('<desktop'){
+      float: none !important;
+      height: auto;
+      width: 100%;
+    }
+
     &:after {
       @include align(middle);
       overflow: hidden;
@@ -944,6 +1078,10 @@ h1 {
       margin: 0 0 0 -5px;
       height: 450px;
       content: '';
+
+      @include media('<desktop'){
+        @extend .hidden;
+      }
     }
 
     h1 {
@@ -958,6 +1096,11 @@ h1 {
   @extend %pull-right;
   width: 60%;
   padding: 0 10px;
+  
+  @include media('<desktop'){
+    width: 100%;
+    float: none !important;
+  }
 
   .mask {
     @extend %layout;
@@ -965,6 +1108,16 @@ h1 {
     width: 100%;
     max-width: 880px;
     margin: 0 auto;
+
+    @include media('<tvscreen'){
+      max-width: 600px;
+    }
+    @include media('<widescreen'){
+      max-width: 500px;
+    }
+    @include media('<desktop'){
+      max-width: 600px;
+    }
   }
   .slideset{
     float: left;
@@ -980,6 +1133,10 @@ h1 {
     position: absolute;
     bottom: 40px;
     left: 0;
+
+    @include media('<desktop'){
+      left: 10px;
+    }
 
     &:hover{
       color: $p42-color;
@@ -1023,6 +1180,10 @@ h1 {
   li{
     width: 25%;
 
+    @include media('<desktop'){
+      width: 33.33%;
+    }
+
     a{
       display: block;
       background: $white;
@@ -1040,6 +1201,10 @@ h1 {
       -ms-transition: opacity 0.6s ease, filter 0.6s ease, transform 0.6s ease;
       -moz-transition: opacity 0.6s ease, filter 0.6s ease, transform 0.6s ease;
 
+      @include media('<desktop'){
+        height: 100px;
+      }
+
       &:after {
         content: '';
         @include align(middle);
@@ -1047,6 +1212,10 @@ h1 {
         margin: 0 0 0 -5px;
         height: 150px;
         @extend %layout;
+
+        @include media('<desktop'){
+          height: 100px;
+        }
       }
       img {
         @include align(middle);
@@ -1054,6 +1223,12 @@ h1 {
         margin: 0 0 0 -5px;
         max-width: 160px;
 
+        @include media('<tvscreen'){
+          max-width: 130px;
+        }
+        @include media('<widescreen'){
+          max-width: 100px;
+        }
       }
     }
   }
