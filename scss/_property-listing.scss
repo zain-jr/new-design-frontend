@@ -1,0 +1,301 @@
+.listing-page {
+  @extend %layout;
+  position: relative;
+  padding: 5px;
+
+  #aside {
+    width: 25%;
+    padding: 10px;
+    @extend .pull-left;
+    box-shadow: 0 0 20px -9px rgba($black, 0.5);
+  }
+  #content {
+    width: 75%;
+    @extend .pull-left;
+    padding: 0 0 0 20px;
+  }
+  .filter-form {
+    position: relative;
+    @extend %layout;
+  }
+  .filters-links {
+    @extend %listreset;
+    @include font(14,17);
+
+    li {
+      display: block;
+
+      a {
+        font-weight: 700;
+        text-decoration: none;
+        display: block;
+        color: $dark-grey;
+        position: relative;
+        padding: 10px;
+        transition: color 0.5s ease, background 0.5s ease;
+        -webkit-transition: color 0.5s ease, background 0.5s ease;
+        -moz-transition: color 0.5s ease, background 0.5s ease;
+        -ms-transition: color 0.5s ease, background 0.5s ease;
+
+        &:after {
+          position: absolute;
+          top: 50%;
+          right: 10px;
+          content: "\e91b";
+          font-family: 'icomoon';
+          @include font(27,27);
+          margin: -14px 0 0;
+          color: $p42-color;
+          transition: color 0.5s ease;
+          -webkit-transition: color 0.5s ease;
+          -moz-transition: color 0.5s ease;
+          -ms-transition: color 0.5s ease;
+        }
+      }
+      .slide {
+        @extend %layout;
+        background: $white;
+        padding: 20px;
+      }
+    }
+  }
+  .filterChecks {
+    @extend %listreset;
+
+    li {
+      display: block;
+      padding: 0 0 10px;
+
+      .select2-container {
+        width: 100% !important;
+        border: 1px solid $p42-color;
+      }
+    }
+  }
+  .fake-select {
+    margin: 0 0 10px;
+    color: rgba($dark-grey, 0.9);
+  }
+  .fromTo {
+    @extend %layout;
+    @include align-reset(top, 14, 17);
+    position: relative;
+    padding: 0 31px 0 0;
+
+    .field-holder {
+      width: 50%;
+      padding: 3px;
+    }
+    input[type="number"]{
+      @include squar(100%, 26px);
+      @include font(12,15);
+      padding: 4px;
+      font-family: $open-sans;
+      display: block;
+      border: 2px solid $p42-background;
+      color: $dark-grey;
+
+      @include placeholder{ color: $dark-grey;}
+    }
+    button{
+      @include align(top);
+      position: absolute;
+      top: 3px;
+      right: 3px;
+      bottom: 3px;
+      @include font(12,15);
+      color: $white;
+      background: $p42-color;
+      border: 0;
+      padding: 5px;
+      transition: background 0.5s ease;
+      -webkit-transition: background 0.5s ease;
+      -moz-transition: background 0.5s ease;
+      -ms-transition: background 0.5s ease;
+
+      &:hover { background: $green;}
+    }
+  }
+  .publicProperty-post {
+    @extend %layout;
+    background: $white;
+    padding: 5px;
+
+    .image-holder {
+      @extend .pull-left;
+      position: relative;
+      @extend %clearfix;
+
+      .add-to-favorite {
+        position: absolute;
+        top: -4px;
+        left: 5px;
+        @include squar(27px, 30px);
+        background: url('../images/sprite-fav.png') 0 -36px;
+        background-size: cover;
+        text-decoration: none;
+        transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+
+        &.added {
+          background: url('../images/sprite-fav.png') 0 0;
+        }
+      }
+      .premiumProperty {
+        position: absolute;
+        top: 28px;
+        left: -38px;
+        color: $white;
+        @include font(17, 20);
+        font-weight: 600;
+        background: $green;
+        @extend %text-center;
+        width: 155px;
+        transform: rotate(319deg);
+        -webkit-transform: rotate(319deg);
+        -moz-transform: rotate(319deg);
+        -ms-transform: rotate(319deg);
+      }
+      img {
+        max-height: 208px;
+        min-height: 208px;
+        min-width: 208px;
+        max-width: 208px;
+        @extend img-res;
+      }
+    }
+    .caption {
+      @extend %layout;
+      font-family: $open-sans;
+      @include font(13,16);
+      color: $p42-default-grey;
+      padding: 0 0 0 10px;
+
+      h1 {
+        margin: 0 0 15px;
+        font-weight: 700;
+        color: $p42-color;
+        @include font(21,24);
+        @extend %text-left;
+      }
+
+      .left-area {
+        @extend %pull-left;
+        width: 70%;
+        padding: 0 10px 0 0;
+      }
+      .right-area {
+        @extend %pull-right;
+        width: 30%;
+      }
+      .public-ui-features {
+        color: $p42-default-grey;
+        @extend %listreset;
+
+        li {
+          display: block;
+          @include align-reset(top, 13, 16);
+
+          span[class^="icon-"], span[class*="icon-"] {
+            @include align(top);
+            width: 35%;
+            padding: 0;
+          }
+          b {
+            @include align(top);
+            width: 65%;
+            font-weight: 400;
+          }
+          span {
+            padding: 0 5px;
+            width: 75%;
+          }
+          strong {
+            width: 25%;
+            @include font(17,20);
+            font-weight: 700;
+            @extend %text-center;
+            padding: 0 10px 10px;
+            border-left: 1px solid $p42-default-grey;
+          }
+        }
+      }
+      .links-left {
+        @extend %pull-left;
+        width: 70%;
+        padding: 40px 0 0;
+      }
+      .links-right {
+        @extend %pull-right;
+        width: 30%;
+      }
+      .btn-default {
+        @include font(12,15);
+        border-radius: 4px;
+        position: relative;
+        padding: 10px 37px 10px 15px;
+        
+        span[class^="icon-"],span[class*="icon-"]{
+          @include font(20,20);
+          top: 50%;
+          right: 10px;
+          margin: -10px 0 0;
+          position: absolute;
+        }
+      }
+      .trusted-agent {
+        position: relative;
+        @include font(13,17);
+        font-weight: 600;
+        border: 1px solid $p42-default-grey;
+        @include align(top);
+        padding: 0 5px 0 24px;
+        margin: 15px 0 0 10px;
+
+        span[class^="icon-"],span[class*="icon-"]{
+          position: absolute;
+          top: -10px;
+          left: -1px;
+          @include font(30,23);
+        }
+      }
+      .company-logo {
+        @extend img-res;
+        @extend .pull-right;
+        max-width: 76px;
+        max-height: 76px;
+        min-width: 76px;
+        min-height: 76px;
+      }
+      .quick-links {
+        @extend %listreset;
+        @include align-reset(top, 25,25);
+        margin:0 -5px;
+        @extend .pull-left;
+        max-width: 115px;
+        padding: 32px 0 0;
+        
+        li {
+          padding: 0 5px 10px;
+
+          a {
+            text-decoration: none;
+            border: 1px solid $p42-color;
+            color: $p42-color;
+            display:  block;
+            border-radius: 4px;
+            padding: 5px;
+            transition: background 0.5s ease, color 0.5s ease;
+
+            &:hover {
+              color: $white;
+              background: $p42-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
