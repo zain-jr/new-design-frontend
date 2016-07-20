@@ -33,7 +33,12 @@ $media-expressions: (
 @import 'base/forms';
 @import 'select2-min';
 @import 'property-listing';
-
+body{
+  &.nav-active{
+    height: 100vh;
+    overflow: hidden;
+  }
+}
 h1 {
   margin: 0 0 30px;
   width: 100%;
@@ -55,6 +60,11 @@ h1 {
   -webkit-transition: background 0.4s ease;
   -moz-transition: background 0.4s ease;
   -ms-transition: background 0.4s ease;
+
+  @include media('<tablet'){
+    @include font(14,18);
+    padding: 10px;
+  }
 
   &:hover {
     background: lighten( $p42-color, 10%);
@@ -200,6 +210,7 @@ h1 {
     z-index: 999 !important;
     background: $white !important;
     box-shadow: 0 0 20px -1px rgba($black, 0.5);
+    min-width: 320px;
     
     .social-icons {
       @include media('<tablet'){
@@ -211,6 +222,9 @@ h1 {
   .byDefault-fixed &,
   &.fixed-position {
     position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
     z-index: 999 !important;
     background: $white !important;
     box-shadow: 0 0 20px -1px rgba($black, 0.5);
@@ -352,6 +366,14 @@ h1 {
       top: 11px;
       margin: 0 auto;
     }
+    @include media('<tablet'){
+      max-width: 130px;
+      position: fixed;
+      top: 9px;
+      left: 0;
+      right: 60px;
+      margin: 0 auto;
+    }
   }
 
   img{ @extend %img-res;}
@@ -483,6 +505,10 @@ h1 {
   &.byDefault-fixed {
     padding: 110px 0 0;
     margin: 0 0 50px;
+
+    @include media('<widescreen'){
+      padding: 95px 0 0;
+    }
   }
 
   &:after {
@@ -768,9 +794,74 @@ h1 {
     right: 0 !important;
     bottom: 0 !important;
     height: 100vh !important;
+    width: 100% !important;
     overflow: auto !important;
     z-index: 9999 !important;
     background: rgba($p42-default-grey, 0.90);
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    transition: transform 0.5s ease;
+
+    .nav-active & {
+      transform: translateX(0);
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+    }
+  }
+
+  .close {
+    color: $orange;
+    text-decoration: none;
+    float: right;
+
+    @include media('>=tablet'){ display: none;}
+    
+    &:hover {
+      color: lighten($orange, 10%);
+    }
+
+    span[class^="icon-"], span[class*="icon-"]{
+      font-size: 50px;
+      line-height: 1;
+    }
+  }
+  
+  .mobile-content {
+    color: $white;
+    padding: 20px 0;
+
+    &.hidden{ @include media('<tablet'){ display: block !important;} }
+    .social-icons {
+      li {
+        @include align-reset(top, 20,20);
+
+        a {
+          color: $white;
+          border: 2px solid $white;
+          border-radius: 100%;
+          padding: 8px;
+        }
+      }
+    }
+    .copyright {
+      color: $white;
+
+      a {
+        color:$white;
+        &:hover { color: $orange;}
+      }
+    }
+  }
+
+  .nav-holder {
+    display: block;
+    position: relative;
+    width: 100%;
+
+    @include media('<tablet'){
+      overflow: hidden;
+    }
   }
 
   .byDefault-fixed &,
@@ -820,6 +911,12 @@ h1 {
     @extend %listreset;
     @include align-reset(top, 16,20);
 
+    @include media('<tablet'){
+      width: 100%;
+      display: block;
+      overflow: hidden;
+    }
+
     li{
       font-weight: 700;
       width: 16.66%;
@@ -832,6 +929,7 @@ h1 {
         display: block;
         background: none;
         padding: 0 20px;
+        @include font(14,17);
       }
 
       &:first-child{ border: 0;}
@@ -845,11 +943,18 @@ h1 {
 
           @include media('<tablet'){
             background: none;
+            color: $orange;
           }
 
           &:after {
             left: 0;
             right: 0;
+            
+            @include media('<tablet'){
+              left: 15%;
+              right: 15%;
+              background: $orange;
+            }
           }
           &:before { opacity: 1;}
         }
@@ -874,8 +979,7 @@ h1 {
           background: none;
           box-shadow: none;
           color: $white;
-          padding: 15px 0;
-          border-bottom: 2px solid $white;
+          padding: 10px 0;
         }
 
         &:after {
@@ -891,7 +995,14 @@ h1 {
           -moz-transition: left 0.5s ease, right 0.5s ease;
           -ms-transition: left 0.5s ease, right 0.5s ease;
           
-          @include media('<tablet'){ display: none;}
+          @include media('<tablet'){
+            top: auto;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 2px;
+            background: $white;
+          }
         }
         &:before {
           position: absolute;
@@ -916,7 +1027,10 @@ h1 {
           line-height: 1;
           padding: 0 0 10px;
 
-          @include media('<tablet'){ display: none;}
+          @include media('<tablet'){
+            font-size: 20px;
+            padding: 0 0 5px;
+          }
         }
 
         &:hover {
@@ -927,11 +1041,18 @@ h1 {
 
           @include media('<tablet'){
             background: none;
+            color: $orange;
           }
 
           &:after {
             left: 0;
             right: 0;
+
+            @include media('<tablet'){
+              left: 15%;
+              right: 15%;
+              background: $orange;
+            }
           }
           &:before { opacity: 1;}
         }
@@ -1149,6 +1270,7 @@ h1 {
         @include media('<desktop'){
           height: 255px;
         }
+
         @include media('<tablet'){
           height: 150px;
         }
@@ -1179,7 +1301,7 @@ h1 {
           @include media('<desktop'){
             height: 255px;
           }
-          @include media('<desktop'){
+          @include media('<tablet'){
             height: 150px;
           }
         }
@@ -1225,6 +1347,8 @@ h1 {
         -webkit-transition: opacity 0.6s ease,visibility 0.6s ease,z-index 0.6s ease;
         -moz-transition: opacity 0.6s ease,visibility 0.6s ease,z-index 0.6s ease;
         -ms-transition: opacity 0.6s ease,visibility 0.6s ease,z-index 0.6s ease;
+
+        @include media('<desktop'){ display: none;}
 
         @include media('<tablet'){
           padding: 5px;
@@ -1612,6 +1736,10 @@ h1 {
   letter-spacing: 1px;
   padding: 0 0 10px;
 
+  @include media('<widescreen'){
+    @include font(22,25);
+  }
+
   span {
     font-weight: 400;
   }
@@ -1647,4 +1775,9 @@ h1 {
     right: 40%;
     margin: -2px 0 0;
   }
+}
+.resize-active * {
+  transition: none;
+  -webkit-transition: none;
+  -moz-transition: none;
 }

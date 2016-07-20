@@ -8,11 +8,26 @@
     padding: 10px;
     @extend .pull-left;
     box-shadow: 0 0 20px -9px rgba($black, 0.5);
+
+    @include media('<desktop'){
+      width: 100%;
+      overflow: hidden;
+      display: block;
+      margin: 0 0 20px;
+    }
   }
   #content {
     width: 75%;
     @extend .pull-left;
     padding: 0 0 0 20px;
+
+    @include media('<desktop'){
+      width: 100%;
+      overflow: hidden;
+      display: block;
+      margin: 0 0 20px;
+      padding: 0;
+    }
   }
   .filter-form {
     position: relative;
@@ -25,11 +40,18 @@
     li {
       display: block;
 
+      &.active {
+        a{
+          &:after {content: "\e91a";}
+        }
+      }
+
       a {
         font-weight: 700;
         text-decoration: none;
         display: block;
         color: $dark-grey;
+        cursor: pointer;
         position: relative;
         padding: 10px;
         transition: color 0.5s ease, background 0.5s ease;
@@ -41,7 +63,7 @@
           position: absolute;
           top: 50%;
           right: 10px;
-          content: "\e91a";
+          content: "\e91b";
           font-family: 'icomoon';
           @include font(27,27);
           margin: -14px 0 0;
@@ -196,10 +218,17 @@
         @extend %pull-left;
         width: 70%;
         padding: 0 10px 0 0;
+
       }
       .right-area {
         @extend %pull-right;
         width: 30%;
+
+        @include media('<tablet'){
+          float: none !important;
+          width: 100%;
+          overflow: hidden;
+        }
       }
       .public-ui-features {
         color: $p42-default-grey;
@@ -237,10 +266,18 @@
         @extend %pull-left;
         width: 70%;
         padding: 40px 0 0;
+
+        @include media('<widescreen'){
+          width: 60%;
+        }
       }
       .links-right {
         @extend %pull-right;
         width: 30%;
+
+        @include media('<widescreen'){
+          width: 40%;
+        }
       }
       .btn-default {
         @include font(12,15);
@@ -307,6 +344,48 @@
           }
         }
       }
+    }
+  }
+}
+.aside-opener-filters {
+  display: block;
+  color: $white;
+  @include font(16,20);
+  background: $p42-color;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  margin: 0 0 20px;
+
+  @include media('>=desktop'){ display: none;}
+
+  .button {
+    @include squar(30px, 20px);
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    z-index: 1;
+    margin: -10px 0 0;
+
+    &:after, &:before, b{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: $white;
+      height: 2px;
+      content: '';
+    }
+    &:before {
+      top: auto;
+      bottom: 0;
+    }
+    b{
+      top: 50%;
+      margin: -1px 0 0;
     }
   }
 }

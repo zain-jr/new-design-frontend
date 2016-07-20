@@ -10,7 +10,7 @@
 </head>
 <body>
 	<div id="wrapper">
-		<div class="main-bg-holder">
+		<div class="main-bg-holder byDefault-fixed">
 			<header id="header">
 				<div class="top-bar">
 					<ul class="social-icons">
@@ -20,7 +20,7 @@
 						<li><a href="#"><span class="icon-twitter"></span></a></li>
 						<li><a href="#"><span class="icon-instagram"></span></a></li>
 					</ul>
-					<a href="#" class="nav-opener"><span></span></a>
+					<a href="#" class="navigation-toggler nav-opener"><span></span></a>
 					<div class="right-sideTop text-right">
 						<a class="mail" href="mailto:&#105;&#110;&#102;&#111;&#064;&#112;&#114;&#111;&#112;&#101;&#114;&#116;&#121;&#052;&#050;&#046;&#099;&#111;&#109;">&#105;&#110;&#102;&#111;&#064;&#112;&#114;&#111;&#112;&#101;&#114;&#116;&#121;&#052;&#050;&#046;&#099;&#111;&#109;</a>
 						<ul class="loginRegister text-upparcase text-left">
@@ -31,7 +31,7 @@
 				</div>
 				<div class="logo"><a href="#"><img src="images/logo.png" width="477" height="150" alt="Property42"></a></div>
 			</header>
-			<div class="main-visualSection">
+			<!--<div class="main-visualSection">
 				<div class="container">
 					<strong class="main-heading text-upparcase hidden-xs"><span class="blue">LIST</span> <span class="black">yOUR</span> PROPERTY</strong>
 					<p class="hidden-xs">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
@@ -115,29 +115,41 @@
 						</div>
 					</form>
 				</div>
-			</div>
+			</div>-->
 			<nav id="nav">
-				<a href="#" class=""></a>
-				<ul class="main-navigation text-upparcase">
-					<li class="active">
-						<a href="#"><span class="middle-align"><span class="icon-home"></span>HOME</span></a>
-					</li>
-					<li>
-						<a href="#"><span class="middle-align"><span class="icon-d-building"></span>Properties</span></a>
-					</li>
-					<li>
-						<a href="#"><span class="middle-align"><span class="icon-male-close-up-silhouette-with-tie"></span>AGENTS</span></a>
-					</li>
-					<li>
-						<a href="#"><span class="middle-align"><span class="icon-street-map"></span>MAPS</span></a>
-					</li>
-					<li>
-						<a href="#"><span class="middle-align"><span class="icon-light-bulb"></span>ABOUT</span></a>
-					</li>
-					<li>
-						<a href="#"><span class="middle-align"><span class="icon-close-envelope"></span>CONTACT</span></a>
-					</li>
-				</ul>
+				<div class="nav-holder">
+					<a href="#" class="navigation-toggler close"><span class="icon-cross"></span></a>
+					<ul class="main-navigation text-upparcase">
+						<li class="active">
+							<a href="#"><span class="middle-align"><span class="icon-home"></span>HOME</span></a>
+						</li>
+						<li>
+							<a href="#"><span class="middle-align"><span class="icon-d-building"></span>Properties</span></a>
+						</li>
+						<li>
+							<a href="#"><span class="middle-align"><span class="icon-male-close-up-silhouette-with-tie"></span>AGENTS</span></a>
+						</li>
+						<li>
+							<a href="#"><span class="middle-align"><span class="icon-street-map"></span>MAPS</span></a>
+						</li>
+						<li>
+							<a href="#"><span class="middle-align"><span class="icon-light-bulb"></span>ABOUT</span></a>
+						</li>
+						<li>
+							<a href="#"><span class="middle-align"><span class="icon-close-envelope"></span>CONTACT</span></a>
+						</li>
+					</ul>
+					<div class="mobile-content text-center hidden">
+						<ul class="social-icons">
+							<li><a href="#"><span class="icon-facebook"></span></a></li>
+							<li><a href="#"><span class="icon-google-plus-symbol"></span></a></li>
+							<li><a href="#"><span class="icon-linkedin"></span></a></li>
+							<li><a href="#"><span class="icon-twitter"></span></a></li>
+							<li><a href="#"><span class="icon-instagram"></span></a></li>
+						</ul>
+						<span class="copyright">Copyright, <a href="#">Property42.pk</a></span>
+					</div>
+				</div>
 			</nav>
 		</div>
 		<main id="main" role="main">
@@ -165,7 +177,7 @@
 														<a href="#" class="news-btn-next"><span class="icon-right-arrow"></span></a>
 													</div>
 													<div class="caption">
-														<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+														<p>Lorem Ipsum is simply dummy text of the . Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
 														<a href="#" class="btn-default text-upparcase">Learn More</a>
 													</div>
 												</div>
@@ -185,7 +197,7 @@
 														<a href="#" class="news-btn-next"><span class="icon-right-arrow"></span></a>
 													</div>
 													<div class="caption">
-														<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+														<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived</p>
 														<a href="#" class="btn-default text-upparcase">Learn More</a>
 													</div>
 												</div>
@@ -452,15 +464,16 @@
 				</div>-->
 				<div class="listing-page">
 					<div class="container">
+						<a class="aside-opener-filters">Search Filters<span class="button"><b></b></span></a>
 						<aside id="aside">
 							<form class="filter-form">
 								<ul class="filters-links text-upparcase">
-									<li>
-										<a href="#" class="opener">SEARCH FILTERS</a>
+									<li class="active">
+										<a class="filters-links-opener">SEARCH FILTERS</a>
 										<div class="slide"></div>
 									</li>
-									<li>
-										<a href="#" class="opener">PROPERTY FOR</a>
+									<li class="active">
+										<a class="filters-links-opener">PROPERTY FOR</a>
 										<div class="slide">
 											<ul class="filterChecks">
 												<li>
@@ -480,8 +493,8 @@
 											</ul>
 										</div>
 									</li>
-									<li>
-										<a href="#" class="opener">Property Type</a>
+									<li class="active">
+										<a class="filters-links-opener">Property Type</a>
 										<div class="slide">
 											<ul class="filterChecks">
 												<li>
@@ -508,8 +521,8 @@
 											</ul>
 										</div>
 									</li>
-									<li>
-										<a href="#" class="opener">Property SUB-Type</a>
+									<li class="active">
+										<a class="filters-links-opener">Property SUB-Type</a>
 										<div class="slide">
 											<ul class="filterChecks">
 												<li>
@@ -530,8 +543,8 @@
 											</ul>
 										</div>
 									</li>
-									<li>
-										<a href="#" class="opener">LOCATION / SOCITY</a>
+									<li class="active">
+										<a class="filters-links-opener">LOCATION / SOCITY</a>
 										<div class="slide">
 											<ul class="filterChecks">
 												<li>
@@ -559,8 +572,8 @@
 											</ul>
 										</div>
 									</li>
-									<li>
-										<a href="#" class="opener">LAND AREA</a>
+									<li class="active">
+										<a class="filters-links-opener">LAND AREA</a>
 										<div class="slide">
 											<span class="fake-select">
 												<select>
@@ -584,8 +597,8 @@
 											</div>
 										</div>
 									</li>
-									<li>
-										<a href="#" class="opener">PRICE RANGE</a>
+									<li class="active">
+										<a class="filters-links-opener">PRICE RANGE</a>
 										<div class="slide">
 											<div class="fromTo">
 												<div class="field-holder">
