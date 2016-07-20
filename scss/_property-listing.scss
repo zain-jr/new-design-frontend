@@ -144,10 +144,18 @@
     padding: 5px 5px 0;
     margin: 0 0 20px;
 
+    @include media('<tablet'){
+      padding: 10px 5px 0;
+    }
+
     .image-holder {
       @extend .pull-left;
       position: relative;
       @extend %clearfix;
+
+      @include media('<phone'){
+        display: none;
+      }
 
       a{ display: block;}
 
@@ -189,6 +197,13 @@
         min-width: 208px;
         max-width: 208px;
         @extend img-res;
+
+        @include media('<tablet'){
+          max-height: 170px;
+          max-width: 170px;
+          min-height: 170px;
+          min-width: 170px;
+        }
       }
     }
     .caption {
@@ -198,12 +213,21 @@
       color: $p42-default-grey;
       padding: 0 0 0 10px;
 
+      @include media('<tablet'){
+        position: relative;
+      }
+
       h1 {
         margin: 0 0 15px;
         font-weight: 700;
         color: $p42-color;
         @include font(18,21);
         @extend %text-left;
+
+        @include media('<tablet'){
+          @include font(16,19);
+          margin: 0 0 2px;
+        }
 
         a {
           @include align(top);
@@ -219,6 +243,14 @@
         width: 70%;
         padding: 0 10px 0 0;
 
+        @include media('<tablet'){
+          padding: 0;
+          float: none !important;
+          width: 100%;
+        }
+        p {
+          @include media('<tablet'){ display: none;}
+        }
       }
       .right-area {
         @extend %pull-right;
@@ -234,9 +266,17 @@
         color: $p42-default-grey;
         @extend %listreset;
 
+        @include media('<tablet'){
+          overflow: hidden;
+        }
+
         li {
           display: block;
           @include align-reset(top, 13, 16);
+
+          @include media('<tablet'){
+            float: left;
+          }
 
           span[class^="icon-"], span[class*="icon-"] {
             @include align(top);
@@ -247,10 +287,16 @@
             @include align(top);
             width: 65%;
             font-weight: 400;
+
+            @include media('<tablet'){ display: none;}
           }
           span {
             padding: 0 5px;
             width: 75%;
+
+            @include media('<tablet'){
+              width: auto;
+            }
           }
           strong {
             width: 25%;
@@ -259,6 +305,12 @@
             @extend %text-center;
             padding: 0 10px 10px;
             border-left: 1px solid $p42-default-grey;
+
+            @include media('<tablet'){
+              width: auto;
+              padding: 0 5px;
+              @include font(14,17);
+            }
           }
         }
       }
@@ -266,6 +318,10 @@
         @extend %pull-left;
         width: 70%;
         padding: 40px 0 0;
+
+        @include media('<tablet'){
+          padding: 10px 0 0;
+        }
 
         @include media('<widescreen'){
           width: 60%;
@@ -302,11 +358,24 @@
         padding: 0 5px 0 24px;
         margin: 15px 0 0 10px;
 
+        @include media('<tablet'){
+          position: absolute;
+          top: 40px;
+          right: 5px;
+          @include font(11,12);
+          padding: 0 5px 0 17px;
+          margin: 3px 0 0 10px;
+        }
+
         span[class^="icon-"],span[class*="icon-"]{
           position: absolute;
           top: -10px;
           left: -1px;
           @include font(30,23);
+
+          @include media('<tablet'){
+            @include font(21,23);
+          }
         }
       }
       .company-logo {
@@ -316,6 +385,8 @@
         max-height: 76px;
         min-width: 76px;
         min-height: 76px;
+
+        @include media('<tablet'){ display: none;}
       }
       .quick-links {
         @extend %listreset;
@@ -325,6 +396,10 @@
         max-width: 115px;
         padding: 32px 0 0;
         
+        @include media('<tablet'){
+          padding: 10px 0 0;
+        }
+
         li {
           padding: 0 5px 10px;
 
