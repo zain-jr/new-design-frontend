@@ -894,9 +894,19 @@ h1 {
           transition: padding 0.5s ease;
           -webkit-transition: padding 0.5s ease;
           -moz-transition: padding 0.5s ease;
-          
 
-          &:after , &:before { transition: none !important;}
+          @include media('<tablet'){ box-shadow: none;}
+
+          &:after , &:before {
+            transition: none !important;
+
+            @include media('<tablet'){
+              transition: left 0.5s ease, right 0.5s ease !important;
+              -webkit-transition: left 0.5s ease, right 0.5s ease !important;
+              -moz-transition: left 0.5s ease, right 0.5s ease !important;
+              -ms-transition: left 0.5s ease, right 0.5s ease !important;
+            }
+          }
 
           span[class^="icon-"],span[class*="icon-"]{
             height: 0;
@@ -909,15 +919,23 @@ h1 {
              @include media('<tablet'){
               font-size: 20px;
               padding: 0 0 5px;
+              height: auto;
             }
           }
-
+          
           &:hover {
             padding: 25px 10px;
+            
+            @include media('<tablet'){  padding: 10px 0; }
 
             span[class^="icon-"],span[class*="icon-"]{
               height: 42px;
               padding: 0 0 10px;
+
+              @include media('<tablet'){
+                height: auto;
+                padding: 0 0 5px;
+              }
             }
           }
         }

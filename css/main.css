@@ -3284,8 +3284,23 @@ h1 span {
   -moz-transition: padding 0.5s ease;
 }
 
+@media (max-width: 767px) {
+  .byDefault-fixed #nav .main-navigation li a, #nav.fixed-position .main-navigation li a {
+    box-shadow: none;
+  }
+}
+
 .byDefault-fixed #nav .main-navigation li a:after, .byDefault-fixed #nav .main-navigation li a:before, #nav.fixed-position .main-navigation li a:after, #nav.fixed-position .main-navigation li a:before {
   transition: none !important;
+}
+
+@media (max-width: 767px) {
+  .byDefault-fixed #nav .main-navigation li a:after, .byDefault-fixed #nav .main-navigation li a:before, #nav.fixed-position .main-navigation li a:after, #nav.fixed-position .main-navigation li a:before {
+    transition: left 0.5s ease, right 0.5s ease !important;
+    -webkit-transition: left 0.5s ease, right 0.5s ease !important;
+    -moz-transition: left 0.5s ease, right 0.5s ease !important;
+    -ms-transition: left 0.5s ease, right 0.5s ease !important;
+  }
 }
 
 .byDefault-fixed #nav .main-navigation li a span[class^="icon-"], .byDefault-fixed #nav .main-navigation li a span[class*="icon-"], #nav.fixed-position .main-navigation li a span[class^="icon-"], #nav.fixed-position .main-navigation li a span[class*="icon-"] {
@@ -3300,6 +3315,7 @@ h1 span {
   .byDefault-fixed #nav .main-navigation li a span[class^="icon-"], .byDefault-fixed #nav .main-navigation li a span[class*="icon-"], #nav.fixed-position .main-navigation li a span[class^="icon-"], #nav.fixed-position .main-navigation li a span[class*="icon-"] {
     font-size: 20px;
     padding: 0 0 5px;
+    height: auto;
   }
 }
 
@@ -3307,9 +3323,22 @@ h1 span {
   padding: 25px 10px;
 }
 
+@media (max-width: 767px) {
+  .byDefault-fixed #nav .main-navigation li a:hover, #nav.fixed-position .main-navigation li a:hover {
+    padding: 10px 0;
+  }
+}
+
 .byDefault-fixed #nav .main-navigation li a:hover span[class^="icon-"], .byDefault-fixed #nav .main-navigation li a:hover span[class*="icon-"], #nav.fixed-position .main-navigation li a:hover span[class^="icon-"], #nav.fixed-position .main-navigation li a:hover span[class*="icon-"] {
   height: 42px;
   padding: 0 0 10px;
+}
+
+@media (max-width: 767px) {
+  .byDefault-fixed #nav .main-navigation li a:hover span[class^="icon-"], .byDefault-fixed #nav .main-navigation li a:hover span[class*="icon-"], #nav.fixed-position .main-navigation li a:hover span[class^="icon-"], #nav.fixed-position .main-navigation li a:hover span[class*="icon-"] {
+    height: auto;
+    padding: 0 0 5px;
+  }
 }
 
 #nav .main-navigation {
