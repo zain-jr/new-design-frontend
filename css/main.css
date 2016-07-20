@@ -2082,6 +2082,7 @@ input[type='submit'] {
   display: block;
   border-radius: 4px;
   padding: 5px;
+  width: auto;
   transition: background 0.5s ease, color 0.5s ease;
 }
 
@@ -4141,6 +4142,7 @@ h1 span {
 
 .agents-logo li {
   width: 25%;
+  margin: 0 0 15px;
 }
 
 @media (max-width: 1023px) {
@@ -4606,6 +4608,17 @@ h1 span {
   color: #fff;
   background: #2092d0;
   border-color: #2092d0;
+}
+
+.popup-holder {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+}
+
+.lightbox {
+  padding: 5px;
+  width: 300px;
 }
 
 .resize-active * {

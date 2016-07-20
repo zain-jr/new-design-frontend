@@ -30,14 +30,13 @@ $(document).on('focusout', '.PriceField', function(){
 
 // page init
 jQuery(function(){
-  initCarousel();
+  	initCarousel();
 	initSlideShow();
-
+	initAccordion();
+	
 	if(screen.width >= 768){
 		initFixedScrollBlock();
 	}
-	
-	initAccordion();
 });
 
 // slideshow init

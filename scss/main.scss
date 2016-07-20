@@ -1568,6 +1568,7 @@ h1 {
 
   li{
     width: 25%;
+    margin: 0 0 15px;
 
     @include media('<desktop'){
       width: 33.33%;
@@ -1891,6 +1892,15 @@ h1 {
 			}
 		}
 	}
+}
+.popup-holder {
+	position: relative;
+	overflow: hidden;
+	height: 0;
+}
+.lightbox {
+	padding: 5px;
+	width: 300px;
 }
 .resize-active * {
   transition: none;
