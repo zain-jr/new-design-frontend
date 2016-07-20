@@ -485,13 +485,20 @@ h1 {
     }
   }
 }
+.main-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  @extend img-res;
+  width: 100%;
+  z-index: -1;
+}
 .main-bg-holder {
   @extend %layout;
-  background: url('../images/bg.jpg') no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
   position: relative;
-  z-index: 991;
   padding: 230px 0 113px;
 
   @include media('<desktop'){
@@ -508,6 +515,7 @@ h1 {
 
     @include media('<widescreen'){
       padding: 95px 0 0;
+      margin: 0 0 30px;
     }
   }
 
@@ -527,6 +535,8 @@ h1 {
   @extend %layout;
   @extend %text-center;
   padding: 0 50px;
+  position: relative;
+  z-index: 9;
 
   @include media('<tablet'){
     padding: 0;
@@ -895,6 +905,11 @@ h1 {
             transition: height 0.5s ease, padding 0.5s ease;
             -webkit-transition: height 0.5s ease, padding 0.5s ease;
             -moz-transition: height 0.5s ease, padding 0.5s ease;
+
+             @include media('<tablet'){
+              font-size: 20px;
+              padding: 0 0 5px;
+            }
           }
 
           &:hover {
@@ -1360,13 +1375,10 @@ h1 {
         .heading {
           display: block;
           @extend %text-center;
-          @include font(50,55);
+          @include font(40,48);
           font-weight: 500;
           margin: 0 0 20px;
-
-          @include media('<tvscreen'){
-            @include font(40,45);
-          }
+          
           @include media('<widescreen'){
             @include font(30,35);
           }
@@ -1435,7 +1447,7 @@ h1 {
       content: '';
 
       @include media('<desktop'){
-        @extend .hidden;
+        display: none;
       }
     }
 

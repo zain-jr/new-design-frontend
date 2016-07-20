@@ -1,5 +1,9 @@
 $(document).ready(function() {
   $(".js-example-basic-single").select2();
+  
+  if(screen.width < 1024){
+  	$('#aside').slideUp();
+  }
 });
 
 $(document).on('click', '.navigation-toggler', function(){
@@ -36,7 +40,7 @@ jQuery(function(){
 	if(screen.width >= 768){
 		initFixedScrollBlock();
 	}
-
+	
 	initAccordion();
 });
 

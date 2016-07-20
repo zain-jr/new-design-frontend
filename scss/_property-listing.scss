@@ -6,6 +6,7 @@
   #aside {
     width: 25%;
     padding: 10px;
+    border: 4px solid $white;
     @extend .pull-left;
     box-shadow: 0 0 20px -9px rgba($black, 0.5);
 
@@ -146,6 +147,7 @@
 
     @include media('<tablet'){
       padding: 10px 5px 0;
+      margin: 0 0 10px;
     }
 
     .image-holder {
@@ -433,7 +435,7 @@
   border-radius: 4px;
   cursor: pointer;
   position: relative;
-  margin: 0 0 20px;
+  margin: 0 0 10px;
 
   @include media('>=desktop'){ display: none;}
 
