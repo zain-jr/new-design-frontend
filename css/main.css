@@ -1549,6 +1549,12 @@ input[type='submit'] {
 }
 
 @media (max-width: 1023px) {
+  .listing-page #aside.hideOnMobile {
+    display: none;
+  }
+}
+
+@media (max-width: 1023px) {
   .listing-page #aside {
     width: 100%;
     overflow: hidden;
