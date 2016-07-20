@@ -2511,7 +2511,7 @@ h1 span {
   background-attachment: fixed;
   background-size: cover;
   position: relative;
-  z-index: 9;
+  z-index: 991;
   padding: 230px 0 113px;
 }
 
