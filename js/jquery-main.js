@@ -1,5 +1,12 @@
 $(document).ready(function() {
   $(".js-example-basic-single").select2();
+
+  if (screen.width < 768){
+		$('.call-agent-btn').each(function(){
+			var mobileNumber = $(this).attr('data-tel');
+			$(this).attr('href', 'tel:'+mobileNumber)
+		});
+	}
 });
 
 $(document).on('click', '.navigation-toggler', function(){
@@ -28,11 +35,18 @@ $(document).on('focusout', '.PriceField', function(){
 	$('.calculatedPrice').removeClass('priceShow');
 });
 
+$(document).on('click', '.call-agent-btn', function(){
+	var phoneNumber = $(this).attr('data-tel');
+	var placeToGo = $('.call-agent').find('p').text(phoneNumber);
+});
+
 // page init
 jQuery(function(){
   	initCarousel();
 	initSlideShow();
 	initAccordion();
+	initLightbox();
+	initAnchors();
 	
 	if(screen.width >= 768){
 		initFixedScrollBlock();
@@ -106,5 +120,17 @@ function initAccordion() {
 		slider:'>.slide',
 		collapsible:false,
 		animSpeed: 300
+	});
+}
+// smooth anchor links
+function initAnchors() {
+
+	// common case:
+	new SmoothScroll({
+		extraOffset: $('#header').height() || 20,
+		anchorLinks: '.scroll',
+		activeClasses: 'link',
+		wheelBehavior: 'ignore',
+		animDuration: 800
 	});
 }

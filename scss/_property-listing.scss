@@ -152,8 +152,11 @@
     margin: 0 0 20px;
 
     @include media('<tablet'){
-      padding: 10px 5px 0;
+      padding: 5px 5px 0;
       margin: 0 0 10px;
+    }
+    @include media('<phone'){
+      padding: 10px 5px 0;
     }
 
     .image-holder {
@@ -219,11 +222,8 @@
       font-family: $open-sans;
       @include font(13,16);
       color: $p42-default-grey;
-      padding: 0 0 0 10px;
-
-      @include media('<tablet'){
-        position: relative;
-      }
+      padding: 0 0 80px 10px;
+      position: relative;
 
       h1 {
         margin: 0 0 15px;
@@ -322,6 +322,19 @@
           }
         }
       }
+      .links-holder {
+        position: absolute;
+        bottom: 0;
+        left: 10px;
+        right: 0;
+
+        @include media('<tablet'){
+          overflow: visible;
+          clear: both;
+          right: 10px;
+          display: block;
+        }
+      }
       .links-left {
         @extend %pull-left;
         width: 70%;
@@ -368,7 +381,7 @@
 
         @include media('<tablet'){
           position: absolute;
-          top: 40px;
+          top: -40px;
           right: 5px;
           @include font(11,12);
           padding: 0 5px 0 17px;
@@ -406,6 +419,7 @@
         
         @include media('<tablet'){
           padding: 10px 0 0;
+          float: right !important;
         }
 
         li {
