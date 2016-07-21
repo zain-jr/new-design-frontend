@@ -35,7 +35,14 @@ $media-expressions: (
 @import 'property-listing';
 @import 'fancybox';
 
+html {
+  width: 100%;
+  height: 100%;
+}
 body{
+  width: 100%;
+  height: 100%;
+
   &.nav-active{
     height: 100vh;
     overflow: hidden;
@@ -195,6 +202,11 @@ h1 {
 #wrapper {
   @extend %layout;
   position: relative;
+  width: 100%;
+  height: 100%;
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
 }
 #header {
   position: absolute;
@@ -520,8 +532,11 @@ h1 {
     margin: 0 0 50px;
 
     @include media('<widescreen'){
-      padding: 40px 0 0;
+      padding: 92px 0 0;
       margin: 0 0 30px;
+    }
+    @include media('<tablet'){
+      padding: 40px 0 0;
     }
   }
 
@@ -1401,21 +1416,6 @@ h1 {
           padding: 5px;
         }
 
-        .heading {
-          display: block;
-          @extend %text-center;
-          @include font(40,48);
-          font-weight: 500;
-          margin: 0 0 20px;
-          
-          @include media('<widescreen'){
-            @include font(30,35);
-          }
-          @include media('<tablet'){
-            @include font(20,22);
-            margin: 0 0 10px;
-          }
-        }
         .numberOfproperties {
           @extend %listreset;
           @extend %text-left;
@@ -1450,6 +1450,21 @@ h1 {
     }
   }
 }
+.heading {
+    display: block;
+    @extend %text-center;
+    @include font(40,48);
+    font-weight: 500;
+    margin: 0 0 20px;
+    
+    @include media('<widescreen'){
+      @include font(30,35);
+    }
+    @include media('<tablet'){
+      @include font(20,22);
+      margin: 0 0 10px;
+    }
+  }
 .agents {
   background: $white;
   @extend %layout;
@@ -1751,9 +1766,11 @@ h1 {
 #footer {
   background: $p42-background;
   @extend %layout;
-  padding: 7px 20px;
+  display: table-footer-group;
+  height: 1%;
 
   .copyright{
+    padding: 7px 20px;
     @extend %text-right;
 
     @include media('<tablet'){ text-align: center;}
@@ -1916,6 +1933,161 @@ h1 {
   color: $p42-color;
   @extend %text-center;
 }
+.add-to-favorite {
+  position: absolute;
+  top: -4px;
+  left: 5px;
+  @include squar(27px, 30px);
+  background: url('../images/sprite-fav.png') 0 -36px;
+  background-size: cover;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+
+  &.added {
+    background: url('../images/sprite-fav.png') 0 0;
+  }
+}
+.premiumProperty {
+  position: absolute;
+  top: 28px;
+  left: -38px;
+  color: $white;
+  @include font(17, 20);
+  font-weight: 600;
+  background: $green;
+  @extend %text-center;
+  width: 155px;
+  transform: rotate(319deg);
+  -webkit-transform: rotate(319deg);
+  -moz-transform: rotate(319deg);
+  -ms-transform: rotate(319deg);
+}
+.trusted-agent {
+  background: $white;
+  position: relative;
+  @include font(13,17);
+  font-weight: 600;
+  border: 1px solid $p42-default-grey;
+  @include align(top);
+  padding: 0 5px 0 24px;
+  margin: 15px 0 0 10px;
+  box-shadow: 0 1px 7px rgba($black, 0.5);
+
+  span[class^="icon-"],span[class*="icon-"]{
+    position: absolute;
+    top: -10px;
+    left: -1px;
+    @include font(30,23);
+
+    @include media('<tablet'){
+      @include font(21,23);
+    }
+  }
+}
+.quick-links {
+  @extend %listreset;
+  @include align-reset(top, 25,25);
+  margin:0 -5px;
+
+  li {
+    padding: 0 5px 10px;
+
+    a {
+      text-decoration: none;
+      border: 1px solid $p42-color;
+      color: $p42-color;
+      display:  block;
+      border-radius: 4px;
+      padding: 5px;
+      width: auto;
+      transition: background 0.5s ease, color 0.5s ease;
+
+      &:hover {
+        color: $white;
+        background: $p42-color;
+      }
+    }
+  }
+}
+.public-ui-features {
+  color: $p42-default-grey;
+  @extend %listreset;
+
+  @include media('<tablet'){
+    overflow: hidden;
+  }
+
+  li {
+    display: block;
+    @include align-reset(top, 13, 16);
+
+    @include media('<tablet'){
+      float: left;
+    }
+
+    span[class^="icon-"], span[class*="icon-"] {
+      @include align(top);
+      width: 35%;
+      padding: 0;
+    }
+    b {
+      @include align(top);
+      width: 65%;
+      font-weight: 400;
+
+      @include media('<tablet'){ display: none;}
+    }
+    span {
+      padding: 0 5px;
+      width: 75%;
+
+      @include media('<tablet'){
+        width: auto;
+      }
+    }
+    strong {
+      width: 25%;
+      @include font(17,20);
+      font-weight: 700;
+      @extend %text-center;
+      padding: 0 10px 10px;
+      border-left: 1px solid $p42-default-grey;
+
+      @include media('<tablet'){
+        width: auto;
+        padding: 0 5px;
+        @include font(14,17);
+      }
+    }
+  }
+}
+.carousal {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  .mask {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  .slideset{
+    width: 999999px;
+    float: left;
+  }
+  .slide{
+    width: 600px;
+    float: left;
+  }
+  img {
+    @extend %img-res;
+  }
+}
+.paginationCurrent-num-1,
+.current-num{ @extend .hidden;}
 .resize-active * {
   transition: none;
   -webkit-transition: none;

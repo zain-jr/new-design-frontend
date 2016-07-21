@@ -111,6 +111,23 @@
     position: relative;
     padding: 0 31px 0 0;
 
+    &.full-width {
+      width: 100%;
+      display: block;
+      padding: 0;
+
+      .field-holder {
+        width: 100%;
+        display: block;
+      }
+
+      button {
+        position: static;
+        width: 100%;
+        display: block;
+      }
+    }
+
     .field-holder {
       width: 50%;
       padding: 3px;
@@ -170,38 +187,6 @@
 
       a{ display: block;}
 
-      .add-to-favorite {
-        position: absolute;
-        top: -4px;
-        left: 5px;
-        @include squar(27px, 30px);
-        background: url('../images/sprite-fav.png') 0 -36px;
-        background-size: cover;
-        text-decoration: none;
-        transition: all 0.5s ease;
-        -webkit-transition: all 0.5s ease;
-        -moz-transition: all 0.5s ease;
-        -ms-transition: all 0.5s ease;
-
-        &.added {
-          background: url('../images/sprite-fav.png') 0 0;
-        }
-      }
-      .premiumProperty {
-        position: absolute;
-        top: 28px;
-        left: -38px;
-        color: $white;
-        @include font(17, 20);
-        font-weight: 600;
-        background: $green;
-        @extend %text-center;
-        width: 155px;
-        transform: rotate(319deg);
-        -webkit-transform: rotate(319deg);
-        -moz-transform: rotate(319deg);
-        -ms-transform: rotate(319deg);
-      }
       img {
         max-height: 208px;
         min-height: 208px;
@@ -270,58 +255,6 @@
           overflow: hidden;
         }
       }
-      .public-ui-features {
-        color: $p42-default-grey;
-        @extend %listreset;
-
-        @include media('<tablet'){
-          overflow: hidden;
-        }
-
-        li {
-          display: block;
-          @include align-reset(top, 13, 16);
-
-          @include media('<tablet'){
-            float: left;
-          }
-
-          span[class^="icon-"], span[class*="icon-"] {
-            @include align(top);
-            width: 35%;
-            padding: 0;
-          }
-          b {
-            @include align(top);
-            width: 65%;
-            font-weight: 400;
-
-            @include media('<tablet'){ display: none;}
-          }
-          span {
-            padding: 0 5px;
-            width: 75%;
-
-            @include media('<tablet'){
-              width: auto;
-            }
-          }
-          strong {
-            width: 25%;
-            @include font(17,20);
-            font-weight: 700;
-            @extend %text-center;
-            padding: 0 10px 10px;
-            border-left: 1px solid $p42-default-grey;
-
-            @include media('<tablet'){
-              width: auto;
-              padding: 0 5px;
-              @include font(14,17);
-            }
-          }
-        }
-      }
       .links-holder {
         position: absolute;
         bottom: 0;
@@ -371,13 +304,6 @@
         }
       }
       .trusted-agent {
-        position: relative;
-        @include font(13,17);
-        font-weight: 600;
-        border: 1px solid $p42-default-grey;
-        @include align(top);
-        padding: 0 5px 0 24px;
-        margin: 15px 0 0 10px;
 
         @include media('<tablet'){
           position: absolute;
@@ -386,17 +312,6 @@
           @include font(11,12);
           padding: 0 5px 0 17px;
           margin: 3px 0 0 10px;
-        }
-
-        span[class^="icon-"],span[class*="icon-"]{
-          position: absolute;
-          top: -10px;
-          left: -1px;
-          @include font(30,23);
-
-          @include media('<tablet'){
-            @include font(21,23);
-          }
         }
       }
       .company-logo {
@@ -410,9 +325,6 @@
         @include media('<tablet'){ display: none;}
       }
       .quick-links {
-        @extend %listreset;
-        @include align-reset(top, 25,25);
-        margin:0 -5px;
         @extend .pull-left;
         max-width: 115px;
         padding: 32px 0 0;
@@ -420,26 +332,6 @@
         @include media('<tablet'){
           padding: 10px 0 0;
           float: right !important;
-        }
-
-        li {
-          padding: 0 5px 10px;
-
-          a {
-            text-decoration: none;
-            border: 1px solid $p42-color;
-            color: $p42-color;
-            display:  block;
-            border-radius: 4px;
-            padding: 5px;
-            width: auto;
-            transition: background 0.5s ease, color 0.5s ease;
-
-            &:hover {
-              color: $white;
-              background: $p42-color;
-            }
-          }
         }
       }
     }
