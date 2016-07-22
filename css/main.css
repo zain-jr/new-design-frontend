@@ -395,8 +395,8 @@ th {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?2q4ywi");
-  src: url("../fonts/icomoon.eot?2q4ywi#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?2q4ywi") format("truetype"), url("../fonts/icomoon.woff?2q4ywi") format("woff"), url("../fonts/icomoon.svg?2q4ywi#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?uw1ur2");
+  src: url("../fonts/icomoon.eot?uw1ur2#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?uw1ur2") format("truetype"), url("../fonts/icomoon.woff?uw1ur2") format("woff"), url("../fonts/icomoon.svg?uw1ur2#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -413,6 +413,10 @@ th {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-printer:before {
+  content: "\e922";
 }
 
 .icon-avatar:before {
@@ -522,16 +526,12 @@ th {
   content: "\e908";
 }
 
-.icon-minus-square:before {
-  content: "\e91a";
+.icon-eye:before {
+  content: "\e921";
 }
 
-.icon-plus-square:before {
-  content: "\e91b";
-}
-
-.icon-home:before {
-  content: "\e901";
+.icon-views:before {
+  content: "\e921";
 }
 
 .icon-search:before {
@@ -590,6 +590,18 @@ th {
   content: "\e906";
 }
 
+.icon-minus-square:before {
+  content: "\e91a";
+}
+
+.icon-plus-square:before {
+  content: "\e91b";
+}
+
+.icon-home:before {
+  content: "\e901";
+}
+
 .icon-cross:before {
   content: "\e920";
 }
@@ -598,7 +610,7 @@ th {
   content: "\e907";
 }
 
-.listing-page .filters-links, .listing-page .filterChecks, .social-icons, .loginRegister, .main-visualSection .number-of-properties, .mainSearch-form .typeOfBuying, .mainSearch-form .subTypes, .mainSearch-form .inputsHolder, #nav .main-navigation, .news-carousel .news-pagination ul, .topSocities-holder .socities, .topSocities-holder .socities li .caption .numberOfproperties, .agents-logo, .pager, .quick-links, .public-ui-features {
+.listing-page .filters-links, .listing-page .filterChecks, .social-icons, .loginRegister, .main-visualSection .number-of-properties, .mainSearch-form .typeOfBuying, .mainSearch-form .subTypes, .mainSearch-form .inputsHolder, #nav .main-navigation, .news-carousel .news-pagination ul, .topSocities-holder .socities, .topSocities-holder .socities li .caption .numberOfproperties, .agents-logo, .pager, .quick-links, .public-ui-features, .star-rating, .propertyDetail-page .feature-list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -610,7 +622,10 @@ th {
   clear: both;
 }
 
-.logo img, .news-carousel .news-slide img, .carousal img, .propertyDetail-page .propertyImage-slider .slide img {
+.logo img, .news-carousel .news-slide img, .propertyDetail-page .propertyImage-pagination .propertyImage-slide img,
+.propertyDetail-page .propertyImage-pagination .slide img,
+.propertyDetail-page .propertyImage-slider .propertyImage-slide img,
+.propertyDetail-page .propertyImage-slider .slide img {
   width: 100%;
   height: auto;
   display: block;
@@ -631,11 +646,11 @@ th {
   overflow: hidden;
 }
 
-.text-center, h1, .loginRegister li, .main-visualSection, #nav .main-navigation li, .news-carousel .news-pagination ul, .topSocities-holder .socities li a, .heading, .agents-logo li a, .premiumProperty, .public-ui-features li strong {
+.text-center, h1, .loginRegister li, .main-visualSection, #nav .main-navigation li, .news-carousel .news-pagination ul, .topSocities-holder .socities li a, .heading, .agents-logo li a, .premiumProperty, .public-ui-features li strong, .propertyDetail-page .overview-section, .propertyDetail-page .extra-feature-section .small-heading {
   text-align: center;
 }
 
-.text-left, .listing-page .publicProperty-post .caption h1, .mainSearch-form .inputsHolder, #nav, .topSocities-holder .socities li .caption .numberOfproperties, .propertyDetail-page .property-picture-holder h1 {
+.text-left, .listing-page .publicProperty-post .caption h1, .mainSearch-form .inputsHolder, #nav, .topSocities-holder .socities li .caption .numberOfproperties, .propertyDetail-page .property-picture-holder h1, .propertyDetail-page .overview-section .small-heading, .propertyDetail-page .feature .small-heading {
   text-align: left;
 }
 
@@ -643,7 +658,7 @@ th {
   text-align: right;
 }
 
-.text-upparcase, .mainSearch-form button[type="submit"], .submit-query button[type="submit"] {
+.text-upparcase, .mainSearch-form button[type="submit"], .submit-query button[type="submit"], .small-heading {
   text-transform: uppercase;
 }
 
@@ -651,7 +666,7 @@ th {
   text-transform: lowercase;
 }
 
-.text-capital, .select2-container .select2-selection--single .select2-selection__rendered, .mainSearch-form .subTypes {
+.text-capital, .select2-container .select2-selection--single .select2-selection__rendered, .mainSearch-form .subTypes, .views {
   text-transform: capitalize;
 }
 
@@ -659,11 +674,15 @@ th {
   float: left !important;
 }
 
-.pull-right, .listing-page .publicProperty-post .caption .company-logo, .listing-page .publicProperty-post .caption .right-area, .listing-page .publicProperty-post .caption .links-right, .news-carousel, .agent-slider {
+.pull-right, .listing-page .publicProperty-post .caption .company-logo, .listing-page .publicProperty-post .caption .right-area, .listing-page .publicProperty-post .caption .links-right, .news-carousel, .agent-slider, .propertyDetail-page .star-rating {
   float: right !important;
 }
 
-.layout, .listing-page, .listing-page .filter-form, .listing-page .filters-links li .slide, .listing-page .fromTo, .listing-page .publicProperty-post, .listing-page .publicProperty-post .caption, .fake-select, #wrapper, .logo, .main-bg-holder, .main-visualSection, #main, .mainSearch-form .form-holder, .mainSearch-form .inputsHolder li .input-holder, .byDefault-fixed #nav .main-navigation li a span[class^="icon-"], .byDefault-fixed #nav .main-navigation li a span[class*="icon-"], #nav.fixed-position .main-navigation li a span[class^="icon-"], #nav.fixed-position .main-navigation li a span[class*="icon-"], .generic-section, .news-sliderHolder, .news-slideshow, .news-slideshow .mask, .news-slideshow .slideset, .news-carousel, .news-carousel .news-mask, .news-carousel .news-pagination ul a, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .propertyDetail-page {
+.layout, .listing-page, .listing-page .filter-form, .listing-page .filters-links li .slide, .listing-page .fromTo, .listing-page .publicProperty-post, .listing-page .publicProperty-post .caption, .fake-select, #wrapper, .logo, .main-bg-holder, .main-visualSection, #main, .mainSearch-form .form-holder, .mainSearch-form .inputsHolder li .input-holder, .byDefault-fixed #nav .main-navigation li a span[class^="icon-"], .byDefault-fixed #nav .main-navigation li a span[class*="icon-"], #nav.fixed-position .main-navigation li a span[class^="icon-"], #nav.fixed-position .main-navigation li a span[class*="icon-"], .generic-section, .news-sliderHolder, .news-slideshow, .news-slideshow .mask, .news-slideshow .slideset, .news-carousel, .news-carousel .news-mask, .news-carousel .news-pagination ul a, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .propertyDetail-page, .propertyDetail-page .propertyImage-pagination,
+.propertyDetail-page .propertyImage-slider, .propertyDetail-page .propertyImage-pagination .propertyImage-mask,
+.propertyDetail-page .propertyImage-pagination .mask,
+.propertyDetail-page .propertyImage-slider .propertyImage-mask,
+.propertyDetail-page .propertyImage-slider .mask, .propertyDetail-page .overview-section, .propertyDetail-page .extra-feature-section, .propertyDetail-page .feature {
   overflow: hidden;
 }
 
@@ -2290,6 +2309,23 @@ html.nav-active {
 body {
   width: 100%;
   height: 100%;
+  background: url("../images/bg.jpg") no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  z-index: 999999999;
+  position: relative;
+}
+
+body:after {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.85);
+  content: '';
+  z-index: -1;
+  pointer-events: none;
 }
 
 h1 {
@@ -2524,7 +2560,7 @@ h1 span {
   left: 0 !important;
   right: 0 !important;
   z-index: 999 !important;
-  background: #fff !important;
+  background: rgba(222, 225, 227, 0.95) !important;
   box-shadow: 0 0 20px -1px rgba(0, 0, 0, 0.5);
 }
 
@@ -2966,18 +3002,6 @@ h1 span {
   .main-bg-holder.byDefault-fixed {
     padding: 40px 0 0;
   }
-}
-
-.main-bg-holder:after {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  right: 0;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.8);
-  content: '';
-  pointer-events: none;
 }
 
 .main-visualSection {
@@ -4969,26 +4993,54 @@ h1 span {
   }
 }
 
-.carousal {
+.views {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 13px;
+  line-height: 16px;
   position: relative;
-  overflow: hidden;
-  width: 100%;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: #6c6d70;
+  padding: 0 0 0 30px;
 }
 
-.carousal .mask {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
+.views:after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  content: "\e921";
+  font-family: 'icomoon';
+  font-size: 25px;
+  line-height: 1;
+  margin: -12px 0 0;
 }
 
-.carousal .slideset {
-  width: 999999px;
-  float: left;
+.views .number {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 5px;
 }
 
-.carousal .slide {
-  width: 600px;
-  float: left;
+.star-rating {
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+}
+
+.star-rating > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0;
+}
+
+.star-rating li {
+  padding: 0 5px;
+}
+
+.star-rating a {
+  display: block;
 }
 
 .resize-active * {
@@ -4997,8 +5049,13 @@ h1 span {
   -moz-transition: none;
 }
 
-.propertyDetail-page .detail-holder {
+.propertyDetail-page {
   padding: 5px;
+}
+
+.propertyDetail-page .detail-holder {
+  background: #dee1e3;
+  box-shadow: 0 5px 13px rgba(0, 0, 0, 0.5);
 }
 
 .propertyDetail-page .frame {
@@ -5032,10 +5089,40 @@ h1 span {
   margin: 0 0 20px;
 }
 
+.propertyDetail-page .propertyImage-pagination,
+.propertyDetail-page .propertyImage-slider {
+  position: relative;
+  width: 100%;
+}
+
+.propertyDetail-page .propertyImage-pagination .propertyImage-mask,
+.propertyDetail-page .propertyImage-pagination .mask,
+.propertyDetail-page .propertyImage-slider .propertyImage-mask,
 .propertyDetail-page .propertyImage-slider .mask {
+  width: 100% !important;
   margin: 0 -5px;
 }
 
+.propertyDetail-page .propertyImage-pagination .propertyImage-mask:hover .propertyImage-slider-btn-prev, .propertyDetail-page .propertyImage-pagination .propertyImage-mask:hover .propertyImage-slider-btn-next,
+.propertyDetail-page .propertyImage-pagination .propertyImage-mask:hover .propertyImage-pagination-btn-prev-1, .propertyDetail-page .propertyImage-pagination .propertyImage-mask:hover .propertyImage-pagination-btn-next-1,
+.propertyDetail-page .propertyImage-pagination .mask:hover .propertyImage-slider-btn-prev,
+.propertyDetail-page .propertyImage-pagination .mask:hover .propertyImage-slider-btn-next,
+.propertyDetail-page .propertyImage-pagination .mask:hover .propertyImage-pagination-btn-prev-1,
+.propertyDetail-page .propertyImage-pagination .mask:hover .propertyImage-pagination-btn-next-1,
+.propertyDetail-page .propertyImage-slider .propertyImage-mask:hover .propertyImage-slider-btn-prev,
+.propertyDetail-page .propertyImage-slider .propertyImage-mask:hover .propertyImage-slider-btn-next,
+.propertyDetail-page .propertyImage-slider .propertyImage-mask:hover .propertyImage-pagination-btn-prev-1,
+.propertyDetail-page .propertyImage-slider .propertyImage-mask:hover .propertyImage-pagination-btn-next-1,
+.propertyDetail-page .propertyImage-slider .mask:hover .propertyImage-slider-btn-prev,
+.propertyDetail-page .propertyImage-slider .mask:hover .propertyImage-slider-btn-next,
+.propertyDetail-page .propertyImage-slider .mask:hover .propertyImage-pagination-btn-prev-1,
+.propertyDetail-page .propertyImage-slider .mask:hover .propertyImage-pagination-btn-next-1 {
+  display: block;
+}
+
+.propertyDetail-page .propertyImage-pagination .propertyImage-slideset,
+.propertyDetail-page .propertyImage-pagination .slideset,
+.propertyDetail-page .propertyImage-slider .propertyImage-slideset,
 .propertyDetail-page .propertyImage-slider .slideset {
   width: 100% !important;
   font-size: 0 !important;
@@ -5044,6 +5131,9 @@ h1 span {
   white-space: nowrap !important;
 }
 
+.propertyDetail-page .propertyImage-pagination .propertyImage-slide,
+.propertyDetail-page .propertyImage-pagination .slide,
+.propertyDetail-page .propertyImage-slider .propertyImage-slide,
 .propertyDetail-page .propertyImage-slider .slide {
   display: inline-block !important;
   vertical-align: middle !important;
@@ -5053,4 +5143,92 @@ h1 span {
   letter-spacing: 0 !important;
   float: none !important;
   padding: 0 5px 5px;
+}
+
+.propertyDetail-page .propertyImage-pagination .propertyImage-slide {
+  width: 20% !important;
+}
+
+.propertyDetail-page .propertyImage-pagination .propertyImage-slide img {
+  max-width: 155px;
+  max-height: 95px;
+  min-width: 155px;
+  min-height: 95px;
+}
+
+.propertyDetail-page .propertyImage-slider-btn-prev, .propertyDetail-page .propertyImage-slider-btn-next,
+.propertyDetail-page .propertyImage-pagination-btn-prev-1, .propertyDetail-page .propertyImage-pagination-btn-next-1 {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  text-decoration: none;
+  color: #57b3e5;
+  margin: -20px 0 0;
+  display: none;
+}
+
+.propertyDetail-page .propertyImage-slider-btn-prev span[class^="icon-"], .propertyDetail-page .propertyImage-slider-btn-prev span[class*="icon-"], .propertyDetail-page .propertyImage-slider-btn-next span[class^="icon-"], .propertyDetail-page .propertyImage-slider-btn-next span[class*="icon-"],
+.propertyDetail-page .propertyImage-pagination-btn-prev-1 span[class^="icon-"],
+.propertyDetail-page .propertyImage-pagination-btn-prev-1 span[class*="icon-"], .propertyDetail-page .propertyImage-pagination-btn-next-1 span[class^="icon-"], .propertyDetail-page .propertyImage-pagination-btn-next-1 span[class*="icon-"] {
+  font-size: 40px;
+  line-height: 1;
+}
+
+.propertyDetail-page .propertyImage-slider-btn-next, .propertyDetail-page .propertyImage-pagination-btn-next-1 {
+  left: auto;
+  right: 20px;
+}
+
+.propertyDetail-page .overview-section {
+  background: #fff;
+  margin: 10px;
+  display: block;
+  padding: 20px;
+  color: #6c6d70;
+}
+
+.propertyDetail-page .extra-feature-section {
+  margin: 10px;
+  border-radius: 8px;
+  border: 1px solid #6c6d70;
+  padding: 20px;
+}
+
+.propertyDetail-page .extra-feature-section .small-heading {
+  border-bottom: 1px solid #6c6d70;
+  margin: 0 0 20px;
+  padding: 0 0 20px;
+}
+
+.propertyDetail-page .feature .small-heading {
+  border: 0;
+  margin: 0;
+}
+
+.propertyDetail-page .feature-list {
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+}
+
+.propertyDetail-page .feature-list > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0;
+}
+
+.propertyDetail-page .feature-list li {
+  width: 33.33%;
+}
+
+.small-heading {
+  display: block;
+  color: #6c6d70;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 24px;
+  padding: 0 0 10px;
 }

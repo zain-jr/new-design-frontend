@@ -10,7 +10,7 @@ $(document).ready(function() {
 });
 
 $(document).on('click', '.propertyImage-slider-btn-next, .propertyImage-slider-btn-prev', function(){
-	var windowSize = 6;
+	var windowSize = 5;
 	var currentSlideNumber = parseInt($('#propertyImageCurrentSlide').text());
 	var currentSlideRemainder = currentSlideNumber/ windowSize;
 	var currentSlideRemainderCeil = Math.ceil(currentSlideRemainder);
