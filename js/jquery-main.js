@@ -34,7 +34,7 @@ $(document).on('click', '.propertyImage-slider-btn-next, .propertyImage-slider-b
 });
 
 $(document).on('click', '.navigation-toggler', function(){
-	$('body').toggleClass('nav-active');
+	$('html').toggleClass('nav-active');
 });
 
 $(document).on('click', '.filters-links-opener', function(){
