@@ -33,6 +33,7 @@ $media-expressions: (
 @import 'base/forms';
 @import 'select2-min';
 @import 'property-listing';
+@import 'property-detail';
 @import 'fancybox';
 
 html {
@@ -2086,77 +2087,61 @@ h1 {
     padding: 0 5px;
   }
 }
+
 .star-rating {
-  @extend %listreset;
-  @extend %layout;
-  background: url('../images/star-rating.png') repeat-x 0 -21px;
-  @include squar(76px, 15px);
-  position: relative;
-
-  li {
-    float: left;
-    position: relative;
-
-    &.active, 
-    &.setted {
-      a {
-        background: url('../images/star-rating.png') 0 0;
-        left: 0;
-        z-index: 4;
-      }
-
-    }
-    &.setted a,
-    &.setted a:hover {
-      background-position: 0 -21px;
-      left: 0;
-      z-index: 4;
-    }
-  }
-  a {
-    @include squar(15px, 15px);
-    text-indent: -9000px;
-    display: block;
-    position: absolute;
-    z-index: 5;
-
-    &:hover {
-      background: url('../images/star-rating.png') 0 0;
-      left: 0;
-    }
-
-    &.one-star {
-      left: 15px;
-      &:hover {
-        width: 15px;
-      }
-    }
-    &.two-star {
-      left: 30px;
-      &:hover {
-        width: 30px;
-      }
-    }
-    &.three-star {
-      left: 45px;
-      &:hover {
-        width: 45px;
-      }
-    }
-    &.four-star {
-      left: 60px;
-      &:hover {
-        width: 60px;
-      }
-    }
-    &.five-star {
-      left: 75px;
-      &:hover {
-        width: 75px;
-      }
-    }
-  }
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	width:120px;
+	height:24px;
+	position:relative;
+	background:url(../images/star-setted.gif) repeat-x;
+	overflow: hidden;
 }
+.star-rating li{
+	float:left;
+}
+.star-rating li a{
+	display:block;
+	width:24px;
+	height:24px;
+	text-decoration:none;
+	text-indent:-9000px;
+	z-index:2;
+	position:absolute;
+}
+.star-rating li a:hover,
+.star-rating li.active a,
+.star-rating li.setted a{
+	background:url(../images/star-setted.gif) 0 -24px;
+	z-index:1;
+	left:0px;
+}
+.star-rating li.setted a,
+.star-rating li.setted a:hover {
+	background-position: 0 100%;
+}
+.star-rating a.one-star{left:0px;}
+.star-rating a.one-star:hover,
+.star-rating li.active a.one-star,
+.star-rating li.setted a.one-star{width:24px;}
+.star-rating a.two-stars{left:24px;}
+.star-rating a.two-stars:hover,
+.star-rating li.active a.two-stars,
+.star-rating li.setted a.two-stars{width:48px;}
+.star-rating a.three-stars{left:48px;}
+.star-rating a.three-stars:hover,
+.star-rating li.active a.three-stars,
+.star-rating li.setted a.three-stars{width:72px;}
+.star-rating a.four-stars{left:72px;}
+.star-rating a.four-stars:hover,
+.star-rating li.active a.four-stars,
+.star-rating li.setted a.four-stars{width:96px;}
+.star-rating a.five-stars{left:96px;}
+.star-rating a.five-stars:hover,
+.star-rating li.active a.five-stars,
+.star-rating li.setted a.five-stars{width:120px;}
+
 .paginationCurrent-num-1,
 .current-num{ @extend .hidden;}
 .resize-active * {
@@ -2165,267 +2150,6 @@ h1 {
   -moz-transition: none;
 }
 
-.propertyDetail-page {
-  @extend %layout;
-  padding: 5px;
-
-  .detail-holder {
-    box-shadow: 0 5px 13px rgba($black , 0.5);
-    padding: 0 305px 10px 0;
-    margin: 0 0 50px;
-    position: relative;
-    background: $p42-background;
-    
-  }
-  .frame {
-    display: block;
-    width: 100%;
-  }
-  .info-blockProperty {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 91;
-    width: 100%;
-    max-width: 305px;
-    box-shadow: -7px 0 15px rgba($black , 0.15);
-    padding: 8px;
-    
-    .pull-left, .pull-right {
-      width: 50%;
-    }
-
-    .price {
-      @include font(38,40);
-      @extend %text-center;
-      box-shadow: 0 5px 15px -5px rgba($black, 0.5);
-      padding: 10px;
-      margin: 0 0 20px;
-    }
-    .pictureHolder {
-      width: 145px;
-      margin: 0 auto 10px;
-      @extend %layout;
-      height: 145px;
-      white-space: nowrap;
-      background: $white;
-
-      &:after {
-        @include align(middle);
-        height: 145px;
-        overflow: hidden;
-        margin: 0 0 0 -5px;
-        content: '';
-      }
-
-      img {
-        @include align(middle);
-        white-space: normal;
-        @extend %img-res;
-      }
-    }
-    .heading {
-      color: $p42-color;
-      font-family: $open-sans;
-      @include font(21,24);
-      font-weight: 700;
-      margin: 0 0 10px;
-    }
-    .quick-links {
-      @extend %pull-right;
-      padding: 8px 0 0;
-    }
-    .small-heading {
-      @extend %text-center;
-      padding: 10px 0;
-      text-transform: normal;
-    }
-    .star-rating {
-      margin: 0;
-
-      li {
-        padding: 0;
-      }
-    }
-    .timeOfAddedProperty {
-      padding: 50px 0 0;
-    }
-  }
-  .property-picture-holder {
-    width: 100%;
-    background:$p42-background;
-    padding: 10px;
-
-    h1 {
-      @extend %text-left;
-      font-weight: 700;
-      font-family: $open-sans;
-      @include font(27,30);
-      margin: 0 0 20px;
-    }
-    
-    .star-rating {
-      @extend %pull-right;
-    }
-    .quick-links {
-      padding: 7px 0 0;
-    }
-  }
-  .propertyImage-pagination,
-  .propertyImage-slider {
-    position: relative;
-    width: 100%;
-    @extend %layout;
-
-    .propertyImage-mask,
-    .mask {
-      @extend %layout;
-      width: 100% !important;
-      margin: 0 -5px;
-
-       &:hover {
-         .propertyImage-slider-btn-prev, .propertyImage-slider-btn-next,
-        .propertyImage-pagination-btn-prev-1, .propertyImage-pagination-btn-next-1 { display: block;}
-        }
-    }
-    .propertyImage-slideset,
-    .slideset {
-      width: 100% !important;
-      font-size:0 !important;
-      line-height: 0 !important;
-      letter-spacing: -4px !important;
-      white-space: nowrap !important;
-    }
-    .propertyImage-slide,
-    .slide {
-      display: inline-block !important;
-      vertical-align: middle !important;
-      width: 100% !important;
-      font-size: 14px !important;
-      line-height: 17px !important;
-      letter-spacing: 0 !important;
-      float: none !important;
-      padding: 0 5px 5px;
-
-      img {
-        @extend  %img-res;
-      }
-    }
-  }
-  .propertyImage-pagination {
-    .propertyImage-slide {
-      width: 20% !important;
-
-      img {
-        max-width: 155px;
-        max-height: 95px;
-        min-width: 155px;
-        min-height: 95px;
-      }
-    }
-  }
-  .propertyImage-slider-btn-prev, .propertyImage-slider-btn-next,
-  .propertyImage-pagination-btn-prev-1, .propertyImage-pagination-btn-next-1 {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    text-decoration: none;
-    margin: -20px 0 0;
-    display: none;
-
-    span[class^="icon-"],span[class*="icon-"]{
-      font-size: 40px;
-      line-height: 1;
-    }
-  }
-  .propertyImage-slider-btn-next, .propertyImage-pagination-btn-next-1 {
-    left: auto;
-    right: 20px;
-  }
-  .overview-section {
-    @extend %layout;
-    background: $white;
-    margin: 10px;
-    display: block;
-    padding: 20px;
-    @extend %text-center;
-    color: $p42-default-grey;
-
-    .small-heading {
-      @extend %text-left;
-      @extend .pull-left;
-      padding: 0;
-    }
-    .btn-hollow {
-      @extend .pull-right;
-    }
-    .layout{
-      padding: 0 0 15px;
-    }
-  }
-  .extra-feature-section {
-    margin: 10px;
-    @extend %layout;
-    border-radius: 8px;
-    border: 1px solid $p42-default-grey;
-    padding: 20px;
-
-    .small-heading {
-      @extend %text-center;
-      border-bottom: 1px solid $p42-default-grey;
-      margin: 0 0 20px;
-      padding: 0 0 20px;
-    }
-  }
-  .trusted-agent {
-    margin: 15px 0 10px;
-  }
-  .feature {
-    @extend %layout;
-    margin: 0 0 25px;
-
-    .small-heading {
-      @extend %text-left;
-      border: 0;
-      margin: 0;
-    }
-  }
-  .feature-list {
-    @extend %listreset;
-    @include align-reset(top, 17,22);
-    color: $p42-default-grey;
-    margin: 0 -1px;
-
-    li {
-      width: 33.33%;
-      color: $p42-default-grey;
-      @include align-reset(top, 17,22);
-      padding: 5px 10px 10px;
-      border-left: 1px solid $dark-grey;
-
-      span[class^="icon-"],span[class*="icon-"]{
-        font-size: 14px;
-        line-height: 1;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        margin: -7px 0 0;
-      }
-
-      .text-feature , .stataus {
-        width: 50%;
-        position: relative;
-      }
-      .text-feature {
-        padding: 0 0 0 30px;
-      }
-      .stataus {
-        @extend %text-right;
-        font-weight: bold;
-      }
-    }
-  }
-}
 .sumery-list {
   @extend %listreset;
 
