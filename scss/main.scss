@@ -2088,14 +2088,73 @@ h1 {
 }
 .star-rating {
   @extend %listreset;
-  @include align-reset(top, 12,12);
-  margin: 0 -5px;
+  @extend %layout;
+  background: url('../images/star-rating.png') repeat-x 0 -21px;
+  @include squar(76px, 15px);
+  position: relative;
 
   li {
-    padding: 0 5px;
+    float: left;
+    position: relative;
+
+    &.active, 
+    &.setted {
+      a {
+        background: url('../images/star-rating.png') 0 0;
+        left: 0;
+        z-index: 4;
+      }
+
+    }
+    &.setted a,
+    &.setted a:hover {
+      background-position: 0 -21px;
+      left: 0;
+      z-index: 4;
+    }
   }
   a {
+    @include squar(15px, 15px);
+    text-indent: -9000px;
     display: block;
+    position: absolute;
+    z-index: 5;
+
+    &:hover {
+      background: url('../images/star-rating.png') 0 0;
+      left: 0;
+    }
+
+    &.one-star {
+      left: 15px;
+      &:hover {
+        width: 15px;
+      }
+    }
+    &.two-star {
+      left: 30px;
+      &:hover {
+        width: 30px;
+      }
+    }
+    &.three-star {
+      left: 45px;
+      &:hover {
+        width: 45px;
+      }
+    }
+    &.four-star {
+      left: 60px;
+      &:hover {
+        width: 60px;
+      }
+    }
+    &.five-star {
+      left: 75px;
+      &:hover {
+        width: 75px;
+      }
+    }
   }
 }
 .paginationCurrent-num-1,
@@ -2113,6 +2172,7 @@ h1 {
   .detail-holder {
     box-shadow: 0 5px 13px rgba($black , 0.5);
     padding: 0 305px 10px 0;
+    margin: 0 0 50px;
     position: relative;
     background: $p42-background;
     
@@ -2293,6 +2353,14 @@ h1 {
 
     .small-heading {
       @extend %text-left;
+      @extend .pull-left;
+      padding: 0;
+    }
+    .btn-hollow {
+      @extend .pull-right;
+    }
+    .layout{
+      padding: 0 0 15px;
     }
   }
   .extra-feature-section {
@@ -2394,4 +2462,34 @@ h1 {
   @include font(21,24);
   padding: 0 0 10px;
   @extend %text-upparcase;
+}
+.btn-hollow {
+  @include align(top);
+  @extend %text-upparcase;
+  @include font(14,18);
+  color: $p42-color;
+  border: 1px solid $p42-color;
+  border-radius: 2px;
+  text-decoration: none;
+  font-weight: 700;
+  position: relative;
+  padding: 10px 10px 10px 35px;
+  transition: color 0.5s ease, background 0.5s ease;
+  -webkit-transition: color 0.5s ease, background 0.5s ease;
+  -moz-transition: color 0.5s ease, background 0.5s ease;
+  -ms-transition: color 0.5s ease, background 0.5s ease;
+
+  span[class^="icon-"],span[class*="icon-"]{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    font-size: 22px;
+    line-height: 1;
+    margin: -11px 0 0;
+  }
+
+  &:hover {
+    color: $white;
+    background: $p42-color;
+  }
 }

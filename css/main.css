@@ -658,7 +658,7 @@ th {
   text-align: right;
 }
 
-.text-upparcase, .mainSearch-form button[type="submit"], .submit-query button[type="submit"], .small-heading {
+.text-upparcase, .mainSearch-form button[type="submit"], .submit-query button[type="submit"], .small-heading, .btn-hollow {
   text-transform: uppercase;
 }
 
@@ -670,15 +670,15 @@ th {
   text-transform: capitalize;
 }
 
-.pull-left, .listing-page #aside, .listing-page #content, .listing-page .publicProperty-post .image-holder, .listing-page .publicProperty-post .caption .quick-links, .listing-page .publicProperty-post .caption .left-area, .listing-page .publicProperty-post .caption .links-left, .news-slideshow .slide .caption, .agents .left-side {
+.pull-left, .listing-page #aside, .listing-page #content, .listing-page .publicProperty-post .image-holder, .listing-page .publicProperty-post .caption .quick-links, .propertyDetail-page .overview-section .small-heading, .listing-page .publicProperty-post .caption .left-area, .listing-page .publicProperty-post .caption .links-left, .news-slideshow .slide .caption, .agents .left-side {
   float: left !important;
 }
 
-.pull-right, .listing-page .publicProperty-post .caption .company-logo, .listing-page .publicProperty-post .caption .right-area, .listing-page .publicProperty-post .caption .links-right, .news-carousel, .agent-slider, .propertyDetail-page .info-blockProperty .quick-links, .propertyDetail-page .property-picture-holder .star-rating {
+.pull-right, .listing-page .publicProperty-post .caption .company-logo, .propertyDetail-page .overview-section .btn-hollow, .listing-page .publicProperty-post .caption .right-area, .listing-page .publicProperty-post .caption .links-right, .news-carousel, .agent-slider, .propertyDetail-page .info-blockProperty .quick-links, .propertyDetail-page .property-picture-holder .star-rating {
   float: right !important;
 }
 
-.layout, .listing-page, .listing-page .filter-form, .listing-page .filters-links li .slide, .listing-page .fromTo, .listing-page .publicProperty-post, .listing-page .publicProperty-post .caption, .fake-select, #wrapper, .logo, .main-bg-holder, .main-visualSection, #main, .mainSearch-form .form-holder, .mainSearch-form .inputsHolder li .input-holder, .byDefault-fixed #nav .main-navigation li a span[class^="icon-"], .byDefault-fixed #nav .main-navigation li a span[class*="icon-"], #nav.fixed-position .main-navigation li a span[class^="icon-"], #nav.fixed-position .main-navigation li a span[class*="icon-"], .generic-section, .news-sliderHolder, .news-slideshow, .news-slideshow .mask, .news-slideshow .slideset, .news-carousel, .news-carousel .news-mask, .news-carousel .news-pagination ul a, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .propertyDetail-page, .propertyDetail-page .info-blockProperty .pictureHolder, .propertyDetail-page .propertyImage-pagination,
+.layout, .listing-page, .listing-page .filter-form, .listing-page .filters-links li .slide, .listing-page .fromTo, .listing-page .publicProperty-post, .listing-page .publicProperty-post .caption, .fake-select, #wrapper, .logo, .main-bg-holder, .main-visualSection, #main, .mainSearch-form .form-holder, .mainSearch-form .inputsHolder li .input-holder, .byDefault-fixed #nav .main-navigation li a span[class^="icon-"], .byDefault-fixed #nav .main-navigation li a span[class*="icon-"], #nav.fixed-position .main-navigation li a span[class^="icon-"], #nav.fixed-position .main-navigation li a span[class*="icon-"], .generic-section, .news-sliderHolder, .news-slideshow, .news-slideshow .mask, .news-slideshow .slideset, .news-carousel, .news-carousel .news-mask, .news-carousel .news-pagination ul a, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .star-rating, .propertyDetail-page, .propertyDetail-page .info-blockProperty .pictureHolder, .propertyDetail-page .propertyImage-pagination,
 .propertyDetail-page .propertyImage-slider, .propertyDetail-page .propertyImage-pagination .propertyImage-mask,
 .propertyDetail-page .propertyImage-pagination .mask,
 .propertyDetail-page .propertyImage-slider .propertyImage-mask,
@@ -5022,26 +5022,82 @@ h1 span {
 }
 
 .star-rating {
-  font-size: 0;
-  line-height: 0;
-  letter-spacing: -4px;
-  margin: 0 -5px;
-}
-
-.star-rating > * {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 12px;
-  line-height: 12px;
-  letter-spacing: 0;
+  background: url("../images/star-rating.png") repeat-x 0 -21px;
+  width: 76px;
+  height: 15px;
+  position: relative;
 }
 
 .star-rating li {
-  padding: 0 5px;
+  float: left;
+  position: relative;
+}
+
+.star-rating li.active a, .star-rating li.setted a {
+  background: url("../images/star-rating.png") 0 0;
+  left: 0;
+  z-index: 4;
+}
+
+.star-rating li.setted a,
+.star-rating li.setted a:hover {
+  background-position: 0 -21px;
+  left: 0;
+  z-index: 4;
 }
 
 .star-rating a {
+  width: 15px;
+  height: 15px;
+  text-indent: -9000px;
   display: block;
+  position: absolute;
+  z-index: 5;
+}
+
+.star-rating a:hover {
+  background: url("../images/star-rating.png") 0 0;
+  left: 0;
+}
+
+.star-rating a.one-star {
+  left: 15px;
+}
+
+.star-rating a.one-star:hover {
+  width: 15px;
+}
+
+.star-rating a.two-star {
+  left: 30px;
+}
+
+.star-rating a.two-star:hover {
+  width: 30px;
+}
+
+.star-rating a.three-star {
+  left: 45px;
+}
+
+.star-rating a.three-star:hover {
+  width: 45px;
+}
+
+.star-rating a.four-star {
+  left: 60px;
+}
+
+.star-rating a.four-star:hover {
+  width: 60px;
+}
+
+.star-rating a.five-star {
+  left: 75px;
+}
+
+.star-rating a.five-star:hover {
+  width: 75px;
 }
 
 .resize-active * {
@@ -5057,6 +5113,7 @@ h1 span {
 .propertyDetail-page .detail-holder {
   box-shadow: 0 5px 13px rgba(0, 0, 0, 0.5);
   padding: 0 305px 10px 0;
+  margin: 0 0 50px;
   position: relative;
   background: #dee1e3;
 }
@@ -5077,7 +5134,7 @@ h1 span {
   padding: 8px;
 }
 
-.propertyDetail-page .info-blockProperty .pull-left, .propertyDetail-page .info-blockProperty .listing-page #aside, .listing-page .propertyDetail-page .info-blockProperty #aside, .propertyDetail-page .info-blockProperty .listing-page #content, .listing-page .propertyDetail-page .info-blockProperty #content, .propertyDetail-page .info-blockProperty .listing-page .publicProperty-post .image-holder, .listing-page .publicProperty-post .propertyDetail-page .info-blockProperty .image-holder, .propertyDetail-page .info-blockProperty .listing-page .publicProperty-post .caption .quick-links, .listing-page .publicProperty-post .caption .propertyDetail-page .info-blockProperty .quick-links, .propertyDetail-page .info-blockProperty .pull-right, .propertyDetail-page .info-blockProperty .listing-page .publicProperty-post .caption .company-logo, .listing-page .publicProperty-post .caption .propertyDetail-page .info-blockProperty .company-logo {
+.propertyDetail-page .info-blockProperty .pull-left, .propertyDetail-page .info-blockProperty .listing-page #aside, .listing-page .propertyDetail-page .info-blockProperty #aside, .propertyDetail-page .info-blockProperty .listing-page #content, .listing-page .propertyDetail-page .info-blockProperty #content, .propertyDetail-page .info-blockProperty .listing-page .publicProperty-post .image-holder, .listing-page .publicProperty-post .propertyDetail-page .info-blockProperty .image-holder, .propertyDetail-page .info-blockProperty .listing-page .publicProperty-post .caption .quick-links, .listing-page .publicProperty-post .caption .propertyDetail-page .info-blockProperty .quick-links, .propertyDetail-page .info-blockProperty .overview-section .small-heading, .propertyDetail-page .overview-section .info-blockProperty .small-heading, .propertyDetail-page .info-blockProperty .pull-right, .propertyDetail-page .info-blockProperty .listing-page .publicProperty-post .caption .company-logo, .listing-page .publicProperty-post .caption .propertyDetail-page .info-blockProperty .company-logo, .propertyDetail-page .info-blockProperty .overview-section .btn-hollow, .propertyDetail-page .overview-section .info-blockProperty .btn-hollow {
   width: 50%;
 }
 
@@ -5257,6 +5314,14 @@ h1 span {
   color: #6c6d70;
 }
 
+.propertyDetail-page .overview-section .small-heading {
+  padding: 0;
+}
+
+.propertyDetail-page .overview-section .layout {
+  padding: 0 0 15px;
+}
+
 .propertyDetail-page .extra-feature-section {
   margin: 10px;
   border-radius: 8px;
@@ -5385,4 +5450,36 @@ h1 span {
   font-size: 21px;
   line-height: 24px;
   padding: 0 0 10px;
+}
+
+.btn-hollow {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 18px;
+  color: #2092d0;
+  border: 1px solid #2092d0;
+  border-radius: 2px;
+  text-decoration: none;
+  font-weight: 700;
+  position: relative;
+  padding: 10px 10px 10px 35px;
+  transition: color 0.5s ease, background 0.5s ease;
+  -webkit-transition: color 0.5s ease, background 0.5s ease;
+  -moz-transition: color 0.5s ease, background 0.5s ease;
+  -ms-transition: color 0.5s ease, background 0.5s ease;
+}
+
+.btn-hollow span[class^="icon-"], .btn-hollow span[class*="icon-"] {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  font-size: 22px;
+  line-height: 1;
+  margin: -11px 0 0;
+}
+
+.btn-hollow:hover {
+  color: #fff;
+  background: #2092d0;
 }
