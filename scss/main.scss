@@ -2086,6 +2086,7 @@ h1 {
   -webkit-transition: none;
   -moz-transition: none;
 }
+
 .propertyDetail-page {
   @extend %layout;
 
@@ -2110,6 +2111,7 @@ h1 {
   .property-picture-holder {
     width: 100%;
     background:$p42-background;
+    padding: 10px;
 
     h1 {
       @extend %text-left;

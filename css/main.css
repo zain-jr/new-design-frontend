@@ -5021,6 +5021,7 @@ h1 span {
 .propertyDetail-page .property-picture-holder {
   width: 100%;
   background: #dee1e3;
+  padding: 10px;
 }
 
 .propertyDetail-page .property-picture-holder h1 {
