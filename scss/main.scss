@@ -1926,13 +1926,6 @@ h1 {
 	overflow: hidden;
 	height: 0;
 }
-.call-agent {
-  @include font(20, 22);
-  padding: 35px 0 0;
-  font-weight: 600;
-  color: $p42-color;
-  @extend %text-center;
-}
 .add-to-favorite {
   position: absolute;
   top: -4px;
@@ -2095,4 +2088,62 @@ h1 {
 }
 .propertyDetail-page {
   @extend %layout;
+
+  .detail-holder {
+    padding: 5px;
+  }
+  .frame {
+    display: block;
+    width: 100%;
+    position: relative;
+    padding: 0 305px 0 0;
+  }
+  .info-blockProperty {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 91;
+    width: 100%;
+    max-width: 305px;
+    background: $p42-background;
+  }
+  .property-picture-holder {
+    width: 100%;
+    background:$p42-background;
+
+    h1 {
+      @extend %text-left;
+      font-weight: 700;
+      font-family: $open-sans;
+      @include font(27,30);
+      margin: 0 0 20px;
+    }
+  }
+  .propertyImage-slider {
+
+    .mask {
+      margin: 0 -5px;
+    }
+    .slideset {
+      width: 100% !important;
+      font-size:0 !important;
+      line-height: 0 !important;
+      letter-spacing: -4px !important;
+      white-space: nowrap !important;
+    }
+    .slide {
+      display: inline-block !important;
+      vertical-align: middle !important;
+      width: 100% !important;
+      font-size: 14px !important;
+      line-height: 17px !important;
+      letter-spacing: 0 !important;
+      float: none !important;
+      padding: 0 5px 5px;
+
+      img {
+        @extend  %img-res;
+      }
+    }
+  }
 }
