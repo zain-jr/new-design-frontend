@@ -2093,3 +2093,6 @@ h1 {
   -webkit-transition: none;
   -moz-transition: none;
 }
+.propertyDetail-page {
+  @extend %layout;
+}
