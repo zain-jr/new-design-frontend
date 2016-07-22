@@ -610,7 +610,7 @@ th {
   content: "\e907";
 }
 
-.listing-page .filters-links, .listing-page .filterChecks, .social-icons, .loginRegister, .main-visualSection .number-of-properties, .mainSearch-form .typeOfBuying, .mainSearch-form .subTypes, .mainSearch-form .inputsHolder, #nav .main-navigation, .news-carousel .news-pagination ul, .topSocities-holder .socities, .topSocities-holder .socities li .caption .numberOfproperties, .agents-logo, .pager, .quick-links, .public-ui-features, .star-rating, .propertyDetail-page .feature-list {
+.listing-page .filters-links, .listing-page .filterChecks, .social-icons, .loginRegister, .main-visualSection .number-of-properties, .mainSearch-form .typeOfBuying, .mainSearch-form .subTypes, .mainSearch-form .inputsHolder, #nav .main-navigation, .news-carousel .news-pagination ul, .topSocities-holder .socities, .topSocities-holder .socities li .caption .numberOfproperties, .agents-logo, .pager, .quick-links, .public-ui-features, .star-rating, .propertyDetail-page .feature-list, .sumery-list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -622,7 +622,7 @@ th {
   clear: both;
 }
 
-.logo img, .news-carousel .news-slide img, .propertyDetail-page .propertyImage-pagination .propertyImage-slide img,
+.logo img, .news-carousel .news-slide img, .propertyDetail-page .info-blockProperty .pictureHolder img, .propertyDetail-page .propertyImage-pagination .propertyImage-slide img,
 .propertyDetail-page .propertyImage-pagination .slide img,
 .propertyDetail-page .propertyImage-slider .propertyImage-slide img,
 .propertyDetail-page .propertyImage-slider .slide img {
@@ -646,7 +646,7 @@ th {
   overflow: hidden;
 }
 
-.text-center, h1, .loginRegister li, .main-visualSection, #nav .main-navigation li, .news-carousel .news-pagination ul, .topSocities-holder .socities li a, .heading, .agents-logo li a, .premiumProperty, .public-ui-features li strong, .propertyDetail-page .overview-section, .propertyDetail-page .extra-feature-section .small-heading {
+.text-center, h1, .loginRegister li, .main-visualSection, #nav .main-navigation li, .news-carousel .news-pagination ul, .topSocities-holder .socities li a, .heading, .agents-logo li a, .premiumProperty, .public-ui-features li strong, .propertyDetail-page .info-blockProperty .price, .propertyDetail-page .info-blockProperty .small-heading, .propertyDetail-page .overview-section, .propertyDetail-page .extra-feature-section .small-heading {
   text-align: center;
 }
 
@@ -654,7 +654,7 @@ th {
   text-align: left;
 }
 
-.text-right, .topSocities-holder .socities li .caption .numberOfproperties li span:last-child, #footer .copyright {
+.text-right, .topSocities-holder .socities li .caption .numberOfproperties li span:last-child, #footer .copyright, .propertyDetail-page .feature-list li .stataus, .sumery-list li .quantity {
   text-align: right;
 }
 
@@ -674,11 +674,11 @@ th {
   float: left !important;
 }
 
-.pull-right, .listing-page .publicProperty-post .caption .company-logo, .listing-page .publicProperty-post .caption .right-area, .listing-page .publicProperty-post .caption .links-right, .news-carousel, .agent-slider, .propertyDetail-page .star-rating {
+.pull-right, .listing-page .publicProperty-post .caption .company-logo, .listing-page .publicProperty-post .caption .right-area, .listing-page .publicProperty-post .caption .links-right, .news-carousel, .agent-slider, .propertyDetail-page .info-blockProperty .quick-links, .propertyDetail-page .property-picture-holder .star-rating {
   float: right !important;
 }
 
-.layout, .listing-page, .listing-page .filter-form, .listing-page .filters-links li .slide, .listing-page .fromTo, .listing-page .publicProperty-post, .listing-page .publicProperty-post .caption, .fake-select, #wrapper, .logo, .main-bg-holder, .main-visualSection, #main, .mainSearch-form .form-holder, .mainSearch-form .inputsHolder li .input-holder, .byDefault-fixed #nav .main-navigation li a span[class^="icon-"], .byDefault-fixed #nav .main-navigation li a span[class*="icon-"], #nav.fixed-position .main-navigation li a span[class^="icon-"], #nav.fixed-position .main-navigation li a span[class*="icon-"], .generic-section, .news-sliderHolder, .news-slideshow, .news-slideshow .mask, .news-slideshow .slideset, .news-carousel, .news-carousel .news-mask, .news-carousel .news-pagination ul a, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .propertyDetail-page, .propertyDetail-page .propertyImage-pagination,
+.layout, .listing-page, .listing-page .filter-form, .listing-page .filters-links li .slide, .listing-page .fromTo, .listing-page .publicProperty-post, .listing-page .publicProperty-post .caption, .fake-select, #wrapper, .logo, .main-bg-holder, .main-visualSection, #main, .mainSearch-form .form-holder, .mainSearch-form .inputsHolder li .input-holder, .byDefault-fixed #nav .main-navigation li a span[class^="icon-"], .byDefault-fixed #nav .main-navigation li a span[class*="icon-"], #nav.fixed-position .main-navigation li a span[class^="icon-"], #nav.fixed-position .main-navigation li a span[class*="icon-"], .generic-section, .news-sliderHolder, .news-slideshow, .news-slideshow .mask, .news-slideshow .slideset, .news-carousel, .news-carousel .news-mask, .news-carousel .news-pagination ul a, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .propertyDetail-page, .propertyDetail-page .info-blockProperty .pictureHolder, .propertyDetail-page .propertyImage-pagination,
 .propertyDetail-page .propertyImage-slider, .propertyDetail-page .propertyImage-pagination .propertyImage-mask,
 .propertyDetail-page .propertyImage-pagination .mask,
 .propertyDetail-page .propertyImage-slider .propertyImage-mask,
@@ -5025,6 +5025,7 @@ h1 span {
   font-size: 0;
   line-height: 0;
   letter-spacing: -4px;
+  margin: 0 -5px;
 }
 
 .star-rating > * {
@@ -5054,15 +5055,15 @@ h1 span {
 }
 
 .propertyDetail-page .detail-holder {
-  background: #dee1e3;
   box-shadow: 0 5px 13px rgba(0, 0, 0, 0.5);
+  padding: 0 305px 10px 0;
+  position: relative;
+  background: #dee1e3;
 }
 
 .propertyDetail-page .frame {
   display: block;
   width: 100%;
-  position: relative;
-  padding: 0 305px 0 0;
 }
 
 .propertyDetail-page .info-blockProperty {
@@ -5072,7 +5073,73 @@ h1 span {
   z-index: 91;
   width: 100%;
   max-width: 305px;
-  background: #dee1e3;
+  box-shadow: -7px 0 15px rgba(0, 0, 0, 0.15);
+  padding: 8px;
+}
+
+.propertyDetail-page .info-blockProperty .pull-left, .propertyDetail-page .info-blockProperty .listing-page #aside, .listing-page .propertyDetail-page .info-blockProperty #aside, .propertyDetail-page .info-blockProperty .listing-page #content, .listing-page .propertyDetail-page .info-blockProperty #content, .propertyDetail-page .info-blockProperty .listing-page .publicProperty-post .image-holder, .listing-page .publicProperty-post .propertyDetail-page .info-blockProperty .image-holder, .propertyDetail-page .info-blockProperty .listing-page .publicProperty-post .caption .quick-links, .listing-page .publicProperty-post .caption .propertyDetail-page .info-blockProperty .quick-links, .propertyDetail-page .info-blockProperty .pull-right, .propertyDetail-page .info-blockProperty .listing-page .publicProperty-post .caption .company-logo, .listing-page .publicProperty-post .caption .propertyDetail-page .info-blockProperty .company-logo {
+  width: 50%;
+}
+
+.propertyDetail-page .info-blockProperty .price {
+  font-size: 38px;
+  line-height: 40px;
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  margin: 0 0 20px;
+}
+
+.propertyDetail-page .info-blockProperty .pictureHolder {
+  width: 145px;
+  margin: 0 auto 10px;
+  height: 145px;
+  white-space: nowrap;
+  background: #fff;
+}
+
+.propertyDetail-page .info-blockProperty .pictureHolder:after {
+  display: inline-block;
+  vertical-align: middle;
+  height: 145px;
+  overflow: hidden;
+  margin: 0 0 0 -5px;
+  content: '';
+}
+
+.propertyDetail-page .info-blockProperty .pictureHolder img {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+}
+
+.propertyDetail-page .info-blockProperty .heading {
+  color: #2092d0;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 21px;
+  line-height: 24px;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.propertyDetail-page .info-blockProperty .quick-links {
+  padding: 8px 0 0;
+}
+
+.propertyDetail-page .info-blockProperty .small-heading {
+  padding: 10px 0;
+  text-transform: normal;
+}
+
+.propertyDetail-page .info-blockProperty .star-rating {
+  margin: 0;
+}
+
+.propertyDetail-page .info-blockProperty .star-rating li {
+  padding: 0;
+}
+
+.propertyDetail-page .info-blockProperty .timeOfAddedProperty {
+  padding: 50px 0 0;
 }
 
 .propertyDetail-page .property-picture-holder {
@@ -5087,6 +5154,10 @@ h1 span {
   font-size: 27px;
   line-height: 30px;
   margin: 0 0 20px;
+}
+
+.propertyDetail-page .property-picture-holder .quick-links {
+  padding: 7px 0 0;
 }
 
 .propertyDetail-page .propertyImage-pagination,
@@ -5162,7 +5233,6 @@ h1 span {
   top: 50%;
   left: 10px;
   text-decoration: none;
-  color: #57b3e5;
   margin: -20px 0 0;
   display: none;
 }
@@ -5200,6 +5270,14 @@ h1 span {
   padding: 0 0 20px;
 }
 
+.propertyDetail-page .trusted-agent {
+  margin: 15px 0 10px;
+}
+
+.propertyDetail-page .feature {
+  margin: 0 0 25px;
+}
+
 .propertyDetail-page .feature .small-heading {
   border: 0;
   margin: 0;
@@ -5209,6 +5287,8 @@ h1 span {
   font-size: 0;
   line-height: 0;
   letter-spacing: -4px;
+  color: #6c6d70;
+  margin: 0 -1px;
 }
 
 .propertyDetail-page .feature-list > * {
@@ -5221,6 +5301,80 @@ h1 span {
 
 .propertyDetail-page .feature-list li {
   width: 33.33%;
+  color: #6c6d70;
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+  padding: 5px 10px 10px;
+  border-left: 1px solid #555;
+}
+
+.propertyDetail-page .feature-list li > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0;
+}
+
+.propertyDetail-page .feature-list li span[class^="icon-"], .propertyDetail-page .feature-list li span[class*="icon-"] {
+  font-size: 14px;
+  line-height: 1;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin: -7px 0 0;
+}
+
+.propertyDetail-page .feature-list li .text-feature, .propertyDetail-page .feature-list li .stataus {
+  width: 50%;
+  position: relative;
+}
+
+.propertyDetail-page .feature-list li .text-feature {
+  padding: 0 0 0 30px;
+}
+
+.propertyDetail-page .feature-list li .stataus {
+  font-weight: bold;
+}
+
+.sumery-list li {
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  padding: 5px;
+}
+
+.sumery-list li > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 17px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+.sumery-list li span {
+  width: 50%;
+}
+
+.sumery-list li .blue {
+  color: #2092d0;
+}
+
+.timeOfAddedProperty {
+  display: block;
+  font-size: 12px;
+  line-height: 15px;
+  color: #6c6d70;
+}
+
+.timeOfAddedProperty b {
+  display: block;
+  font-size: 15px;
+  line-height: 18px;
 }
 
 .small-heading {

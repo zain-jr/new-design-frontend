@@ -2089,6 +2089,7 @@ h1 {
 .star-rating {
   @extend %listreset;
   @include align-reset(top, 12,12);
+  margin: 0 -5px;
 
   li {
     padding: 0 5px;
@@ -2110,14 +2111,15 @@ h1 {
   padding: 5px;
 
   .detail-holder {
-    background: $p42-background;
     box-shadow: 0 5px 13px rgba($black , 0.5);
+    padding: 0 305px 10px 0;
+    position: relative;
+    background: $p42-background;
+    
   }
   .frame {
     display: block;
     width: 100%;
-    position: relative;
-    padding: 0 305px 0 0;
   }
   .info-blockProperty {
     position: absolute;
@@ -2126,7 +2128,68 @@ h1 {
     z-index: 91;
     width: 100%;
     max-width: 305px;
-    background: $p42-background;
+    box-shadow: -7px 0 15px rgba($black , 0.15);
+    padding: 8px;
+    
+    .pull-left, .pull-right {
+      width: 50%;
+    }
+
+    .price {
+      @include font(38,40);
+      @extend %text-center;
+      box-shadow: 0 5px 15px -5px rgba($black, 0.5);
+      padding: 10px;
+      margin: 0 0 20px;
+    }
+    .pictureHolder {
+      width: 145px;
+      margin: 0 auto 10px;
+      @extend %layout;
+      height: 145px;
+      white-space: nowrap;
+      background: $white;
+
+      &:after {
+        @include align(middle);
+        height: 145px;
+        overflow: hidden;
+        margin: 0 0 0 -5px;
+        content: '';
+      }
+
+      img {
+        @include align(middle);
+        white-space: normal;
+        @extend %img-res;
+      }
+    }
+    .heading {
+      color: $p42-color;
+      font-family: $open-sans;
+      @include font(21,24);
+      font-weight: 700;
+      margin: 0 0 10px;
+    }
+    .quick-links {
+      @extend %pull-right;
+      padding: 8px 0 0;
+    }
+    .small-heading {
+      @extend %text-center;
+      padding: 10px 0;
+      text-transform: normal;
+    }
+    .star-rating {
+      margin: 0;
+
+      li {
+        padding: 0;
+      }
+    }
+    .timeOfAddedProperty {
+      padding: 50px 0 0;
+    }
   }
   .property-picture-holder {
     width: 100%;
@@ -2139,6 +2202,13 @@ h1 {
       font-family: $open-sans;
       @include font(27,30);
       margin: 0 0 20px;
+    }
+    
+    .star-rating {
+      @extend %pull-right;
+    }
+    .quick-links {
+      padding: 7px 0 0;
     }
   }
   .propertyImage-pagination,
@@ -2200,7 +2270,6 @@ h1 {
     top: 50%;
     left: 10px;
     text-decoration: none;
-    color:  lighten($p42-color, 15  %);
     margin: -20px 0 0;
     display: none;
 
@@ -2212,9 +2281,6 @@ h1 {
   .propertyImage-slider-btn-next, .propertyImage-pagination-btn-next-1 {
     left: auto;
     right: 20px;
-  }
-  .star-rating {
-    @extend %pull-right;
   }
   .overview-section {
     @extend %layout;
@@ -2243,8 +2309,12 @@ h1 {
       padding: 0 0 20px;
     }
   }
+  .trusted-agent {
+    margin: 15px 0 10px;
+  }
   .feature {
     @extend %layout;
+    margin: 0 0 25px;
 
     .small-heading {
       @extend %text-left;
@@ -2256,10 +2326,64 @@ h1 {
     @extend %listreset;
     @include align-reset(top, 17,22);
     color: $p42-default-grey;
+    margin: 0 -1px;
 
     li {
       width: 33.33%;
+      color: $p42-default-grey;
+      @include align-reset(top, 17,22);
+      padding: 5px 10px 10px;
+      border-left: 1px solid $dark-grey;
+
+      span[class^="icon-"],span[class*="icon-"]{
+        font-size: 14px;
+        line-height: 1;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin: -7px 0 0;
+      }
+
+      .text-feature , .stataus {
+        width: 50%;
+        position: relative;
+      }
+      .text-feature {
+        padding: 0 0 0 30px;
+      }
+      .stataus {
+        @extend %text-right;
+        font-weight: bold;
+      }
     }
+  }
+}
+.sumery-list {
+  @extend %listreset;
+
+  li {
+    display: block;
+    @include align-reset(top, 17, 20);
+    font-family: $open-sans;
+    padding: 5px;
+
+    span {
+      width: 50%;
+    }
+    .blue { color: $p42-color;}
+    .quantity {
+      @extend %text-right;
+    }
+  }
+}
+.timeOfAddedProperty {
+  display: block;
+  @include font(12, 15);
+  color: $p42-default-grey;
+
+  b {
+    display: block;
+    @include font(15,18);
   }
 }
 .small-heading {
