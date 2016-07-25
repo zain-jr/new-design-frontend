@@ -34,6 +34,7 @@ $media-expressions: (
 @import 'select2-min';
 @import 'property-listing';
 @import 'property-detail';
+@import 'add-property-form';
 @import 'fancybox';
 
 html {
@@ -50,13 +51,10 @@ body{
   height: 100%;
   background: url('../images/bg.jpg') no-repeat;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: 100% 100%;
   z-index: 999999999;
   position: relative;
 
-  @include media('<desktop'){
-    background-size: 100% 100%; 
-  }
   @include media('<tablet'){
     background-size: 100% cover;
   }
@@ -131,6 +129,7 @@ h1 {
     @include squar(22px, 22px);
     border: 3px solid $p42-color;
     position: relative;
+    color: $dark-grey;
 
     &:after {
       position: absolute;
@@ -148,6 +147,54 @@ h1 {
   }
   .fake-label {
     padding: 0 0 0 10px;
+    color: $dark-grey;
+  }
+}
+.custom-withouChecks {
+  display: block;
+  width: 100%;
+
+  &.transparent {
+    input[type="radio"], input[type="checkbox"]{
+      &:checked {
+        ~ .fake-label{
+          color: $white;
+          background: $p42-color;
+        }
+      }
+    }
+    .fake-label {
+      background: transparent;
+      border: 1px solid $p42-color;
+      color: $p42-color;
+    }
+  }
+
+  input[type="radio"], input[type="checkbox"]{
+    position: fixed;
+    top: -999px;
+    left: -999px;
+    opacity: 0;
+    visibility: hidden;
+
+    &:checked {
+      ~ .fake-label{
+        background: $orange;
+      }
+    }
+  }
+  .fake-label {
+    display: block;
+    background: $p42-color;
+    color: $white;
+    @extend %text-center;
+    padding: 5px;
+    @extend  %text-capital;
+    cursor: pointer;
+    transition: background 0.5s ease;
+    -webkit-transition: background 0.5s ease;
+    -moz-transition: background 0.5s ease;
+    -ms-transition: background 0.5s ease;
   }
 }
 .fake-select {
@@ -630,6 +677,10 @@ h1 {
   @extend %layout;
   position: relative;
   z-index: 9;
+}
+.page-holder {
+  @extend %layout;
+  padding: 5px;
 }
 .mainSearch-form {
   max-width: 675px;
@@ -2240,7 +2291,7 @@ h1 {
   @include media('<tablet'){
     width: 100%;
   }
-  
+
   .lighbox-heading{
     color: $p42-default-grey;
     display: block;
@@ -2250,25 +2301,6 @@ h1 {
 
     @include media('<tablet'){
       @include font(30,33);
-    }
-  }
-
-  .close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    text-decoration: none;
-    color: $p42-color;
-    border: 2px solid $p42-color;
-
-    span[class^="icon-"],span[class*="icon-"]{
-      font-size: 25px;
-      line-height: 1;
-      display: block;
-    }
-    &:hover {
-      color: $orange;
-      border-color: $orange;
     }
   }
 
@@ -2368,6 +2400,40 @@ h1 {
 
     &:hover {
       background: $green;
+    }
+  }
+}
+.radio-checks-holder {
+  @extend %listreset;
+  @include align-reset(top, 16,20);
+  font: $open-sans;
+  font-weight: 700;
+  margin: 10px 0 0;
+  @extend %layout;
+
+  &.subtype-links {
+    border-radius: 8px;
+    margin: -2px 0 10px;
+    background: $p42-background;
+    border: 1px solid $p42-color;
+  }
+
+  li {
+    width: 33.33%;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+
+    &.active {
+      border-radius: 8px 8px 0 0;
+      background: $p42-background;
+      border: 1px solid $p42-color;
+      border-bottom: 0;
+    }
+
+    .custom-withouChecks {
+      margin: 0 auto;
+      max-width: 170px;
     }
   }
 }

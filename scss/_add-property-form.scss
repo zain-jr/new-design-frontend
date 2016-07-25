@@ -1,0 +1,55 @@
+.addProperty-form {
+    background: rgba($p42-background, 0.5);
+    @extend %layout;
+    box-shadow: 0 0 7px rgba($black , 0.22);
+    padding: 10px;
+
+    h1 {
+        @include font(60,63);
+        font-weight: 100;
+
+        span { font-weight: 300;}
+    }
+
+    .add-pro-heading {
+        display: block;
+        @extend %text-center;
+        @extend %text-capital;
+        color: $dark-grey;
+        @include font(20,23);
+        font-family: $open-sans;
+        font-weight: 600;
+        overflow: hidden;
+        
+        span {
+            @include align(top);
+            padding: 5px;
+            position: relative;
+
+            &:before , &:after {
+                position: absolute;
+                top: 50%;
+                left: -9999px;
+                right: 110%;
+                background: #bec0c2;
+                content: '';
+                height: 3px;
+                margin: -2px 0 0;
+            }
+            &:after{
+                right: -9999px;
+                left: 110%;
+            }
+        }
+    }
+    .main-form {
+        @extend %layout;
+        @extend .pull-left;
+        width: 75%;
+    }
+    .tips {
+        @extend %layout;
+        @extend .pull-left;
+        width: 25%;
+    }
+}

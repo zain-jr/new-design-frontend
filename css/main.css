@@ -610,7 +610,7 @@ th {
   content: "\e907";
 }
 
-.listing-page .filters-links, .listing-page .filterChecks, .propertyDetail-page .feature-list, .social-icons, .loginRegister, .main-visualSection .number-of-properties, .mainSearch-form .typeOfBuying, .mainSearch-form .subTypes, .mainSearch-form .inputsHolder, #nav .main-navigation, .news-carousel .news-pagination ul, .topSocities-holder .socities, .topSocities-holder .socities li .caption .numberOfproperties, .agents-logo, .pager, .quick-links, .public-ui-features, .sumery-list {
+.listing-page .filters-links, .listing-page .filterChecks, .propertyDetail-page .feature-list, .social-icons, .loginRegister, .main-visualSection .number-of-properties, .mainSearch-form .typeOfBuying, .mainSearch-form .subTypes, .mainSearch-form .inputsHolder, #nav .main-navigation, .news-carousel .news-pagination ul, .topSocities-holder .socities, .topSocities-holder .socities li .caption .numberOfproperties, .agents-logo, .pager, .quick-links, .public-ui-features, .sumery-list, .radio-checks-holder {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -649,7 +649,7 @@ th {
 .text-center, .propertyNotFound, .propertyDetail-page .info-blockProperty .price, .propertyDetail-page .info-blockProperty .small-heading, .propertyDetail-page .propertyImage-pagination .propertyImage-slide a,
 .propertyDetail-page .propertyImage-pagination .slide a,
 .propertyDetail-page .propertyImage-slider .propertyImage-slide a,
-.propertyDetail-page .propertyImage-slider .slide a, .propertyDetail-page .overview-section, .propertyDetail-page .extra-feature-section .small-heading, h1, .loginRegister li, .main-visualSection, #nav .main-navigation li, .news-carousel .news-pagination ul, .topSocities-holder .socities li a, .heading, .agents-logo li a, .premiumProperty, .public-ui-features li strong, .generic-lightbox {
+.propertyDetail-page .propertyImage-slider .slide a, .propertyDetail-page .overview-section, .propertyDetail-page .extra-feature-section .small-heading, .addProperty-form .add-pro-heading, .custom-withouChecks .fake-label, h1, .loginRegister li, .main-visualSection, #nav .main-navigation li, .news-carousel .news-pagination ul, .topSocities-holder .socities li a, .heading, .agents-logo li a, .premiumProperty, .public-ui-features li strong, .generic-lightbox {
   text-align: center;
 }
 
@@ -669,11 +669,11 @@ th {
   text-transform: lowercase;
 }
 
-.text-capital, .propertyNotFound .no-heading, .select2-container .select2-selection--single .select2-selection__rendered, .mainSearch-form .subTypes, .views, .inquiry-email-form label {
+.text-capital, .propertyNotFound .no-heading, .addProperty-form .add-pro-heading, .custom-withouChecks .fake-label, .select2-container .select2-selection--single .select2-selection__rendered, .mainSearch-form .subTypes, .views, .inquiry-email-form label {
   text-transform: capitalize;
 }
 
-.pull-left, .listing-page #aside, .listing-page #content, .listing-page .publicProperty-post .image-holder, .listing-page .publicProperty-post .caption .quick-links, .propertyDetail-page .overview-section .small-heading, .listing-page .publicProperty-post .caption .left-area, .listing-page .publicProperty-post .caption .links-left, .news-slideshow .slide .caption, .agents .left-side {
+.pull-left, .listing-page #aside, .listing-page #content, .listing-page .publicProperty-post .image-holder, .listing-page .publicProperty-post .caption .quick-links, .propertyDetail-page .overview-section .small-heading, .addProperty-form .main-form, .addProperty-form .tips, .listing-page .publicProperty-post .caption .left-area, .listing-page .publicProperty-post .caption .links-left, .news-slideshow .slide .caption, .agents .left-side {
   float: left !important;
 }
 
@@ -685,7 +685,7 @@ th {
 .propertyDetail-page .propertyImage-slider, .propertyDetail-page .propertyImage-pagination .propertyImage-mask,
 .propertyDetail-page .propertyImage-pagination .mask,
 .propertyDetail-page .propertyImage-slider .propertyImage-mask,
-.propertyDetail-page .propertyImage-slider .mask, .propertyDetail-page .overview-section, .propertyDetail-page .extra-feature-section, .propertyDetail-page .feature, .fake-select, #wrapper, .logo, .main-bg-holder, .main-visualSection, #main, .mainSearch-form .form-holder, .mainSearch-form .inputsHolder li .input-holder, .byDefault-fixed #nav .main-navigation li a span[class^="icon-"], .byDefault-fixed #nav .main-navigation li a span[class*="icon-"], #nav.fixed-position .main-navigation li a span[class^="icon-"], #nav.fixed-position .main-navigation li a span[class*="icon-"], .generic-section, .news-sliderHolder, .news-slideshow, .news-slideshow .mask, .news-slideshow .slideset, .news-carousel, .news-carousel .news-mask, .news-carousel .news-pagination ul a, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .inquiry-email-form .input-holder {
+.propertyDetail-page .propertyImage-slider .mask, .propertyDetail-page .overview-section, .propertyDetail-page .extra-feature-section, .propertyDetail-page .feature, .addProperty-form, .addProperty-form .main-form, .addProperty-form .tips, .fake-select, #wrapper, .logo, .main-bg-holder, .main-visualSection, #main, .page-holder, .mainSearch-form .form-holder, .mainSearch-form .inputsHolder li .input-holder, .byDefault-fixed #nav .main-navigation li a span[class^="icon-"], .byDefault-fixed #nav .main-navigation li a span[class*="icon-"], #nav.fixed-position .main-navigation li a span[class^="icon-"], #nav.fixed-position .main-navigation li a span[class*="icon-"], .generic-section, .news-sliderHolder, .news-slideshow, .news-slideshow .mask, .news-slideshow .slideset, .news-carousel, .news-carousel .news-mask, .news-carousel .news-pagination ul a, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .inquiry-email-form .input-holder, .radio-checks-holder {
   overflow: hidden;
 }
 
@@ -2152,7 +2152,7 @@ input[type='submit'] {
   }
 }
 
-.propertyDetail-page .info-blockProperty .pull-left, .propertyDetail-page .info-blockProperty .listing-page #aside, .listing-page .propertyDetail-page .info-blockProperty #aside, .propertyDetail-page .info-blockProperty .listing-page #content, .listing-page .propertyDetail-page .info-blockProperty #content, .propertyDetail-page .info-blockProperty .listing-page .publicProperty-post .image-holder, .listing-page .publicProperty-post .propertyDetail-page .info-blockProperty .image-holder, .propertyDetail-page .info-blockProperty .listing-page .publicProperty-post .caption .quick-links, .listing-page .publicProperty-post .caption .propertyDetail-page .info-blockProperty .quick-links, .propertyDetail-page .info-blockProperty .overview-section .small-heading, .propertyDetail-page .overview-section .info-blockProperty .small-heading, .propertyDetail-page .info-blockProperty .pull-right, .propertyDetail-page .info-blockProperty .listing-page .publicProperty-post .caption .company-logo, .listing-page .publicProperty-post .caption .propertyDetail-page .info-blockProperty .company-logo, .propertyDetail-page .info-blockProperty .overview-section .btn-hollow, .propertyDetail-page .overview-section .info-blockProperty .btn-hollow {
+.propertyDetail-page .info-blockProperty .pull-left, .propertyDetail-page .info-blockProperty .listing-page #aside, .listing-page .propertyDetail-page .info-blockProperty #aside, .propertyDetail-page .info-blockProperty .listing-page #content, .listing-page .propertyDetail-page .info-blockProperty #content, .propertyDetail-page .info-blockProperty .listing-page .publicProperty-post .image-holder, .listing-page .publicProperty-post .propertyDetail-page .info-blockProperty .image-holder, .propertyDetail-page .info-blockProperty .listing-page .publicProperty-post .caption .quick-links, .listing-page .publicProperty-post .caption .propertyDetail-page .info-blockProperty .quick-links, .propertyDetail-page .info-blockProperty .overview-section .small-heading, .propertyDetail-page .overview-section .info-blockProperty .small-heading, .propertyDetail-page .info-blockProperty .addProperty-form .main-form, .addProperty-form .propertyDetail-page .info-blockProperty .main-form, .propertyDetail-page .info-blockProperty .addProperty-form .tips, .addProperty-form .propertyDetail-page .info-blockProperty .tips, .propertyDetail-page .info-blockProperty .pull-right, .propertyDetail-page .info-blockProperty .listing-page .publicProperty-post .caption .company-logo, .listing-page .publicProperty-post .caption .propertyDetail-page .info-blockProperty .company-logo, .propertyDetail-page .info-blockProperty .overview-section .btn-hollow, .propertyDetail-page .overview-section .info-blockProperty .btn-hollow {
   width: 50%;
 }
 
@@ -2563,6 +2563,63 @@ input[type='submit'] {
   font-weight: bold;
 }
 
+.addProperty-form {
+  background: rgba(222, 225, 227, 0.5);
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.22);
+  padding: 10px;
+}
+
+.addProperty-form h1 {
+  font-size: 60px;
+  line-height: 63px;
+  font-weight: 100;
+}
+
+.addProperty-form h1 span {
+  font-weight: 300;
+}
+
+.addProperty-form .add-pro-heading {
+  display: block;
+  color: #555;
+  font-size: 20px;
+  line-height: 23px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 600;
+  overflow: hidden;
+}
+
+.addProperty-form .add-pro-heading span {
+  display: inline-block;
+  vertical-align: top;
+  padding: 5px;
+  position: relative;
+}
+
+.addProperty-form .add-pro-heading span:before, .addProperty-form .add-pro-heading span:after {
+  position: absolute;
+  top: 50%;
+  left: -9999px;
+  right: 110%;
+  background: #bec0c2;
+  content: '';
+  height: 3px;
+  margin: -2px 0 0;
+}
+
+.addProperty-form .add-pro-heading span:after {
+  right: -9999px;
+  left: 110%;
+}
+
+.addProperty-form .main-form {
+  width: 75%;
+}
+
+.addProperty-form .tips {
+  width: 25%;
+}
+
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
 .fancybox-wrap,
 .fancybox-skin,
@@ -2636,7 +2693,7 @@ input[type='submit'] {
   max-height: 100%;
 }
 
-#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
+#fancybox-loading, .fancybox-prev span, .fancybox-next span {
   background-image: url("../images/fancybox/fancybox_sprite.png");
 }
 
@@ -2660,13 +2717,26 @@ input[type='submit'] {
 
 .fancybox-close {
   position: absolute;
-  top: -18px;
-  right: -18px;
-  width: 36px;
-  height: 36px;
+  top: -10px;
+  right: -10px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
   z-index: 8040;
-  display: none;
+  color: #fff;
+  background: #2092d0;
+  border: 2px solid #2092d0;
+}
+
+.fancybox-close:after {
+  content: "\e920";
+  position: absolute;
+  top: 50%;
+  left: 1px;
+  font-size: 24px;
+  line-height: 1;
+  font-family: 'icomoon';
+  margin: -12px 0 0;
 }
 
 .fancybox-nav {
@@ -2848,15 +2918,9 @@ body {
   height: 100%;
   background: url("../images/bg.jpg") no-repeat;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: 100% 100%;
   z-index: 999999999;
   position: relative;
-}
-
-@media (max-width: 1023px) {
-  body {
-    background-size: 100% 100%;
-  }
 }
 
 @media (max-width: 767px) {
@@ -2958,6 +3022,7 @@ h1 {
   height: 22px;
   border: 3px solid #2092d0;
   position: relative;
+  color: #555;
 }
 
 .customCheckbox .fake-checkbox:after,
@@ -2980,6 +3045,47 @@ h1 {
 .customCheckbox .fake-label,
 .customRadio .fake-label {
   padding: 0 0 0 10px;
+  color: #555;
+}
+
+.custom-withouChecks {
+  display: block;
+  width: 100%;
+}
+
+.custom-withouChecks.transparent input[type="radio"]:checked ~ .fake-label, .custom-withouChecks.transparent input[type="checkbox"]:checked ~ .fake-label {
+  color: #fff;
+  background: #2092d0;
+}
+
+.custom-withouChecks.transparent .fake-label {
+  background: transparent;
+  border: 1px solid #2092d0;
+  color: #2092d0;
+}
+
+.custom-withouChecks input[type="radio"], .custom-withouChecks input[type="checkbox"] {
+  position: fixed;
+  top: -999px;
+  left: -999px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.custom-withouChecks input[type="radio"]:checked ~ .fake-label, .custom-withouChecks input[type="checkbox"]:checked ~ .fake-label {
+  background: #d89429;
+}
+
+.custom-withouChecks .fake-label {
+  display: block;
+  background: #2092d0;
+  color: #fff;
+  padding: 5px;
+  cursor: pointer;
+  transition: background 0.5s ease;
+  -webkit-transition: background 0.5s ease;
+  -moz-transition: background 0.5s ease;
+  -ms-transition: background 0.5s ease;
 }
 
 .fake-select {
@@ -3636,6 +3742,10 @@ h1 span {
 #main {
   position: relative;
   z-index: 9;
+}
+
+.page-holder {
+  padding: 5px;
 }
 
 .mainSearch-form {
@@ -5790,26 +5900,6 @@ h1 span {
   }
 }
 
-.generic-lightbox .close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  text-decoration: none;
-  color: #2092d0;
-  border: 2px solid #2092d0;
-}
-
-.generic-lightbox .close span[class^="icon-"], .generic-lightbox .close span[class*="icon-"] {
-  font-size: 25px;
-  line-height: 1;
-  display: block;
-}
-
-.generic-lightbox .close:hover {
-  color: #d89429;
-  border-color: #d89429;
-}
-
 .generic-lightbox.call-agent p {
   position: relative;
   font-size: 33px;
@@ -5930,6 +6020,49 @@ h1 span {
 
 .inquiry-email-form button[type="submit"]:hover {
   background: #30ce20;
+}
+
+.radio-checks-holder {
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+  font: "Open Sans", "Arial", sans-serif;
+  font-weight: 700;
+  margin: 10px 0 0;
+}
+
+.radio-checks-holder > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+.radio-checks-holder.subtype-links {
+  border-radius: 8px;
+  margin: -2px 0 10px;
+  background: #dee1e3;
+  border: 1px solid #2092d0;
+}
+
+.radio-checks-holder li {
+  width: 33.33%;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+}
+
+.radio-checks-holder li.active {
+  border-radius: 8px 8px 0 0;
+  background: #dee1e3;
+  border: 1px solid #2092d0;
+  border-bottom: 0;
+}
+
+.radio-checks-holder li .custom-withouChecks {
+  margin: 0 auto;
+  max-width: 170px;
 }
 
 .resize-active * {
