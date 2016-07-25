@@ -1,6 +1,6 @@
 <div class="listing-page">
     <div class="container">
-        <a class="aside-opener-filters">Search Filters<span class="button"><b></b></span></a>
+        <a class="aside-opener-filters">More Filters <b>(Land Area / Price...)</b><span class="button"><b></b></span></a>
         <aside id="aside" class="hideOnMobile">
             <form class="filter-form">
                 <ul class="filters-links text-upparcase">
@@ -152,6 +152,10 @@
             </form>
         </aside>
         <section id="content">
+            <div class="propertyNotFound hidden">
+                <strong class="no-heading">sorry, no property found</strong>
+                <p>Maybe your search was to specific, please try searching with another term.</p>
+            </div>
             <article class="publicProperty-post">
                 <div class="image-holder">
                     <img src="images/img13.jpg" alt="image description">
@@ -198,6 +202,7 @@
                 </div>
             </article>
             <ul class="pager">
+                <li><a href="#" class="previous"><span class="icon-left-arrow"></span></a></li>
                 <li class="active"><a href="#">1</a></li>
                 <li><a href="#">2</a></li>
                 <li><a href="#">3</a></li>
@@ -208,13 +213,17 @@
                 <li><a href="#">8</a></li>
                 <li><a href="#">9</a></li>
                 <li><a href="#">10</a></li>
+                <li><a href="#" class="next"><span class="icon-right-arrow"></span></a></li>
             </ul>
         </section>
         <div class="popup-holder">
-            <div id="callPopup" class="lightbox call-agent">
+            <div id="callPopup" class="lightbox call-agent generic-lightbox">
+                <span class="lighbox-heading">Phone Number</span>
                 <p></p>
+                <a href="#" class="close"><span class="icon-cross"></span></a>
             </div>
-            <div id="sendEmail-popup" class="lightbox">
+            <div id="sendEmail-popup" class="lightbox generic-lightbox">
+                <span class="lighbox-heading">Send Email</span>
                 <form class="inquiry-email-form">
                     <div class="field-holder">
                         <label for="name">Name</label>
@@ -234,10 +243,14 @@
                     </div>
                     <div class="field-holder">
                         <label for="message">message</label>
-                        <div class="input-holder"><textarea id="message"></textarea></div>
+                        <div class="input-holder">
+                            <textarea id="message"></textarea>
+                            <p>By submitting this form I agree to Terms of Use</p>
+                        </div>
                     </div>
                     <button type="submit">SEND</button>
                 </form>
+                <a href="#" class="close"><span class="icon-cross"></span></a>
             </div>
         </div>
     </div>

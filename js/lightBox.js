@@ -5,7 +5,7 @@ function initLightbox() {
 		helpers: {
 			overlay: {
 				css: {
-					background: 'rgba(0, 0, 0, 0.65)'
+					// background: 'rgba(0, 0, 0, 0.65)'
 				}
 			}
 		},

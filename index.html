@@ -3,8 +3,13 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Property42</title>
 	<link media="all" rel="stylesheet" href="css/main.css">
+	<link rel="icon" type="image/png" href="images/favicon-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="images/favicon-160x160.png" sizes="160x160">
+	<link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
+	<title>Property42</title>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,700,800' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,300,500,600,700,800,400italic' rel='stylesheet' type='text/css'>
 </head>
@@ -463,9 +468,9 @@
 						</div>
 					</section>
 				</div>-->
-				<!--<div class="listing-page">
+				<div class="listing-page">
 					<div class="container">
-						<a class="aside-opener-filters">Search Filters<span class="button"><b></b></span></a>
+						<a class="aside-opener-filters">More Filters <b>(Land Area / Price...)</b><span class="button"><b></b></span></a>
 						<aside id="aside" class="hideOnMobile">
 							<form class="filter-form">
 								<ul class="filters-links text-upparcase">
@@ -617,6 +622,10 @@
 							</form>
 						</aside>
 						<section id="content">
+							<div class="propertyNotFound hidden">
+								<strong class="no-heading">sorry, no property found</strong>
+								<p>Maybe your search was to specific, please try searching with another term.</p>
+							</div>
 							<article class="publicProperty-post">
 								<div class="image-holder">
 									<img src="images/img13.jpg" alt="image description">
@@ -663,6 +672,7 @@
 								</div>
 							</article>
 							<ul class="pager">
+								<li><a href="#" class="previous"><span class="icon-left-arrow"></span></a></li>
 								<li class="active"><a href="#">1</a></li>
 								<li><a href="#">2</a></li>
 								<li><a href="#">3</a></li>
@@ -673,13 +683,17 @@
 								<li><a href="#">8</a></li>
 								<li><a href="#">9</a></li>
 								<li><a href="#">10</a></li>
+								<li><a href="#" class="next"><span class="icon-right-arrow"></span></a></li>
 							</ul>
 						</section>
 						<div class="popup-holder">
-							<div id="callPopup" class="lightbox call-agent">
+							<div id="callPopup" class="lightbox call-agent generic-lightbox">
+								<span class="lighbox-heading">Phone Number</span>
 								<p></p>
+								<a href="#" class="close"><span class="icon-cross"></span></a>
 							</div>
-							<div id="sendEmail-popup" class="lightbox">
+							<div id="sendEmail-popup" class="lightbox generic-lightbox">
+								<span class="lighbox-heading">Send Email</span>
 								<form class="inquiry-email-form">
 									<div class="field-holder">
 										<label for="name">Name</label>
@@ -699,14 +713,18 @@
 									</div>
 									<div class="field-holder">
 										<label for="message">message</label>
-										<div class="input-holder"><textarea id="message"></textarea></div>
+										<div class="input-holder">
+											<textarea id="message"></textarea>
+											<p>By submitting this form I agree to Terms of Use</p>
+										</div>
 									</div>
 									<button type="submit">SEND</button>
 								</form>
+								<a href="#" class="close"><span class="icon-cross"></span></a>
 							</div>
 						</div>
 					</div>
-				</div>-->
+				</div>
 				<div class="propertyDetail-page">
 					<div class="container">
 						<div class="detail-holder">
@@ -792,7 +810,7 @@
 										<div class="pull-right">
 											<ul class="quick-links">
 												<li><a href="#callPopup" class="lightbox call-agent-btn" data-tel="03154379760"><span class="icon-phone"></span></a></li>
-												<li><a href="#"><span class="icon-empty-envelop"></span></a></li>
+												<li><a href="#sendEmail-popup" class="lightbox"><span class="icon-empty-envelop"></span></a></li>
 											</ul>
 										</div>
 									</div>
@@ -975,6 +993,43 @@
 										</ul>
 									</div>
 								</div>
+							</div>
+						</div>
+						<div class="popup-holder">
+							<div id="callPopup" class="lightbox call-agent generic-lightbox">
+								<span class="lighbox-heading">Phone Number</span>
+								<p></p>
+								<a href="#" class="close"><span class="icon-cross"></span></a>
+							</div>
+							<div id="sendEmail-popup" class="lightbox generic-lightbox">
+								<span class="lighbox-heading">Send Email</span>
+								<form class="inquiry-email-form">
+									<div class="field-holder">
+										<label for="name">Name</label>
+										<div class="input-holder"><input type="text" id="name"></div>
+									</div>
+									<div class="field-holder">
+										<label for="email">Email</label>
+										<div class="input-holder"><input type="email" id="email"></div>
+									</div>
+									<div class="field-holder">
+										<label for="phone">phone</label>
+										<div class="input-holder"><input type="tel" id="phone"></div>
+									</div>
+									<div class="field-holder">
+										<label for="subject">subject</label>
+										<div class="input-holder"><input type="text" id="subject"></div>
+									</div>
+									<div class="field-holder">
+										<label for="message">message</label>
+										<div class="input-holder">
+											<textarea id="message"></textarea>
+											<p>By submitting this form I agree to Terms of Use</p>
+										</div>
+									</div>
+									<button type="submit">SEND</button>
+								</form>
+								<a href="#" class="close"><span class="icon-cross"></span></a>
 							</div>
 						</div>
 					</div>

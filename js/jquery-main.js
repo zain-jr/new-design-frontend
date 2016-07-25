@@ -7,6 +7,35 @@ $(document).ready(function() {
 			$(this).attr('href', 'tel:'+mobileNumber)
 		});
 	}
+
+	if($('.publicProperty-post').length == 0){
+		$('.propertyNotFound').removeClass('hidden');
+	}
+});
+
+$(document).on('click', 'a.lightbox', function(){
+	$('#wrapper').addClass('fancy-overlay');
+});
+
+$(document).mouseup(function (e)
+{
+    var container = $(".fancybox-opened");
+
+    if (!container.is(e.target) 
+        && container.has(e.target).length === 0) 
+    {
+		$('#wrapper').removeClass('fancy-overlay');
+    }
+});
+
+$(document).on('click', '.generic-lightbox>.close', function(){
+	$('#wrapper').removeClass('fancy-overlay');
+});
+
+$(document).keyup(function(e) {
+  if (e.keyCode === 27){ 
+  		$('#wrapper').removeClass('fancy-overlay');
+	}   // esc
 });
 
 $(document).on('click', '.propertyImage-slider-btn-next, .propertyImage-slider-btn-prev', function(){

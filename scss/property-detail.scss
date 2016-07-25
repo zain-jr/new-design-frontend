@@ -8,7 +8,14 @@
     margin: 0 0 50px;
     position: relative;
     background: $p42-background;
-    
+    overflow: hidden;
+
+    @include media('<desktop'){
+      padding: 0 255px 10px 0;
+    }
+    @include media('<tablet'){
+      padding: 0 10px 0;
+    }
   }
   .frame {
     display: block;
@@ -25,6 +32,17 @@
     padding: 8px;
     overflow: hidden;
     
+    @include media('<desktop'){
+      max-width: 250px;
+    }
+    
+    @include media('<tablet'){
+      max-width: inherit;
+      position: static;
+      width: 100%;
+      margin: 0 0 10px;
+      box-shadow: none;
+    }
     .pull-left, .pull-right {
       width: 50%;
     }
@@ -36,6 +54,10 @@
       padding: 10px;
       margin: 0 0 20px;
       margin: -10px -10px 20px;
+
+      @include media('<desktop'){
+        @include font(30,33);
+      }
     }
     .pictureHolder {
       width: 145px;
@@ -84,6 +106,10 @@
     }
     .timeOfAddedProperty {
       padding: 50px 0 0;
+
+      @include media('<tablet'){
+        padding: 0;
+      }
     }
   }
   .property-picture-holder {
@@ -91,12 +117,21 @@
     background:$p42-background;
     padding: 10px;
 
+    @include media('<tablet'){
+      margin: 0 0 20px;
+      padding: 0;
+    }
+
     h1 {
       @extend %text-left;
       font-weight: 700;
       font-family: $open-sans;
       @include font(27,30);
       margin: 0 0 20px;
+
+      @include media('<tablet'){
+        @include font(18,22);
+      }
     }
     
     .star-rating {
@@ -118,10 +153,20 @@
       width: 100% !important;
       margin: 0 -5px;
 
-       &:hover {
-         .propertyImage-slider-btn-prev, .propertyImage-slider-btn-next,
-        .propertyImage-pagination-btn-prev-1, .propertyImage-pagination-btn-next-1 { display: block;}
-        }
+      @include media('<desktop'){
+        margin: 0 -3px;
+      }
+
+      &:hover {
+      .propertyImage-slider-btn-prev, .propertyImage-slider-btn-next,
+      .propertyImage-pagination-btn-prev-1, .propertyImage-pagination-btn-next-1 { display: block;}
+      }
+    }
+    .propertyImage-mask {
+      @include media('<tablet'){
+        max-width: 320px;
+        margin: 0 auto 10px;
+      }
     }
     .propertyImage-slideset,
     .slideset {
@@ -142,20 +187,57 @@
       float: none !important;
       padding: 0 5px 5px;
 
+      a {
+        display: block;
+        @extend %text-center;
+      }
+
+      @include media('<desktop'){
+        padding: 0 3px 5px;
+      }
+
       img {
         @extend  %img-res;
       }
     }
   }
+  .slide {
+    img {
+      min-height: 457px;
+      max-height: 457px;
+
+      @include media('<desktop'){
+        max-height: 335px;
+        min-height: 335px;
+      }
+      @include media('<tablet'){
+        max-height: inherit;
+        min-height: inherit;
+      }
+    }
+  }
   .propertyImage-pagination {
-    .propertyImage-slide {
+  .propertyImage-slide {
       width: 20% !important;
 
       img {
         max-width: 155px;
         max-height: 95px;
-        min-width: 155px;
-        min-height: 95px;
+
+        @include media('<widescreen'){
+          min-height: 85px;
+          max-height: 85px;
+        }
+        
+        @include media('<desktop'){
+          min-height: 65px;
+          max-height: 65px;
+        }
+        
+        @include media('<tablet'){
+          min-height: 35px;
+          max-height: 35px;
+        }
       }
     }
   }
@@ -167,6 +249,10 @@
     text-decoration: none;
     margin: -20px 0 0;
     display: none;
+
+    @include media('<tablet'){
+      display: none !important;
+    }
 
     span[class^="icon-"],span[class*="icon-"]{
       font-size: 40px;
@@ -186,13 +272,29 @@
     @extend %text-center;
     color: $p42-default-grey;
 
+    @include media('<tablet'){
+      margin: 0 0 10px;
+      padding: 10px;
+    }
+
     .small-heading {
       @extend %text-left;
       @extend .pull-left;
       padding: 0;
+
+      @include media('<tablet'){
+        float: none !important;
+        padding: 0 0 10px;
+        display: block;
+      }
     }
     .btn-hollow {
       @extend .pull-right;
+
+      @include media('<tablet'){
+        float: none !important;
+        display: block;
+      }
     }
     .layout{
       padding: 0 0 15px;
@@ -204,6 +306,11 @@
     border-radius: 8px;
     border: 1px solid $p42-default-grey;
     padding: 20px;
+
+    @include media('<tablet'){
+      padding: 10px;
+      margin: 0 0 10px;
+    }
 
     .small-heading {
       @extend %text-center;
@@ -237,6 +344,10 @@
       @include align-reset(top, 17,22);
       padding: 5px 10px 10px;
       border-left: 1px solid $dark-grey;
+
+      @include media('<tablet'){
+        width: 50%;
+      }
 
       span[class^="icon-"],span[class*="icon-"]{
         font-size: 14px;

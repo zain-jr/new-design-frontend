@@ -6,8 +6,9 @@
   #aside {
     width: 25%;
     padding: 10px;
-    border-top: 4px solid $white;
+    border-top: 4px solid $p42-color;
     @extend .pull-left;
+    overflow: hidden;
     box-shadow: 0 0 20px -9px rgba($black, 0.5);
 
     &.hideOnMobile {
@@ -151,7 +152,7 @@
       bottom: 3px;
       @include font(12,15);
       color: $white;
-      background: $p42-color;
+      background: $orange;
       border: 0;
       padding: 5px;
       transition: background 0.5s ease;
@@ -167,6 +168,7 @@
     background: $white;
     padding: 5px 5px 0;
     margin: 0 0 20px;
+    position: relative;
 
     @include media('<tablet'){
       padding: 5px 5px 0;
@@ -207,8 +209,7 @@
       font-family: $open-sans;
       @include font(13,16);
       color: $p42-default-grey;
-      padding: 0 0 80px 10px;
-      position: relative;
+      padding: 0 0 10px 10px;
 
       h1 {
         margin: 0 0 15px;
@@ -258,7 +259,7 @@
       .links-holder {
         position: absolute;
         bottom: 0;
-        left: 10px;
+        left: 220px;
         right: 0;
 
         @include media('<tablet'){
@@ -266,12 +267,16 @@
           clear: both;
           right: 10px;
           display: block;
+          left: 180px;
+        }
+        @include  media('<phone'){
+          position: static;
         }
       }
       .links-left {
         @extend %pull-left;
         width: 70%;
-        padding: 40px 0 0;
+        padding: 35px 0 0;
 
         @include media('<tablet'){
           padding: 10px 0 0;
@@ -340,15 +345,23 @@
 .aside-opener-filters {
   display: block;
   color: $white;
-  @include font(16,20);
-  background: $p42-color;
+  @include font(14,19);
+  background: $orange;
   font-weight: 600;
-  letter-spacing: 1px;
   padding: 10px;
   border-radius: 4px;
   cursor: pointer;
   position: relative;
   margin: 0 0 10px;
+  font-weight: 600;
+
+  b{
+    font-weight: normal;
+    font-weight: 400;
+    @include font(13,17);
+    padding: 0 3px;
+    @include align(middle);
+  }
 
   @include media('>=desktop'){ display: none;}
 
@@ -378,4 +391,44 @@
       margin: -1px 0 0;
     }
   }
+}
+.propertyNotFound {
+  @extend %layout;
+  @extend %text-center;
+  position: relative;
+  background: $p42-background;
+  @include font(16, 21);
+  font-weight: 600;
+  padding: 80px 20px;
+
+  @include media('<tablet'){
+      @include font(13,16);
+      padding: 65px 5px;
+    }
+
+  &:after {
+    background: url('../images/caution-sign.png') no-repeat;
+    @include squar(200px, 200px);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    content: '';
+    margin: 0 0 0 -100px;
+    opacity: 0.25;
+  }
+
+  .no-heading {
+    @extend %text-capital;
+    display: block;
+    opacity: 0.5;
+    font-weight: 700;
+    @include font(30,33);
+    padding: 0 0 10px;
+
+    @include media('<tablet'){
+      @include font(20,23);
+    }
+  }
+  p { opacity: 0.5;}
 }
