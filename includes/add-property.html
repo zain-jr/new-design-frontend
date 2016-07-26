@@ -2,97 +2,282 @@
     <h1>Add <span>Property</span></h1>
     <div class="layout">
         <div class="main-form">
-            <strong class="add-pro-heading"><span>property for</span></strong>
-            <ul class="radio-checks-holder">
-                <li>
-                    <label for="for-sale" class="custom-withouChecks">
-                        <input type="radio" name="add-for" id="for-sale">
-                        <span class="fake-label">For Sale</span>
-                    </label>
-                </li>
-                <li>
-                    <label for="for-rent" class="custom-withouChecks">
-                        <input type="radio" name="add-for" id="for-rent">
-                        <span class="fake-label">For Rent</span>
-                    </label>
-                </li>
-            </ul>
-            <strong class="add-pro-heading"><span>Property Type</span></strong>
-            <ul class="radio-checks-holder">
-                <li>
-                    <label for="add-home" class="custom-withouChecks transparent">
-                        <input type="radio" name="subtype" id="add-home" class="addPro-type">
-                        <span class="fake-label">Home</span>
-                    </label>
-                </li>
-                <li>
-                    <label for="add-plot" class="custom-withouChecks transparent">
-                        <input type="radio" name="subtype" id="add-plot" class="addPro-type">
-                        <span class="fake-label">plot</span>
-                    </label>
-                </li>
-                <li>
-                    <label for="add-commercial" class="custom-withouChecks transparent">
-                        <input type="radio" name="subtype" id="add-commercial" class="addPro-type">
-                        <span class="fake-label">commercial</span>
-                    </label>
-                </li>
-            </ul>
-            <ul class="radio-checks-holder subtype-links hidden">
-                <li>
-                    <label for="subtype-radio" class="customRadio">
-                        <input type="radio" name="subtype-feature" id="subtype-radio">
-                        <span class="fake-radio"></span>
-                        <span class="fake-label">House</span>
-                    </label>
-                </li>
-                <li>
-                    <label for="subtype-radio1" class="customRadio">
-                        <input type="radio" name="subtype-feature" id="subtype-radio1">
-                        <span class="fake-radio"></span>
-                        <span class="fake-label">House</span>
-                    </label>
-                </li>
-                <li>
-                    <label for="subtype-radio2" class="customRadio">
-                        <input type="radio" name="subtype-feature" id="subtype-radio2">
-                        <span class="fake-radio"></span>
-                        <span class="fake-label">House</span>
-                    </label>
-                </li>
-                <li>
-                    <label for="subtype-radio3" class="customRadio">
-                        <input type="radio" name="subtype-feature" id="subtype-radio3">
-                        <span class="fake-radio"></span>
-                        <span class="fake-label">House</span>
-                    </label>
-                </li>
-            </ul>
-            <strong class="add-pro-heading"><span>Property Location</span></strong>
-            <div class="layout">
-                <div class="layout-holder">
-                    <label for="society">Socity</label>
-                    <div class="input-holder">
-                        <select>
-                            <option>1</option>
-                            <option>1</option>
-                            <option>1</option>
-                            <option>1</option>
-                        </select>
+            <form class="add-a-property">
+                <strong class="add-pro-heading"><span>property for</span></strong>
+                <ul class="radio-checks-holder">
+                    <li>
+                        <label for="for-sale" class="custom-withouChecks">
+                            <input type="radio" name="add-for" id="for-sale">
+                            <span class="fake-label">For Sale</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="for-rent" class="custom-withouChecks">
+                            <input type="radio" name="add-for" id="for-rent">
+                            <span class="fake-label">For Rent</span>
+                        </label>
+                    </li>
+                </ul>
+                <strong class="add-pro-heading"><span>Property Type</span></strong>
+                <ul class="radio-checks-holder">
+                    <li>
+                        <label for="add-home" class="custom-withouChecks transparent">
+                            <input type="radio" name="subtype" id="add-home" class="addPro-type">
+                            <span class="fake-label">Home</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="add-plot" class="custom-withouChecks transparent">
+                            <input type="radio" name="subtype" id="add-plot" class="addPro-type">
+                            <span class="fake-label">plot</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="add-commercial" class="custom-withouChecks transparent">
+                            <input type="radio" name="subtype" id="add-commercial" class="addPro-type">
+                            <span class="fake-label">commercial</span>
+                        </label>
+                    </li>
+                </ul>
+                <ul class="radio-checks-holder subtype-links hidden">
+                    <li>
+                        <label for="subtype-radio" class="customRadio">
+                            <input type="radio" name="subtype-feature" id="subtype-radio">
+                            <span class="fake-radio"></span>
+                            <span class="fake-label">House</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="subtype-radio1" class="customRadio">
+                            <input type="radio" name="subtype-feature" id="subtype-radio1">
+                            <span class="fake-radio"></span>
+                            <span class="fake-label">House</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="subtype-radio2" class="customRadio">
+                            <input type="radio" name="subtype-feature" id="subtype-radio2">
+                            <span class="fake-radio"></span>
+                            <span class="fake-label">House</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="subtype-radio3" class="customRadio">
+                            <input type="radio" name="subtype-feature" id="subtype-radio3">
+                            <span class="fake-radio"></span>
+                            <span class="fake-label">House</span>
+                        </label>
+                    </li>
+                </ul>
+                <strong class="add-pro-heading"><span>Property Location</span></strong>
+                <div class="layout">
+                    <div class="layout-holder">
+                        <label for="society">Socity</label>
+                        <div class="input-holder">
+                            <select class="js-example-basic-single" id="society">
+                                <option>1</option>
+                                <option>1</option>
+                                <option>1</option>
+                                <option>1</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layout-holder">
+                        <label for="block">Block</label>
+                        <div class="input-holder">
+                            <select class="js-example-basic-single" id="block">
+                                <option>1</option>
+                                <option>1</option>
+                                <option>1</option>
+                                <option>1</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-                <div class="layout-holder">
-                    <label for="society">Block</label>
-                    <div class="input-holder">
-                        <select>
-                            <option>1</option>
-                            <option>1</option>
-                            <option>1</option>
-                            <option>1</option>
-                        </select>
+                <div class="layout">
+                    <div class="layout-holder">
+                        <label for="property-title">Property Title</label>
+                        <div class="input-holder">
+                            <input type="text" id="property-title" placeholder="Please add property title">
+                        </div>
                     </div>
                 </div>
-            </div>
+                <div class="layout">
+                    <div class="layout-holder">
+                        <label for="area">Area</label>
+                        <div class="input-holder">
+                            <input type="text" id="area" placeholder="Area of property">
+                        </div>
+                    </div>
+                    <div class="layout-holder">
+                        <label for="unit">Unit</label>
+                        <div class="input-holder">
+                            <span class="fake-select">
+                                <select>
+                                    <option>Marla</option>
+                                    <option>Kanal</option>
+                                    <option>Squar Yard</option>
+                                    <option>Squar Feet</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="layout">
+                    <div class="layout-holder">
+                        <label for="price">Price</label>
+                        <div class="input-holder">
+                            <input type="text" id="price" placeholder="Please enter the price">
+                        </div>
+                    </div>
+                    <div class="layout-holder">
+                        <span class="calculatedPrice">Price must contain numbers only</span>
+                    </div>
+                </div>
+                <div class="layout">
+                    <div class="layout-holder">
+                        <label for="description">Description</label>
+                        <div class="input-holder">
+                            <textarea placeholder="Please enter the description" id="description"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="layout">
+                    <div class="layout-holder">
+                        <label for="bedrooms">bedrooms</label>
+                        <div class="input-holder">
+                            <input type="number" id="bedrooms" placeholder="Total Bedrooms">
+                        </div>
+                    </div>
+                    <div class="layout-holder">
+                        <label for="bathroom">bathroom</label>
+                        <div class="input-holder">
+                            <input type="number" id="bathroom" placeholder="Total Bathroom">
+                        </div>
+                    </div>
+                </div>
+                <div class="layout">
+                    <div class="input-holder">
+                        <a class="extra-features">Extra Feature</a>
+                    </div>
+                </div>
+                <strong class="add-pro-heading"><span>Attachments</span></strong>
+                <ul class="image-uploading-area">
+                    <li>
+                        <div class="file-uploader">
+                            <input type="file" ngf-select ng-model="form.data.files.mainFile.file" onchange="previewAddPropertyImg(this , '.img-thumb1')" class="upload-img">
+                            <div class="image-holder">
+                                <img src="#" class="img-thumb1" alt="image Description">
+                                <span class="propertyDocumentCloseBtn" ng-click="cancelFile(0)"><span class="icon-cross"></span></span>
+                            </div>
+                        </div>
+                        <input type="text" ng-model="form.data.files.mainFile.title" class="picture-name" placeholder="Title">
+                        <span class="error-text">This is error</span>
+                    </li>
+                    <li>
+                        <div class="file-uploader">
+                            <input type="file" ngf-select ng-model="form.data.files.twoFile.file" onchange="previewAddPropertyImg(this , '.img-thumb2')" class="upload-img">
+                            <div class="image-holder">
+                                <img src="#" class="img-thumb2" alt="image Description">
+                                <span class="propertyDocumentCloseBtn" ng-click="cancelFile(1)"><span class="icon-cross"></span></span>
+                            </div>
+                        </div>
+                        <input type="text" ng-model="form.data.files.twoFile.title" class="picture-name" placeholder="Title">
+                        <span class="error-text">This is error</span>
+                    </li>
+                    <li>
+                        <div class="file-uploader">
+                            <input type="file" ngf-select ng-model="form.data.files.threeFile.file" onchange="previewAddPropertyImg(this , '.img-thumb3')" class="upload-img">
+                            <div class="image-holder">
+                                <img src="#" class="img-thumb3" alt="image Description">
+                                <span class="propertyDocumentCloseBtn" ng-click="cancelFile(2)"><span class="icon-cross"></span></span>
+                            </div>
+                        </div>
+                        <input type="text" ng-model="form.data.files.threeFile.title" class="picture-name" placeholder="Title">
+                        <span class="error-text">This is error</span>
+                    </li>
+                    <li>
+                        <div class="file-uploader">
+                            <input type="file" ng-model="form.data.files.fourFile.file" onchange="previewAddPropertyImg(this , '.img-thumb4')" class="upload-img">
+                            <div class="image-holder">
+                                <img src="#" class="img-thumb4" alt="image Description">
+                                <span class="propertyDocumentCloseBtn"><span class="icon-cross"></span></span>
+                            </div>
+                        </div>
+                        <input type="text" ng-model="form.data.files.fourFile.title" class="picture-name" placeholder="Title">
+                        <span class="error-text">This is error</span>
+                    </li>
+                    <li>
+                        <div class="file-uploader">
+                            <input type="file" ng-model="form.data.files.fiveFile.file" onchange="previewAddPropertyImg(this , '.img-thumb5')" class="upload-img">
+                            <div class="image-holder">
+                                <img src="#" class="img-thumb5" alt="image Description">
+                                <span class="propertyDocumentCloseBtn"><span class="icon-cross"></span></span>
+                            </div>
+                        </div>
+                        <input type="text" ng-model="form.data.files.fiveFile.title" class="picture-name" placeholder="Title">
+                        <span class="error-text">This is error</span>
+                    </li>
+                    <li>
+                        <div class="file-uploader">
+                            <input type="file" ng-model="form.data.files.sixFile.file" onchange="previewAddPropertyImg(this , '.img-thumb6')" class="upload-img">
+                            <div class="image-holder">
+                                <img src="#" class="img-thumb6" alt="image Description">
+                                <span class="propertyDocumentCloseBtn"><span class="icon-cross"></span></span>
+                            </div>
+                        </div>
+                        <input type="text" ng-model="form.data.files.sixFile.title" class="picture-name" placeholder="Title">
+                        <span class="error-text">This is error</span>
+                    </li>
+                </ul>
+                <strong class="add-pro-heading"><span>User Details</span></strong>
+                <ul class="existingOrNew-member">
+                    <li>
+                        <label for="existing">Existing Member</label>
+                        <input type="radio" name="newOrExisting" id="existing">
+                        <div class="slide">
+                            <div class="layout">
+                                <label for="email">E-mail ID</label>
+                                <div class="input-holder"><input type="email" id="email" placeholder="Please enter the email"></div>
+                            </div>
+                            <div class="layout">
+                                <label for="password">Password</label>
+                                <div class="input-holder">
+                                    <input type="password" id="password" placeholder="Please enter the Password">
+                                    <a href="#" class="forgot-pass">Forgot Password</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <label for="new">New Member (Free)</label>
+                        <input type="radio" name="newOrExisting" id="new">
+                        <div class="slide">
+                            <div class="layout">
+                                <label for="f-name">First Name</label>
+                                <div class="input-holder"><input type="text" id="f-name" placeholder="First Name"></div>
+                            </div>
+                            <div class="layout">
+                                <label for="l-name">Last name</label>
+                                <div class="input-holder"><input type="text" id="l-name" placeholder="Last name"></div>
+                            </div>
+                            <div class="layout">
+                                <label for="new-email">Email</label>
+                                <div class="input-holder"><input type="email" id="new-email" placeholder="Email"></div>
+                            </div>
+                            <div class="layout">
+                                <label for="new-phone">Phone</label>
+                                <div class="input-holder"><input type="tel" id="new-phone" placeholder="Phone Number"></div>
+                            </div>
+                            <div class="layout">
+                                <label for="new-password">Password</label>
+                                <div class="input-holder"><input type="tel" id="new-password" placeholder="Password"></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <input type="submit" value="SUBMIT PROPERTY">
+            </form>
         </div>
         <div class="tips">
             <strong class="add-pro-heading"><span>tips</span></strong>

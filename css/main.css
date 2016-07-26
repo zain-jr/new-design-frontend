@@ -610,7 +610,7 @@ th {
   content: "\e907";
 }
 
-.listing-page .filters-links, .listing-page .filterChecks, .propertyDetail-page .feature-list, .social-icons, .loginRegister, .main-visualSection .number-of-properties, .mainSearch-form .typeOfBuying, .mainSearch-form .subTypes, .mainSearch-form .inputsHolder, #nav .main-navigation, .news-carousel .news-pagination ul, .topSocities-holder .socities, .topSocities-holder .socities li .caption .numberOfproperties, .agents-logo, .pager, .quick-links, .public-ui-features, .sumery-list, .radio-checks-holder {
+.listing-page .filters-links, .listing-page .filterChecks, .propertyDetail-page .feature-list, .addProperty-form .image-uploading-area, .social-icons, .loginRegister, .main-visualSection .number-of-properties, .mainSearch-form .typeOfBuying, .mainSearch-form .subTypes, .mainSearch-form .inputsHolder, #nav .main-navigation, .news-carousel .news-pagination ul, .topSocities-holder .socities, .topSocities-holder .socities li .caption .numberOfproperties, .agents-logo, .pager, .quick-links, .public-ui-features, .sumery-list, .radio-checks-holder {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -2569,6 +2569,10 @@ input[type='submit'] {
   padding: 10px;
 }
 
+.addProperty-form .select2-container {
+  width: 100% !important;
+}
+
 .addProperty-form h1 {
   font-size: 60px;
   line-height: 63px;
@@ -2618,6 +2622,225 @@ input[type='submit'] {
 
 .addProperty-form .tips {
   width: 25%;
+}
+
+.addProperty-form .image-uploading-area {
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+  text-align: center;
+  margin: 10px auto;
+  max-width: 1024px;
+}
+
+.addProperty-form .image-uploading-area > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0;
+}
+
+@media (max-width: 1023px) {
+  .addProperty-form .image-uploading-area {
+    max-width: 480px;
+    margin: 10px auto;
+  }
+}
+
+.addProperty-form .image-uploading-area li {
+  width: 16.66%;
+  position: relative;
+  padding: 0 10px 10px;
+}
+
+@media (max-width: 1199px) {
+  .addProperty-form .image-uploading-area li {
+    padding: 0 5px 10px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .addProperty-form .image-uploading-area li {
+    width: 33.33%;
+    padding: 0 5px 10px;
+  }
+}
+
+.addProperty-form .image-uploading-area li.error .error-text {
+  display: block;
+  padding: 3px;
+  text-align: left;
+}
+
+.addProperty-form .image-uploading-area li.image-loaded .image-holder {
+  opacity: 1;
+  z-index: 9;
+}
+
+.addProperty-form .image-uploading-area li.image-loaded .picture-name {
+  pointer-events: inherit;
+}
+
+.addProperty-form .image-uploading-area li.image-loaded .file-uploader:after {
+  display: none;
+}
+
+.addProperty-form .image-uploading-area li:first-child .file-uploader:before {
+  position: absolute;
+  top: 15px;
+  left: -45px;
+  content: 'Main Image';
+  text-transform: capitalize;
+  font-size: 13px;
+  line-height: 16px;
+  padding: 3px;
+  transform: rotate(-39deg);
+  width: 150px;
+  color: #fff;
+  z-index: 999;
+  word-spacing: 1px;
+  background: #d89429;
+}
+
+.addProperty-form .image-uploading-area li .file-uploader {
+  width: 100%;
+  height: 110px;
+  margin: 0 auto 15px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background: #6c6d70;
+}
+
+@media (max-width: 767px) {
+  .addProperty-form .image-uploading-area li .file-uploader {
+    width: 100%;
+    height: 100px;
+  }
+}
+
+.addProperty-form .image-uploading-area li .file-uploader:hover:after {
+  color: #30ce20;
+}
+
+.addProperty-form .image-uploading-area li .file-uploader:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: "\e91b";
+  font-family: 'icomoon';
+  font-size: 50px;
+  line-height: 1;
+  z-index: -1;
+  margin: -25px 0 0 -25px;
+  color: #9da2a8;
+  transition: color 0.4s ease;
+  -webkit-transition: color 0.4s ease;
+  -ms-transition: color 0.4s ease;
+  -moz-transition: color 0.4s ease;
+}
+
+@media (max-width: 1023px) {
+  .addProperty-form .image-uploading-area li .file-uploader:after {
+    font-size: 60px;
+    margin: -30px 0 0 -30px;
+  }
+}
+
+.addProperty-form .image-uploading-area li .file-uploader input[type="file"] {
+  display: block;
+  overflow: hidden;
+  border: 0;
+  outline: none;
+  opacity: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.addProperty-form .image-uploading-area li .picture-name {
+  border: 0;
+  display: block;
+  max-width: inherit !important;
+  margin: 0;
+  width: 100%;
+  height: 28px;
+  padding: 6px 10px;
+  font-size: 14px;
+  line-height: 18px;
+  pointer-events: none;
+}
+
+.addProperty-form .image-uploading-area li .image-holder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 0;
+  outline: none;
+  overflow: hidden;
+  z-index: -1;
+  opacity: 0;
+  transition: z-index 0.9s ease, opacity 0.9s ease;
+  -webkit-transition: z-index 0.9s ease, opacity 0.9s ease;
+  -moz-transition: z-index 0.9s ease, opacity 0.9s ease;
+  -ms-transition: z-index 0.9s ease, opacity 0.9s ease;
+}
+
+.addProperty-form .image-uploading-area li .image-holder:after {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.7);
+  content: '';
+  transition: top 0.4s ease;
+  -webkit-transition: top 0.4s ease;
+  -moz-transition: top 0.4s ease;
+  -ms-transition: top 0.4s ease;
+}
+
+.addProperty-form .image-uploading-area li .image-holder .propertyDocumentCloseBtn {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  text-decoration: none;
+  z-index: 6;
+  font-size: 50px;
+  line-height: 50px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease, color 0.4s ease;
+  -webkit-transition: opacity 0.4s ease, visibility 0.4s ease, color 0.4s ease;
+  -ms-transition: opacity 0.4s ease, visibility 0.4s ease, color 0.4s ease;
+  -moz-transition: opacity 0.4s ease, visibility 0.4s ease, color 0.4s ease;
+  cursor: pointer;
+  margin: -25px -25px 0 0;
+}
+
+@media (max-width: 1424px) {
+  .addProperty-form .image-uploading-area li .image-holder .propertyDocumentCloseBtn {
+    font-size: 50px;
+    line-height: 50px;
+  }
+}
+
+.addProperty-form .image-uploading-area li .image-holder img {
+  width: 100%;
+  display: block;
+  height: 100%;
+  border: 0;
+}
+
+.addProperty-form .image-uploading-area li .image-holder:hover:after {
+  top: 0;
+}
+
+.addProperty-form .image-uploading-area li .image-holder:hover .propertyDocumentCloseBtn {
+  opacity: 1;
+  visibility: visible;
 }
 
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
@@ -3104,6 +3327,7 @@ h1 {
   width: 28px;
   background: #2092d0;
   content: '';
+  pointer-events: none;
 }
 
 .fake-select:before {
@@ -3115,6 +3339,7 @@ h1 {
   content: '';
   z-index: 1;
   margin: -2px 0 0;
+  pointer-events: none;
 }
 
 .fake-select select {

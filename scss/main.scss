@@ -213,6 +213,7 @@ h1 {
     width: 28px;
     background: $p42-color;
     content: '';
+    pointer-events: none;
   }
 
   &:before {
@@ -223,7 +224,8 @@ h1 {
     border-top: 4px solid $black;
     content: '';
     z-index: 1;
-    margin: -2px 0 0; 
+    margin: -2px 0 0;
+    pointer-events: none;
   }
 
   select {

@@ -107,6 +107,36 @@ $(document).on('click', '.call-agent-btn', function(){
 	var placeToGo = $('.call-agent').find('p').text(phoneNumber);
 });
 
+function previewAddPropertyImg(file, target)
+ {
+	previewFile(file, target);
+	$(file).closest('li').addClass('image-loaded');
+	$(file).closest('li').find('.picture-name').focus();
+ }
+
+
+function previewFile(file, target) {
+  var preview = document.querySelector(target);
+  var file    = file.files[0];
+  var reader  = new FileReader();
+
+  reader.onloadend = function () {
+    preview.src = reader.result;
+  }
+
+  if (file) {
+    reader.readAsDataURL(file);
+  } else {
+    preview.src = "";
+  }
+}
+
+$(document).on('click', '.propertyDocumentCloseBtn', function(){
+	 $(this).closest('li').find('.picture-name').val('');
+	 $(this).closest('li').find('img').attr('src', '#');
+	 $(this).closest('li').removeClass('image-loaded');
+ });
+
 // page init
 jQuery(function(){
   	initCarousel();

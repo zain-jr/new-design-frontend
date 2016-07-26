@@ -4,6 +4,10 @@
     box-shadow: 0 0 7px rgba($black , 0.22);
     padding: 10px;
 
+    .select2-container {
+        width:  100% !important;
+    }
+
     h1 {
         @include font(60,63);
         font-weight: 100;
@@ -52,4 +56,197 @@
         @extend .pull-left;
         width: 25%;
     }
+    .image-uploading-area{
+		@extend %listreset;
+		@include align-reset(top,14,17);
+		text-align: center;
+		margin: 10px auto;
+		max-width: 1024px;
+		
+		@include media('<desktop'){
+			max-width: 480px;
+			margin: 10px auto;
+		}
+		
+		li{
+			width: 16.66%;
+			position: relative;
+			padding:0 10px 10px;
+			
+			@include media('<widescreen'){
+				padding:  0 5px 10px;
+			}
+
+			@include media('<desktop'){
+				width: 33.33%;
+				padding: 0 5px 10px;
+			}
+			
+			&.error {
+				.error-text{
+					display: block;
+					padding: 3px;
+					text-align: left;
+				}
+			}
+			
+			&.image-loaded {
+				.image-holder {
+					opacity: 1;
+					z-index: 9;
+				}
+				.picture-name {
+					pointer-events: inherit;
+				}
+				.file-uploader {
+					&:after{ display: none;}
+				}
+			}
+			
+			&:first-child{
+				
+				.file-uploader{
+					
+					&:before{
+						position: absolute;
+						top: 15px;
+						left: -45px;
+						content: 'Main Image';
+						text-transform: capitalize;
+						@include font(13,16);
+						padding: 3px;
+						transform: rotate(-39deg);
+						width: 150px;
+						color: $white;
+						z-index: 999;
+						word-spacing: 1px;
+                        background: $orange;
+					}
+				}
+			}
+
+			.file-uploader{
+                @include squar(100%, 110px);
+                margin: 0 auto 15px;
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+                background: $p42-default-grey;
+                
+                @include media('<tablet'){
+                    @include squar(100%, 100px);
+                }
+
+                &:hover{
+                    &:after{ color: $green;}
+                }
+                
+                &:after{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    content: "\e91b";
+                    font-family: 'icomoon';
+                    font-size: 50px;
+                    line-height: 1;
+                    z-index: -1;
+                    margin: -25px 0 0 -25px;
+                    color: #9da2a8;
+                    transition: color 0.4s ease;
+                    -webkit-transition: color 0.4s ease;
+                    -ms-transition: color 0.4s ease;
+                    -moz-transition: color 0.4s ease;
+                    
+                    @include media('<desktop'){
+                        font-size: 60px;
+                        margin: -30px 0 0 -30px;
+                    }
+                }
+            input[type="file"]{
+                display: block;
+                overflow: hidden;
+                border: 0;
+                outline: none;
+                opacity: 0;
+                @include squar(100% !important, 100% !important);
+            }
+        }
+        .picture-name{
+            border: 0;
+            display: block;
+            max-width: inherit !important;
+            margin: 0;
+            width: 100%;
+            height: 28px;
+            padding: 6px 10px;
+            @include font(14,18);
+            pointer-events: none;
+        }
+        .image-holder{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 0;
+            outline: none;
+            overflow: hidden;
+            z-index: -1;
+            opacity: 0;
+            transition: z-index 0.9s ease, opacity 0.9s ease;
+            -webkit-transition: z-index 0.9s ease, opacity 0.9s ease;
+            -moz-transition: z-index 0.9s ease, opacity 0.9s ease;
+            -ms-transition: z-index 0.9s ease, opacity 0.9s ease; 
+            
+            &:after{
+                position: absolute;
+                top: 100%;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                background: rgba(255,255,255,0.7);
+                content: '';
+                transition: top 0.4s ease;
+                -webkit-transition: top 0.4s ease;
+                -moz-transition: top 0.4s ease;
+                -ms-transition: top 0.4s ease;
+            }
+            .propertyDocumentCloseBtn{
+                position: absolute;
+                top: 50%;
+                right: 50%;
+                text-decoration: none;
+                z-index: 6;
+                @include font(50,50);
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.4s ease, visibility 0.4s ease, color 0.4s ease;
+                -webkit-transition: opacity 0.4s ease, visibility 0.4s ease, color 0.4s ease;
+                -ms-transition: opacity 0.4s ease, visibility 0.4s ease, color 0.4s ease;
+                -moz-transition: opacity 0.4s ease, visibility 0.4s ease, color 0.4s ease;
+                cursor:pointer;
+                margin: -25px -25px 0 0;
+                
+                @include media('<1425px'){
+                    @include font(50,50);
+                }
+            }
+            
+            img{
+                width: 100%;
+                display: block;
+                height: 100%;
+                border: 0;
+            }
+            
+            &:hover{
+                &:after { top: 0;}
+                .propertyDocumentCloseBtn {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
 }
