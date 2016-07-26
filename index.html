@@ -1032,19 +1032,19 @@
 				</div>-->
 				<div class="addProperty-form container">
 					<h1>Add <span>Property</span></h1>
-					<div class="layout">
+					<div class="add-form-holder">
 						<div class="main-form">
 							<form class="add-a-property">
 								<strong class="add-pro-heading"><span>property for</span></strong>
 								<ul class="radio-checks-holder">
 									<li>
-										<label for="for-sale" class="custom-withouChecks">
-											<input type="radio" name="add-for" id="for-sale">
+										<label for="for-sale" class="custom-withouChecks transparent">
+											<input type="radio" name="add-for" id="for-sale" checked>
 											<span class="fake-label">For Sale</span>
 										</label>
 									</li>
 									<li>
-										<label for="for-rent" class="custom-withouChecks">
+										<label for="for-rent" class="custom-withouChecks transparent">
 											<input type="radio" name="add-for" id="for-rent">
 											<span class="fake-label">For Rent</span>
 										</label>
@@ -1060,7 +1060,7 @@
 									</li>
 									<li>
 										<label for="add-plot" class="custom-withouChecks transparent">
-											<input type="radio" name="subtype" id="add-plot" class="addPro-type">
+											<input type="radio" name="subtype" id="add-plot" class="addPro-type" checked>
 											<span class="fake-label">plot</span>
 										</label>
 									</li>
@@ -1166,7 +1166,7 @@
 										<span class="calculatedPrice">Price must contain numbers only</span>
 									</div>
 								</div>
-								<div class="layout">
+								<div class="layout full-width">
 									<div class="layout-holder">
 										<label for="description">Description</label>
 										<div class="input-holder">
@@ -1188,9 +1188,45 @@
 										</div>
 									</div>
 								</div>
-								<div class="layout">
+								<div class="layout full-width">
 									<div class="input-holder">
 										<a class="extra-features">Extra Feature</a>
+									</div>
+								</div>
+								<div class="list-extraFeatures">
+									<div class="col">
+										<span class="feature-heading">Healthcare Recreational</span>
+										<div class="layout">
+											<div class="layout-holder">
+												<label for="bedrooms1">bedrooms</label>
+												<div class="input-holder">
+													<input type="number" id="bedrooms1">
+												</div>
+											</div>
+											<div class="layout-holder">
+												<label for="bathroom1">bathroom</label>
+												<div class="input-holder">
+													<input type="number" id="bathroom1">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col">
+										<span class="feature-heading">Healthcare Recreational</span>
+										<div class="layout">
+											<div class="layout-holder">
+												<label for="bedrooms15">bedrooms</label>
+												<div class="input-holder">
+													<input type="checkbox" id="bedrooms15">
+												</div>
+											</div>
+											<div class="layout-holder">
+												<label for="bathroom12">bathroom</label>
+												<div class="input-holder">
+													<input type="radio" id="bathroom12">
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 								<strong class="add-pro-heading"><span>Attachments</span></strong>
@@ -1265,8 +1301,8 @@
 								<strong class="add-pro-heading"><span>User Details</span></strong>
 								<ul class="existingOrNew-member">
 									<li>
+										<input type="radio" name="newOrExisting" id="existing" checked>
 										<label for="existing">Existing Member</label>
-										<input type="radio" name="newOrExisting" id="existing">
 										<div class="slide">
 											<div class="layout">
 												<label for="email">E-mail ID</label>
@@ -1282,8 +1318,8 @@
 										</div>
 									</li>
 									<li>
-										<label for="new">New Member (Free)</label>
 										<input type="radio" name="newOrExisting" id="new">
+										<label for="new">New Member (Free)</label>
 										<div class="slide">
 											<div class="layout">
 												<label for="f-name">First Name</label>
@@ -1311,9 +1347,9 @@
 								<input type="submit" value="SUBMIT PROPERTY">
 							</form>
 						</div>
-						<div class="tips">
+						<!--<div class="tips">
 							<strong class="add-pro-heading"><span>tips</span></strong>
-						</div>
+						</div>-->
 					</div>
 				</div>
 			</div>

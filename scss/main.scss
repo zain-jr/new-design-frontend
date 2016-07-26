@@ -40,11 +40,6 @@ $media-expressions: (
 html {
   width: 100%;
   height: 100%;
-
-  &.nav-active{
-    height: 100vh;
-    overflow: hidden;
-  }
 }
 body{
   width: 100%;
@@ -200,10 +195,10 @@ h1 {
 .fake-select {
   width: 100%;
   @extend %layout;
-  border: 1px solid $p42-color;
   display: block;
   position: relative;
   z-index: 1;
+  cursor: pointer;
 
   &:after {
     position: absolute;
@@ -214,6 +209,7 @@ h1 {
     background: $p42-color;
     content: '';
     pointer-events: none;
+    cursor: pointer;
   }
 
   &:before {
@@ -226,6 +222,7 @@ h1 {
     z-index: 1;
     margin: -2px 0 0;
     pointer-events: none;
+    cursor: pointer;
   }
 
   select {
@@ -593,7 +590,8 @@ h1 {
   z-index: -1;
 }
 .main-bg-holder {
-  @extend %layout;
+  width: 100%;
+  display: block;
   position: relative;
   padding: 230px 0 113px;
 
@@ -897,7 +895,7 @@ h1 {
     height: 100vh !important;
     width: 100% !important;
     overflow: auto !important;
-    z-index: 9999 !important;
+    z-index: 999999999 !important;
     background: rgba($p42-default-grey, 0.90);
     transform: translateX(-100%);
     -webkit-transform: translateX(-100%);
@@ -963,6 +961,7 @@ h1 {
 
     @include media('<tablet'){
       overflow: hidden;
+      height: 100vh;
     }
   }
 
@@ -973,7 +972,7 @@ h1 {
     top:  auto !important;
     left: 0 !important;
     right: 0 !important;
-    z-index: 999 !important;
+    z-index: 999999999 !important;
 
     .main-navigation {
 
@@ -2417,26 +2416,44 @@ h1 {
     border-radius: 8px;
     margin: -2px 0 10px;
     background: $p42-background;
-    border: 1px solid $p42-color;
   }
 
   li {
-    width: 33.33%;
+    width: 25%;
     font-weight: 600;
     padding: 10px 20px;
-    border: 1px solid transparent;
 
     &.active {
       border-radius: 8px 8px 0 0;
       background: $p42-background;
-      border: 1px solid $p42-color;
-      border-bottom: 0;
+      position: relative;
+
+      &:after {
+        position: absolute;
+        bottom: 0;
+        left: -1px;
+        right: -1px;
+        background: $p42-background;
+        content: '';
+        height: 5px;
+      }
     }
 
     .custom-withouChecks {
       margin: 0 auto;
       max-width: 170px;
+      width: 100%;
     }
+  }
+}
+.error-text {
+  display: none;
+  @include font(13,16);
+  color: $red;
+  padding: 2px;
+
+  .error & {
+    display: block;
   }
 }
 .resize-active * {

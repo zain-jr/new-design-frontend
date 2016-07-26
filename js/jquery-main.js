@@ -14,7 +14,14 @@ $(document).ready(function() {
 
 	$('.addPro-type:first').trigger('change');
 
+	$('.list-extraFeatures').slideUp();
+
 });
+
+$(document).on('change keyup', 'input, textarea, select', function(){
+	$(this).closest('.input-holder').removeClass('error');
+});
+
 
 $(document).on('click', 'a.lightbox', function(){
 	$('#wrapper').addClass('fancy-overlay');
@@ -136,6 +143,11 @@ $(document).on('click', '.propertyDocumentCloseBtn', function(){
 	 $(this).closest('li').find('img').attr('src', '#');
 	 $(this).closest('li').removeClass('image-loaded');
  });
+
+$(document).on('click', '.extra-features', function(){
+	$(this).toggleClass('active');
+	$('.list-extraFeatures').slideToggle();
+});
 
 // page init
 jQuery(function(){
