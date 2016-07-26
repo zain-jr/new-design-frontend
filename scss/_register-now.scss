@@ -1,0 +1,214 @@
+.registerNow {
+    background: rgba($p42-background, 0.5);
+    @extend %layout;
+    box-shadow: 0 0 7px rgba($black , 0.22);
+    padding: 20px 10px;
+    margin: 0 auto 30px;
+
+    h1 {
+        @include font(60,63);
+        font-weight: 100;
+
+        span { font-weight: 300;}
+
+        @include media('<tablet'){
+            @include font(30,33);
+        }
+    }
+    
+    .layout {
+        padding: 3px;
+        @include align-reset(top, 13, 16);
+        margin: 0 -10px 10px;
+
+        &.two {
+
+            .layout-holder {
+                width: 40%;
+                &:first-child{
+                    width: 60%;
+                }
+            }
+        }
+
+        @include media('<tablet'){
+            margin: 0;
+            padding: 0;
+            @include align-reset(top, 12, 15);
+        }
+
+        .layout-holder {
+            width: 33.33%;
+            padding: 0 10px;
+            @include align-reset(top, 13, 16);
+
+            @include media('<tablet'){
+                width: 100%;
+                display: block;
+                margin: 0 0 10px;
+                padding: 0;
+                @include align-reset(top, 12, 15);
+            }
+        }
+        .input-holder {
+            width: calc(90% - 140px);
+            padding: 2px;
+        }
+        label {
+            color: $dark-grey;
+            opacity: 0.80;
+            font-family: $open-sans;
+            @extend %text-capital;
+            width: 140px;
+            @include font(13,16);
+            padding: 7px 0 0;
+
+            @include media('<tablet'){
+                @include font(12,15);
+                width: 35%;
+            }
+
+            &:after {
+                @include align(top);
+                color: $red;
+                content: '*';
+            }
+        }
+    }
+
+    textarea,
+    input[type="text"],input[type="tel"],input[type="password"],input[type="number"],input[type="email"]{
+        border: 0;
+        width: 100%;
+        padding: 6px;
+        @include font(13,16);
+        height: 28px;
+        width: 100%;
+        
+        @include media('<tablet'){
+            @include font(12,16);
+        }
+
+        @include placeholder {
+            color: $dark-grey;
+            opacity: 0.7;
+        }
+    }
+
+    textarea {
+        height: 90px;
+        resize: none;
+    }
+    .role-opener {
+        display: block;
+        @include squar(200px, 28px);
+        @extend %text-center;
+        color: $dark-grey;
+        opacity: 0.8;
+        cursor: pointer;
+        font-family: $open-sans;
+        background: $white;
+        @include font(13,28);
+        position: relative;
+
+        &:after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 28px;
+            background: $p42-color;
+            content: '';
+        }
+        &:before {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            border: 4px solid transparent;
+            border-top: 4px solid $black;
+            content: '';
+            z-index: 1;
+            margin: -2px 0 0;
+        }
+    }
+    .agent-check {
+        @include align(top);
+        position: relative;
+        z-index: 60;
+        padding: 1px 0;
+        
+        @include media('<tablet'){
+            margin: 25px 20px 0;
+            @include font(13,15);
+        }
+        
+        &:after{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 55;
+            content: '';
+        }
+        
+        .hidden-checkfield{
+            visibility: visible;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            position: fixed;
+            
+            &:checked ~ {
+
+                .fake-checkbox{
+                    background: $orange;
+                    box-shadow: none;
+                    
+                    .fake-button {
+                        left: 53%;
+                    }
+                }
+                .fake-label{
+                    color: $black;
+                }
+            }
+        }
+        .fake-checkbox{
+            @include squar(40px, 20px);
+            border-radius: 20px;
+            float: left;
+            background: $gray;
+            box-shadow: inset 0 0 5px -2px rgba(0,0,0,0.5);
+            position: relative;
+            transition: background 0.4s ease;
+            z-index: -1;
+            
+            .fake-button {
+                position: absolute;
+                top: 2px;
+                left: 2px;
+                bottom: 2px;
+                width: 17px;
+                border-radius: 100%;
+                background: $gray;
+                background: $white;
+                content: '';
+                transition: left 0.4s ease;
+                -webkit-transition: left 0.4s ease;
+                -moz-transition: left 0.4s ease;
+                -ms-transition: left 0.4s ease;
+                cursor: pointer;
+            }
+        }
+        .fake-label {
+            float: left;
+            cursor: pointer;
+            max-width: 200px;
+            padding: 0 0 0 10px;
+            position: relative;
+            z-index: -1;
+            color: $black;
+        }
+    }
+}

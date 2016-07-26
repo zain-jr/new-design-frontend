@@ -21,42 +21,7 @@
             @include font(30,33);
         }
     }
-
-    .add-pro-heading {
-        display: block;
-        @extend %text-center;
-        @extend %text-capital;
-        color: $dark-grey;
-        @include font(20,23);
-        font-family: $open-sans;
-        font-weight: 600;
-        overflow: hidden;
-        
-        @include media('<tablet'){
-            @include font(16,19);
-        }
-
-        span {
-            @include align(top);
-            padding: 5px;
-            position: relative;
-
-            &:before , &:after {
-                position: absolute;
-                top: 50%;
-                left: -9999px;
-                right: 110%;
-                background: #bec0c2;
-                content: '';
-                height: 3px;
-                margin: -2px 0 0;
-            }
-            &:after{
-                right: -9999px;
-                left: 110%;
-            }
-        }
-    }
+    
     .main-form {
         @extend %layout;
         width: 75%;
@@ -365,6 +330,7 @@
         padding: 6px;
         @include font(13,16);
         height: 28px;
+        width: 100%;
         
         @include media('<tablet'){
             @include font(12,16);
@@ -372,7 +338,7 @@
 
         @include placeholder {
             color: $dark-grey;
-            opacity: 1;
+            opacity: 0.7;
         }
     }
     textarea {

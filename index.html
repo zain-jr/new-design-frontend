@@ -1029,7 +1029,7 @@
 						</div>
 					</div>
 				</div>-->
-				<div class="addProperty-form container">
+				<!--<div class="addProperty-form container">
 					<h1>Add <span>Property</span></h1>
 					<div class="add-form-holder">
 						<div class="main-form">
@@ -1348,6 +1348,167 @@
 						</div>
 						<div class="tips">
 							<strong class="add-pro-heading"><span>tips</span></strong>
+						</div>
+					</div>
+				</div>-->
+				<div class="registerNow container">
+					<div class="registration-form">
+						<h1>Register <span>Now</span></h1>
+						<div class="layout">
+							<div class="layout-holder">
+								<label for="f-name">First Name</label>
+								<div class="input-holder">
+									<input type="text" id="f-name" placeholder="First Name">
+								</div>
+							</div>
+							<div class="layout-holder">
+								<label for="l-name">Last Name</label>
+								<div class="input-holder">
+									<input type="text" id="l-name" placeholder="Last Name">
+								</div>
+							</div>
+							<div class="layout-holder">
+								<label for="email">Email</label>
+								<div class="input-holder">
+									<input type="email" id="email" placeholder="Email">
+								</div>
+							</div>
+						</div>
+						<div class="layout">
+							<div class="layout-holder">
+								<label for="pass">Password</label>
+								<div class="input-holder">
+									<input type="password" id="pass" placeholder="Password">
+								</div>
+							</div>
+							<div class="layout-holder">
+								<label for="re-pass">Re-Enter Password</label>
+								<div class="input-holder">
+									<input type="password" id="re-pass" placeholder="Re-Enter Password">
+								</div>
+							</div>
+						</div>
+						<strong class="registerNow-heading"><span>Contact Information</span></strong>
+						<div class="layout two">
+							<div class="layout-holder">
+								<label for="address">Address</label>
+								<div class="input-holder">
+									<input type="text" id="address" placeholder="Address">
+								</div>
+							</div>
+							<div class="layout-holder">
+								<label for="m-number">Mobile Number</label>
+								<div class="input-holder">
+									<input type="tel" id="m-number" placeholder="Mobile Number">
+								</div>
+							</div>
+						</div>
+						<div class="layout two">
+							<div class="layout-holder">
+								<label for="address">Other Roles</label>
+								<div class="input-holder">
+									<a class="role-opener">0 Selected</a>
+								</div>
+							</div>
+							<div class="layout-holder">
+								<label for="p-number">Phone Number</label>
+								<div class="input-holder">
+									<input type="tel" id="p-number" placeholder="Phone Number">
+								</div>
+							</div>
+						</div>
+						<strong class="registerNow-heading smaller">
+							<span>
+								Are you an Agent ? <b>Yes</b>
+								<label for="agent" class="agent-check">
+									<input type="checkbox" class="hidden-checkfield agent-brokerCheckbox" id="agent">
+									<span class="fake-checkbox">
+										<span class="fake-button"></span>
+									</span>
+								</label>
+								<b>No</b>
+							</span>
+						</strong>
+						<div class="agent-information">
+							<strong class="registerNow-heading"><span>Agent Information</span></strong>
+							<div class="layout">
+								<div class="layout-holder">
+									<div class="company-logo">
+										<input type="file" name="companyLogo" onchange="companyLogoUploader(this , '.company-profileP')">
+										<span class="name-tag">Add Company Logo</span>
+										<div class="picture-holder">
+											<img src="" class="company-profileP" alt="Company logo">
+											<a class="delete"><span class="icon-cross"></span></a>
+										</div>
+									</div>
+								</div>
+								<div class="layout-holder">
+									<label for="D-services" class="icon-technical-support"></label>
+									<div class="input-holder">
+										<textarea id="D-services" name="agencyDescription" placeholder="Description of Services"></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="input-holder full-width no-indent">
+								<label for="search-society" class="icon-society"></label>
+								<input type="text" placeholder="Select Societies You Deal In:" id="search-society" name="SelectDealSociety" required>
+								<span class="border"></span>
+								<span class="error-text">This is error</span>
+								<span class="calculatedSocieties"></span>
+							</div>
+							<div class="input-holder full-width">
+								<ul class="societiesBlock-listing">
+									<li>
+										<input type="checkbox" id="society1" class="selectSociety-checkbox">
+										<label for="society1">DHA</label>
+									</li>
+									<li>
+										<input type="checkbox" id="society2" class="selectSociety-checkbox">
+										<label for="society2">Garden Town</label>
+									</li>
+									<li>
+										<input type="checkbox" id="society3" class="selectSociety-checkbox">
+										<label for="society3">Model Town</label>
+									</li>
+									<li>
+										<input type="checkbox" id="society4" class="selectSociety-checkbox">
+										<label for="society4">wapda Town</label>
+									</li>
+									<li>
+										<input type="checkbox" id="society5" class="selectSociety-checkbox">
+										<label for="society5">Behria Town</label>
+									</li>
+									<li>
+										<input type="checkbox" id="society6" class="selectSociety-checkbox">
+										<label for="society6">Alflah town</label>
+									</li>
+								</ul>
+							</div>
+							<strong class="registerNow-heading"><span>Agency Contact Details</span></strong>
+							<div class="input-holder error">
+								<label for="compny-phone" class="icon-phone"></label>
+								<input type="tel" placeholder="Enter Company Phone Number" name="companyPhone" id="compny-phone" required>
+								<span class="border"></span>
+								<span class="error-text">This is error</span>
+							</div>
+							<div class="input-holder error">
+								<label for="compny-mobile" class="icon-phone_iphone"></label>
+								<input type="tel" placeholder="Enter Company Mobile Number" name="companyMobile" id="compny-mobile" required>
+								<span class="border"></span>
+								<span class="error-text">This is error</span>
+							</div>
+							<div class="input-holder full-width error">
+								<label for="compny-address" class="icon-directions"></label>
+								<input type="text" placeholder="Enter Company Address" name="companyAddress" id="compny-address" required>
+								<span class="border"></span>
+								<span class="error-text">This is error</span>
+							</div>
+							<div class="input-holder error">
+								<label for="compny-email" class="icon-envelope"></label>
+								<input type="email" placeholder="Enter Company Email" name="companyEmail" id="compny-email" required>
+								<span class="border"></span>
+								<span class="error-text">This is error</span>
+							</div>
 						</div>
 					</div>
 				</div>

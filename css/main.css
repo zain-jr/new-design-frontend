@@ -649,7 +649,8 @@ th {
 .text-center, .propertyNotFound, .propertyDetail-page .info-blockProperty .price, .propertyDetail-page .info-blockProperty .small-heading, .propertyDetail-page .propertyImage-pagination .propertyImage-slide a,
 .propertyDetail-page .propertyImage-pagination .slide a,
 .propertyDetail-page .propertyImage-slider .propertyImage-slide a,
-.propertyDetail-page .propertyImage-slider .slide a, .propertyDetail-page .overview-section, .propertyDetail-page .extra-feature-section .small-heading, .addProperty-form .add-pro-heading, .addProperty-form .extra-features, .addProperty-form .existingOrNew-member li, .addProperty-form .list-extraFeatures .feature-heading, .custom-withouChecks .fake-label, h1, .loginRegister li, .main-visualSection, #nav .main-navigation li, .news-carousel .news-pagination ul, .topSocities-holder .socities li a, .heading, .agents-logo li a, .premiumProperty, .public-ui-features li strong, .generic-lightbox {
+.propertyDetail-page .propertyImage-slider .slide a, .propertyDetail-page .overview-section, .propertyDetail-page .extra-feature-section .small-heading, .addProperty-form .extra-features, .addProperty-form .existingOrNew-member li, .addProperty-form .list-extraFeatures .feature-heading, .registerNow .role-opener, .custom-withouChecks .fake-label, h1, .loginRegister li, .main-visualSection, #nav .main-navigation li, .news-carousel .news-pagination ul, .topSocities-holder .socities li a, .heading, .agents-logo li a, .premiumProperty, .public-ui-features li strong, .generic-lightbox, .registerNow-heading,
+.add-pro-heading {
   text-align: center;
 }
 
@@ -669,7 +670,8 @@ th {
   text-transform: lowercase;
 }
 
-.text-capital, .propertyNotFound .no-heading, .addProperty-form .add-pro-heading, .addProperty-form .layout label, .addProperty-form .existingOrNew-member, .custom-withouChecks .fake-label, .select2-container .select2-selection--single .select2-selection__rendered, .mainSearch-form .subTypes, .views, .inquiry-email-form label {
+.text-capital, .propertyNotFound .no-heading, .addProperty-form .layout label, .addProperty-form .existingOrNew-member, .registerNow .layout label, .custom-withouChecks .fake-label, .select2-container .select2-selection--single .select2-selection__rendered, .mainSearch-form .subTypes, .views, .inquiry-email-form label, .registerNow-heading,
+.add-pro-heading {
   text-transform: capitalize;
 }
 
@@ -685,7 +687,7 @@ th {
 .propertyDetail-page .propertyImage-slider, .propertyDetail-page .propertyImage-pagination .propertyImage-mask,
 .propertyDetail-page .propertyImage-pagination .mask,
 .propertyDetail-page .propertyImage-slider .propertyImage-mask,
-.propertyDetail-page .propertyImage-slider .mask, .propertyDetail-page .overview-section, .propertyDetail-page .extra-feature-section, .propertyDetail-page .feature, .addProperty-form, .addProperty-form .add-form-holder, .addProperty-form .main-form, .addProperty-form .tips, .addProperty-form .list-extraFeatures, .fake-select, #wrapper, .logo, .main-visualSection, #main, .page-holder, .mainSearch-form .form-holder, .mainSearch-form .inputsHolder li .input-holder, .byDefault-fixed #nav .main-navigation li a span[class^="icon-"], .byDefault-fixed #nav .main-navigation li a span[class*="icon-"], #nav.fixed-position .main-navigation li a span[class^="icon-"], #nav.fixed-position .main-navigation li a span[class*="icon-"], .generic-section, .news-sliderHolder, .news-slideshow, .news-slideshow .mask, .news-slideshow .slideset, .news-carousel, .news-carousel .news-mask, .news-carousel .news-pagination ul a, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .inquiry-email-form .input-holder, .radio-checks-holder {
+.propertyDetail-page .propertyImage-slider .mask, .propertyDetail-page .overview-section, .propertyDetail-page .extra-feature-section, .propertyDetail-page .feature, .addProperty-form, .addProperty-form .add-form-holder, .addProperty-form .main-form, .addProperty-form .tips, .addProperty-form .list-extraFeatures, .registerNow, .fake-select, #wrapper, .logo, .main-visualSection, #main, .page-holder, .mainSearch-form .form-holder, .mainSearch-form .inputsHolder li .input-holder, .byDefault-fixed #nav .main-navigation li a span[class^="icon-"], .byDefault-fixed #nav .main-navigation li a span[class*="icon-"], #nav.fixed-position .main-navigation li a span[class^="icon-"], #nav.fixed-position .main-navigation li a span[class*="icon-"], .generic-section, .news-sliderHolder, .news-slideshow, .news-slideshow .mask, .news-slideshow .slideset, .news-carousel, .news-carousel .news-mask, .news-carousel .news-pagination ul a, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .inquiry-email-form .input-holder, .radio-checks-holder {
   overflow: hidden;
 }
 
@@ -2591,46 +2593,6 @@ input[type='submit'] {
   }
 }
 
-.addProperty-form .add-pro-heading {
-  display: block;
-  color: #555;
-  font-size: 20px;
-  line-height: 23px;
-  font-family: "Open Sans", "Arial", sans-serif;
-  font-weight: 600;
-  overflow: hidden;
-}
-
-@media (max-width: 767px) {
-  .addProperty-form .add-pro-heading {
-    font-size: 16px;
-    line-height: 19px;
-  }
-}
-
-.addProperty-form .add-pro-heading span {
-  display: inline-block;
-  vertical-align: top;
-  padding: 5px;
-  position: relative;
-}
-
-.addProperty-form .add-pro-heading span:before, .addProperty-form .add-pro-heading span:after {
-  position: absolute;
-  top: 50%;
-  left: -9999px;
-  right: 110%;
-  background: #bec0c2;
-  content: '';
-  height: 3px;
-  margin: -2px 0 0;
-}
-
-.addProperty-form .add-pro-heading span:after {
-  right: -9999px;
-  left: 110%;
-}
-
 .addProperty-form .main-form {
   width: 75%;
   margin: 0 auto;
@@ -3028,6 +2990,7 @@ input[type='submit'] {
   font-size: 13px;
   line-height: 16px;
   height: 28px;
+  width: 100%;
 }
 
 @media (max-width: 767px) {
@@ -3041,32 +3004,32 @@ input[type='submit'] {
 .addProperty-form textarea::-webkit-input-placeholder,
 .addProperty-form input[type="text"]::-webkit-input-placeholder, .addProperty-form input[type="tel"]::-webkit-input-placeholder, .addProperty-form input[type="password"]::-webkit-input-placeholder, .addProperty-form input[type="number"]::-webkit-input-placeholder, .addProperty-form input[type="email"]::-webkit-input-placeholder {
   color: #555;
-  opacity: 1;
+  opacity: 0.7;
 }
 
 .addProperty-form textarea::-moz-placeholder,
 .addProperty-form input[type="text"]::-moz-placeholder, .addProperty-form input[type="tel"]::-moz-placeholder, .addProperty-form input[type="password"]::-moz-placeholder, .addProperty-form input[type="number"]::-moz-placeholder, .addProperty-form input[type="email"]::-moz-placeholder {
   opacity: 1;
   color: #555;
-  opacity: 1;
+  opacity: 0.7;
 }
 
 .addProperty-form textarea:-moz-placeholder,
 .addProperty-form input[type="text"]:-moz-placeholder, .addProperty-form input[type="tel"]:-moz-placeholder, .addProperty-form input[type="password"]:-moz-placeholder, .addProperty-form input[type="number"]:-moz-placeholder, .addProperty-form input[type="email"]:-moz-placeholder {
   color: #555;
-  opacity: 1;
+  opacity: 0.7;
 }
 
 .addProperty-form textarea:-ms-input-placeholder,
 .addProperty-form input[type="text"]:-ms-input-placeholder, .addProperty-form input[type="tel"]:-ms-input-placeholder, .addProperty-form input[type="password"]:-ms-input-placeholder, .addProperty-form input[type="number"]:-ms-input-placeholder, .addProperty-form input[type="email"]:-ms-input-placeholder {
   color: #555;
-  opacity: 1;
+  opacity: 0.7;
 }
 
 .addProperty-form textarea.placeholder,
 .addProperty-form input[type="text"].placeholder, .addProperty-form input[type="tel"].placeholder, .addProperty-form input[type="password"].placeholder, .addProperty-form input[type="number"].placeholder, .addProperty-form input[type="email"].placeholder {
   color: #555;
-  opacity: 1;
+  opacity: 0.7;
 }
 
 .addProperty-form textarea {
@@ -3310,6 +3273,312 @@ input[type='submit'] {
     text-align: center;
     display: block !important;
   }
+}
+
+.registerNow {
+  background: rgba(222, 225, 227, 0.5);
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.22);
+  padding: 20px 10px;
+  margin: 0 auto 30px;
+}
+
+.registerNow h1 {
+  font-size: 60px;
+  line-height: 63px;
+  font-weight: 100;
+}
+
+.registerNow h1 span {
+  font-weight: 300;
+}
+
+@media (max-width: 767px) {
+  .registerNow h1 {
+    font-size: 30px;
+    line-height: 33px;
+  }
+}
+
+.registerNow .layout {
+  padding: 3px;
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+  margin: 0 -10px 10px;
+}
+
+.registerNow .layout > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0;
+}
+
+.registerNow .layout.two .layout-holder {
+  width: 40%;
+}
+
+.registerNow .layout.two .layout-holder:first-child {
+  width: 60%;
+}
+
+@media (max-width: 767px) {
+  .registerNow .layout {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    letter-spacing: -4px;
+  }
+  .registerNow .layout > * {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0;
+  }
+}
+
+.registerNow .layout .layout-holder {
+  width: 33.33%;
+  padding: 0 10px;
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+}
+
+.registerNow .layout .layout-holder > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0;
+}
+
+@media (max-width: 767px) {
+  .registerNow .layout .layout-holder {
+    width: 100%;
+    display: block;
+    margin: 0 0 10px;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    letter-spacing: -4px;
+  }
+  .registerNow .layout .layout-holder > * {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0;
+  }
+}
+
+.registerNow .layout .input-holder {
+  width: calc(90% - 140px);
+  padding: 2px;
+}
+
+.registerNow .layout label {
+  color: #555;
+  opacity: 0.80;
+  font-family: "Open Sans", "Arial", sans-serif;
+  width: 140px;
+  font-size: 13px;
+  line-height: 16px;
+  padding: 7px 0 0;
+}
+
+@media (max-width: 767px) {
+  .registerNow .layout label {
+    font-size: 12px;
+    line-height: 15px;
+    width: 35%;
+  }
+}
+
+.registerNow .layout label:after {
+  display: inline-block;
+  vertical-align: top;
+  color: #f20;
+  content: '*';
+}
+
+.registerNow textarea,
+.registerNow input[type="text"], .registerNow input[type="tel"], .registerNow input[type="password"], .registerNow input[type="number"], .registerNow input[type="email"] {
+  border: 0;
+  width: 100%;
+  padding: 6px;
+  font-size: 13px;
+  line-height: 16px;
+  height: 28px;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .registerNow textarea,
+  .registerNow input[type="text"], .registerNow input[type="tel"], .registerNow input[type="password"], .registerNow input[type="number"], .registerNow input[type="email"] {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.registerNow textarea::-webkit-input-placeholder,
+.registerNow input[type="text"]::-webkit-input-placeholder, .registerNow input[type="tel"]::-webkit-input-placeholder, .registerNow input[type="password"]::-webkit-input-placeholder, .registerNow input[type="number"]::-webkit-input-placeholder, .registerNow input[type="email"]::-webkit-input-placeholder {
+  color: #555;
+  opacity: 0.7;
+}
+
+.registerNow textarea::-moz-placeholder,
+.registerNow input[type="text"]::-moz-placeholder, .registerNow input[type="tel"]::-moz-placeholder, .registerNow input[type="password"]::-moz-placeholder, .registerNow input[type="number"]::-moz-placeholder, .registerNow input[type="email"]::-moz-placeholder {
+  opacity: 1;
+  color: #555;
+  opacity: 0.7;
+}
+
+.registerNow textarea:-moz-placeholder,
+.registerNow input[type="text"]:-moz-placeholder, .registerNow input[type="tel"]:-moz-placeholder, .registerNow input[type="password"]:-moz-placeholder, .registerNow input[type="number"]:-moz-placeholder, .registerNow input[type="email"]:-moz-placeholder {
+  color: #555;
+  opacity: 0.7;
+}
+
+.registerNow textarea:-ms-input-placeholder,
+.registerNow input[type="text"]:-ms-input-placeholder, .registerNow input[type="tel"]:-ms-input-placeholder, .registerNow input[type="password"]:-ms-input-placeholder, .registerNow input[type="number"]:-ms-input-placeholder, .registerNow input[type="email"]:-ms-input-placeholder {
+  color: #555;
+  opacity: 0.7;
+}
+
+.registerNow textarea.placeholder,
+.registerNow input[type="text"].placeholder, .registerNow input[type="tel"].placeholder, .registerNow input[type="password"].placeholder, .registerNow input[type="number"].placeholder, .registerNow input[type="email"].placeholder {
+  color: #555;
+  opacity: 0.7;
+}
+
+.registerNow textarea {
+  height: 90px;
+  resize: none;
+}
+
+.registerNow .role-opener {
+  display: block;
+  width: 200px;
+  height: 28px;
+  color: #555;
+  opacity: 0.8;
+  cursor: pointer;
+  font-family: "Open Sans", "Arial", sans-serif;
+  background: #fff;
+  font-size: 13px;
+  line-height: 28px;
+  position: relative;
+}
+
+.registerNow .role-opener:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 28px;
+  background: #2092d0;
+  content: '';
+}
+
+.registerNow .role-opener:before {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  border: 4px solid transparent;
+  border-top: 4px solid #000;
+  content: '';
+  z-index: 1;
+  margin: -2px 0 0;
+}
+
+.registerNow .agent-check {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  z-index: 60;
+  padding: 1px 0;
+}
+
+@media (max-width: 767px) {
+  .registerNow .agent-check {
+    margin: 25px 20px 0;
+    font-size: 13px;
+    line-height: 15px;
+  }
+}
+
+.registerNow .agent-check:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 55;
+  content: '';
+}
+
+.registerNow .agent-check .hidden-checkfield {
+  visibility: visible;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+}
+
+.registerNow .agent-check .hidden-checkfield:checked ~ .fake-checkbox {
+  background: #d89429;
+  box-shadow: none;
+}
+
+.registerNow .agent-check .hidden-checkfield:checked ~ .fake-checkbox .fake-button {
+  left: 53%;
+}
+
+.registerNow .agent-check .hidden-checkfield:checked ~ .fake-label {
+  color: #000;
+}
+
+.registerNow .agent-check .fake-checkbox {
+  width: 40px;
+  height: 20px;
+  border-radius: 20px;
+  float: left;
+  background: #999;
+  box-shadow: inset 0 0 5px -2px rgba(0, 0, 0, 0.5);
+  position: relative;
+  transition: background 0.4s ease;
+  z-index: -1;
+}
+
+.registerNow .agent-check .fake-checkbox .fake-button {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  width: 17px;
+  border-radius: 100%;
+  background: #999;
+  background: #fff;
+  content: '';
+  transition: left 0.4s ease;
+  -webkit-transition: left 0.4s ease;
+  -moz-transition: left 0.4s ease;
+  -ms-transition: left 0.4s ease;
+  cursor: pointer;
+}
+
+.registerNow .agent-check .fake-label {
+  float: left;
+  cursor: pointer;
+  max-width: 200px;
+  padding: 0 0 0 10px;
+  position: relative;
+  z-index: -1;
+  color: #000;
 }
 
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
@@ -6831,6 +7100,67 @@ h1 span {
 
 .error .error-text {
   display: block;
+}
+
+.registerNow-heading,
+.add-pro-heading {
+  display: block;
+  color: #555;
+  font-size: 20px;
+  line-height: 23px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 600;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .registerNow-heading,
+  .add-pro-heading {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+.registerNow-heading.smaller,
+.add-pro-heading.smaller {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.registerNow-heading.smaller b,
+.add-pro-heading.smaller b {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  line-height: 15px;
+  padding: 0 5px;
+}
+
+.registerNow-heading > span,
+.add-pro-heading > span {
+  display: inline-block;
+  vertical-align: top;
+  padding: 5px;
+  position: relative;
+}
+
+.registerNow-heading > span:before, .registerNow-heading > span:after,
+.add-pro-heading > span:before,
+.add-pro-heading > span:after {
+  position: absolute;
+  top: 50%;
+  left: -9999px;
+  right: 110%;
+  background: #bec0c2;
+  content: '';
+  height: 3px;
+  margin: -2px 0 0;
+}
+
+.registerNow-heading > span:after,
+.add-pro-heading > span:after {
+  right: -9999px;
+  left: 110%;
 }
 
 .resize-active * {
