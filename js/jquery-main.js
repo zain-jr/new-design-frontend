@@ -64,7 +64,7 @@ function initCarousel() {
 		stretchSlideToMask: true,
 		btnPrev: '.news-btn-prev',
 		btnNext: '.news-btn-next',
-		switchTime: 2000,
+		switchTime: 4000,
 		animSpeed: 600
 	});
 
