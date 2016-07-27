@@ -901,12 +901,12 @@ input[type='number'] {
 }
 
 select {
+  background: #fff;
   border-radius: 0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background: transparent;
   outline: none;
   box-shadow: none;
 }
@@ -1573,6 +1573,10 @@ input[type='submit'] {
   border-top: 4px solid #2092d0;
   overflow: hidden;
   box-shadow: 0 0 20px -9px rgba(0, 0, 0, 0.5);
+}
+
+.listing-page #aside .fake-select {
+  border: 1px solid #2092d0;
 }
 
 @media (max-width: 1023px) {
@@ -2355,20 +2359,20 @@ input[type='submit'] {
   }
 }
 
-.propertyDetail-page .slide img {
+.propertyDetail-page .slide > img {
   min-height: 457px;
   max-height: 457px;
 }
 
 @media (max-width: 1023px) {
-  .propertyDetail-page .slide img {
+  .propertyDetail-page .slide > img {
     max-height: 335px;
     min-height: 335px;
   }
 }
 
 @media (max-width: 767px) {
-  .propertyDetail-page .slide img {
+  .propertyDetail-page .slide > img {
     max-height: inherit;
     min-height: inherit;
   }
@@ -3312,11 +3316,27 @@ input[type='submit'] {
   opacity: 0.7;
 }
 
+@media (max-width: 1199px) {
+  .registerNow .registration-form textarea::-webkit-input-placeholder,
+  .registerNow .registration-form input[type="text"]::-webkit-input-placeholder, .registerNow .registration-form input[type="tel"]::-webkit-input-placeholder, .registerNow .registration-form input[type="password"]::-webkit-input-placeholder, .registerNow .registration-form input[type="number"]::-webkit-input-placeholder, .registerNow .registration-form input[type="email"]::-webkit-input-placeholder {
+    font-size: 11px;
+    line-height: 16px;
+  }
+}
+
 .registerNow .registration-form textarea::-moz-placeholder,
 .registerNow .registration-form input[type="text"]::-moz-placeholder, .registerNow .registration-form input[type="tel"]::-moz-placeholder, .registerNow .registration-form input[type="password"]::-moz-placeholder, .registerNow .registration-form input[type="number"]::-moz-placeholder, .registerNow .registration-form input[type="email"]::-moz-placeholder {
   opacity: 1;
   color: #555;
   opacity: 0.7;
+}
+
+@media (max-width: 1199px) {
+  .registerNow .registration-form textarea::-moz-placeholder,
+  .registerNow .registration-form input[type="text"]::-moz-placeholder, .registerNow .registration-form input[type="tel"]::-moz-placeholder, .registerNow .registration-form input[type="password"]::-moz-placeholder, .registerNow .registration-form input[type="number"]::-moz-placeholder, .registerNow .registration-form input[type="email"]::-moz-placeholder {
+    font-size: 11px;
+    line-height: 16px;
+  }
 }
 
 .registerNow .registration-form textarea:-moz-placeholder,
@@ -3325,16 +3345,40 @@ input[type='submit'] {
   opacity: 0.7;
 }
 
+@media (max-width: 1199px) {
+  .registerNow .registration-form textarea:-moz-placeholder,
+  .registerNow .registration-form input[type="text"]:-moz-placeholder, .registerNow .registration-form input[type="tel"]:-moz-placeholder, .registerNow .registration-form input[type="password"]:-moz-placeholder, .registerNow .registration-form input[type="number"]:-moz-placeholder, .registerNow .registration-form input[type="email"]:-moz-placeholder {
+    font-size: 11px;
+    line-height: 16px;
+  }
+}
+
 .registerNow .registration-form textarea:-ms-input-placeholder,
 .registerNow .registration-form input[type="text"]:-ms-input-placeholder, .registerNow .registration-form input[type="tel"]:-ms-input-placeholder, .registerNow .registration-form input[type="password"]:-ms-input-placeholder, .registerNow .registration-form input[type="number"]:-ms-input-placeholder, .registerNow .registration-form input[type="email"]:-ms-input-placeholder {
   color: #555;
   opacity: 0.7;
 }
 
+@media (max-width: 1199px) {
+  .registerNow .registration-form textarea:-ms-input-placeholder,
+  .registerNow .registration-form input[type="text"]:-ms-input-placeholder, .registerNow .registration-form input[type="tel"]:-ms-input-placeholder, .registerNow .registration-form input[type="password"]:-ms-input-placeholder, .registerNow .registration-form input[type="number"]:-ms-input-placeholder, .registerNow .registration-form input[type="email"]:-ms-input-placeholder {
+    font-size: 11px;
+    line-height: 16px;
+  }
+}
+
 .registerNow .registration-form textarea.placeholder,
 .registerNow .registration-form input[type="text"].placeholder, .registerNow .registration-form input[type="tel"].placeholder, .registerNow .registration-form input[type="password"].placeholder, .registerNow .registration-form input[type="number"].placeholder, .registerNow .registration-form input[type="email"].placeholder {
   color: #555;
   opacity: 0.7;
+}
+
+@media (max-width: 1199px) {
+  .registerNow .registration-form textarea.placeholder,
+  .registerNow .registration-form input[type="text"].placeholder, .registerNow .registration-form input[type="tel"].placeholder, .registerNow .registration-form input[type="password"].placeholder, .registerNow .registration-form input[type="number"].placeholder, .registerNow .registration-form input[type="email"].placeholder {
+    font-size: 11px;
+    line-height: 16px;
+  }
 }
 
 .registerNow .registration-form textarea {
@@ -3357,6 +3401,14 @@ input[type='submit'] {
   -webkit-transition: background 0.5s ease;
   -moz-transition: background 0.5s ease;
   -ms-transition: background 0.5s ease;
+}
+
+@media (max-width: 767px) {
+  .registerNow .registration-form input[type="submit"] {
+    padding: 10px;
+    width: 280px;
+    margin: 15px auto 0;
+  }
 }
 
 .registerNow .registration-form input[type="submit"]:hover {
@@ -3400,8 +3452,34 @@ input[type='submit'] {
   width: 40%;
 }
 
+@media (max-width: 1199px) {
+  .registerNow .layout.two .layout-holder {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .registerNow .layout.two .layout-holder {
+    width: 100%;
+    display: block;
+  }
+}
+
 .registerNow .layout.two .layout-holder:first-child {
   width: 60%;
+}
+
+@media (max-width: 1199px) {
+  .registerNow .layout.two .layout-holder:first-child {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .registerNow .layout.two .layout-holder:first-child {
+    width: 100%;
+    display: block;
+  }
 }
 
 .registerNow .layout.first-small {
@@ -3412,8 +3490,34 @@ input[type='submit'] {
   width: 65%;
 }
 
+@media (max-width: 1199px) {
+  .registerNow .layout.first-small .layout-holder {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .registerNow .layout.first-small .layout-holder {
+    width: 100%;
+    display: block;
+  }
+}
+
 .registerNow .layout.first-small .layout-holder:first-child {
   width: 35%;
+}
+
+@media (max-width: 1199px) {
+  .registerNow .layout.first-small .layout-holder:first-child {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .registerNow .layout.first-small .layout-holder:first-child {
+    width: 100%;
+    display: block;
+  }
 }
 
 @media (max-width: 767px) {
@@ -3488,6 +3592,24 @@ input[type='submit'] {
   padding: 2px;
 }
 
+@media (max-width: 1199px) {
+  .registerNow .layout .input-holder {
+    width: calc(100% - 140px);
+  }
+}
+
+@media (max-width: 1023px) {
+  .registerNow .layout .input-holder {
+    width: calc(100% - 90px);
+  }
+}
+
+@media (max-width: 767px) {
+  .registerNow .layout .input-holder {
+    width: calc(100% - 80px);
+  }
+}
+
 .registerNow .layout label {
   color: #555;
   opacity: 0.80;
@@ -3498,11 +3620,17 @@ input[type='submit'] {
   padding: 7px 5px 0 0;
 }
 
+@media (max-width: 1023px) {
+  .registerNow .layout label {
+    width: 90px;
+  }
+}
+
 @media (max-width: 767px) {
   .registerNow .layout label {
     font-size: 12px;
     line-height: 15px;
-    width: 35%;
+    width: 80px;
   }
 }
 
@@ -3526,6 +3654,19 @@ input[type='submit'] {
   line-height: 28px;
   position: relative;
   padding: 0 30px 0 0;
+}
+
+@media (max-width: 1199px) {
+  .registerNow .role-opener {
+    font-size: 11px;
+    line-height: 28px;
+  }
+}
+
+@media (max-width: 767px) {
+  .registerNow .role-opener {
+    width: 100%;
+  }
 }
 
 .registerNow .role-opener.active:after {
@@ -3567,9 +3708,7 @@ input[type='submit'] {
 
 @media (max-width: 767px) {
   .registerNow .agent-check {
-    margin: 25px 20px 0;
-    font-size: 13px;
-    line-height: 15px;
+    margin: 0 3px;
   }
 }
 
@@ -3650,6 +3789,14 @@ input[type='submit'] {
   max-width: 300px;
 }
 
+@media (max-width: 767px) {
+  .registerNow .company-logo {
+    margin: 0 auto;
+    display: block !important;
+    max-width: 250px;
+  }
+}
+
 .registerNow .company-logo .name-tag {
   float: left;
   font-size: 16px;
@@ -3657,6 +3804,17 @@ input[type='submit'] {
   font-family: "Open Sans", "Arial", sans-serif;
   color: #555;
   padding: 35px 0 0;
+}
+
+@media (max-width: 767px) {
+  .registerNow .company-logo .name-tag {
+    float: none;
+    display: block;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    padding: 0 0 10px;
+  }
 }
 
 .registerNow .company-logo input[type="file"] {
@@ -3672,6 +3830,15 @@ input[type='submit'] {
   width: 90px;
   height: 90px;
   float: right;
+}
+
+@media (max-width: 767px) {
+  .registerNow .company-logo .logo-holder {
+    float: none;
+    display: block;
+    padding: 0 0 10px;
+    margin: 0 auto;
+  }
 }
 
 .registerNow .company-logo .logo-holder label {
@@ -3718,7 +3885,7 @@ input[type='submit'] {
   display: none;
 }
 
-.registerNow .company-logo .logo-holder .picture-holder:hover .delete, .registerNow .company-logo .logo-holder .picture-holder:hover:after {
+.registerNow .company-logo .logo-holder .picture-holder:hover .company-logo-delete, .registerNow .company-logo .logo-holder .picture-holder:hover:after {
   display: block;
 }
 
@@ -3726,7 +3893,7 @@ input[type='submit'] {
   height: 100%;
 }
 
-.registerNow .company-logo .logo-holder .picture-holder .delete {
+.registerNow .company-logo .logo-holder .picture-holder .company-logo-delete {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -3764,10 +3931,25 @@ input[type='submit'] {
   padding: 0 5px 10px;
 }
 
+@media (max-width: 767px) {
+  .registerNow .packetData-list li,
+  .registerNow .societiesBlock-listing li {
+    width: 50%;
+  }
+}
+
 .registerNow .societiesBlock-listing {
   padding: 20px;
   max-height: 115px;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+@media (max-width: 767px) {
+  .registerNow .societiesBlock-listing {
+    padding: 0;
+    margin: 0 0 10px;
+  }
 }
 
 .registerNow .packetData-list {
@@ -3779,6 +3961,25 @@ input[type='submit'] {
   padding: 0 5px 10px;
 }
 
+@media (max-width: 1199px) {
+  .registerNow .packetData-list li {
+    width: 25%;
+    padding: 0 3px 10px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .registerNow .packetData-list li {
+    width: 33.33%;
+  }
+}
+
+@media (max-width: 767px) {
+  .registerNow .packetData-list li {
+    width: 50%;
+  }
+}
+
 .registerNow .packetData {
   display: block;
   color: #fff;
@@ -3786,7 +3987,14 @@ input[type='submit'] {
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 400;
   position: relative;
-  padding: 5px;
+  padding: 5px 25px 5px 5px;
+}
+
+@media (max-width: 1023px) {
+  .registerNow .packetData {
+    font-size: 12px;
+    line-height: 15px;
+  }
 }
 
 .registerNow .packetData .delete {
@@ -3796,11 +4004,15 @@ input[type='submit'] {
   top: 50%;
   right: 5px;
   font-size: 14px;
-  line-height: 1;
-  margin: -7px 0 0;
+  line-height: 0;
+  margin: -8px 0 0;
   border: 1px solid #fff;
-  border-radius: 100%;
   cursor: pointer;
+}
+
+.registerNow .packetData .delete:hover {
+  color: #f20;
+  border-color: #f20;
 }
 
 .registerNow .role-listing {
@@ -3822,10 +4034,16 @@ input[type='submit'] {
   padding: 0 0 10px;
 }
 
+@media (max-width: 767px) {
+  .registerNow .role-listing li {
+    width: 50%;
+  }
+}
+
 .registerNow .agent-information {
   border: 1px solid #777;
   border-radius: 8px;
-  margin: 10px 0 0;
+  margin: 10px 0;
   padding: 5px;
   display: none;
 }
@@ -3841,15 +4059,28 @@ input[type='submit'] {
 
 .registerNow .agree-with-terms li {
   display: block;
+  position: relative;
+  margin: 0 0 10px;
 }
 
 .registerNow .agree-with-terms label {
-  display: block;
   width: 100%;
+  padding: 0 20px 0 30px;
 }
 
 .registerNow .agree-with-terms label:after {
   display: none;
+}
+
+.registerNow .agree-with-terms .fake-checkbox {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin: -11px 0 0;
+}
+
+.registerNow .agree-with-terms .fake-label {
+  max-width: 510px;
 }
 
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
@@ -4211,8 +4442,23 @@ h1 {
 
 .customCheckbox,
 .customRadio {
+  position: relative;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
+  cursor: pointer;
+  font-size: 13px !important;
+  line-height: 22px !important;
+  z-index: 5;
+  padding: 0 20px 0 30px;
+  text-align: left !important;
+}
+
+@media (max-width: 767px) {
+  .customCheckbox,
+  .customRadio {
+    font-size: 12px !important;
+    padding: 0 5px 0 25px;
+  }
 }
 
 .customCheckbox input[type="checkbox"], .customCheckbox input[type="radio"],
@@ -4222,7 +4468,7 @@ h1 {
   top: -999px;
   left: -999px;
   opacity: 0;
-  z-index: -1;
+  visibility: hidden;
 }
 
 .customCheckbox input[type="checkbox"]:checked ~ .fake-checkbox:after,
@@ -4235,12 +4481,6 @@ h1 {
   bottom: 0;
 }
 
-.customCheckbox span,
-.customRadio span {
-  display: inline-block;
-  vertical-align: middle;
-}
-
 .customCheckbox .fake-checkbox,
 .customCheckbox .fake-radio,
 .customRadio .fake-checkbox,
@@ -4250,6 +4490,13 @@ h1 {
   border: 3px solid #2092d0;
   position: relative;
   color: #555;
+  display: inline-block;
+  vertical-align: top;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 
 .customCheckbox .fake-checkbox:after,
@@ -4262,6 +4509,7 @@ h1 {
   right: 0;
   bottom: 100%;
   background: #2092d0;
+  pointer-events: none;
   content: '';
   transition: bottom 0.5s ease;
   -webkit-transition: bottom 0.5s ease;
@@ -4273,6 +4521,9 @@ h1 {
 .customRadio .fake-label {
   padding: 0 0 0 10px;
   color: #555;
+  display: inline-block;
+  vertical-align: top;
+  pointer-events: none;
 }
 
 .custom-withouChecks {
@@ -6523,6 +6774,7 @@ h1 span {
   background: #dee1e3;
   display: table-footer-group;
   height: 1%;
+  width: 100%;
 }
 
 #footer .copyright {
@@ -6556,10 +6808,9 @@ h1 span {
   display: block;
   color: #6c6d70;
   font-family: "Open Sans", "Arial", sans-serif;
-  font-size: 25px;
-  line-height: 28px;
+  font-size: 18px;
+  line-height: 22px;
   font-weight: 800;
-  letter-spacing: 1px;
   padding: 0 0 10px;
 }
 
@@ -7401,6 +7652,14 @@ h1 span {
   line-height: 19px;
 }
 
+@media (max-width: 767px) {
+  .registerNow-heading.smaller,
+  .add-pro-heading.smaller {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
 .registerNow-heading.smaller b,
 .add-pro-heading.smaller b {
   display: inline-block;
@@ -7408,6 +7667,13 @@ h1 span {
   font-size: 12px;
   line-height: 15px;
   padding: 0 5px;
+}
+
+@media (max-width: 767px) {
+  .registerNow-heading.smaller b,
+  .add-pro-heading.smaller b {
+    display: none;
+  }
 }
 
 .registerNow-heading > span,

@@ -100,14 +100,26 @@ h1 {
 }
 .customCheckbox,
 .customRadio {
-  @include align(middle);
+  position: relative;
+  @include align(top);
+  cursor: pointer;
+  font-size: 13px !important;
+  line-height: 22px !important;
+  z-index: 5;
+  padding: 0 20px 0 30px;
+  text-align: left !important;
+
+  @include media('<tablet'){
+    font-size: 12px !important;
+    padding: 0 5px 0 25px;
+  }
 
   input[type="checkbox"], input[type="radio"]{
     position: fixed;
     top: -999px;
     left: -999px;
     opacity: 0;
-    z-index: -1;
+    visibility: hidden;
 
     &:checked ~ {
       .fake-checkbox,
@@ -117,15 +129,18 @@ h1 {
     }
   }
 
-  span {
-    @include align(middle);
-  }
   .fake-checkbox,
   .fake-radio {
     @include squar(22px, 22px);
     border: 3px solid $p42-color;
     position: relative;
     color: $dark-grey;
+    @include align(top);
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
 
     &:after {
       position: absolute;
@@ -134,6 +149,7 @@ h1 {
       right: 0;
       bottom: 100%;
       background: $p42-color;
+      pointer-events: none;
       content: '';
       transition: bottom 0.5s ease;
       -webkit-transition: bottom 0.5s ease;
@@ -144,6 +160,8 @@ h1 {
   .fake-label {
     padding: 0 0 0 10px;
     color: $dark-grey;
+    @include align(top);
+    pointer-events: none;
   }
 }
 .custom-withouChecks {
@@ -1860,6 +1878,7 @@ h1 {
   @extend %layout;
   display: table-footer-group;
   height: 1%;
+  width: 100%;
 
   .copyright{
     padding: 7px 20px;
@@ -1885,9 +1904,8 @@ h1 {
   display: block;
   color: $p42-default-grey;
   font-family: $open-sans;
-  @include font(25,28);
+  @include font(18,22);
   font-weight: 800;
-  letter-spacing: 1px;
   padding: 0 0 10px;
 
   @include media('<widescreen'){
@@ -2518,10 +2536,16 @@ h1 {
     &.smaller {
       @include font(16,19);
 
+      @include media('<tablet'){
+        @include font(12,15);
+      }
+
       b {
         @include align(middle);
         @include font(12,15);
         padding: 0 5px;
+
+        @include media('<tablet'){ display: none;}
       }
     }
 

@@ -192,19 +192,6 @@ $(document).on('change', '.userRole-checkbox', function(){
 	countCheckedRoles();
 });
 
-function countSelectedSocieties(){
-	var totalSelectedSocieties = 0;
-	$('.selectSociety-checkbox').each( function(){
-		if($(this).is(':checked')){
-			totalSelectedSocieties++;	
-		}
-	})
-}
-
-$(document).on('change', '.selectSociety-checkbox', function(){
-	countSelectedSocieties();
-});
-
 $(document).on('change', '.agent-brokerCheckbox', function(){
 	if($(this).is(':checked')){
 		$('.agent-brokerCheckbox').each(function(){
@@ -230,7 +217,7 @@ function companyLogoUploader(file, target)
 	$(file).closest('.company-logo').addClass('hover');
  }
  
- $(document).on('click', '.delete', function(){
+ $(document).on('click', '.company-logo-delete', function(){
 	 $(this).closest('.company-logo').find('.company-profileP').attr('src', '');
 	 $(this).closest('.company-logo').find('.company-profileP').attr('alt', '');
 	 $(this).closest('.company-logo').removeClass('hover');
@@ -239,6 +226,25 @@ function companyLogoUploader(file, target)
 	 });
  });
  
+$(document).on('change', '.selectSociety-checkbox', function(){
+	var targetId = $(this).attr('id');
+	if($(this).is(':checked')){
+		if($('.packetData>a[data-target="'+targetId+'"]').length == 0){
+			var targetSociety = $(this).closest('li').find('.fake-label').text();
+			var selectedSocietyPacket = '<li><strong class="packetData">'+targetSociety+'<a class="delete" data-target="'+targetId+'"><span class="icon-cross"></span></a></strong></li>'
+			$('.packetData-list').append(selectedSocietyPacket);
+		}
+	}
+	else{
+		$('.packetData>a[data-target="'+targetId+'"]').closest('li').remove();
+	}
+});
+
+$(document).on('click', '.packetData>.delete', function(){
+	var targetId = $(this).attr('data-target');
+	$("#"+targetId).prop("checked", false);
+	$(this).closest('li').remove();
+});
 
 // page init
 jQuery(function(){

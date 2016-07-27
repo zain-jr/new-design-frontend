@@ -27,6 +27,10 @@
             @include placeholder {
                 color: $dark-grey;
                 opacity: 0.7;
+
+                @include media('<widescreen'){
+                    @include font(11,16);
+                }
             }
         }
 
@@ -49,6 +53,12 @@
             -webkit-transition: background 0.5s ease;
             -moz-transition: background 0.5s ease;
             -ms-transition: background 0.5s ease;
+
+            @include media('<tablet'){
+                padding: 10px;
+                width: 280px;
+                margin: 15px auto 0;
+            }
 
             &:hover {
                 background: $green;
@@ -75,18 +85,54 @@
         &.two {
             .layout-holder {
                 width: 40%;
+                
+                @include media('<widescreen'){
+                    width: 50%;
+                }
+                @include media('<tablet'){
+                    width: 100%;
+                    display: block;
+                }
+                
                 &:first-child{
                     width: 60%;
+
+                    @include media('<widescreen'){
+                        width: 50%;
+                    }
+                    @include media('<tablet'){
+                       width: 100%;
+                        display: block;
+                    }
                 }
             }
         }
 
         &.first-small {
             margin: 0;
+
             .layout-holder {
                 width: 65%;
+
+                @include media('<widescreen'){
+                    width: 50%;
+                }
+
+                @include media('<tablet'){
+                    width: 100%;
+                    display: block;
+                }
+
                 &:first-child{
                     width: 35%;
+
+                    @include media('<widescreen'){
+                        width: 50%;
+                    }
+                    @include media('<tablet'){
+                        width: 100%;
+                        display: block;
+                    }
                 }
             }
         }
@@ -118,6 +164,18 @@
         .input-holder {
             width: calc(90% - 140px);
             padding: 2px;
+
+            @include media('<widescreen'){
+                width: calc(100% - 140px);
+            }
+
+            @include media('<desktop'){
+                width: calc(100% - 90px);
+            }
+
+            @include media('<tablet'){
+                width: calc(100% - 80px);
+            }
         }
         label {
             color: $dark-grey;
@@ -128,9 +186,13 @@
             @include font(13,16);
             padding: 7px 5px 0 0;
 
+            @include media('<desktop'){
+                width: 90px;
+            }
+
             @include media('<tablet'){
                 @include font(12,15);
-                width: 35%;
+                width: 80px;
             }
 
             &:after {
@@ -153,6 +215,13 @@
         @include font(13,28);
         position: relative;
         padding: 0 30px 0 0;
+
+        @include media('<widescreen'){
+            @include font(11,28);
+        }
+        @include media('<tablet'){
+            width: 100%;
+        }
 
         &.active {
             &:after { background: $orange;}
@@ -186,8 +255,7 @@
         padding: 1px 0;
         
         @include media('<tablet'){
-            margin: 25px 20px 0;
-            @include font(13,15);
+            margin: 0 3px;
         }
         
         &:after{
@@ -267,6 +335,12 @@
         width: 100%;
         max-width: 300px;
 
+        @include media('<tablet'){
+            margin: 0 auto;
+            display: block !important;
+            max-width: 250px;
+        }
+
         &.hover {
             label {
              span[class^="icon-"],span[class*="icon-"]{ @extend %hidden;}   
@@ -279,6 +353,14 @@
             font-family: $open-sans;
             color: $dark-grey;
             padding: 35px 0 0;
+
+            @include media('<tablet'){
+                float: none;
+                display: block;
+                @include font(12,15);
+                text-align: center;
+                padding: 0 0 10px;
+            }
         }
 
         input[type="file"]{
@@ -293,6 +375,13 @@
             @extend %layout;
             @include squar(90px,90px);
             float: right;
+
+            @include media('<tablet'){
+                float: none;
+                display: block;
+                padding: 0 0 10px;
+                margin: 0 auto;
+            }
 
             label {
                 @include squar(90px,90px);
@@ -333,7 +422,7 @@
                     display: none;
                 }
                 &:hover {
-                    .delete,
+                    .company-logo-delete,
                     &:after { display: block;} 
                 }
 
@@ -341,7 +430,7 @@
                     @extend %img-res;
                     height: 100%;
                 }
-                .delete {
+                .company-logo-delete {
                     position: absolute;
                     top: 50%;
                     left: 50%;
@@ -368,20 +457,42 @@
         li {
             width: 25%;
             padding: 0 5px 10px;
+
+            @include media('<tablet'){
+                width: 50%;
+            }
         }
     }
 
     .societiesBlock-listing {
         padding: 20px;
         max-height: 115px;
-        overflow: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
+        
+        @include media('<tablet'){
+            padding: 0;
+            margin: 0 0 10px;
+        }
     }
     
     .packetData-list {
         margin: 0 -5px;
+
         li {
             width: 20%;
             padding: 0 5px 10px;
+
+            @include media('<widescreen'){
+                width: 25%;
+                padding: 0 3px 10px;
+            }
+            @include media('<desktop'){
+                width: 33.33%;
+            }
+            @include media('<tablet'){
+                width: 50%;
+            }
         }
     }
 
@@ -392,7 +503,11 @@
         font-family: $open-sans;
         font-weight: 400;
         position: relative;
-        padding: 5px;
+        padding: 5px 25px 5px 5px;
+
+        @include media('<desktop'){
+            @include font(12,15);
+        }
 
         .delete {
             cursor: pointer;
@@ -401,11 +516,15 @@
             top: 50%;
             right: 5px;
             font-size: 14px;
-            line-height: 1;
-            margin: -7px 0 0;
+            line-height: 0;
+            margin: -8px 0 0;
             border: 1px solid $white;
-            border-radius: 100%;
             cursor: pointer;
+
+            &:hover {
+                color: $red;
+                border-color: $red;
+            }
         }
     }
 
@@ -417,6 +536,10 @@
         li {
             width: 25%;
             padding: 0 0 10px;
+
+            @include media('<tablet'){
+                width: 50%;
+            }
         }
     }
 
@@ -424,7 +547,7 @@
         border: 1px solid $darken-grey;
         border-radius: 8px;
         @extend %layout;
-        margin: 10px 0 0;
+        margin: 10px 0;
         padding: 5px;
         display: none;
 
@@ -436,17 +559,28 @@
         @extend %listreset;
         display: block;
         width: 100%;
-        
+
         li {
             display: block;
+            position: relative;
+            margin: 0 0 10px;
         }
         label {
-            display: block;
             width: 100%;
+            padding: 0 20px 0 30px;
 
             &:after {
                 display: none;
             }
+        }
+        .fake-checkbox {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            margin: -11px 0 0;
+        }
+        .fake-label {
+            max-width: 510px;
         }
     }
 }

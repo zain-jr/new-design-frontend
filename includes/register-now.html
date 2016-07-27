@@ -64,6 +64,92 @@
                 </div>
             </div>
         </div>
+        <ul class="role-listing">
+            <li>
+                <label for="owner-investor" class="customCheckbox">
+                    <input type="checkbox" id="owner-investor" class="userRole-checkbox" name="owner-investor">
+                    <span class="fake-checkbox"></span>
+                    <span class="fake-label">Owner / Investor</span>
+                </label>
+            </li>
+            <li>
+                <label for="tenant" class="customCheckbox">
+                    <input type="checkbox" id="tenant" class="userRole-checkbox" name="tenant">
+                    <span class="fake-checkbox"></span>
+                    <span class="fake-label">Tenant</span>
+                </label>
+            </li>
+            <li>
+                <label for="agent-2" class="customCheckbox">
+                    <input type="checkbox" id="agent-2" class="userRole-checkbox agent-brokerCheckbox" name="agent-broker">
+                    <span class="fake-checkbox"></span>
+                    <span class="fake-label">Agent/Broker</span>
+                </label>
+            </li>
+            <li>
+                <label for="Apprraiser" class="customCheckbox">
+                    <input type="checkbox" id="Apprraiser" class="userRole-checkbox" name="apprraiser">
+                    <span class="fake-checkbox"></span>
+                    <span class="fake-label">Apprraiser</span>
+                </label>
+            </li>
+            <li>
+                <label for="Architect" class="customCheckbox">
+                    <input type="checkbox" id="Architect" class="userRole-checkbox" name="architect">
+                    <span class="fake-checkbox"></span>
+                    <span class="fake-label">Architect</span>
+                </label>
+            </li>
+            <li>
+                <label for="Builder" class="customCheckbox">
+                    <input type="checkbox" id="Builder" class="userRole-checkbox" name="builder">
+                    <span class="fake-checkbox"></span>
+                    <span class="fake-label">Builder</span>
+                </label>
+            </li>
+            <li>
+                <label for="Corporate-Investor" class="customCheckbox">
+                    <input type="checkbox" id="Corporate-Investor" class="userRole-checkbox" name="corporate-investor">
+                    <span class="fake-checkbox"></span>
+                    <span class="fake-label">Corporate Investor</span>
+                </label>
+            </li>
+            <li>
+                <label for="Developer" class="customCheckbox">
+                    <input type="checkbox" id="Developer" class="userRole-checkbox" name="developer">
+                    <span class="fake-checkbox"></span>
+                    <span class="fake-label">Developer</span>
+                </label>
+            </li>
+            <li>
+                <label for="Listing-Administrator" class="customCheckbox">
+                    <input type="checkbox" id="Listing-Administrator" class="userRole-checkbox" name="listing-admin">
+                    <span class="fake-checkbox"></span>
+                    <span class="fake-label">Listing Administrator</span>
+                </label>
+            </li>
+            <li>
+                <label for="Mortgage-Broker" class="customCheckbox">
+                    <input type="checkbox" id="Mortgage-Broker" class="userRole-checkbox" name="mortgage-broker">
+                    <span class="fake-checkbox"></span>
+                    <span class="fake-label">Mortgage Broker</span>
+                </label>
+            </li>
+            <li>
+                <label for="Property/Asset-Manger" class="customCheckbox">
+                    <input type="checkbox" id="Property/Asset-Manger" class="userRole-checkbox" name="property-manager">
+                    <span class="fake-checkbox"></span>
+                    <span class="fake-label">Property/Asset Manger</span>
+                </label>
+            </li>
+            <li>
+                <label for="Researcher" class="customCheckbox">
+                    <input type="checkbox" id="Researcher" class="userRole-checkbox" name="researcher">
+                    <span class="fake-checkbox"></span>
+                    <span class="fake-label">Researcher</span>
+                </label>
+            </li>
+        </ul>
         <strong class="registerNow-heading smaller">
             <span>
                 Are you an Agent ? <b>Yes</b>
@@ -77,84 +163,146 @@
             </span>
         </strong>
         <div class="agent-information">
-            <strong class="registerNow-heading"><span>Agent Information</span></strong>
-            <div class="layout">
+            <strong class="registerNow-heading">Agent Information</strong>
+            <div class="layout two first-small">
                 <div class="layout-holder">
                     <div class="company-logo">
-                        <input type="file" name="companyLogo" onchange="companyLogoUploader(this , '.company-profileP')">
+                        <input type="file" id="c-logo" name="companyLogo" onchange="companyLogoUploader(this , '.company-profileP')">
                         <span class="name-tag">Add Company Logo</span>
-                        <div class="picture-holder">
-                            <img src="" class="company-profileP" alt="Company logo">
-                            <a class="delete"><span class="icon-cross"></span></a>
+                        <div class="logo-holder">
+                            <label for="c-logo"><span class="icon-plus-square"></span></label>
+                            <div class="picture-holder">
+                                <img src="" class="company-profileP" alt="Company logo">
+                                <a class="delete"><span class="icon-cross"></span></a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="layout-holder">
-                    <label for="D-services" class="icon-technical-support"></label>
-                    <div class="input-holder">
-                        <textarea id="D-services" name="agencyDescription" placeholder="Description of Services"></textarea>
+                    <div class="full-width">
+                        <label for="agencyName">Agency Name</label>
+                        <div class="input-holder">
+                            <input type="text" id="agencyName" name="agencyName"  placeholder="Agency Name">
+                        </div>
+                    </div>
+                    <div class="full-width">
+                        <label for="D-services">Agency Description</label>
+                        <div class="input-holder">
+                            <textarea id="D-services" name="agencyDescription" placeholder="Description of Services"></textarea>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="input-holder full-width no-indent">
-                <label for="search-society" class="icon-society"></label>
-                <input type="text" placeholder="Select Societies You Deal In:" id="search-society" name="SelectDealSociety" required>
-                <span class="border"></span>
-                <span class="error-text">This is error</span>
-                <span class="calculatedSocieties"></span>
+            <div class="layout two first-small">
+                <div class="layout-holder">
+                    <label for="selectSociety">Filter Socities You Deal In</label>
+                    <div class="input-holder">
+                        <input type="text" placeholder="Select Societies You Deal In" id="search-society" name="SelectDealSociety" required>
+                    </div>
+                </div>
+                <div class="layout-holder">
+                    <ul class="packetData-list">
+                        
+                    </ul>
+                </div>
             </div>
             <div class="input-holder full-width">
                 <ul class="societiesBlock-listing">
                     <li>
-                        <input type="checkbox" id="society1" class="selectSociety-checkbox">
-                        <label for="society1">DHA</label>
+                        <label for="society1" class="customCheckbox">
+                            <input type="checkbox" id="society1" class="selectSociety-checkbox">
+                            <span class="fake-checkbox"></span>
+                            <span class="fake-label">DHA</span>
+                        </label>
                     </li>
                     <li>
-                        <input type="checkbox" id="society2" class="selectSociety-checkbox">
-                        <label for="society2">Garden Town</label>
+                        <label for="society2" class="customCheckbox">
+                            <input type="checkbox" id="society2" class="selectSociety-checkbox">
+                            <span class="fake-checkbox"></span>
+                            <span class="fake-label">Garden Town</span>
+                        </label>
                     </li>
                     <li>
-                        <input type="checkbox" id="society3" class="selectSociety-checkbox">
-                        <label for="society3">Model Town</label>
+                        <label for="society3" class="customCheckbox">
+                            <input type="checkbox" id="society3" class="selectSociety-checkbox">
+                            <span class="fake-checkbox"></span>
+                            <span class="fake-label">Model Town</span>
+                        </label>
                     </li>
                     <li>
-                        <input type="checkbox" id="society4" class="selectSociety-checkbox">
-                        <label for="society4">wapda Town</label>
+                        <label for="society4" class="customCheckbox">
+                            <input type="checkbox" id="society4" class="selectSociety-checkbox">
+                            <span class="fake-checkbox"></span>
+                            <span class="fake-label">wapda Town</span>
+                        </label>
                     </li>
                     <li>
-                        <input type="checkbox" id="society5" class="selectSociety-checkbox">
-                        <label for="society5">Behria Town</label>
+                        <label for="society5" class="customCheckbox">
+                            <input type="checkbox" id="society5" class="selectSociety-checkbox">
+                            <span class="fake-checkbox"></span>
+                            <span class="fake-label">Behria Town</span>
+                        </label>
                     </li>
                     <li>
-                        <input type="checkbox" id="society6" class="selectSociety-checkbox">
-                        <label for="society6">Alflah town</label>
+                        <label for="society6" class="customCheckbox">
+                            <input type="checkbox" id="society6" class="selectSociety-checkbox">
+                            <span class="fake-checkbox"></span>
+                            <span class="fake-label">Alflah town</span>
+                        </label>
                     </li>
                 </ul>
             </div>
-            <strong class="registerNow-heading"><span>Agency Contact Details</span></strong>
-            <div class="input-holder error">
-                <label for="compny-phone" class="icon-phone"></label>
-                <input type="tel" placeholder="Enter Company Phone Number" name="companyPhone" id="compny-phone" required>
-                <span class="border"></span>
-                <span class="error-text">This is error</span>
+            <strong class="registerNow-heading">Agency Contact Details</strong>
+            <div class="layout">
+                <div class="layout-holder">
+                    <label for="compny-phone">Phone Number</label>
+                    <div class="input-holder">
+                        <input type="tel" placeholder="Enter Company Phone Number" name="companyPhone" id="compny-phone" required>
+                    </div>
+                </div>
+                <div class="layout-holder">
+                    <label for="compny-mobile">Mobile Number</label>
+                    <div class="input-holder">
+                        <input type="tel" placeholder="Enter Company Mobile Number" name="companyMobile" id="compny-mobile" required>
+                    </div>
+                </div>
+                <div class="layout-holder">
+                    <label for="compny-email">Company E-mail</label>
+                    <div class="input-holder">
+                        <input type="email" placeholder="Enter Company Email" name="companyEmail" id="compny-email" required>
+                    </div>
+                </div>
             </div>
-            <div class="input-holder error">
-                <label for="compny-mobile" class="icon-phone_iphone"></label>
-                <input type="tel" placeholder="Enter Company Mobile Number" name="companyMobile" id="compny-mobile" required>
-                <span class="border"></span>
-                <span class="error-text">This is error</span>
+            <div class="layout two">
+                <div class="layout-holder">
+                    <label for="compny-address">Company Address</label>
+                    <div class="input-holder">
+                        <input type="text" placeholder="Enter Company Address" name="companyAddress" id="compny-address" required>
+                    </div>
+                </div>
             </div>
-            <div class="input-holder full-width error">
-                <label for="compny-address" class="icon-directions"></label>
-                <input type="text" placeholder="Enter Company Address" name="companyAddress" id="compny-address" required>
-                <span class="border"></span>
-                <span class="error-text">This is error</span>
+        </div>
+        <div class="layout two">
+            <div class="layout-holder">
+                <ul class="agree-with-terms">
+                    <li>
+                        <label for="terms-condition" class="customCheckbox">
+                            <input type="checkbox" id="terms-condition">
+                            <span class="fake-checkbox"></span>
+                            <span class="fake-label">I have read and agree to Property42.pk Terms and Conditions</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="want-noti" class="customCheckbox">
+                            <input type="checkbox" id="want-noti">
+                            <span class="fake-checkbox"></span>
+                            <span class="fake-label">I want to receive notifications for promotions, newsletters and website updates.</span>
+                        </label>
+                    </li>
+                </ul>
             </div>
-            <div class="input-holder error">
-                <label for="compny-email" class="icon-envelope"></label>
-                <input type="email" placeholder="Enter Company Email" name="companyEmail" id="compny-email" required>
-                <span class="border"></span>
-                <span class="error-text">This is error</span>
+            <div class="layout-holder">
+                <input type="submit" value="SIGN ME UP">
             </div>
         </div>
     </form>
