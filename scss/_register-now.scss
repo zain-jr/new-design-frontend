@@ -5,6 +5,57 @@
     padding: 20px 10px;
     margin: 0 auto 30px;
 
+    .registration-form {
+        @extend %layout;
+        
+        &.agent-info {
+            .agent-information { display: block;}
+        }
+        textarea,
+        input[type="text"],input[type="tel"],input[type="password"],input[type="number"],input[type="email"]{
+            border: 0;
+            width: 100%;
+            padding: 6px;
+            @include font(13,16);
+            height: 28px;
+            width: 100%;
+            
+            @include media('<tablet'){
+                @include font(12,16);
+            }
+
+            @include placeholder {
+                color: $dark-grey;
+                opacity: 0.7;
+            }
+        }
+
+        textarea {
+            height: 90px;
+            resize: none;
+        }
+        
+        input[type="submit"]{
+            background: $p42-color;
+            border: 0;
+            color: $white;
+            font-weight: 700;
+            letter-spacing: 1px;
+            @include font(18,22);
+            display: block;
+            padding: 10px 35px;
+            margin: 15px 0 0;
+            transition: background 0.5s ease;
+            -webkit-transition: background 0.5s ease;
+            -moz-transition: background 0.5s ease;
+            -ms-transition: background 0.5s ease;
+
+            &:hover {
+                background: $green;
+            }
+        }
+    }
+
     h1 {
         @include font(60,63);
         font-weight: 100;
@@ -22,11 +73,20 @@
         margin: 0 -10px 10px;
 
         &.two {
-
             .layout-holder {
                 width: 40%;
                 &:first-child{
                     width: 60%;
+                }
+            }
+        }
+
+        &.first-small {
+            margin: 0;
+            .layout-holder {
+                width: 65%;
+                &:first-child{
+                    width: 35%;
                 }
             }
         }
@@ -49,6 +109,11 @@
                 padding: 0;
                 @include align-reset(top, 12, 15);
             }
+
+            .full-width {
+                @include align-reset(top, 13, 16);
+                margin: 0 0 10px;
+            }
         }
         .input-holder {
             width: calc(90% - 140px);
@@ -61,7 +126,7 @@
             @extend %text-capital;
             width: 140px;
             @include font(13,16);
-            padding: 7px 0 0;
+            padding: 7px 5px 0 0;
 
             @include media('<tablet'){
                 @include font(12,15);
@@ -76,29 +141,6 @@
         }
     }
 
-    textarea,
-    input[type="text"],input[type="tel"],input[type="password"],input[type="number"],input[type="email"]{
-        border: 0;
-        width: 100%;
-        padding: 6px;
-        @include font(13,16);
-        height: 28px;
-        width: 100%;
-        
-        @include media('<tablet'){
-            @include font(12,16);
-        }
-
-        @include placeholder {
-            color: $dark-grey;
-            opacity: 0.7;
-        }
-    }
-
-    textarea {
-        height: 90px;
-        resize: none;
-    }
     .role-opener {
         display: block;
         @include squar(200px, 28px);
@@ -110,6 +152,12 @@
         background: $white;
         @include font(13,28);
         position: relative;
+        padding: 0 30px 0 0;
+
+        &.active {
+            &:after { background: $orange;}
+            &:before { border-top-color: $white;}
+        }
 
         &:after {
             position: absolute;
@@ -209,6 +257,196 @@
             position: relative;
             z-index: -1;
             color: $black;
+        }
+    }
+    
+    .company-logo {
+        position: relative;
+        @extend %layout;
+        display: block;
+        width: 100%;
+        max-width: 300px;
+
+        &.hover {
+            label {
+             span[class^="icon-"],span[class*="icon-"]{ @extend %hidden;}   
+            }
+        }
+
+        .name-tag {
+            float: left;
+            @include font(16,19);
+            font-family: $open-sans;
+            color: $dark-grey;
+            padding: 35px 0 0;
+        }
+
+        input[type="file"]{
+            position: fixed;
+            top: -999px;
+            left: -999px;
+            opacity: 0;
+            visibility: hidden;
+        }
+        .logo-holder {
+            position: relative;
+            @extend %layout;
+            @include squar(90px,90px);
+            float: right;
+
+            label {
+                @include squar(90px,90px);
+                background: $dark-grey;
+                display: block;
+                padding: 0;
+                position: relative;
+                cursor: pointer;
+
+                span[class^="icon-"],span[class*="icon-"]{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    color: $p42-background;
+                    font-size: 25px;
+                    line-height: 1;
+                    margin: -12px 0 0 -12px;
+                }
+
+                &:after { display: none;}
+            }
+            .picture-holder {
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                display: none;
+
+                &:after {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: rgba($white, 0.7);
+                    content: '';
+                    display: none;
+                }
+                &:hover {
+                    .delete,
+                    &:after { display: block;} 
+                }
+
+                img {
+                    @extend %img-res;
+                    height: 100%;
+                }
+                .delete {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    z-index: 11;
+                    color: $red;
+                    font-size: 30px;
+                    line-height: 1;
+                    margin: -15px 0 0 -15px;
+                    display: none;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .packetData-list,
+    .societiesBlock-listing {
+        @extend %listreset;
+        @include align-reset(top, 13,16);
+        font-family: $open-sans;
+        display: block;
+        width: 100%;
+
+        li {
+            width: 25%;
+            padding: 0 5px 10px;
+        }
+    }
+
+    .societiesBlock-listing {
+        padding: 20px;
+        max-height: 115px;
+        overflow: auto;
+    }
+    
+    .packetData-list {
+        margin: 0 -5px;
+        li {
+            width: 20%;
+            padding: 0 5px 10px;
+        }
+    }
+
+    .packetData {
+        display: block;
+        color: $white;
+        background: $p42-color;
+        font-family: $open-sans;
+        font-weight: 400;
+        position: relative;
+        padding: 5px;
+
+        .delete {
+            cursor: pointer;
+            color: $white;
+            position: absolute;
+            top: 50%;
+            right: 5px;
+            font-size: 14px;
+            line-height: 1;
+            margin: -7px 0 0;
+            border: 1px solid $white;
+            border-radius: 100%;
+            cursor: pointer;
+        }
+    }
+
+    .role-listing {
+        @extend %listreset;
+        @extend %layout;
+        @include align-reset(top,13,16);
+
+        li {
+            width: 25%;
+            padding: 0 0 10px;
+        }
+    }
+
+    .agent-information {
+        border: 1px solid $darken-grey;
+        border-radius: 8px;
+        @extend %layout;
+        margin: 10px 0 0;
+        padding: 5px;
+        display: none;
+
+        .registerNow-heading {
+            margin: 0 0 10px;
+        }
+    }
+    .agree-with-terms {
+        @extend %listreset;
+        display: block;
+        width: 100%;
+        
+        li {
+            display: block;
+        }
+        label {
+            display: block;
+            width: 100%;
+
+            &:after {
+                display: none;
+            }
         }
     }
 }

@@ -610,7 +610,8 @@ th {
   content: "\e907";
 }
 
-.listing-page .filters-links, .listing-page .filterChecks, .propertyDetail-page .feature-list, .addProperty-form .image-uploading-area, .addProperty-form .existingOrNew-member, .social-icons, .loginRegister, .main-visualSection .number-of-properties, .mainSearch-form .typeOfBuying, .mainSearch-form .subTypes, .mainSearch-form .inputsHolder, #nav .main-navigation, .news-carousel .news-pagination ul, .topSocities-holder .socities, .topSocities-holder .socities li .caption .numberOfproperties, .agents-logo, .pager, .quick-links, .public-ui-features, .sumery-list, .radio-checks-holder {
+.listing-page .filters-links, .listing-page .filterChecks, .propertyDetail-page .feature-list, .addProperty-form .image-uploading-area, .addProperty-form .existingOrNew-member, .registerNow .packetData-list,
+.registerNow .societiesBlock-listing, .registerNow .role-listing, .registerNow .agree-with-terms, .social-icons, .loginRegister, .main-visualSection .number-of-properties, .mainSearch-form .typeOfBuying, .mainSearch-form .subTypes, .mainSearch-form .inputsHolder, #nav .main-navigation, .news-carousel .news-pagination ul, .topSocities-holder .socities, .topSocities-holder .socities li .caption .numberOfproperties, .agents-logo, .pager, .quick-links, .public-ui-features, .sumery-list, .radio-checks-holder {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -625,7 +626,7 @@ th {
 .propertyDetail-page .info-blockProperty .pictureHolder img, .propertyDetail-page .propertyImage-pagination .propertyImage-slide img,
 .propertyDetail-page .propertyImage-pagination .slide img,
 .propertyDetail-page .propertyImage-slider .propertyImage-slide img,
-.propertyDetail-page .propertyImage-slider .slide img, .logo img, .news-carousel .news-slide img {
+.propertyDetail-page .propertyImage-slider .slide img, .registerNow .company-logo .logo-holder .picture-holder img, .logo img, .news-carousel .news-slide img {
   width: 100%;
   height: auto;
   display: block;
@@ -687,12 +688,12 @@ th {
 .propertyDetail-page .propertyImage-slider, .propertyDetail-page .propertyImage-pagination .propertyImage-mask,
 .propertyDetail-page .propertyImage-pagination .mask,
 .propertyDetail-page .propertyImage-slider .propertyImage-mask,
-.propertyDetail-page .propertyImage-slider .mask, .propertyDetail-page .overview-section, .propertyDetail-page .extra-feature-section, .propertyDetail-page .feature, .addProperty-form, .addProperty-form .add-form-holder, .addProperty-form .main-form, .addProperty-form .tips, .addProperty-form .list-extraFeatures, .registerNow, .fake-select, #wrapper, .logo, .main-visualSection, #main, .page-holder, .mainSearch-form .form-holder, .mainSearch-form .inputsHolder li .input-holder, .byDefault-fixed #nav .main-navigation li a span[class^="icon-"], .byDefault-fixed #nav .main-navigation li a span[class*="icon-"], #nav.fixed-position .main-navigation li a span[class^="icon-"], #nav.fixed-position .main-navigation li a span[class*="icon-"], .generic-section, .news-sliderHolder, .news-slideshow, .news-slideshow .mask, .news-slideshow .slideset, .news-carousel, .news-carousel .news-mask, .news-carousel .news-pagination ul a, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .inquiry-email-form .input-holder, .radio-checks-holder {
+.propertyDetail-page .propertyImage-slider .mask, .propertyDetail-page .overview-section, .propertyDetail-page .extra-feature-section, .propertyDetail-page .feature, .addProperty-form, .addProperty-form .add-form-holder, .addProperty-form .main-form, .addProperty-form .tips, .addProperty-form .list-extraFeatures, .registerNow, .registerNow .registration-form, .registerNow .company-logo, .registerNow .company-logo .logo-holder, .registerNow .role-listing, .registerNow .agent-information, .fake-select, #wrapper, .logo, .main-visualSection, #main, .page-holder, .mainSearch-form .form-holder, .mainSearch-form .inputsHolder li .input-holder, .byDefault-fixed #nav .main-navigation li a span[class^="icon-"], .byDefault-fixed #nav .main-navigation li a span[class*="icon-"], #nav.fixed-position .main-navigation li a span[class^="icon-"], #nav.fixed-position .main-navigation li a span[class*="icon-"], .generic-section, .news-sliderHolder, .news-slideshow, .news-slideshow .mask, .news-slideshow .slideset, .news-carousel, .news-carousel .news-mask, .news-carousel .news-pagination ul a, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .inquiry-email-form .input-holder, .radio-checks-holder {
   overflow: hidden;
 }
 
 .hidden, .paginationCurrent-num-1,
-.current-num {
+.current-num, .registerNow .company-logo.hover label span[class^="icon-"], .registerNow .company-logo.hover label span[class*="icon-"] {
   display: none !important;
 }
 
@@ -3282,6 +3283,86 @@ input[type='submit'] {
   margin: 0 auto 30px;
 }
 
+.registerNow .registration-form.agent-info .agent-information {
+  display: block;
+}
+
+.registerNow .registration-form textarea,
+.registerNow .registration-form input[type="text"], .registerNow .registration-form input[type="tel"], .registerNow .registration-form input[type="password"], .registerNow .registration-form input[type="number"], .registerNow .registration-form input[type="email"] {
+  border: 0;
+  width: 100%;
+  padding: 6px;
+  font-size: 13px;
+  line-height: 16px;
+  height: 28px;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .registerNow .registration-form textarea,
+  .registerNow .registration-form input[type="text"], .registerNow .registration-form input[type="tel"], .registerNow .registration-form input[type="password"], .registerNow .registration-form input[type="number"], .registerNow .registration-form input[type="email"] {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.registerNow .registration-form textarea::-webkit-input-placeholder,
+.registerNow .registration-form input[type="text"]::-webkit-input-placeholder, .registerNow .registration-form input[type="tel"]::-webkit-input-placeholder, .registerNow .registration-form input[type="password"]::-webkit-input-placeholder, .registerNow .registration-form input[type="number"]::-webkit-input-placeholder, .registerNow .registration-form input[type="email"]::-webkit-input-placeholder {
+  color: #555;
+  opacity: 0.7;
+}
+
+.registerNow .registration-form textarea::-moz-placeholder,
+.registerNow .registration-form input[type="text"]::-moz-placeholder, .registerNow .registration-form input[type="tel"]::-moz-placeholder, .registerNow .registration-form input[type="password"]::-moz-placeholder, .registerNow .registration-form input[type="number"]::-moz-placeholder, .registerNow .registration-form input[type="email"]::-moz-placeholder {
+  opacity: 1;
+  color: #555;
+  opacity: 0.7;
+}
+
+.registerNow .registration-form textarea:-moz-placeholder,
+.registerNow .registration-form input[type="text"]:-moz-placeholder, .registerNow .registration-form input[type="tel"]:-moz-placeholder, .registerNow .registration-form input[type="password"]:-moz-placeholder, .registerNow .registration-form input[type="number"]:-moz-placeholder, .registerNow .registration-form input[type="email"]:-moz-placeholder {
+  color: #555;
+  opacity: 0.7;
+}
+
+.registerNow .registration-form textarea:-ms-input-placeholder,
+.registerNow .registration-form input[type="text"]:-ms-input-placeholder, .registerNow .registration-form input[type="tel"]:-ms-input-placeholder, .registerNow .registration-form input[type="password"]:-ms-input-placeholder, .registerNow .registration-form input[type="number"]:-ms-input-placeholder, .registerNow .registration-form input[type="email"]:-ms-input-placeholder {
+  color: #555;
+  opacity: 0.7;
+}
+
+.registerNow .registration-form textarea.placeholder,
+.registerNow .registration-form input[type="text"].placeholder, .registerNow .registration-form input[type="tel"].placeholder, .registerNow .registration-form input[type="password"].placeholder, .registerNow .registration-form input[type="number"].placeholder, .registerNow .registration-form input[type="email"].placeholder {
+  color: #555;
+  opacity: 0.7;
+}
+
+.registerNow .registration-form textarea {
+  height: 90px;
+  resize: none;
+}
+
+.registerNow .registration-form input[type="submit"] {
+  background: #2092d0;
+  border: 0;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 18px;
+  line-height: 22px;
+  display: block;
+  padding: 10px 35px;
+  margin: 15px 0 0;
+  transition: background 0.5s ease;
+  -webkit-transition: background 0.5s ease;
+  -moz-transition: background 0.5s ease;
+  -ms-transition: background 0.5s ease;
+}
+
+.registerNow .registration-form input[type="submit"]:hover {
+  background: #30ce20;
+}
+
 .registerNow h1 {
   font-size: 60px;
   line-height: 63px;
@@ -3321,6 +3402,18 @@ input[type='submit'] {
 
 .registerNow .layout.two .layout-holder:first-child {
   width: 60%;
+}
+
+.registerNow .layout.first-small {
+  margin: 0;
+}
+
+.registerNow .layout.first-small .layout-holder {
+  width: 65%;
+}
+
+.registerNow .layout.first-small .layout-holder:first-child {
+  width: 35%;
 }
 
 @media (max-width: 767px) {
@@ -3375,6 +3468,21 @@ input[type='submit'] {
   }
 }
 
+.registerNow .layout .layout-holder .full-width {
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+  margin: 0 0 10px;
+}
+
+.registerNow .layout .layout-holder .full-width > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0;
+}
+
 .registerNow .layout .input-holder {
   width: calc(90% - 140px);
   padding: 2px;
@@ -3387,7 +3495,7 @@ input[type='submit'] {
   width: 140px;
   font-size: 13px;
   line-height: 16px;
-  padding: 7px 0 0;
+  padding: 7px 5px 0 0;
 }
 
 @media (max-width: 767px) {
@@ -3405,61 +3513,6 @@ input[type='submit'] {
   content: '*';
 }
 
-.registerNow textarea,
-.registerNow input[type="text"], .registerNow input[type="tel"], .registerNow input[type="password"], .registerNow input[type="number"], .registerNow input[type="email"] {
-  border: 0;
-  width: 100%;
-  padding: 6px;
-  font-size: 13px;
-  line-height: 16px;
-  height: 28px;
-  width: 100%;
-}
-
-@media (max-width: 767px) {
-  .registerNow textarea,
-  .registerNow input[type="text"], .registerNow input[type="tel"], .registerNow input[type="password"], .registerNow input[type="number"], .registerNow input[type="email"] {
-    font-size: 12px;
-    line-height: 16px;
-  }
-}
-
-.registerNow textarea::-webkit-input-placeholder,
-.registerNow input[type="text"]::-webkit-input-placeholder, .registerNow input[type="tel"]::-webkit-input-placeholder, .registerNow input[type="password"]::-webkit-input-placeholder, .registerNow input[type="number"]::-webkit-input-placeholder, .registerNow input[type="email"]::-webkit-input-placeholder {
-  color: #555;
-  opacity: 0.7;
-}
-
-.registerNow textarea::-moz-placeholder,
-.registerNow input[type="text"]::-moz-placeholder, .registerNow input[type="tel"]::-moz-placeholder, .registerNow input[type="password"]::-moz-placeholder, .registerNow input[type="number"]::-moz-placeholder, .registerNow input[type="email"]::-moz-placeholder {
-  opacity: 1;
-  color: #555;
-  opacity: 0.7;
-}
-
-.registerNow textarea:-moz-placeholder,
-.registerNow input[type="text"]:-moz-placeholder, .registerNow input[type="tel"]:-moz-placeholder, .registerNow input[type="password"]:-moz-placeholder, .registerNow input[type="number"]:-moz-placeholder, .registerNow input[type="email"]:-moz-placeholder {
-  color: #555;
-  opacity: 0.7;
-}
-
-.registerNow textarea:-ms-input-placeholder,
-.registerNow input[type="text"]:-ms-input-placeholder, .registerNow input[type="tel"]:-ms-input-placeholder, .registerNow input[type="password"]:-ms-input-placeholder, .registerNow input[type="number"]:-ms-input-placeholder, .registerNow input[type="email"]:-ms-input-placeholder {
-  color: #555;
-  opacity: 0.7;
-}
-
-.registerNow textarea.placeholder,
-.registerNow input[type="text"].placeholder, .registerNow input[type="tel"].placeholder, .registerNow input[type="password"].placeholder, .registerNow input[type="number"].placeholder, .registerNow input[type="email"].placeholder {
-  color: #555;
-  opacity: 0.7;
-}
-
-.registerNow textarea {
-  height: 90px;
-  resize: none;
-}
-
 .registerNow .role-opener {
   display: block;
   width: 200px;
@@ -3472,6 +3525,15 @@ input[type='submit'] {
   font-size: 13px;
   line-height: 28px;
   position: relative;
+  padding: 0 30px 0 0;
+}
+
+.registerNow .role-opener.active:after {
+  background: #d89429;
+}
+
+.registerNow .role-opener.active:before {
+  border-top-color: #fff;
 }
 
 .registerNow .role-opener:after {
@@ -3579,6 +3641,215 @@ input[type='submit'] {
   position: relative;
   z-index: -1;
   color: #000;
+}
+
+.registerNow .company-logo {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 300px;
+}
+
+.registerNow .company-logo .name-tag {
+  float: left;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: #555;
+  padding: 35px 0 0;
+}
+
+.registerNow .company-logo input[type="file"] {
+  position: fixed;
+  top: -999px;
+  left: -999px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.registerNow .company-logo .logo-holder {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  float: right;
+}
+
+.registerNow .company-logo .logo-holder label {
+  width: 90px;
+  height: 90px;
+  background: #555;
+  display: block;
+  padding: 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.registerNow .company-logo .logo-holder label span[class^="icon-"], .registerNow .company-logo .logo-holder label span[class*="icon-"] {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #dee1e3;
+  font-size: 25px;
+  line-height: 1;
+  margin: -12px 0 0 -12px;
+}
+
+.registerNow .company-logo .logo-holder label:after {
+  display: none;
+}
+
+.registerNow .company-logo .logo-holder .picture-holder {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: none;
+}
+
+.registerNow .company-logo .logo-holder .picture-holder:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.7);
+  content: '';
+  display: none;
+}
+
+.registerNow .company-logo .logo-holder .picture-holder:hover .delete, .registerNow .company-logo .logo-holder .picture-holder:hover:after {
+  display: block;
+}
+
+.registerNow .company-logo .logo-holder .picture-holder img {
+  height: 100%;
+}
+
+.registerNow .company-logo .logo-holder .picture-holder .delete {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 11;
+  color: #f20;
+  font-size: 30px;
+  line-height: 1;
+  margin: -15px 0 0 -15px;
+  display: none;
+  cursor: pointer;
+}
+
+.registerNow .packetData-list,
+.registerNow .societiesBlock-listing {
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  display: block;
+  width: 100%;
+}
+
+.registerNow .packetData-list > *,
+.registerNow .societiesBlock-listing > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0;
+}
+
+.registerNow .packetData-list li,
+.registerNow .societiesBlock-listing li {
+  width: 25%;
+  padding: 0 5px 10px;
+}
+
+.registerNow .societiesBlock-listing {
+  padding: 20px;
+  max-height: 115px;
+  overflow: auto;
+}
+
+.registerNow .packetData-list {
+  margin: 0 -5px;
+}
+
+.registerNow .packetData-list li {
+  width: 20%;
+  padding: 0 5px 10px;
+}
+
+.registerNow .packetData {
+  display: block;
+  color: #fff;
+  background: #2092d0;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 400;
+  position: relative;
+  padding: 5px;
+}
+
+.registerNow .packetData .delete {
+  cursor: pointer;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  font-size: 14px;
+  line-height: 1;
+  margin: -7px 0 0;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.registerNow .role-listing {
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+}
+
+.registerNow .role-listing > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0;
+}
+
+.registerNow .role-listing li {
+  width: 25%;
+  padding: 0 0 10px;
+}
+
+.registerNow .agent-information {
+  border: 1px solid #777;
+  border-radius: 8px;
+  margin: 10px 0 0;
+  padding: 5px;
+  display: none;
+}
+
+.registerNow .agent-information .registerNow-heading {
+  margin: 0 0 10px;
+}
+
+.registerNow .agree-with-terms {
+  display: block;
+  width: 100%;
+}
+
+.registerNow .agree-with-terms li {
+  display: block;
+}
+
+.registerNow .agree-with-terms label {
+  display: block;
+  width: 100%;
+}
+
+.registerNow .agree-with-terms label:after {
+  display: none;
 }
 
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
@@ -4143,6 +4414,9 @@ h1 span {
 
 #wrapper.fancy-overlay {
   filter: blur(15px);
+  -webkit-filter: blur(15px);
+  -moz-filter: blur(15px);
+  -ms-filter: blur(15px);
 }
 
 #header {
@@ -4184,7 +4458,7 @@ h1 span {
 }
 
 .byDefault-fixed #header .top-bar, #header.fixed-position .top-bar {
-  padding: 20px 12px 24px;
+  padding: 12px;
 }
 
 @media (max-width: 1539px) {
@@ -4212,12 +4486,12 @@ h1 span {
 }
 
 .byDefault-fixed #header .social-icons, #header.fixed-position .social-icons {
-  padding: 26px 0 0;
+  padding: 15px 0 0;
 }
 
 @media (max-width: 1023px) {
   .byDefault-fixed #header .social-icons, #header.fixed-position .social-icons {
-    padding: 10px 0 0;
+    padding: 35px 0 0;
   }
 }
 
@@ -4342,7 +4616,7 @@ h1 span {
 
 .byDefault-fixed .logo,
 .fixed-position .logo {
-  max-width: 300px;
+  max-width: 250px;
   position: fixed;
   top: 9px;
   left: 0;
@@ -7107,7 +7381,7 @@ h1 span {
   display: block;
   color: #555;
   font-size: 20px;
-  line-height: 23px;
+  line-height: 24px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 600;
   overflow: hidden;

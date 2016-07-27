@@ -7,14 +7,12 @@ $(document).ready(function() {
 			$(this).attr('href', 'tel:'+mobileNumber)
 		});
 	}
-
 	if($('.publicProperty-post').length == 0){
 		$('.propertyNotFound').removeClass('hidden');
 	}
-
 	$('.addPro-type:first').trigger('change');
-
 	$('.list-extraFeatures').slideUp();
+	$('.registration-form').find('.role-listing').hide();
 
 });
 
@@ -199,17 +197,6 @@ function countSelectedSocieties(){
 	$('.selectSociety-checkbox').each( function(){
 		if($(this).is(':checked')){
 			totalSelectedSocieties++;	
-		}
-		if(totalSelectedSocieties > 1){
-			$('.calculatedSocieties').text(totalSelectedSocieties+' Societies Selected');			
-		}
-		else {
-			if(totalSelectedSocieties == 1){
-				$('.calculatedSocieties').text(totalSelectedSocieties+' Society Selected');
-			}
-			else{
-				$('.calculatedSocieties').text('');
-			}
 		}
 	})
 }

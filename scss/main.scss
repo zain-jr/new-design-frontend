@@ -282,6 +282,9 @@ h1 {
 
   &.fancy-overlay {
     filter: blur(15px);
+    -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -ms-filter: blur(15px);
   }
 }
 #header {
@@ -320,7 +323,7 @@ h1 {
     box-shadow: 0 0 20px -1px rgba($black, 0.5);
     
     .top-bar {
-      padding: 20px 12px 24px;
+      padding: 12px;
 
       @include media('<tvscreen'){
         padding: 15px 12px 20px;
@@ -338,10 +341,10 @@ h1 {
       }
     }
     .social-icons {
-      padding: 26px 0 0;
+      padding: 15px 0 0;
 
        @include media('<desktop'){
-         padding: 10px 0 0;
+         padding: 35px 0 0;
       }
     }
   }
@@ -439,7 +442,7 @@ h1 {
 
   .byDefault-fixed &,
   .fixed-position & {
-    max-width: 300px;
+    max-width: 250px;
     position: fixed;
     top: 9px;
     left: 0;
@@ -2503,7 +2506,7 @@ h1 {
     @extend %text-center;
     @extend %text-capital;
     color: $dark-grey;
-    @include font(20,23);
+    @include font(20,24);
     font-family: $open-sans;
     font-weight: 600;
     overflow: hidden;
