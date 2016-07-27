@@ -2359,20 +2359,20 @@ input[type='submit'] {
   }
 }
 
-.propertyDetail-page .slide > img {
+.propertyDetail-page .slide img {
   min-height: 457px;
   max-height: 457px;
 }
 
 @media (max-width: 1023px) {
-  .propertyDetail-page .slide > img {
+  .propertyDetail-page .slide img {
     max-height: 335px;
     min-height: 335px;
   }
 }
 
 @media (max-width: 767px) {
-  .propertyDetail-page .slide > img {
+  .propertyDetail-page .slide img {
     max-height: inherit;
     min-height: inherit;
   }
