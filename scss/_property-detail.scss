@@ -127,7 +127,7 @@
       font-weight: 700;
       font-family: $open-sans;
       @include font(27,30);
-      margin: 0 0 20px;
+      margin: 0 0 15px;
 
       @include media('<tablet'){
         @include font(18,22);
@@ -146,6 +146,15 @@
     position: relative;
     width: 100%;
     @extend %layout;
+    padding: 5px 0 0;
+
+    .add-to-favorite {
+      top: 1px;
+    }
+    .premiumProperty {
+      top: 46px;
+      width: 195px;
+    }
 
     .propertyImage-mask,
     .mask {
@@ -334,14 +343,14 @@
   }
   .feature-list {
     @extend %listreset;
-    @include align-reset(top, 17,22);
+    @include align-reset(top, 14,17);
     color: $p42-default-grey;
     margin: 0 -1px;
 
     li {
       width: 33.33%;
       color: $p42-default-grey;
-      @include align-reset(top, 17,22);
+      @include align-reset(top, 14,17);
       padding: 5px 10px 10px;
       border-left: 1px solid $dark-grey;
 
@@ -353,13 +362,12 @@
         font-size: 14px;
         line-height: 1;
         position: absolute;
-        top: 50%;
+        top: 0;
         left: 0;
-        margin: -7px 0 0;
       }
 
       .text-feature , .stataus {
-        width: 50%;
+        width: 70%;
         position: relative;
       }
       .text-feature {
@@ -368,6 +376,7 @@
       .stataus {
         @extend %text-right;
         font-weight: bold;
+        width: 30%;
       }
     }
   }

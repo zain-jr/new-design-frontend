@@ -36,6 +36,7 @@ $media-expressions: (
 @import 'property-detail';
 @import 'add-property-form';
 @import 'register-now';
+@import 'login-page';
 @import 'fancybox';
 
 html {
@@ -2518,6 +2519,7 @@ h1 {
     display: block;
   }
 }
+.login-heading,
 .registerNow-heading,
 .add-pro-heading {
     display: block;
@@ -2569,6 +2571,30 @@ h1 {
             left: 110%;
         }
     }
+}
+.information {
+  display: block;
+  @include font(12,15);
+  font-weight: 600;
+  position: relative;
+  @extend %text-left;
+  padding: 3px 0 3px 23px;
+
+  span[class^="icon-"],span[class*="icon-"]{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    line-height: 1;
+  }
+}
+.forgot-pass {
+    @include align(top);
+    color: $dark-grey;
+    text-decoration: none;
+    margin: 5px 0 0;
+
+    &:hover { color: $p42-color;}
 }
 .resize-active * {
   transition: none;

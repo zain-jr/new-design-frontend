@@ -1,0 +1,141 @@
+.login-page {
+    @extend %layout;
+    max-width: 500px;
+    background: rgba($p42-background, 0.5);
+    box-shadow: 0 0 7px rgba($black , 0.22);
+    margin: 100px auto;
+    
+    h1 {
+        @include font(60,63);
+        font-weight: 100;
+
+        span { font-weight: 300;}
+
+        @include media('<tablet'){
+            @include font(30,33);
+        }
+    }
+    .forgot-form,
+    .login-form {
+        @extend %layout;
+        padding: 50px 10px;
+        
+        input[type="text"],input[type="tel"],input[type="password"],input[type="number"],input[type="email"]{
+            border: 0;
+            width: 100%;
+            padding: 6px;
+            @include font(13,16);
+            height: 28px;
+            width: 100%;
+            
+            @include media('<tablet'){
+                @include font(12,16);
+            }
+
+            @include placeholder {
+                color: $dark-grey;
+                opacity: 0.7;
+
+                @include media('<widescreen'){
+                    @include font(11,16);
+                }
+            }
+        }
+        .layout {
+            padding: 3px;
+            @include align-reset(top, 13, 16);
+            margin: 0 0 20px;
+
+            @include media('<tablet'){
+                margin: 0;
+                padding: 0;
+                @include align-reset(top, 12, 15);
+            }
+
+            .layout-holder {
+                width: 33.33%;
+                padding: 0 10px;
+                @include align-reset(top, 13, 16);
+
+                @include media('<tablet'){
+                    width: 100%;
+                    display: block;
+                    margin: 0 0 10px;
+                    padding: 0;
+                    @include align-reset(top, 12, 15);
+                }
+
+                .full-width {
+                    @include align-reset(top, 13, 16);
+                    margin: 0 0 10px;
+                }
+            }
+            .input-holder {
+                width: calc(100% - 140px);
+                padding: 2px;
+            }
+            label {
+                color: $dark-grey;
+                font-weight: 700;
+                font-family: $open-sans;
+                @extend %text-capital;
+                width: 140px;
+                @include font(14,17);
+                padding: 7px 5px 0 0;
+
+                @include media('<tablet'){
+                    @include font(12,15);
+                }
+
+                &:after {
+                    @include align(top);
+                    color: $red;
+                    content: '*';
+                }
+            }
+        }
+        .buttons-holder {
+            @extend %listreset;
+            @include align-reset(top, 18,22);
+            margin: 0 -5px;
+            font-weight: 700;
+
+            li {
+                width: 50%;
+                padding: 0 5px 10px;
+
+                a {
+                    text-decoration: none;
+                    display: block;
+                    color: $white;
+                    @extend %text-center;
+                    background: $p42-default-grey;
+                    padding: 15px;
+
+                    &:hover {
+                        background: lighten($p42-default-grey, 5%);
+                    }
+                }
+            }
+        }
+        button {
+            display: block;
+            width: 100%;
+            border: 0;
+            background: $p42-color;
+            color: $white;
+            @include font(18,22);
+            padding: 15px;
+
+            span[class^="icon-"],span[class*="icon-"]{
+                @include align(middle);
+                margin: -3px 0 0;
+                padding: 0 5px;
+            }
+
+            &:hover {
+                background: $green;
+            }
+        }
+    }
+}

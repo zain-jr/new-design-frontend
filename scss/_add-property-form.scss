@@ -465,14 +465,6 @@
             }
         }
     }
-    .forgot-pass {
-        @include align(top);
-        color: $dark-grey;
-        text-decoration: none;
-        margin: 10px 0 0;
-
-        &:hover { color: $p42-color;}
-    }
     .list-extraFeatures {
         background: $p42-background;
         @extend %layout;
