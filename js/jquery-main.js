@@ -6,7 +6,7 @@ $(document).ready(function() {
 			$(this).attr('href', 'tel:'+mobileNumber)
 		});
 	}
-	if($('.publicProperty-post').length == 0){
+	if($('.publicProperty-post, .publicAgent-post').length == 0){
 		$('.propertyNotFound').removeClass('hidden');
 	}
 	$('.addPro-type:first').trigger('change');

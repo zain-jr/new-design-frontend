@@ -1,3 +1,4 @@
+.agent-listing-page,
 .listing-page {
   @extend %layout;
   position: relative;
@@ -167,6 +168,7 @@
       &:hover { background: $green;}
     }
   }
+  .publicAgent-post,
   .publicProperty-post {
     @extend %layout;
     background: $white;
@@ -343,6 +345,21 @@
           float: right !important;
         }
       }
+    }
+  }
+}
+.agent-listing-page {
+  #content {
+    @extend .layout;
+  }
+  .publicAgent-post {
+    width: 50%;
+  }
+  .links-holder {
+    position: static !important;
+
+    .links-left {
+      padding: 0 !important;
     }
   }
 }
