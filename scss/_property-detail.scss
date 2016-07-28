@@ -1,3 +1,4 @@
+.agent-detail-page,
 .propertyDetail-page {
   @extend %layout;
   padding: 5px;
@@ -21,6 +22,7 @@
     display: block;
     width: 100%;
   }
+  .info-blockAgent,
   .info-blockProperty {
     position: absolute;
     top: 0;
@@ -112,6 +114,7 @@
       }
     }
   }
+  .agent-detail-holder,
   .property-picture-holder {
     width: 100%;
     background:$p42-background;
@@ -377,6 +380,26 @@
         @extend %text-right;
         font-weight: bold;
         width: 30%;
+      }
+    }
+  }
+  .agent-societies {
+    overflow: hidden;
+    position: relative;
+
+    .agent-mask {
+      overflow: hidden;
+    }
+    .agent-slideset {
+      width: 999999px;
+      float: left;
+    }
+    .agent-slide {
+      width: 600px;
+      float: left;
+
+      a {
+        display: block;
       }
     }
   }

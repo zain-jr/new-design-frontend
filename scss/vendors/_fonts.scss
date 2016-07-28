@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?4bjrm2');
-  src:  url('../fonts/icomoon.eot?4bjrm2#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?4bjrm2') format('truetype'),
-    url('../fonts/icomoon.woff?4bjrm2') format('woff'),
-    url('../fonts/icomoon.svg?4bjrm2#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?wmlhou');
+  src:  url('../fonts/icomoon.eot?wmlhou#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?wmlhou') format('truetype'),
+    url('../fonts/icomoon.woff?wmlhou') format('woff'),
+    url('../fonts/icomoon.svg?wmlhou#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,10 +24,22 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-domain:before {
+  content: "\e925";
+}
+.icon-folder:before {
+  content: "\e926";
+}
+.icon-front-store:before {
+  content: "\e927";
+}
+.icon-paperclip-tool:before {
+  content: "\e928";
+}
 .icon-printer:before {
   content: "\e922";
 }
-.icon-avatar:before {
+.icon-avatar2:before {
   content: "\e919";
 }
 .icon-empty-envelop:before {
@@ -42,7 +54,7 @@
 .icon-room:before {
   content: "\e91e";
 }
-.icon-phone:before {
+.icon-phone2:before {
   content: "\e90f";
 }
 .icon-trusted .path1:before {
@@ -111,6 +123,15 @@
 .icon-google-plus-symbol:before {
   content: "\e908";
 }
+.icon-mobile:before {
+  content: "\e929";
+}
+.icon-phone:before {
+  content: "\e929";
+}
+.icon-cellular:before {
+  content: "\e929";
+}
 .icon-eye:before {
   content: "\e921";
 }
@@ -119,6 +140,36 @@
 }
 .icon-search:before {
   content: "\e902";
+}
+.icon-location:before {
+  content: "\e92a";
+}
+.icon-map-marker:before {
+  content: "\e92a";
+}
+.icon-pin:before {
+  content: "\e92a";
+}
+.icon-user:before {
+  content: "\e92b";
+}
+.icon-profile:before {
+  content: "\e92b";
+}
+.icon-avatar:before {
+  content: "\e92b";
+}
+.icon-person:before {
+  content: "\e92b";
+}
+.icon-member:before {
+  content: "\e92b";
+}
+.icon-home2:before {
+  content: "\e92c";
+}
+.icon-house:before {
+  content: "\e92c";
 }
 .icon-info:before {
   content: "\e923";
@@ -173,6 +224,9 @@
 }
 .icon-home:before {
   content: "\e901";
+}
+.icon-old-phone:before {
+  content: "\e92d";
 }
 .icon-login:before {
   content: "\e924";

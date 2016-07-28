@@ -113,6 +113,22 @@ function initCarousel() {
 		totalNumber: '.total-num-1',
 		swipeGap: true
 	});
+
+	jQuery('.agent-societies').scrollGallery({
+		mask: '.agent-mask',
+		slider: '.agent-slideset',
+		slides: '.agent-slide',
+		currentNumber: 'span.cur-num',
+		totalNumber: 'span.all-num',
+		disableWhileAnimating: true,
+		circularRotation: true,
+		pauseOnHover: true,
+		autoRotation: false,
+		maskAutoSize: false,
+		stretchSlideToMask: true,
+		switchTime: 2000,
+		animSpeed: 600
+	});
 }
 
 // initialize fixed blocks on scroll

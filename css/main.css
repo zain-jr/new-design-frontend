@@ -395,8 +395,8 @@ th {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?4bjrm2");
-  src: url("../fonts/icomoon.eot?4bjrm2#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?4bjrm2") format("truetype"), url("../fonts/icomoon.woff?4bjrm2") format("woff"), url("../fonts/icomoon.svg?4bjrm2#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?wmlhou");
+  src: url("../fonts/icomoon.eot?wmlhou#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?wmlhou") format("truetype"), url("../fonts/icomoon.woff?wmlhou") format("woff"), url("../fonts/icomoon.svg?wmlhou#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -415,11 +415,27 @@ th {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-domain:before {
+  content: "\e925";
+}
+
+.icon-folder:before {
+  content: "\e926";
+}
+
+.icon-front-store:before {
+  content: "\e927";
+}
+
+.icon-paperclip-tool:before {
+  content: "\e928";
+}
+
 .icon-printer:before {
   content: "\e922";
 }
 
-.icon-avatar:before {
+.icon-avatar2:before {
   content: "\e919";
 }
 
@@ -439,7 +455,7 @@ th {
   content: "\e91e";
 }
 
-.icon-phone:before {
+.icon-phone2:before {
   content: "\e90f";
 }
 
@@ -526,6 +542,18 @@ th {
   content: "\e908";
 }
 
+.icon-mobile:before {
+  content: "\e929";
+}
+
+.icon-phone:before {
+  content: "\e929";
+}
+
+.icon-cellular:before {
+  content: "\e929";
+}
+
 .icon-eye:before {
   content: "\e921";
 }
@@ -536,6 +564,46 @@ th {
 
 .icon-search:before {
   content: "\e902";
+}
+
+.icon-location:before {
+  content: "\e92a";
+}
+
+.icon-map-marker:before {
+  content: "\e92a";
+}
+
+.icon-pin:before {
+  content: "\e92a";
+}
+
+.icon-user:before {
+  content: "\e92b";
+}
+
+.icon-profile:before {
+  content: "\e92b";
+}
+
+.icon-avatar:before {
+  content: "\e92b";
+}
+
+.icon-person:before {
+  content: "\e92b";
+}
+
+.icon-member:before {
+  content: "\e92b";
+}
+
+.icon-home2:before {
+  content: "\e92c";
+}
+
+.icon-house:before {
+  content: "\e92c";
 }
 
 .icon-info:before {
@@ -610,6 +678,10 @@ th {
   content: "\e901";
 }
 
+.icon-old-phone:before {
+  content: "\e92d";
+}
+
 .icon-login:before {
   content: "\e924";
 }
@@ -622,7 +694,8 @@ th {
   content: "\e907";
 }
 
-.listing-page .filters-links, .listing-page .filterChecks, .propertyDetail-page .feature-list, .addProperty-form .image-uploading-area, .addProperty-form .existingOrNew-member, .registerNow .packetData-list,
+.listing-page .filters-links, .listing-page .filterChecks, .agent-detail-page .feature-list,
+.propertyDetail-page .feature-list, .addProperty-form .image-uploading-area, .addProperty-form .existingOrNew-member, .registerNow .packetData-list,
 .registerNow .societiesBlock-listing, .registerNow .role-listing, .registerNow .agree-with-terms, .forgot-form .buttons-holder,
 .login-form .buttons-holder, .social-icons, .loginRegister, .main-visualSection .number-of-properties, .mainSearch-form .typeOfBuying, .mainSearch-form .subTypes, .mainSearch-form .inputsHolder, #nav .main-navigation, .news-carousel .news-pagination ul, .topSocities-holder .socities, .topSocities-holder .socities li .caption .numberOfproperties, .agents-logo, .pager, .quick-links, .public-ui-features, .sumery-list, .radio-checks-holder {
   margin: 0;
@@ -636,7 +709,14 @@ th {
   clear: both;
 }
 
-.propertyDetail-page .info-blockProperty .pictureHolder img, .propertyDetail-page .propertyImage-pagination .propertyImage-slide img,
+.agent-detail-page .info-blockAgent .pictureHolder img,
+.agent-detail-page .info-blockProperty .pictureHolder img,
+.propertyDetail-page .info-blockAgent .pictureHolder img,
+.propertyDetail-page .info-blockProperty .pictureHolder img, .agent-detail-page .propertyImage-pagination .propertyImage-slide img,
+.agent-detail-page .propertyImage-pagination .slide img,
+.agent-detail-page .propertyImage-slider .propertyImage-slide img,
+.agent-detail-page .propertyImage-slider .slide img,
+.propertyDetail-page .propertyImage-pagination .propertyImage-slide img,
 .propertyDetail-page .propertyImage-pagination .slide img,
 .propertyDetail-page .propertyImage-slider .propertyImage-slide img,
 .propertyDetail-page .propertyImage-slider .slide img, .registerNow .company-logo .logo-holder .picture-holder img, .logo img, .news-carousel .news-slide img {
@@ -660,21 +740,39 @@ th {
   overflow: hidden;
 }
 
-.text-center, .propertyNotFound, .propertyDetail-page .info-blockProperty .price, .propertyDetail-page .info-blockProperty .small-heading, .propertyDetail-page .propertyImage-pagination .propertyImage-slide a,
+.text-center, .propertyNotFound, .agent-detail-page .info-blockAgent .price,
+.agent-detail-page .info-blockProperty .price,
+.propertyDetail-page .info-blockAgent .price,
+.propertyDetail-page .info-blockProperty .price, .agent-detail-page .info-blockAgent .small-heading,
+.agent-detail-page .info-blockProperty .small-heading,
+.propertyDetail-page .info-blockAgent .small-heading,
+.propertyDetail-page .info-blockProperty .small-heading, .agent-detail-page .propertyImage-pagination .propertyImage-slide a,
+.agent-detail-page .propertyImage-pagination .slide a,
+.agent-detail-page .propertyImage-slider .propertyImage-slide a,
+.agent-detail-page .propertyImage-slider .slide a,
+.propertyDetail-page .propertyImage-pagination .propertyImage-slide a,
 .propertyDetail-page .propertyImage-pagination .slide a,
 .propertyDetail-page .propertyImage-slider .propertyImage-slide a,
-.propertyDetail-page .propertyImage-slider .slide a, .propertyDetail-page .overview-section, .propertyDetail-page .extra-feature-section .small-heading, .addProperty-form .extra-features, .addProperty-form .existingOrNew-member li, .addProperty-form .list-extraFeatures .feature-heading, .registerNow .role-opener, .forgot-form .buttons-holder li a,
+.propertyDetail-page .propertyImage-slider .slide a, .agent-detail-page .overview-section,
+.propertyDetail-page .overview-section, .agent-detail-page .extra-feature-section .small-heading,
+.propertyDetail-page .extra-feature-section .small-heading, .addProperty-form .extra-features, .addProperty-form .existingOrNew-member li, .addProperty-form .list-extraFeatures .feature-heading, .registerNow .role-opener, .forgot-form .buttons-holder li a,
 .login-form .buttons-holder li a, .custom-withouChecks .fake-label, h1, .loginRegister li, .main-visualSection, #nav .main-navigation li, .news-carousel .news-pagination ul, .topSocities-holder .socities li a, .heading, .agents-logo li a, .premiumProperty, .public-ui-features li strong, .generic-lightbox, .login-heading,
 .registerNow-heading,
 .add-pro-heading {
   text-align: center;
 }
 
-.text-left, .listing-page .publicProperty-post .caption h1, .propertyDetail-page .property-picture-holder h1, .propertyDetail-page .overview-section .small-heading, .propertyDetail-page .feature .small-heading, .addProperty-form .existingOrNew-member li .slide, .mainSearch-form .inputsHolder, #nav, .topSocities-holder .socities li .caption .numberOfproperties, .inquiry-email-form, .information {
+.text-left, .listing-page .publicProperty-post .caption h1, .agent-detail-page .agent-detail-holder h1,
+.agent-detail-page .property-picture-holder h1,
+.propertyDetail-page .agent-detail-holder h1,
+.propertyDetail-page .property-picture-holder h1, .agent-detail-page .overview-section .small-heading,
+.propertyDetail-page .overview-section .small-heading, .agent-detail-page .feature .small-heading,
+.propertyDetail-page .feature .small-heading, .addProperty-form .existingOrNew-member li .slide, .mainSearch-form .inputsHolder, #nav, .topSocities-holder .socities li .caption .numberOfproperties, .inquiry-email-form, .information {
   text-align: left;
 }
 
-.text-right, .propertyDetail-page .feature-list li .stataus, .topSocities-holder .socities li .caption .numberOfproperties li span:last-child, #footer .copyright, .sumery-list li .quantity {
+.text-right, .agent-detail-page .feature-list li .stataus,
+.propertyDetail-page .feature-list li .stataus, .topSocities-holder .socities li .caption .numberOfproperties li span:last-child, #footer .copyright, .sumery-list li .quantity {
   text-align: right;
 }
 
@@ -693,19 +791,40 @@ th {
   text-transform: capitalize;
 }
 
-.pull-left, .listing-page #aside, .listing-page #content, .listing-page .publicProperty-post .image-holder, .listing-page .publicProperty-post .caption .quick-links, .propertyDetail-page .overview-section .small-heading, .addProperty-form .tips, .listing-page .publicProperty-post .caption .left-area, .listing-page .publicProperty-post .caption .links-left, .news-slideshow .slide .caption, .agents .left-side {
+.pull-left, .listing-page #aside, .listing-page #content, .listing-page .publicProperty-post .image-holder, .listing-page .publicProperty-post .caption .quick-links, .agent-detail-page .overview-section .small-heading,
+.propertyDetail-page .overview-section .small-heading, .addProperty-form .tips, .listing-page .publicProperty-post .caption .left-area, .listing-page .publicProperty-post .caption .links-left, .news-slideshow .slide .caption, .agents .left-side {
   float: left !important;
 }
 
-.pull-right, .listing-page .publicProperty-post .caption .company-logo, .propertyDetail-page .overview-section .btn-hollow, .listing-page .publicProperty-post .caption .right-area, .listing-page .publicProperty-post .caption .links-right, .propertyDetail-page .info-blockProperty .quick-links, .propertyDetail-page .property-picture-holder .star-rating, .news-carousel, .agent-slider {
+.pull-right, .listing-page .publicProperty-post .caption .company-logo, .agent-detail-page .overview-section .btn-hollow,
+.propertyDetail-page .overview-section .btn-hollow, .listing-page .publicProperty-post .caption .right-area, .listing-page .publicProperty-post .caption .links-right, .agent-detail-page .info-blockAgent .quick-links,
+.agent-detail-page .info-blockProperty .quick-links,
+.propertyDetail-page .info-blockAgent .quick-links,
+.propertyDetail-page .info-blockProperty .quick-links, .agent-detail-page .agent-detail-holder .star-rating,
+.agent-detail-page .property-picture-holder .star-rating,
+.propertyDetail-page .agent-detail-holder .star-rating,
+.propertyDetail-page .property-picture-holder .star-rating, .news-carousel, .agent-slider {
   float: right !important;
 }
 
-.layout, .listing-page, .listing-page .filter-form, .listing-page .filters-links li .slide, .listing-page .fromTo, .listing-page .publicProperty-post, .listing-page .publicProperty-post .caption, .propertyNotFound, .propertyDetail-page, .propertyDetail-page .info-blockProperty .pictureHolder, .propertyDetail-page .propertyImage-pagination,
-.propertyDetail-page .propertyImage-slider, .propertyDetail-page .propertyImage-pagination .propertyImage-mask,
+.layout, .listing-page, .listing-page .filter-form, .listing-page .filters-links li .slide, .listing-page .fromTo, .listing-page .publicProperty-post, .listing-page .publicProperty-post .caption, .propertyNotFound, .agent-detail-page,
+.propertyDetail-page, .agent-detail-page .info-blockAgent .pictureHolder,
+.agent-detail-page .info-blockProperty .pictureHolder,
+.propertyDetail-page .info-blockAgent .pictureHolder,
+.propertyDetail-page .info-blockProperty .pictureHolder, .agent-detail-page .propertyImage-pagination,
+.agent-detail-page .propertyImage-slider,
+.propertyDetail-page .propertyImage-pagination,
+.propertyDetail-page .propertyImage-slider, .agent-detail-page .propertyImage-pagination .propertyImage-mask,
+.agent-detail-page .propertyImage-pagination .mask,
+.agent-detail-page .propertyImage-slider .propertyImage-mask,
+.agent-detail-page .propertyImage-slider .mask,
+.propertyDetail-page .propertyImage-pagination .propertyImage-mask,
 .propertyDetail-page .propertyImage-pagination .mask,
 .propertyDetail-page .propertyImage-slider .propertyImage-mask,
-.propertyDetail-page .propertyImage-slider .mask, .propertyDetail-page .overview-section, .propertyDetail-page .extra-feature-section, .propertyDetail-page .feature, .addProperty-form, .addProperty-form .add-form-holder, .addProperty-form .main-form, .addProperty-form .tips, .addProperty-form .list-extraFeatures, .registerNow, .registerNow .registration-form, .registerNow .company-logo, .registerNow .company-logo .logo-holder, .registerNow .role-listing, .registerNow .agent-information, .login-page, .forgot-form,
+.propertyDetail-page .propertyImage-slider .mask, .agent-detail-page .overview-section,
+.propertyDetail-page .overview-section, .agent-detail-page .extra-feature-section,
+.propertyDetail-page .extra-feature-section, .agent-detail-page .feature,
+.propertyDetail-page .feature, .addProperty-form, .addProperty-form .add-form-holder, .addProperty-form .main-form, .addProperty-form .tips, .addProperty-form .list-extraFeatures, .registerNow, .registerNow .registration-form, .registerNow .company-logo, .registerNow .company-logo .logo-holder, .registerNow .role-listing, .registerNow .agent-information, .login-page, .forgot-form,
 .login-form, .fake-select, #wrapper, .logo, .main-visualSection, #main, .page-holder, .mainSearch-form .form-holder, .mainSearch-form .inputsHolder li .input-holder, .byDefault-fixed #nav .main-navigation li a span[class^="icon-"], .byDefault-fixed #nav .main-navigation li a span[class*="icon-"], #nav.fixed-position .main-navigation li a span[class^="icon-"], #nav.fixed-position .main-navigation li a span[class*="icon-"], .generic-section, .news-sliderHolder, .news-slideshow, .news-slideshow .mask, .news-slideshow .slideset, .news-carousel, .news-carousel .news-mask, .news-carousel .news-pagination ul a, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .inquiry-email-form .input-holder, .radio-checks-holder {
   overflow: hidden;
 }
@@ -2119,10 +2238,12 @@ input[type='submit'] {
   opacity: 0.5;
 }
 
+.agent-detail-page,
 .propertyDetail-page {
   padding: 5px;
 }
 
+.agent-detail-page .detail-holder,
 .propertyDetail-page .detail-holder {
   box-shadow: 0 5px 13px rgba(0, 0, 0, 0.5);
   padding: 0 305px 10px 0;
@@ -2133,22 +2254,28 @@ input[type='submit'] {
 }
 
 @media (max-width: 1023px) {
+  .agent-detail-page .detail-holder,
   .propertyDetail-page .detail-holder {
     padding: 0 255px 10px 0;
   }
 }
 
 @media (max-width: 767px) {
+  .agent-detail-page .detail-holder,
   .propertyDetail-page .detail-holder {
     padding: 0 10px 0;
   }
 }
 
+.agent-detail-page .frame,
 .propertyDetail-page .frame {
   display: block;
   width: 100%;
 }
 
+.agent-detail-page .info-blockAgent,
+.agent-detail-page .info-blockProperty,
+.propertyDetail-page .info-blockAgent,
 .propertyDetail-page .info-blockProperty {
   position: absolute;
   top: 0;
@@ -2162,12 +2289,18 @@ input[type='submit'] {
 }
 
 @media (max-width: 1023px) {
+  .agent-detail-page .info-blockAgent,
+  .agent-detail-page .info-blockProperty,
+  .propertyDetail-page .info-blockAgent,
   .propertyDetail-page .info-blockProperty {
     max-width: 250px;
   }
 }
 
 @media (max-width: 767px) {
+  .agent-detail-page .info-blockAgent,
+  .agent-detail-page .info-blockProperty,
+  .propertyDetail-page .info-blockAgent,
   .propertyDetail-page .info-blockProperty {
     max-width: inherit;
     position: static;
@@ -2177,10 +2310,73 @@ input[type='submit'] {
   }
 }
 
-.propertyDetail-page .info-blockProperty .pull-left, .propertyDetail-page .info-blockProperty .listing-page #aside, .listing-page .propertyDetail-page .info-blockProperty #aside, .propertyDetail-page .info-blockProperty .listing-page #content, .listing-page .propertyDetail-page .info-blockProperty #content, .propertyDetail-page .info-blockProperty .listing-page .publicProperty-post .image-holder, .listing-page .publicProperty-post .propertyDetail-page .info-blockProperty .image-holder, .propertyDetail-page .info-blockProperty .listing-page .publicProperty-post .caption .quick-links, .listing-page .publicProperty-post .caption .propertyDetail-page .info-blockProperty .quick-links, .propertyDetail-page .info-blockProperty .overview-section .small-heading, .propertyDetail-page .overview-section .info-blockProperty .small-heading, .propertyDetail-page .info-blockProperty .addProperty-form .tips, .addProperty-form .propertyDetail-page .info-blockProperty .tips, .propertyDetail-page .info-blockProperty .pull-right, .propertyDetail-page .info-blockProperty .listing-page .publicProperty-post .caption .company-logo, .listing-page .publicProperty-post .caption .propertyDetail-page .info-blockProperty .company-logo, .propertyDetail-page .info-blockProperty .overview-section .btn-hollow, .propertyDetail-page .overview-section .info-blockProperty .btn-hollow {
+.agent-detail-page .info-blockAgent .pull-left, .agent-detail-page .info-blockAgent .listing-page #aside, .listing-page .agent-detail-page .info-blockAgent #aside, .agent-detail-page .info-blockAgent .listing-page #content, .listing-page .agent-detail-page .info-blockAgent #content, .agent-detail-page .info-blockAgent .listing-page .publicProperty-post .image-holder, .listing-page .publicProperty-post .agent-detail-page .info-blockAgent .image-holder, .agent-detail-page .info-blockAgent .listing-page .publicProperty-post .caption .quick-links, .listing-page .publicProperty-post .caption .agent-detail-page .info-blockAgent .quick-links, .agent-detail-page .info-blockAgent .overview-section .small-heading, .agent-detail-page .overview-section .info-blockAgent .small-heading,
+.propertyDetail-page .overview-section .agent-detail-page .info-blockAgent .small-heading, .agent-detail-page .info-blockAgent .addProperty-form .tips, .addProperty-form .agent-detail-page .info-blockAgent .tips, .agent-detail-page .info-blockAgent .pull-right, .agent-detail-page .info-blockAgent .listing-page .publicProperty-post .caption .company-logo, .listing-page .publicProperty-post .caption .agent-detail-page .info-blockAgent .company-logo, .agent-detail-page .info-blockAgent .overview-section .btn-hollow, .agent-detail-page .overview-section .info-blockAgent .btn-hollow,
+.propertyDetail-page .overview-section .agent-detail-page .info-blockAgent .btn-hollow,
+.agent-detail-page .info-blockProperty .pull-left,
+.agent-detail-page .info-blockProperty .listing-page #aside, .listing-page
+.agent-detail-page .info-blockProperty #aside,
+.agent-detail-page .info-blockProperty .listing-page #content, .listing-page
+.agent-detail-page .info-blockProperty #content,
+.agent-detail-page .info-blockProperty .listing-page .publicProperty-post .image-holder, .listing-page .publicProperty-post
+.agent-detail-page .info-blockProperty .image-holder,
+.agent-detail-page .info-blockProperty .listing-page .publicProperty-post .caption .quick-links, .listing-page .publicProperty-post .caption
+.agent-detail-page .info-blockProperty .quick-links, .agent-detail-page .info-blockProperty .overview-section .small-heading, .agent-detail-page .overview-section .info-blockProperty .small-heading,
+.propertyDetail-page .overview-section
+.agent-detail-page .info-blockProperty .small-heading,
+.agent-detail-page .info-blockProperty .addProperty-form .tips, .addProperty-form
+.agent-detail-page .info-blockProperty .tips,
+.agent-detail-page .info-blockProperty .pull-right,
+.agent-detail-page .info-blockProperty .listing-page .publicProperty-post .caption .company-logo, .listing-page .publicProperty-post .caption
+.agent-detail-page .info-blockProperty .company-logo, .agent-detail-page .info-blockProperty .overview-section .btn-hollow, .agent-detail-page .overview-section .info-blockProperty .btn-hollow,
+.propertyDetail-page .overview-section
+.agent-detail-page .info-blockProperty .btn-hollow,
+.propertyDetail-page .info-blockAgent .pull-left,
+.propertyDetail-page .info-blockAgent .listing-page #aside, .listing-page
+.propertyDetail-page .info-blockAgent #aside,
+.propertyDetail-page .info-blockAgent .listing-page #content, .listing-page
+.propertyDetail-page .info-blockAgent #content,
+.propertyDetail-page .info-blockAgent .listing-page .publicProperty-post .image-holder, .listing-page .publicProperty-post
+.propertyDetail-page .info-blockAgent .image-holder,
+.propertyDetail-page .info-blockAgent .listing-page .publicProperty-post .caption .quick-links, .listing-page .publicProperty-post .caption
+.propertyDetail-page .info-blockAgent .quick-links, .agent-detail-page .overview-section
+.propertyDetail-page .info-blockAgent .small-heading,
+.propertyDetail-page .info-blockAgent .overview-section .small-heading,
+.propertyDetail-page .overview-section .info-blockAgent .small-heading,
+.propertyDetail-page .info-blockAgent .addProperty-form .tips, .addProperty-form
+.propertyDetail-page .info-blockAgent .tips,
+.propertyDetail-page .info-blockAgent .pull-right,
+.propertyDetail-page .info-blockAgent .listing-page .publicProperty-post .caption .company-logo, .listing-page .publicProperty-post .caption
+.propertyDetail-page .info-blockAgent .company-logo, .agent-detail-page .overview-section
+.propertyDetail-page .info-blockAgent .btn-hollow,
+.propertyDetail-page .info-blockAgent .overview-section .btn-hollow,
+.propertyDetail-page .overview-section .info-blockAgent .btn-hollow,
+.propertyDetail-page .info-blockProperty .pull-left,
+.propertyDetail-page .info-blockProperty .listing-page #aside, .listing-page
+.propertyDetail-page .info-blockProperty #aside,
+.propertyDetail-page .info-blockProperty .listing-page #content, .listing-page
+.propertyDetail-page .info-blockProperty #content,
+.propertyDetail-page .info-blockProperty .listing-page .publicProperty-post .image-holder, .listing-page .publicProperty-post
+.propertyDetail-page .info-blockProperty .image-holder,
+.propertyDetail-page .info-blockProperty .listing-page .publicProperty-post .caption .quick-links, .listing-page .publicProperty-post .caption
+.propertyDetail-page .info-blockProperty .quick-links, .agent-detail-page .overview-section
+.propertyDetail-page .info-blockProperty .small-heading,
+.propertyDetail-page .info-blockProperty .overview-section .small-heading,
+.propertyDetail-page .overview-section .info-blockProperty .small-heading,
+.propertyDetail-page .info-blockProperty .addProperty-form .tips, .addProperty-form
+.propertyDetail-page .info-blockProperty .tips,
+.propertyDetail-page .info-blockProperty .pull-right,
+.propertyDetail-page .info-blockProperty .listing-page .publicProperty-post .caption .company-logo, .listing-page .publicProperty-post .caption
+.propertyDetail-page .info-blockProperty .company-logo, .agent-detail-page .overview-section
+.propertyDetail-page .info-blockProperty .btn-hollow,
+.propertyDetail-page .info-blockProperty .overview-section .btn-hollow,
+.propertyDetail-page .overview-section .info-blockProperty .btn-hollow {
   width: 50%;
 }
 
+.agent-detail-page .info-blockAgent .price,
+.agent-detail-page .info-blockProperty .price,
+.propertyDetail-page .info-blockAgent .price,
 .propertyDetail-page .info-blockProperty .price {
   font-size: 38px;
   line-height: 40px;
@@ -2191,12 +2387,18 @@ input[type='submit'] {
 }
 
 @media (max-width: 1023px) {
+  .agent-detail-page .info-blockAgent .price,
+  .agent-detail-page .info-blockProperty .price,
+  .propertyDetail-page .info-blockAgent .price,
   .propertyDetail-page .info-blockProperty .price {
     font-size: 30px;
     line-height: 33px;
   }
 }
 
+.agent-detail-page .info-blockAgent .pictureHolder,
+.agent-detail-page .info-blockProperty .pictureHolder,
+.propertyDetail-page .info-blockAgent .pictureHolder,
 .propertyDetail-page .info-blockProperty .pictureHolder {
   width: 145px;
   margin: 0 auto 10px;
@@ -2205,6 +2407,9 @@ input[type='submit'] {
   background: #fff;
 }
 
+.agent-detail-page .info-blockAgent .pictureHolder:after,
+.agent-detail-page .info-blockProperty .pictureHolder:after,
+.propertyDetail-page .info-blockAgent .pictureHolder:after,
 .propertyDetail-page .info-blockProperty .pictureHolder:after {
   display: inline-block;
   vertical-align: middle;
@@ -2214,12 +2419,18 @@ input[type='submit'] {
   content: '';
 }
 
+.agent-detail-page .info-blockAgent .pictureHolder img,
+.agent-detail-page .info-blockProperty .pictureHolder img,
+.propertyDetail-page .info-blockAgent .pictureHolder img,
 .propertyDetail-page .info-blockProperty .pictureHolder img {
   display: inline-block;
   vertical-align: middle;
   white-space: normal;
 }
 
+.agent-detail-page .info-blockAgent .heading,
+.agent-detail-page .info-blockProperty .heading,
+.propertyDetail-page .info-blockAgent .heading,
 .propertyDetail-page .info-blockProperty .heading {
   color: #2092d0;
   font-family: "Open Sans", "Arial", sans-serif;
@@ -2229,33 +2440,54 @@ input[type='submit'] {
   margin: 0 0 10px;
 }
 
+.agent-detail-page .info-blockAgent .quick-links,
+.agent-detail-page .info-blockProperty .quick-links,
+.propertyDetail-page .info-blockAgent .quick-links,
 .propertyDetail-page .info-blockProperty .quick-links {
   padding: 18px 0 0;
 }
 
+.agent-detail-page .info-blockAgent .small-heading,
+.agent-detail-page .info-blockProperty .small-heading,
+.propertyDetail-page .info-blockAgent .small-heading,
 .propertyDetail-page .info-blockProperty .small-heading {
   padding: 10px 0;
   text-transform: normal;
 }
 
+.agent-detail-page .info-blockAgent .star-rating,
+.agent-detail-page .info-blockProperty .star-rating,
+.propertyDetail-page .info-blockAgent .star-rating,
 .propertyDetail-page .info-blockProperty .star-rating {
   margin: 0;
 }
 
+.agent-detail-page .info-blockAgent .star-rating li,
+.agent-detail-page .info-blockProperty .star-rating li,
+.propertyDetail-page .info-blockAgent .star-rating li,
 .propertyDetail-page .info-blockProperty .star-rating li {
   padding: 0;
 }
 
+.agent-detail-page .info-blockAgent .timeOfAddedProperty,
+.agent-detail-page .info-blockProperty .timeOfAddedProperty,
+.propertyDetail-page .info-blockAgent .timeOfAddedProperty,
 .propertyDetail-page .info-blockProperty .timeOfAddedProperty {
   padding: 50px 0 0;
 }
 
 @media (max-width: 767px) {
+  .agent-detail-page .info-blockAgent .timeOfAddedProperty,
+  .agent-detail-page .info-blockProperty .timeOfAddedProperty,
+  .propertyDetail-page .info-blockAgent .timeOfAddedProperty,
   .propertyDetail-page .info-blockProperty .timeOfAddedProperty {
     padding: 0;
   }
 }
 
+.agent-detail-page .agent-detail-holder,
+.agent-detail-page .property-picture-holder,
+.propertyDetail-page .agent-detail-holder,
 .propertyDetail-page .property-picture-holder {
   width: 100%;
   background: #dee1e3;
@@ -2263,12 +2495,18 @@ input[type='submit'] {
 }
 
 @media (max-width: 767px) {
+  .agent-detail-page .agent-detail-holder,
+  .agent-detail-page .property-picture-holder,
+  .propertyDetail-page .agent-detail-holder,
   .propertyDetail-page .property-picture-holder {
     margin: 0 0 20px;
     padding: 0;
   }
 }
 
+.agent-detail-page .agent-detail-holder h1,
+.agent-detail-page .property-picture-holder h1,
+.propertyDetail-page .agent-detail-holder h1,
 .propertyDetail-page .property-picture-holder h1 {
   font-weight: 700;
   font-family: "Open Sans", "Arial", sans-serif;
@@ -2278,16 +2516,24 @@ input[type='submit'] {
 }
 
 @media (max-width: 767px) {
+  .agent-detail-page .agent-detail-holder h1,
+  .agent-detail-page .property-picture-holder h1,
+  .propertyDetail-page .agent-detail-holder h1,
   .propertyDetail-page .property-picture-holder h1 {
     font-size: 18px;
     line-height: 22px;
   }
 }
 
+.agent-detail-page .agent-detail-holder .quick-links,
+.agent-detail-page .property-picture-holder .quick-links,
+.propertyDetail-page .agent-detail-holder .quick-links,
 .propertyDetail-page .property-picture-holder .quick-links {
   padding: 7px 0 0;
 }
 
+.agent-detail-page .propertyImage-pagination,
+.agent-detail-page .propertyImage-slider,
 .propertyDetail-page .propertyImage-pagination,
 .propertyDetail-page .propertyImage-slider {
   position: relative;
@@ -2295,17 +2541,25 @@ input[type='submit'] {
   padding: 5px 0 0;
 }
 
+.agent-detail-page .propertyImage-pagination .add-to-favorite,
+.agent-detail-page .propertyImage-slider .add-to-favorite,
 .propertyDetail-page .propertyImage-pagination .add-to-favorite,
 .propertyDetail-page .propertyImage-slider .add-to-favorite {
   top: 1px;
 }
 
+.agent-detail-page .propertyImage-pagination .premiumProperty,
+.agent-detail-page .propertyImage-slider .premiumProperty,
 .propertyDetail-page .propertyImage-pagination .premiumProperty,
 .propertyDetail-page .propertyImage-slider .premiumProperty {
   top: 46px;
   width: 195px;
 }
 
+.agent-detail-page .propertyImage-pagination .propertyImage-mask,
+.agent-detail-page .propertyImage-pagination .mask,
+.agent-detail-page .propertyImage-slider .propertyImage-mask,
+.agent-detail-page .propertyImage-slider .mask,
 .propertyDetail-page .propertyImage-pagination .propertyImage-mask,
 .propertyDetail-page .propertyImage-pagination .mask,
 .propertyDetail-page .propertyImage-slider .propertyImage-mask,
@@ -2315,6 +2569,10 @@ input[type='submit'] {
 }
 
 @media (max-width: 1023px) {
+  .agent-detail-page .propertyImage-pagination .propertyImage-mask,
+  .agent-detail-page .propertyImage-pagination .mask,
+  .agent-detail-page .propertyImage-slider .propertyImage-mask,
+  .agent-detail-page .propertyImage-slider .mask,
   .propertyDetail-page .propertyImage-pagination .propertyImage-mask,
   .propertyDetail-page .propertyImage-pagination .mask,
   .propertyDetail-page .propertyImage-slider .propertyImage-mask,
@@ -2323,8 +2581,24 @@ input[type='submit'] {
   }
 }
 
-.propertyDetail-page .propertyImage-pagination .propertyImage-mask:hover .propertyImage-slider-btn-prev, .propertyDetail-page .propertyImage-pagination .propertyImage-mask:hover .propertyImage-slider-btn-next,
-.propertyDetail-page .propertyImage-pagination .propertyImage-mask:hover .propertyImage-pagination-btn-prev-1, .propertyDetail-page .propertyImage-pagination .propertyImage-mask:hover .propertyImage-pagination-btn-next-1,
+.agent-detail-page .propertyImage-pagination .propertyImage-mask:hover .propertyImage-slider-btn-prev, .agent-detail-page .propertyImage-pagination .propertyImage-mask:hover .propertyImage-slider-btn-next,
+.agent-detail-page .propertyImage-pagination .propertyImage-mask:hover .propertyImage-pagination-btn-prev-1, .agent-detail-page .propertyImage-pagination .propertyImage-mask:hover .propertyImage-pagination-btn-next-1,
+.agent-detail-page .propertyImage-pagination .mask:hover .propertyImage-slider-btn-prev,
+.agent-detail-page .propertyImage-pagination .mask:hover .propertyImage-slider-btn-next,
+.agent-detail-page .propertyImage-pagination .mask:hover .propertyImage-pagination-btn-prev-1,
+.agent-detail-page .propertyImage-pagination .mask:hover .propertyImage-pagination-btn-next-1,
+.agent-detail-page .propertyImage-slider .propertyImage-mask:hover .propertyImage-slider-btn-prev,
+.agent-detail-page .propertyImage-slider .propertyImage-mask:hover .propertyImage-slider-btn-next,
+.agent-detail-page .propertyImage-slider .propertyImage-mask:hover .propertyImage-pagination-btn-prev-1,
+.agent-detail-page .propertyImage-slider .propertyImage-mask:hover .propertyImage-pagination-btn-next-1,
+.agent-detail-page .propertyImage-slider .mask:hover .propertyImage-slider-btn-prev,
+.agent-detail-page .propertyImage-slider .mask:hover .propertyImage-slider-btn-next,
+.agent-detail-page .propertyImage-slider .mask:hover .propertyImage-pagination-btn-prev-1,
+.agent-detail-page .propertyImage-slider .mask:hover .propertyImage-pagination-btn-next-1,
+.propertyDetail-page .propertyImage-pagination .propertyImage-mask:hover .propertyImage-slider-btn-prev,
+.propertyDetail-page .propertyImage-pagination .propertyImage-mask:hover .propertyImage-slider-btn-next,
+.propertyDetail-page .propertyImage-pagination .propertyImage-mask:hover .propertyImage-pagination-btn-prev-1,
+.propertyDetail-page .propertyImage-pagination .propertyImage-mask:hover .propertyImage-pagination-btn-next-1,
 .propertyDetail-page .propertyImage-pagination .mask:hover .propertyImage-slider-btn-prev,
 .propertyDetail-page .propertyImage-pagination .mask:hover .propertyImage-slider-btn-next,
 .propertyDetail-page .propertyImage-pagination .mask:hover .propertyImage-pagination-btn-prev-1,
@@ -2341,6 +2615,8 @@ input[type='submit'] {
 }
 
 @media (max-width: 767px) {
+  .agent-detail-page .propertyImage-pagination .propertyImage-mask,
+  .agent-detail-page .propertyImage-slider .propertyImage-mask,
   .propertyDetail-page .propertyImage-pagination .propertyImage-mask,
   .propertyDetail-page .propertyImage-slider .propertyImage-mask {
     max-width: 320px;
@@ -2348,6 +2624,10 @@ input[type='submit'] {
   }
 }
 
+.agent-detail-page .propertyImage-pagination .propertyImage-slideset,
+.agent-detail-page .propertyImage-pagination .slideset,
+.agent-detail-page .propertyImage-slider .propertyImage-slideset,
+.agent-detail-page .propertyImage-slider .slideset,
 .propertyDetail-page .propertyImage-pagination .propertyImage-slideset,
 .propertyDetail-page .propertyImage-pagination .slideset,
 .propertyDetail-page .propertyImage-slider .propertyImage-slideset,
@@ -2359,6 +2639,10 @@ input[type='submit'] {
   white-space: nowrap !important;
 }
 
+.agent-detail-page .propertyImage-pagination .propertyImage-slide,
+.agent-detail-page .propertyImage-pagination .slide,
+.agent-detail-page .propertyImage-slider .propertyImage-slide,
+.agent-detail-page .propertyImage-slider .slide,
 .propertyDetail-page .propertyImage-pagination .propertyImage-slide,
 .propertyDetail-page .propertyImage-pagination .slide,
 .propertyDetail-page .propertyImage-slider .propertyImage-slide,
@@ -2373,6 +2657,10 @@ input[type='submit'] {
   padding: 0 5px 5px;
 }
 
+.agent-detail-page .propertyImage-pagination .propertyImage-slide a,
+.agent-detail-page .propertyImage-pagination .slide a,
+.agent-detail-page .propertyImage-slider .propertyImage-slide a,
+.agent-detail-page .propertyImage-slider .slide a,
 .propertyDetail-page .propertyImage-pagination .propertyImage-slide a,
 .propertyDetail-page .propertyImage-pagination .slide a,
 .propertyDetail-page .propertyImage-slider .propertyImage-slide a,
@@ -2381,6 +2669,10 @@ input[type='submit'] {
 }
 
 @media (max-width: 1023px) {
+  .agent-detail-page .propertyImage-pagination .propertyImage-slide,
+  .agent-detail-page .propertyImage-pagination .slide,
+  .agent-detail-page .propertyImage-slider .propertyImage-slide,
+  .agent-detail-page .propertyImage-slider .slide,
   .propertyDetail-page .propertyImage-pagination .propertyImage-slide,
   .propertyDetail-page .propertyImage-pagination .slide,
   .propertyDetail-page .propertyImage-slider .propertyImage-slide,
@@ -2389,12 +2681,14 @@ input[type='submit'] {
   }
 }
 
+.agent-detail-page .slide img,
 .propertyDetail-page .slide img {
   min-height: 457px;
   max-height: 457px;
 }
 
 @media (max-width: 1023px) {
+  .agent-detail-page .slide img,
   .propertyDetail-page .slide img {
     max-height: 335px;
     min-height: 335px;
@@ -2402,22 +2696,26 @@ input[type='submit'] {
 }
 
 @media (max-width: 767px) {
+  .agent-detail-page .slide img,
   .propertyDetail-page .slide img {
     max-height: inherit;
     min-height: inherit;
   }
 }
 
+.agent-detail-page .propertyImage-pagination .propertyImage-slide,
 .propertyDetail-page .propertyImage-pagination .propertyImage-slide {
   width: 20% !important;
 }
 
+.agent-detail-page .propertyImage-pagination .propertyImage-slide img,
 .propertyDetail-page .propertyImage-pagination .propertyImage-slide img {
   max-width: 155px;
   max-height: 95px;
 }
 
 @media (max-width: 1199px) {
+  .agent-detail-page .propertyImage-pagination .propertyImage-slide img,
   .propertyDetail-page .propertyImage-pagination .propertyImage-slide img {
     min-height: 85px;
     max-height: 85px;
@@ -2425,6 +2723,7 @@ input[type='submit'] {
 }
 
 @media (max-width: 1023px) {
+  .agent-detail-page .propertyImage-pagination .propertyImage-slide img,
   .propertyDetail-page .propertyImage-pagination .propertyImage-slide img {
     min-height: 65px;
     max-height: 65px;
@@ -2432,14 +2731,19 @@ input[type='submit'] {
 }
 
 @media (max-width: 767px) {
+  .agent-detail-page .propertyImage-pagination .propertyImage-slide img,
   .propertyDetail-page .propertyImage-pagination .propertyImage-slide img {
     min-height: 35px;
     max-height: 35px;
   }
 }
 
-.propertyDetail-page .propertyImage-slider-btn-prev, .propertyDetail-page .propertyImage-slider-btn-next,
-.propertyDetail-page .propertyImage-pagination-btn-prev-1, .propertyDetail-page .propertyImage-pagination-btn-next-1 {
+.agent-detail-page .propertyImage-slider-btn-prev, .agent-detail-page .propertyImage-slider-btn-next,
+.agent-detail-page .propertyImage-pagination-btn-prev-1, .agent-detail-page .propertyImage-pagination-btn-next-1,
+.propertyDetail-page .propertyImage-slider-btn-prev,
+.propertyDetail-page .propertyImage-slider-btn-next,
+.propertyDetail-page .propertyImage-pagination-btn-prev-1,
+.propertyDetail-page .propertyImage-pagination-btn-next-1 {
   position: absolute;
   top: 50%;
   left: 10px;
@@ -2449,24 +2753,39 @@ input[type='submit'] {
 }
 
 @media (max-width: 767px) {
-  .propertyDetail-page .propertyImage-slider-btn-prev, .propertyDetail-page .propertyImage-slider-btn-next,
-  .propertyDetail-page .propertyImage-pagination-btn-prev-1, .propertyDetail-page .propertyImage-pagination-btn-next-1 {
+  .agent-detail-page .propertyImage-slider-btn-prev, .agent-detail-page .propertyImage-slider-btn-next,
+  .agent-detail-page .propertyImage-pagination-btn-prev-1, .agent-detail-page .propertyImage-pagination-btn-next-1,
+  .propertyDetail-page .propertyImage-slider-btn-prev,
+  .propertyDetail-page .propertyImage-slider-btn-next,
+  .propertyDetail-page .propertyImage-pagination-btn-prev-1,
+  .propertyDetail-page .propertyImage-pagination-btn-next-1 {
     display: none !important;
   }
 }
 
-.propertyDetail-page .propertyImage-slider-btn-prev span[class^="icon-"], .propertyDetail-page .propertyImage-slider-btn-prev span[class*="icon-"], .propertyDetail-page .propertyImage-slider-btn-next span[class^="icon-"], .propertyDetail-page .propertyImage-slider-btn-next span[class*="icon-"],
+.agent-detail-page .propertyImage-slider-btn-prev span[class^="icon-"], .agent-detail-page .propertyImage-slider-btn-prev span[class*="icon-"], .agent-detail-page .propertyImage-slider-btn-next span[class^="icon-"], .agent-detail-page .propertyImage-slider-btn-next span[class*="icon-"],
+.agent-detail-page .propertyImage-pagination-btn-prev-1 span[class^="icon-"],
+.agent-detail-page .propertyImage-pagination-btn-prev-1 span[class*="icon-"], .agent-detail-page .propertyImage-pagination-btn-next-1 span[class^="icon-"], .agent-detail-page .propertyImage-pagination-btn-next-1 span[class*="icon-"],
+.propertyDetail-page .propertyImage-slider-btn-prev span[class^="icon-"],
+.propertyDetail-page .propertyImage-slider-btn-prev span[class*="icon-"],
+.propertyDetail-page .propertyImage-slider-btn-next span[class^="icon-"],
+.propertyDetail-page .propertyImage-slider-btn-next span[class*="icon-"],
 .propertyDetail-page .propertyImage-pagination-btn-prev-1 span[class^="icon-"],
-.propertyDetail-page .propertyImage-pagination-btn-prev-1 span[class*="icon-"], .propertyDetail-page .propertyImage-pagination-btn-next-1 span[class^="icon-"], .propertyDetail-page .propertyImage-pagination-btn-next-1 span[class*="icon-"] {
+.propertyDetail-page .propertyImage-pagination-btn-prev-1 span[class*="icon-"],
+.propertyDetail-page .propertyImage-pagination-btn-next-1 span[class^="icon-"],
+.propertyDetail-page .propertyImage-pagination-btn-next-1 span[class*="icon-"] {
   font-size: 40px;
   line-height: 1;
 }
 
-.propertyDetail-page .propertyImage-slider-btn-next, .propertyDetail-page .propertyImage-pagination-btn-next-1 {
+.agent-detail-page .propertyImage-slider-btn-next, .agent-detail-page .propertyImage-pagination-btn-next-1,
+.propertyDetail-page .propertyImage-slider-btn-next,
+.propertyDetail-page .propertyImage-pagination-btn-next-1 {
   left: auto;
   right: 20px;
 }
 
+.agent-detail-page .overview-section,
 .propertyDetail-page .overview-section {
   background: #fff;
   margin: 10px;
@@ -2476,17 +2795,20 @@ input[type='submit'] {
 }
 
 @media (max-width: 767px) {
+  .agent-detail-page .overview-section,
   .propertyDetail-page .overview-section {
     margin: 0 0 10px;
     padding: 10px;
   }
 }
 
+.agent-detail-page .overview-section .small-heading,
 .propertyDetail-page .overview-section .small-heading {
   padding: 0;
 }
 
 @media (max-width: 767px) {
+  .agent-detail-page .overview-section .small-heading,
   .propertyDetail-page .overview-section .small-heading {
     float: none !important;
     padding: 0 0 10px;
@@ -2495,16 +2817,19 @@ input[type='submit'] {
 }
 
 @media (max-width: 767px) {
+  .agent-detail-page .overview-section .btn-hollow,
   .propertyDetail-page .overview-section .btn-hollow {
     float: none !important;
     display: block;
   }
 }
 
+.agent-detail-page .overview-section .layout,
 .propertyDetail-page .overview-section .layout {
   padding: 0 0 15px;
 }
 
+.agent-detail-page .extra-feature-section,
 .propertyDetail-page .extra-feature-section {
   margin: 10px;
   border-radius: 8px;
@@ -2513,31 +2838,37 @@ input[type='submit'] {
 }
 
 @media (max-width: 767px) {
+  .agent-detail-page .extra-feature-section,
   .propertyDetail-page .extra-feature-section {
     padding: 10px;
     margin: 0 0 10px;
   }
 }
 
+.agent-detail-page .extra-feature-section .small-heading,
 .propertyDetail-page .extra-feature-section .small-heading {
   border-bottom: 1px solid #6c6d70;
   margin: 0 0 20px;
   padding: 0 0 20px;
 }
 
+.agent-detail-page .trusted-agent,
 .propertyDetail-page .trusted-agent {
   margin: 15px 0 10px;
 }
 
+.agent-detail-page .feature,
 .propertyDetail-page .feature {
   margin: 0 0 25px;
 }
 
+.agent-detail-page .feature .small-heading,
 .propertyDetail-page .feature .small-heading {
   border: 0;
   margin: 0;
 }
 
+.agent-detail-page .feature-list,
 .propertyDetail-page .feature-list {
   font-size: 0;
   line-height: 0;
@@ -2546,6 +2877,7 @@ input[type='submit'] {
   margin: 0 -1px;
 }
 
+.agent-detail-page .feature-list > *,
 .propertyDetail-page .feature-list > * {
   display: inline-block;
   vertical-align: top;
@@ -2554,6 +2886,7 @@ input[type='submit'] {
   letter-spacing: 0;
 }
 
+.agent-detail-page .feature-list li,
 .propertyDetail-page .feature-list li {
   width: 33.33%;
   color: #6c6d70;
@@ -2564,6 +2897,7 @@ input[type='submit'] {
   border-left: 1px solid #555;
 }
 
+.agent-detail-page .feature-list li > *,
 .propertyDetail-page .feature-list li > * {
   display: inline-block;
   vertical-align: top;
@@ -2573,12 +2907,15 @@ input[type='submit'] {
 }
 
 @media (max-width: 767px) {
+  .agent-detail-page .feature-list li,
   .propertyDetail-page .feature-list li {
     width: 50%;
   }
 }
 
-.propertyDetail-page .feature-list li span[class^="icon-"], .propertyDetail-page .feature-list li span[class*="icon-"] {
+.agent-detail-page .feature-list li span[class^="icon-"], .agent-detail-page .feature-list li span[class*="icon-"],
+.propertyDetail-page .feature-list li span[class^="icon-"],
+.propertyDetail-page .feature-list li span[class*="icon-"] {
   font-size: 14px;
   line-height: 1;
   position: absolute;
@@ -2586,18 +2923,50 @@ input[type='submit'] {
   left: 0;
 }
 
-.propertyDetail-page .feature-list li .text-feature, .propertyDetail-page .feature-list li .stataus {
+.agent-detail-page .feature-list li .text-feature, .agent-detail-page .feature-list li .stataus,
+.propertyDetail-page .feature-list li .text-feature,
+.propertyDetail-page .feature-list li .stataus {
   width: 70%;
   position: relative;
 }
 
+.agent-detail-page .feature-list li .text-feature,
 .propertyDetail-page .feature-list li .text-feature {
   padding: 0 0 0 30px;
 }
 
+.agent-detail-page .feature-list li .stataus,
 .propertyDetail-page .feature-list li .stataus {
   font-weight: bold;
   width: 30%;
+}
+
+.agent-detail-page .agent-societies,
+.propertyDetail-page .agent-societies {
+  overflow: hidden;
+  position: relative;
+}
+
+.agent-detail-page .agent-societies .agent-mask,
+.propertyDetail-page .agent-societies .agent-mask {
+  overflow: hidden;
+}
+
+.agent-detail-page .agent-societies .agent-slideset,
+.propertyDetail-page .agent-societies .agent-slideset {
+  width: 999999px;
+  float: left;
+}
+
+.agent-detail-page .agent-societies .agent-slide,
+.propertyDetail-page .agent-societies .agent-slide {
+  width: 600px;
+  float: left;
+}
+
+.agent-detail-page .agent-societies .agent-slide a,
+.propertyDetail-page .agent-societies .agent-slide a {
+  display: block;
 }
 
 .addProperty-form {
@@ -4755,6 +5124,10 @@ html {
   height: 100%;
 }
 
+html.nav-active {
+  overflow-y: hidden;
+}
+
 body {
   width: 100%;
   height: 100%;
@@ -5253,7 +5626,7 @@ h1 span {
 .fixed-position .logo {
   max-width: 250px;
   position: fixed;
-  top: 9px;
+  top: 4px;
   left: 0;
   right: 0;
 }
@@ -5885,30 +6258,6 @@ h1 span {
   }
 }
 
-@media (max-width: 767px) {
-  #nav {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    height: 100vh !important;
-    width: 100% !important;
-    overflow: auto !important;
-    z-index: 999999999 !important;
-    background: rgba(108, 109, 112, 0.9);
-    transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
-    -moz-transform: translateX(-100%);
-    transition: transform 0.5s ease;
-  }
-  .nav-active #nav {
-    transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-  }
-}
-
 #nav .close {
   color: #d89429;
   text-decoration: none;
@@ -5982,13 +6331,6 @@ h1 span {
   width: 100%;
 }
 
-@media (max-width: 767px) {
-  #nav .nav-holder {
-    overflow: hidden;
-    height: 100vh;
-  }
-}
-
 .byDefault-fixed #nav, #nav.fixed-position {
   position: fixed !important;
   bottom: 0 !important;
@@ -6007,7 +6349,8 @@ h1 span {
     bottom: 0 !important;
     height: 100vh !important;
     width: 100% !important;
-    overflow: auto !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
     z-index: 999999999 !important;
     background: rgba(108, 109, 112, 0.9);
     transform: translateX(-100%);
@@ -7407,6 +7750,7 @@ h1 span {
   -webkit-transform: rotate(319deg);
   -moz-transform: rotate(319deg);
   -ms-transform: rotate(319deg);
+  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.5);
 }
 
 .trusted-agent {
@@ -7870,6 +8214,16 @@ h1 span {
   font-size: 12px;
   line-height: 15px;
   padding: 3px 0;
+}
+
+.inquiry-email-form .input-holder p a {
+  color: #555;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.inquiry-email-form .input-holder p a:hover {
+  color: #2092d0;
 }
 
 .inquiry-email-form input[type="text"], .inquiry-email-form input[type="email"], .inquiry-email-form input[type="tel"], .inquiry-email-form textarea {
