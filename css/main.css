@@ -623,8 +623,8 @@ th {
 }
 
 .listing-page .filters-links, .listing-page .filterChecks, .propertyDetail-page .feature-list, .addProperty-form .image-uploading-area, .addProperty-form .existingOrNew-member, .registerNow .packetData-list,
-.registerNow .societiesBlock-listing, .registerNow .role-listing, .registerNow .agree-with-terms, .login-page .forgot-form .buttons-holder,
-.login-page .login-form .buttons-holder, .social-icons, .loginRegister, .main-visualSection .number-of-properties, .mainSearch-form .typeOfBuying, .mainSearch-form .subTypes, .mainSearch-form .inputsHolder, #nav .main-navigation, .news-carousel .news-pagination ul, .topSocities-holder .socities, .topSocities-holder .socities li .caption .numberOfproperties, .agents-logo, .pager, .quick-links, .public-ui-features, .sumery-list, .radio-checks-holder {
+.registerNow .societiesBlock-listing, .registerNow .role-listing, .registerNow .agree-with-terms, .forgot-form .buttons-holder,
+.login-form .buttons-holder, .social-icons, .loginRegister, .main-visualSection .number-of-properties, .mainSearch-form .typeOfBuying, .mainSearch-form .subTypes, .mainSearch-form .inputsHolder, #nav .main-navigation, .news-carousel .news-pagination ul, .topSocities-holder .socities, .topSocities-holder .socities li .caption .numberOfproperties, .agents-logo, .pager, .quick-links, .public-ui-features, .sumery-list, .radio-checks-holder {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -663,8 +663,8 @@ th {
 .text-center, .propertyNotFound, .propertyDetail-page .info-blockProperty .price, .propertyDetail-page .info-blockProperty .small-heading, .propertyDetail-page .propertyImage-pagination .propertyImage-slide a,
 .propertyDetail-page .propertyImage-pagination .slide a,
 .propertyDetail-page .propertyImage-slider .propertyImage-slide a,
-.propertyDetail-page .propertyImage-slider .slide a, .propertyDetail-page .overview-section, .propertyDetail-page .extra-feature-section .small-heading, .addProperty-form .extra-features, .addProperty-form .existingOrNew-member li, .addProperty-form .list-extraFeatures .feature-heading, .registerNow .role-opener, .login-page .forgot-form .buttons-holder li a,
-.login-page .login-form .buttons-holder li a, .custom-withouChecks .fake-label, h1, .loginRegister li, .main-visualSection, #nav .main-navigation li, .news-carousel .news-pagination ul, .topSocities-holder .socities li a, .heading, .agents-logo li a, .premiumProperty, .public-ui-features li strong, .generic-lightbox, .login-heading,
+.propertyDetail-page .propertyImage-slider .slide a, .propertyDetail-page .overview-section, .propertyDetail-page .extra-feature-section .small-heading, .addProperty-form .extra-features, .addProperty-form .existingOrNew-member li, .addProperty-form .list-extraFeatures .feature-heading, .registerNow .role-opener, .forgot-form .buttons-holder li a,
+.login-form .buttons-holder li a, .custom-withouChecks .fake-label, h1, .loginRegister li, .main-visualSection, #nav .main-navigation li, .news-carousel .news-pagination ul, .topSocities-holder .socities li a, .heading, .agents-logo li a, .premiumProperty, .public-ui-features li strong, .generic-lightbox, .login-heading,
 .registerNow-heading,
 .add-pro-heading {
   text-align: center;
@@ -686,8 +686,8 @@ th {
   text-transform: lowercase;
 }
 
-.text-capital, .propertyNotFound .no-heading, .addProperty-form .layout label, .addProperty-form .existingOrNew-member, .registerNow .layout label, .login-page .forgot-form .layout label,
-.login-page .login-form .layout label, .custom-withouChecks .fake-label, .select2-container .select2-selection--single .select2-selection__rendered, .mainSearch-form .subTypes, .views, .inquiry-email-form label, .login-heading,
+.text-capital, .propertyNotFound .no-heading, .addProperty-form .layout label, .addProperty-form .existingOrNew-member, .registerNow .layout label, .forgot-form .layout label,
+.login-form .layout label, .custom-withouChecks .fake-label, .select2-container .select2-selection--single .select2-selection__rendered, .mainSearch-form .subTypes, .views, .inquiry-email-form label, .login-heading,
 .registerNow-heading,
 .add-pro-heading {
   text-transform: capitalize;
@@ -705,8 +705,8 @@ th {
 .propertyDetail-page .propertyImage-slider, .propertyDetail-page .propertyImage-pagination .propertyImage-mask,
 .propertyDetail-page .propertyImage-pagination .mask,
 .propertyDetail-page .propertyImage-slider .propertyImage-mask,
-.propertyDetail-page .propertyImage-slider .mask, .propertyDetail-page .overview-section, .propertyDetail-page .extra-feature-section, .propertyDetail-page .feature, .addProperty-form, .addProperty-form .add-form-holder, .addProperty-form .main-form, .addProperty-form .tips, .addProperty-form .list-extraFeatures, .registerNow, .registerNow .registration-form, .registerNow .company-logo, .registerNow .company-logo .logo-holder, .registerNow .role-listing, .registerNow .agent-information, .login-page, .login-page .forgot-form,
-.login-page .login-form, .fake-select, #wrapper, .logo, .main-visualSection, #main, .page-holder, .mainSearch-form .form-holder, .mainSearch-form .inputsHolder li .input-holder, .byDefault-fixed #nav .main-navigation li a span[class^="icon-"], .byDefault-fixed #nav .main-navigation li a span[class*="icon-"], #nav.fixed-position .main-navigation li a span[class^="icon-"], #nav.fixed-position .main-navigation li a span[class*="icon-"], .generic-section, .news-sliderHolder, .news-slideshow, .news-slideshow .mask, .news-slideshow .slideset, .news-carousel, .news-carousel .news-mask, .news-carousel .news-pagination ul a, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .inquiry-email-form .input-holder, .radio-checks-holder {
+.propertyDetail-page .propertyImage-slider .mask, .propertyDetail-page .overview-section, .propertyDetail-page .extra-feature-section, .propertyDetail-page .feature, .addProperty-form, .addProperty-form .add-form-holder, .addProperty-form .main-form, .addProperty-form .tips, .addProperty-form .list-extraFeatures, .registerNow, .registerNow .registration-form, .registerNow .company-logo, .registerNow .company-logo .logo-holder, .registerNow .role-listing, .registerNow .agent-information, .login-page, .forgot-form,
+.login-form, .fake-select, #wrapper, .logo, .main-visualSection, #main, .page-holder, .mainSearch-form .form-holder, .mainSearch-form .inputsHolder li .input-holder, .byDefault-fixed #nav .main-navigation li a span[class^="icon-"], .byDefault-fixed #nav .main-navigation li a span[class*="icon-"], #nav.fixed-position .main-navigation li a span[class^="icon-"], #nav.fixed-position .main-navigation li a span[class*="icon-"], .generic-section, .news-sliderHolder, .news-slideshow, .news-slideshow .mask, .news-slideshow .slideset, .news-carousel, .news-carousel .news-mask, .news-carousel .news-pagination ul a, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .inquiry-email-form .input-holder, .radio-checks-holder {
   overflow: hidden;
 }
 
@@ -4108,34 +4108,58 @@ input[type='submit'] {
   margin: 100px auto;
 }
 
-.login-page h1 {
+@media (max-width: 767px) {
+  .login-page {
+    margin: 20px auto;
+  }
+}
+
+.forgot-form,
+.login-form {
+  padding: 50px 10px;
+}
+
+@media (max-width: 767px) {
+  .forgot-form,
+  .login-form {
+    padding: 30px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .forgot-form p,
+  .login-form p {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.forgot-form h1,
+.login-form h1 {
   font-size: 60px;
   line-height: 63px;
   font-weight: 100;
 }
 
-.login-page h1 span {
+.forgot-form h1 span,
+.login-form h1 span {
   font-weight: 300;
 }
 
 @media (max-width: 767px) {
-  .login-page h1 {
+  .forgot-form h1,
+  .login-form h1 {
     font-size: 30px;
     line-height: 33px;
   }
 }
 
-.login-page .forgot-form,
-.login-page .login-form {
-  padding: 50px 10px;
-}
-
-.login-page .forgot-form input[type="text"], .login-page .forgot-form input[type="tel"], .login-page .forgot-form input[type="password"], .login-page .forgot-form input[type="number"], .login-page .forgot-form input[type="email"],
-.login-page .login-form input[type="text"],
-.login-page .login-form input[type="tel"],
-.login-page .login-form input[type="password"],
-.login-page .login-form input[type="number"],
-.login-page .login-form input[type="email"] {
+.forgot-form input[type="text"], .forgot-form input[type="tel"], .forgot-form input[type="password"], .forgot-form input[type="number"], .forgot-form input[type="email"],
+.login-form input[type="text"],
+.login-form input[type="tel"],
+.login-form input[type="password"],
+.login-form input[type="number"],
+.login-form input[type="email"] {
   border: 0;
   width: 100%;
   padding: 6px;
@@ -4146,130 +4170,130 @@ input[type='submit'] {
 }
 
 @media (max-width: 767px) {
-  .login-page .forgot-form input[type="text"], .login-page .forgot-form input[type="tel"], .login-page .forgot-form input[type="password"], .login-page .forgot-form input[type="number"], .login-page .forgot-form input[type="email"],
-  .login-page .login-form input[type="text"],
-  .login-page .login-form input[type="tel"],
-  .login-page .login-form input[type="password"],
-  .login-page .login-form input[type="number"],
-  .login-page .login-form input[type="email"] {
+  .forgot-form input[type="text"], .forgot-form input[type="tel"], .forgot-form input[type="password"], .forgot-form input[type="number"], .forgot-form input[type="email"],
+  .login-form input[type="text"],
+  .login-form input[type="tel"],
+  .login-form input[type="password"],
+  .login-form input[type="number"],
+  .login-form input[type="email"] {
     font-size: 12px;
     line-height: 16px;
   }
 }
 
-.login-page .forgot-form input[type="text"]::-webkit-input-placeholder, .login-page .forgot-form input[type="tel"]::-webkit-input-placeholder, .login-page .forgot-form input[type="password"]::-webkit-input-placeholder, .login-page .forgot-form input[type="number"]::-webkit-input-placeholder, .login-page .forgot-form input[type="email"]::-webkit-input-placeholder,
-.login-page .login-form input[type="text"]::-webkit-input-placeholder,
-.login-page .login-form input[type="tel"]::-webkit-input-placeholder,
-.login-page .login-form input[type="password"]::-webkit-input-placeholder,
-.login-page .login-form input[type="number"]::-webkit-input-placeholder,
-.login-page .login-form input[type="email"]::-webkit-input-placeholder {
+.forgot-form input[type="text"]::-webkit-input-placeholder, .forgot-form input[type="tel"]::-webkit-input-placeholder, .forgot-form input[type="password"]::-webkit-input-placeholder, .forgot-form input[type="number"]::-webkit-input-placeholder, .forgot-form input[type="email"]::-webkit-input-placeholder,
+.login-form input[type="text"]::-webkit-input-placeholder,
+.login-form input[type="tel"]::-webkit-input-placeholder,
+.login-form input[type="password"]::-webkit-input-placeholder,
+.login-form input[type="number"]::-webkit-input-placeholder,
+.login-form input[type="email"]::-webkit-input-placeholder {
   color: #555;
   opacity: 0.7;
 }
 
 @media (max-width: 1199px) {
-  .login-page .forgot-form input[type="text"]::-webkit-input-placeholder, .login-page .forgot-form input[type="tel"]::-webkit-input-placeholder, .login-page .forgot-form input[type="password"]::-webkit-input-placeholder, .login-page .forgot-form input[type="number"]::-webkit-input-placeholder, .login-page .forgot-form input[type="email"]::-webkit-input-placeholder,
-  .login-page .login-form input[type="text"]::-webkit-input-placeholder,
-  .login-page .login-form input[type="tel"]::-webkit-input-placeholder,
-  .login-page .login-form input[type="password"]::-webkit-input-placeholder,
-  .login-page .login-form input[type="number"]::-webkit-input-placeholder,
-  .login-page .login-form input[type="email"]::-webkit-input-placeholder {
+  .forgot-form input[type="text"]::-webkit-input-placeholder, .forgot-form input[type="tel"]::-webkit-input-placeholder, .forgot-form input[type="password"]::-webkit-input-placeholder, .forgot-form input[type="number"]::-webkit-input-placeholder, .forgot-form input[type="email"]::-webkit-input-placeholder,
+  .login-form input[type="text"]::-webkit-input-placeholder,
+  .login-form input[type="tel"]::-webkit-input-placeholder,
+  .login-form input[type="password"]::-webkit-input-placeholder,
+  .login-form input[type="number"]::-webkit-input-placeholder,
+  .login-form input[type="email"]::-webkit-input-placeholder {
     font-size: 11px;
     line-height: 16px;
   }
 }
 
-.login-page .forgot-form input[type="text"]::-moz-placeholder, .login-page .forgot-form input[type="tel"]::-moz-placeholder, .login-page .forgot-form input[type="password"]::-moz-placeholder, .login-page .forgot-form input[type="number"]::-moz-placeholder, .login-page .forgot-form input[type="email"]::-moz-placeholder,
-.login-page .login-form input[type="text"]::-moz-placeholder,
-.login-page .login-form input[type="tel"]::-moz-placeholder,
-.login-page .login-form input[type="password"]::-moz-placeholder,
-.login-page .login-form input[type="number"]::-moz-placeholder,
-.login-page .login-form input[type="email"]::-moz-placeholder {
+.forgot-form input[type="text"]::-moz-placeholder, .forgot-form input[type="tel"]::-moz-placeholder, .forgot-form input[type="password"]::-moz-placeholder, .forgot-form input[type="number"]::-moz-placeholder, .forgot-form input[type="email"]::-moz-placeholder,
+.login-form input[type="text"]::-moz-placeholder,
+.login-form input[type="tel"]::-moz-placeholder,
+.login-form input[type="password"]::-moz-placeholder,
+.login-form input[type="number"]::-moz-placeholder,
+.login-form input[type="email"]::-moz-placeholder {
   opacity: 1;
   color: #555;
   opacity: 0.7;
 }
 
 @media (max-width: 1199px) {
-  .login-page .forgot-form input[type="text"]::-moz-placeholder, .login-page .forgot-form input[type="tel"]::-moz-placeholder, .login-page .forgot-form input[type="password"]::-moz-placeholder, .login-page .forgot-form input[type="number"]::-moz-placeholder, .login-page .forgot-form input[type="email"]::-moz-placeholder,
-  .login-page .login-form input[type="text"]::-moz-placeholder,
-  .login-page .login-form input[type="tel"]::-moz-placeholder,
-  .login-page .login-form input[type="password"]::-moz-placeholder,
-  .login-page .login-form input[type="number"]::-moz-placeholder,
-  .login-page .login-form input[type="email"]::-moz-placeholder {
+  .forgot-form input[type="text"]::-moz-placeholder, .forgot-form input[type="tel"]::-moz-placeholder, .forgot-form input[type="password"]::-moz-placeholder, .forgot-form input[type="number"]::-moz-placeholder, .forgot-form input[type="email"]::-moz-placeholder,
+  .login-form input[type="text"]::-moz-placeholder,
+  .login-form input[type="tel"]::-moz-placeholder,
+  .login-form input[type="password"]::-moz-placeholder,
+  .login-form input[type="number"]::-moz-placeholder,
+  .login-form input[type="email"]::-moz-placeholder {
     font-size: 11px;
     line-height: 16px;
   }
 }
 
-.login-page .forgot-form input[type="text"]:-moz-placeholder, .login-page .forgot-form input[type="tel"]:-moz-placeholder, .login-page .forgot-form input[type="password"]:-moz-placeholder, .login-page .forgot-form input[type="number"]:-moz-placeholder, .login-page .forgot-form input[type="email"]:-moz-placeholder,
-.login-page .login-form input[type="text"]:-moz-placeholder,
-.login-page .login-form input[type="tel"]:-moz-placeholder,
-.login-page .login-form input[type="password"]:-moz-placeholder,
-.login-page .login-form input[type="number"]:-moz-placeholder,
-.login-page .login-form input[type="email"]:-moz-placeholder {
+.forgot-form input[type="text"]:-moz-placeholder, .forgot-form input[type="tel"]:-moz-placeholder, .forgot-form input[type="password"]:-moz-placeholder, .forgot-form input[type="number"]:-moz-placeholder, .forgot-form input[type="email"]:-moz-placeholder,
+.login-form input[type="text"]:-moz-placeholder,
+.login-form input[type="tel"]:-moz-placeholder,
+.login-form input[type="password"]:-moz-placeholder,
+.login-form input[type="number"]:-moz-placeholder,
+.login-form input[type="email"]:-moz-placeholder {
   color: #555;
   opacity: 0.7;
 }
 
 @media (max-width: 1199px) {
-  .login-page .forgot-form input[type="text"]:-moz-placeholder, .login-page .forgot-form input[type="tel"]:-moz-placeholder, .login-page .forgot-form input[type="password"]:-moz-placeholder, .login-page .forgot-form input[type="number"]:-moz-placeholder, .login-page .forgot-form input[type="email"]:-moz-placeholder,
-  .login-page .login-form input[type="text"]:-moz-placeholder,
-  .login-page .login-form input[type="tel"]:-moz-placeholder,
-  .login-page .login-form input[type="password"]:-moz-placeholder,
-  .login-page .login-form input[type="number"]:-moz-placeholder,
-  .login-page .login-form input[type="email"]:-moz-placeholder {
+  .forgot-form input[type="text"]:-moz-placeholder, .forgot-form input[type="tel"]:-moz-placeholder, .forgot-form input[type="password"]:-moz-placeholder, .forgot-form input[type="number"]:-moz-placeholder, .forgot-form input[type="email"]:-moz-placeholder,
+  .login-form input[type="text"]:-moz-placeholder,
+  .login-form input[type="tel"]:-moz-placeholder,
+  .login-form input[type="password"]:-moz-placeholder,
+  .login-form input[type="number"]:-moz-placeholder,
+  .login-form input[type="email"]:-moz-placeholder {
     font-size: 11px;
     line-height: 16px;
   }
 }
 
-.login-page .forgot-form input[type="text"]:-ms-input-placeholder, .login-page .forgot-form input[type="tel"]:-ms-input-placeholder, .login-page .forgot-form input[type="password"]:-ms-input-placeholder, .login-page .forgot-form input[type="number"]:-ms-input-placeholder, .login-page .forgot-form input[type="email"]:-ms-input-placeholder,
-.login-page .login-form input[type="text"]:-ms-input-placeholder,
-.login-page .login-form input[type="tel"]:-ms-input-placeholder,
-.login-page .login-form input[type="password"]:-ms-input-placeholder,
-.login-page .login-form input[type="number"]:-ms-input-placeholder,
-.login-page .login-form input[type="email"]:-ms-input-placeholder {
+.forgot-form input[type="text"]:-ms-input-placeholder, .forgot-form input[type="tel"]:-ms-input-placeholder, .forgot-form input[type="password"]:-ms-input-placeholder, .forgot-form input[type="number"]:-ms-input-placeholder, .forgot-form input[type="email"]:-ms-input-placeholder,
+.login-form input[type="text"]:-ms-input-placeholder,
+.login-form input[type="tel"]:-ms-input-placeholder,
+.login-form input[type="password"]:-ms-input-placeholder,
+.login-form input[type="number"]:-ms-input-placeholder,
+.login-form input[type="email"]:-ms-input-placeholder {
   color: #555;
   opacity: 0.7;
 }
 
 @media (max-width: 1199px) {
-  .login-page .forgot-form input[type="text"]:-ms-input-placeholder, .login-page .forgot-form input[type="tel"]:-ms-input-placeholder, .login-page .forgot-form input[type="password"]:-ms-input-placeholder, .login-page .forgot-form input[type="number"]:-ms-input-placeholder, .login-page .forgot-form input[type="email"]:-ms-input-placeholder,
-  .login-page .login-form input[type="text"]:-ms-input-placeholder,
-  .login-page .login-form input[type="tel"]:-ms-input-placeholder,
-  .login-page .login-form input[type="password"]:-ms-input-placeholder,
-  .login-page .login-form input[type="number"]:-ms-input-placeholder,
-  .login-page .login-form input[type="email"]:-ms-input-placeholder {
+  .forgot-form input[type="text"]:-ms-input-placeholder, .forgot-form input[type="tel"]:-ms-input-placeholder, .forgot-form input[type="password"]:-ms-input-placeholder, .forgot-form input[type="number"]:-ms-input-placeholder, .forgot-form input[type="email"]:-ms-input-placeholder,
+  .login-form input[type="text"]:-ms-input-placeholder,
+  .login-form input[type="tel"]:-ms-input-placeholder,
+  .login-form input[type="password"]:-ms-input-placeholder,
+  .login-form input[type="number"]:-ms-input-placeholder,
+  .login-form input[type="email"]:-ms-input-placeholder {
     font-size: 11px;
     line-height: 16px;
   }
 }
 
-.login-page .forgot-form input[type="text"].placeholder, .login-page .forgot-form input[type="tel"].placeholder, .login-page .forgot-form input[type="password"].placeholder, .login-page .forgot-form input[type="number"].placeholder, .login-page .forgot-form input[type="email"].placeholder,
-.login-page .login-form input[type="text"].placeholder,
-.login-page .login-form input[type="tel"].placeholder,
-.login-page .login-form input[type="password"].placeholder,
-.login-page .login-form input[type="number"].placeholder,
-.login-page .login-form input[type="email"].placeholder {
+.forgot-form input[type="text"].placeholder, .forgot-form input[type="tel"].placeholder, .forgot-form input[type="password"].placeholder, .forgot-form input[type="number"].placeholder, .forgot-form input[type="email"].placeholder,
+.login-form input[type="text"].placeholder,
+.login-form input[type="tel"].placeholder,
+.login-form input[type="password"].placeholder,
+.login-form input[type="number"].placeholder,
+.login-form input[type="email"].placeholder {
   color: #555;
   opacity: 0.7;
 }
 
 @media (max-width: 1199px) {
-  .login-page .forgot-form input[type="text"].placeholder, .login-page .forgot-form input[type="tel"].placeholder, .login-page .forgot-form input[type="password"].placeholder, .login-page .forgot-form input[type="number"].placeholder, .login-page .forgot-form input[type="email"].placeholder,
-  .login-page .login-form input[type="text"].placeholder,
-  .login-page .login-form input[type="tel"].placeholder,
-  .login-page .login-form input[type="password"].placeholder,
-  .login-page .login-form input[type="number"].placeholder,
-  .login-page .login-form input[type="email"].placeholder {
+  .forgot-form input[type="text"].placeholder, .forgot-form input[type="tel"].placeholder, .forgot-form input[type="password"].placeholder, .forgot-form input[type="number"].placeholder, .forgot-form input[type="email"].placeholder,
+  .login-form input[type="text"].placeholder,
+  .login-form input[type="tel"].placeholder,
+  .login-form input[type="password"].placeholder,
+  .login-form input[type="number"].placeholder,
+  .login-form input[type="email"].placeholder {
     font-size: 11px;
     line-height: 16px;
   }
 }
 
-.login-page .forgot-form .layout,
-.login-page .login-form .layout {
+.forgot-form .layout,
+.login-form .layout {
   padding: 3px;
   font-size: 0;
   line-height: 0;
@@ -4277,8 +4301,8 @@ input[type='submit'] {
   margin: 0 0 20px;
 }
 
-.login-page .forgot-form .layout > *,
-.login-page .login-form .layout > * {
+.forgot-form .layout > *,
+.login-form .layout > * {
   display: inline-block;
   vertical-align: top;
   font-size: 13px;
@@ -4287,16 +4311,16 @@ input[type='submit'] {
 }
 
 @media (max-width: 767px) {
-  .login-page .forgot-form .layout,
-  .login-page .login-form .layout {
-    margin: 0;
+  .forgot-form .layout,
+  .login-form .layout {
+    margin: 0 0 20px;
     padding: 0;
     font-size: 0;
     line-height: 0;
     letter-spacing: -4px;
   }
-  .login-page .forgot-form .layout > *,
-  .login-page .login-form .layout > * {
+  .forgot-form .layout > *,
+  .login-form .layout > * {
     display: inline-block;
     vertical-align: top;
     font-size: 12px;
@@ -4305,70 +4329,21 @@ input[type='submit'] {
   }
 }
 
-.login-page .forgot-form .layout .layout-holder,
-.login-page .login-form .layout .layout-holder {
-  width: 33.33%;
-  padding: 0 10px;
-  font-size: 0;
-  line-height: 0;
-  letter-spacing: -4px;
-}
-
-.login-page .forgot-form .layout .layout-holder > *,
-.login-page .login-form .layout .layout-holder > * {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 13px;
-  line-height: 16px;
-  letter-spacing: 0;
-}
-
-@media (max-width: 767px) {
-  .login-page .forgot-form .layout .layout-holder,
-  .login-page .login-form .layout .layout-holder {
-    width: 100%;
-    display: block;
-    margin: 0 0 10px;
-    padding: 0;
-    font-size: 0;
-    line-height: 0;
-    letter-spacing: -4px;
-  }
-  .login-page .forgot-form .layout .layout-holder > *,
-  .login-page .login-form .layout .layout-holder > * {
-    display: inline-block;
-    vertical-align: top;
-    font-size: 12px;
-    line-height: 15px;
-    letter-spacing: 0;
-  }
-}
-
-.login-page .forgot-form .layout .layout-holder .full-width,
-.login-page .login-form .layout .layout-holder .full-width {
-  font-size: 0;
-  line-height: 0;
-  letter-spacing: -4px;
-  margin: 0 0 10px;
-}
-
-.login-page .forgot-form .layout .layout-holder .full-width > *,
-.login-page .login-form .layout .layout-holder .full-width > * {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 13px;
-  line-height: 16px;
-  letter-spacing: 0;
-}
-
-.login-page .forgot-form .layout .input-holder,
-.login-page .login-form .layout .input-holder {
+.forgot-form .layout .input-holder,
+.login-form .layout .input-holder {
   width: calc(100% - 140px);
   padding: 2px;
 }
 
-.login-page .forgot-form .layout label,
-.login-page .login-form .layout label {
+@media (max-width: 767px) {
+  .forgot-form .layout .input-holder,
+  .login-form .layout .input-holder {
+    width: calc(100% - 90px);
+  }
+}
+
+.forgot-form .layout label,
+.login-form .layout label {
   color: #555;
   font-weight: 700;
   font-family: "Open Sans", "Arial", sans-serif;
@@ -4379,23 +4354,24 @@ input[type='submit'] {
 }
 
 @media (max-width: 767px) {
-  .login-page .forgot-form .layout label,
-  .login-page .login-form .layout label {
+  .forgot-form .layout label,
+  .login-form .layout label {
     font-size: 12px;
     line-height: 15px;
+    width: 90px;
   }
 }
 
-.login-page .forgot-form .layout label:after,
-.login-page .login-form .layout label:after {
+.forgot-form .layout label:after,
+.login-form .layout label:after {
   display: inline-block;
   vertical-align: top;
   color: #f20;
   content: '*';
 }
 
-.login-page .forgot-form .buttons-holder,
-.login-page .login-form .buttons-holder {
+.forgot-form .buttons-holder,
+.login-form .buttons-holder {
   font-size: 0;
   line-height: 0;
   letter-spacing: -4px;
@@ -4403,8 +4379,8 @@ input[type='submit'] {
   font-weight: 700;
 }
 
-.login-page .forgot-form .buttons-holder > *,
-.login-page .login-form .buttons-holder > * {
+.forgot-form .buttons-holder > *,
+.login-form .buttons-holder > * {
   display: inline-block;
   vertical-align: top;
   font-size: 18px;
@@ -4412,14 +4388,31 @@ input[type='submit'] {
   letter-spacing: 0;
 }
 
-.login-page .forgot-form .buttons-holder li,
-.login-page .login-form .buttons-holder li {
+@media (max-width: 767px) {
+  .forgot-form .buttons-holder,
+  .login-form .buttons-holder {
+    font-size: 0;
+    line-height: 0;
+    letter-spacing: -4px;
+  }
+  .forgot-form .buttons-holder > *,
+  .login-form .buttons-holder > * {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0;
+  }
+}
+
+.forgot-form .buttons-holder li,
+.login-form .buttons-holder li {
   width: 50%;
   padding: 0 5px 10px;
 }
 
-.login-page .forgot-form .buttons-holder li a,
-.login-page .login-form .buttons-holder li a {
+.forgot-form .buttons-holder li a,
+.login-form .buttons-holder li a {
   text-decoration: none;
   display: block;
   color: #fff;
@@ -4427,13 +4420,20 @@ input[type='submit'] {
   padding: 15px;
 }
 
-.login-page .forgot-form .buttons-holder li a:hover,
-.login-page .login-form .buttons-holder li a:hover {
+@media (max-width: 767px) {
+  .forgot-form .buttons-holder li a,
+  .login-form .buttons-holder li a {
+    padding: 10px 5px;
+  }
+}
+
+.forgot-form .buttons-holder li a:hover,
+.login-form .buttons-holder li a:hover {
   background: #797a7d;
 }
 
-.login-page .forgot-form button,
-.login-page .login-form button {
+.forgot-form button,
+.login-form button {
   display: block;
   width: 100%;
   border: 0;
@@ -4444,17 +4444,26 @@ input[type='submit'] {
   padding: 15px;
 }
 
-.login-page .forgot-form button span[class^="icon-"], .login-page .forgot-form button span[class*="icon-"],
-.login-page .login-form button span[class^="icon-"],
-.login-page .login-form button span[class*="icon-"] {
+@media (max-width: 767px) {
+  .forgot-form button,
+  .login-form button {
+    font-size: 14px;
+    line-height: 17px;
+    padding: 10px 5px;
+  }
+}
+
+.forgot-form button span[class^="icon-"], .forgot-form button span[class*="icon-"],
+.login-form button span[class^="icon-"],
+.login-form button span[class*="icon-"] {
   display: inline-block;
   vertical-align: middle;
   margin: -3px 0 0;
   padding: 0 5px;
 }
 
-.login-page .forgot-form button:hover,
-.login-page .login-form button:hover {
+.forgot-form button:hover,
+.login-form button:hover {
   background: #30ce20;
 }
 
