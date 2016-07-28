@@ -24,6 +24,7 @@
   }
   .info-blockAgent,
   .info-blockProperty {
+    background: $p42-background;
     position: absolute;
     top: 0;
     right: 0;
@@ -316,7 +317,7 @@
     margin: 10px;
     @extend %layout;
     border-radius: 8px;
-    border: 1px solid $p42-default-grey;
+    border: 1px solid rgba($p42-default-grey, 0.5);
     padding: 20px;
 
     @include media('<tablet'){
@@ -326,7 +327,7 @@
 
     .small-heading {
       @extend %text-center;
-      border-bottom: 1px solid $p42-default-grey;
+      border-bottom: 1px solid rgba($p42-default-grey, 0.5);
       margin: 0 0 20px;
       padding: 0 0 20px;
     }
@@ -386,21 +387,353 @@
   .agent-societies {
     overflow: hidden;
     position: relative;
+    border: 1px solid rgba($darken-grey, 0.7);
+    border-radius: 8px;
+    padding: 10px;
 
     .agent-mask {
       overflow: hidden;
+      position: relative;
+      margin: 0 -5px;
+
     }
     .agent-slideset {
-      width: 999999px;
-      float: left;
+      width: 100% !important;
+      white-space: nowrap;
+      font: 0 !important;
+      line-height: 0 !important;
+      letter-spacing: -7px !important;
     }
     .agent-slide {
-      width: 600px;
-      float: left;
+      display: inline-block !important;
+      vertical-align: top !important;
+      letter-spacing: 0 !important;
+      font-size: 12px !important;
+      line-height: 15px !important;
+      width: 20% !important;
+      padding: 0 5px;
+      white-space: normal;
+
+      @include media('<widescreen'){
+        width: 33.33% !important;
+      }
+
+      @include media('<desktop'){
+        width: 50%  !important;
+        text-align: center;
+        background: $white;
+      }
+
+      @include media('<tablet'){
+        width: 100% !important;
+      }
 
       a {
         display: block;
+        @include squar(100px, 100px);
+        white-space: nowrap;
+        background: $white;
+        padding: 3px;
+        margin: 0 auto;
+
+        &:after {
+          height: 100px;
+          margin: 0 0 0 -5px;
+          @include align(middle);
+          content: '';
+          width: 1px;
+        }
+        img {
+          @include align(middle);
+          white-space: normal;
+        }
       }
+    }
+    .small-heading {
+      @include font(14,17);
+      padding: 0 0 5px;
+
+      @include media('<desktop'){
+        @include font(12,15);
+        text-align: center;
+      }
+    }
+    .btn-prev, .btn-next {
+      text-decoration: none;
+      color: $green;
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      margin: -4px 0 0;
+
+      @include media('<desktop'){
+        left: 0;
+      }
+
+      span[class^="icon-"],span[class*="icon-"]{
+        font-size: 25px;
+        line-height: 0;
+      }
+    }
+    .btn-next {
+      left: auto;
+      right: 10px;
+
+      @include media('<desktop'){
+        right: 0;
+      }
+    }
+  }
+  .agent-picture{
+    @include squar(260px, 260px);
+    @extend .pull-left;
+    position: relative;
+    @extend %text-center;
+    background: $white;
+    white-space: nowrap;
+
+    @include media('<desktop'){
+      @include squar(150px, 150px);
+    }
+
+    @include media('<tablet'){
+      float: none !important;
+      margin: 0 auto 10px;
+      width: 100%;
+    }
+    
+    &:after {
+      height: 260px;
+      overflow: hidden;
+      margin: 0 0 0 -5px;
+      @include align(middle);
+      content: '';
+
+      @include media('<desktop'){
+        height: 150px;
+      }
+    }
+
+    img {
+      @include align(middle);
+      white-space: normal;
+    }
+
+    .premiumProperty {
+      top: 20px;
+      width: 165px;
+    }
+  }
+  .agent-description {
+    @extend %layout;
+    padding: 0 0 0 10px;
+
+    @include media('<tablet'){
+      padding: 0;
+    }
+
+    h1 {
+      margin: 0 0 5px;
+
+      @include media('<desktop'){
+        @include font(18,22);
+      }
+    }
+    .location {
+      padding: 0 0 5px;
+      display: block;
+    }
+    .left-side {
+      width: 75%;
+      @extend .pull-left;
+
+      @include media('<widescreen'){
+        width: 65%;
+      }
+
+      @include media('<desktop'){
+        width: 50%;
+      }
+    }
+    .right-side {
+      width: 25%;
+      @extend .pull-right;
+
+      @include media('<widescreen'){
+        width: 35%;
+      }
+      @include media('<desktop'){
+        width: 50%;
+      }
+    }
+    
+    .trusted-agent {
+      margin: 15px 0 20px 40px;
+
+      @include media('<tablet'){
+        float: right;
+        margin: 15px 24px 20px 40px;
+      }
+    }
+    .star-rating {
+      float: none !important;
+      margin: 0 auto 10px;
+    }
+  }
+}
+.agent-detail-page {
+  .col {
+    width: 50%;
+    @extend .pull-left;
+    padding: 0 5px;
+    border-left: 1px solid rgba($p42-default-grey, 0.5);
+
+    @include media('<tablet'){
+      width: 100%;
+      border-left: 0;
+      border-top: 1px solid rgba($p42-default-grey, 0.5);
+      padding: 10px 5px;
+    }
+
+    &:first-child { border: 0;}
+
+    .small-heading {
+      margin: 0;
+      padding: 0 0 10px;
+      border: 0;
+      @include font(14,17);
+    }
+    .list {
+      @extend %listreset;
+      @include font(17,20);
+      font-family: $open-sans;
+
+      @include media('<desktop'){
+        @include font(14,18);
+      }
+
+      li {
+        position: relative;
+        display: block;
+        color: $p42-default-grey;
+        @include align-reset(top, 17,20);
+        padding: 0 10px 10px;
+
+        @include media('<desktop'){
+          @include align-reset(top, 14,18);
+        }
+
+        > span {
+          width: 40%;
+          @extend %text-right;
+          position: relative;
+          font-weight: bold;
+          
+          &:first-child {
+            @extend %text-left;
+            width: 60%;
+            padding: 0 0 0 30px;
+            font-weight: normal;
+          }
+        }
+
+        span[class^="icon-"],span[class*="icon-"]{
+          position: absolute;
+          top: 0;
+          left: 0;
+          font-size: 20px;
+          line-height: 1;
+
+          @include media('<desktop'){
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+  .overview-section {
+    .small-heading {
+      padding: 0 0 20px;
+    }
+  }
+  .agentDetail-list {
+    @extend %listreset;
+    color: $p42-default-grey;
+    font-family: $open-sans;
+    @include font(17,21);
+    margin: 0 0 30px;
+
+    @include media('<desktop'){
+      @include font(14,18);
+    }
+
+    li {
+      display: block;
+      position: relative;
+      padding: 5px 5px 5px 40px;
+
+      &:after {
+        position: absolute;
+        top: 0;
+        left: 30px;
+        bottom: 0;
+        width: 1px;
+        background: #b0b2b5;
+        content: '';
+      }
+
+      span[class^="icon-"],span[class*="icon-"]{
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 20px;
+        line-height: 1;
+        color: #b0b2b5;
+      }
+      address {
+       font-style: normal; 
+      }
+      a {
+        color: $p42-default-grey;
+        @include align(top);
+        text-decoration: none;
+        &:hover { color: $p42-color;}
+      }
+    }
+  }
+  .info-blockAgent {
+    .small-heading,
+    .heading  {
+      padding: 10px;
+      margin: 0 0 10px;
+      box-shadow: 0 7px 7px -5px rgba($black, 0.5);
+    }
+  }
+  .inquiry-email-form {
+    @include media('<tablet'){
+      max-width: inherit;
+    }
+    .field-holder {
+      @include align-reset(top, 14,18);
+
+      @include media('<desktop'){
+        @include align-reset(top, 12,15);
+      }
+    }
+    button[type="submit"] {
+      @include media('<desktop'){
+        width: 165px;
+      }
+    }
+  }
+  .extra-feature-section {
+    @include media('<desktop'){
+      padding: 20px 0;
+    }
+  }
+  .agent-detail-holder {
+    @include media('<tablet'){
+      padding: 5px 0 0;
     }
   }
 }

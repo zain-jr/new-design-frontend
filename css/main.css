@@ -695,7 +695,7 @@ th {
 }
 
 .listing-page .filters-links, .listing-page .filterChecks, .agent-detail-page .feature-list,
-.propertyDetail-page .feature-list, .addProperty-form .image-uploading-area, .addProperty-form .existingOrNew-member, .registerNow .packetData-list,
+.propertyDetail-page .feature-list, .agent-detail-page .col .list, .agent-detail-page .agentDetail-list, .addProperty-form .image-uploading-area, .addProperty-form .existingOrNew-member, .registerNow .packetData-list,
 .registerNow .societiesBlock-listing, .registerNow .role-listing, .registerNow .agree-with-terms, .forgot-form .buttons-holder,
 .login-form .buttons-holder, .social-icons, .loginRegister, .main-visualSection .number-of-properties, .mainSearch-form .typeOfBuying, .mainSearch-form .subTypes, .mainSearch-form .inputsHolder, #nav .main-navigation, .news-carousel .news-pagination ul, .topSocities-holder .socities, .topSocities-holder .socities li .caption .numberOfproperties, .agents-logo, .pager, .quick-links, .public-ui-features, .sumery-list, .radio-checks-holder {
   margin: 0;
@@ -755,7 +755,8 @@ th {
 .propertyDetail-page .propertyImage-slider .propertyImage-slide a,
 .propertyDetail-page .propertyImage-slider .slide a, .agent-detail-page .overview-section,
 .propertyDetail-page .overview-section, .agent-detail-page .extra-feature-section .small-heading,
-.propertyDetail-page .extra-feature-section .small-heading, .addProperty-form .extra-features, .addProperty-form .existingOrNew-member li, .addProperty-form .list-extraFeatures .feature-heading, .registerNow .role-opener, .forgot-form .buttons-holder li a,
+.propertyDetail-page .extra-feature-section .small-heading, .agent-detail-page .agent-picture,
+.propertyDetail-page .agent-picture, .addProperty-form .extra-features, .addProperty-form .existingOrNew-member li, .addProperty-form .list-extraFeatures .feature-heading, .registerNow .role-opener, .forgot-form .buttons-holder li a,
 .login-form .buttons-holder li a, .custom-withouChecks .fake-label, h1, .loginRegister li, .main-visualSection, #nav .main-navigation li, .news-carousel .news-pagination ul, .topSocities-holder .socities li a, .heading, .agents-logo li a, .premiumProperty, .public-ui-features li strong, .generic-lightbox, .login-heading,
 .registerNow-heading,
 .add-pro-heading {
@@ -767,12 +768,12 @@ th {
 .propertyDetail-page .agent-detail-holder h1,
 .propertyDetail-page .property-picture-holder h1, .agent-detail-page .overview-section .small-heading,
 .propertyDetail-page .overview-section .small-heading, .agent-detail-page .feature .small-heading,
-.propertyDetail-page .feature .small-heading, .addProperty-form .existingOrNew-member li .slide, .mainSearch-form .inputsHolder, #nav, .topSocities-holder .socities li .caption .numberOfproperties, .inquiry-email-form, .information {
+.propertyDetail-page .feature .small-heading, .agent-detail-page .col .list li > span:first-child, .addProperty-form .existingOrNew-member li .slide, .mainSearch-form .inputsHolder, #nav, .topSocities-holder .socities li .caption .numberOfproperties, .inquiry-email-form, .information {
   text-align: left;
 }
 
 .text-right, .agent-detail-page .feature-list li .stataus,
-.propertyDetail-page .feature-list li .stataus, .topSocities-holder .socities li .caption .numberOfproperties li span:last-child, #footer .copyright, .sumery-list li .quantity {
+.propertyDetail-page .feature-list li .stataus, .agent-detail-page .col .list li > span, .topSocities-holder .socities li .caption .numberOfproperties li span:last-child, #footer .copyright, .sumery-list li .quantity {
   text-align: right;
 }
 
@@ -792,12 +793,15 @@ th {
 }
 
 .pull-left, .listing-page #aside, .listing-page #content, .listing-page .publicProperty-post .image-holder, .listing-page .publicProperty-post .caption .quick-links, .agent-detail-page .overview-section .small-heading,
-.propertyDetail-page .overview-section .small-heading, .addProperty-form .tips, .listing-page .publicProperty-post .caption .left-area, .listing-page .publicProperty-post .caption .links-left, .news-slideshow .slide .caption, .agents .left-side {
+.propertyDetail-page .overview-section .small-heading, .agent-detail-page .agent-picture,
+.propertyDetail-page .agent-picture, .agent-detail-page .agent-description .left-side,
+.propertyDetail-page .agent-description .left-side, .agent-detail-page .col, .addProperty-form .tips, .listing-page .publicProperty-post .caption .left-area, .listing-page .publicProperty-post .caption .links-left, .news-slideshow .slide .caption, .agents .left-side {
   float: left !important;
 }
 
 .pull-right, .listing-page .publicProperty-post .caption .company-logo, .agent-detail-page .overview-section .btn-hollow,
-.propertyDetail-page .overview-section .btn-hollow, .listing-page .publicProperty-post .caption .right-area, .listing-page .publicProperty-post .caption .links-right, .agent-detail-page .info-blockAgent .quick-links,
+.propertyDetail-page .overview-section .btn-hollow, .agent-detail-page .agent-description .right-side,
+.propertyDetail-page .agent-description .right-side, .listing-page .publicProperty-post .caption .right-area, .listing-page .publicProperty-post .caption .links-right, .agent-detail-page .info-blockAgent .quick-links,
 .agent-detail-page .info-blockProperty .quick-links,
 .propertyDetail-page .info-blockAgent .quick-links,
 .propertyDetail-page .info-blockProperty .quick-links, .agent-detail-page .agent-detail-holder .star-rating,
@@ -824,7 +828,8 @@ th {
 .propertyDetail-page .propertyImage-slider .mask, .agent-detail-page .overview-section,
 .propertyDetail-page .overview-section, .agent-detail-page .extra-feature-section,
 .propertyDetail-page .extra-feature-section, .agent-detail-page .feature,
-.propertyDetail-page .feature, .addProperty-form, .addProperty-form .add-form-holder, .addProperty-form .main-form, .addProperty-form .tips, .addProperty-form .list-extraFeatures, .registerNow, .registerNow .registration-form, .registerNow .company-logo, .registerNow .company-logo .logo-holder, .registerNow .role-listing, .registerNow .agent-information, .login-page, .forgot-form,
+.propertyDetail-page .feature, .agent-detail-page .agent-description,
+.propertyDetail-page .agent-description, .addProperty-form, .addProperty-form .add-form-holder, .addProperty-form .main-form, .addProperty-form .tips, .addProperty-form .list-extraFeatures, .registerNow, .registerNow .registration-form, .registerNow .company-logo, .registerNow .company-logo .logo-holder, .registerNow .role-listing, .registerNow .agent-information, .login-page, .forgot-form,
 .login-form, .fake-select, #wrapper, .logo, .main-visualSection, #main, .page-holder, .mainSearch-form .form-holder, .mainSearch-form .inputsHolder li .input-holder, .byDefault-fixed #nav .main-navigation li a span[class^="icon-"], .byDefault-fixed #nav .main-navigation li a span[class*="icon-"], #nav.fixed-position .main-navigation li a span[class^="icon-"], #nav.fixed-position .main-navigation li a span[class*="icon-"], .generic-section, .news-sliderHolder, .news-slideshow, .news-slideshow .mask, .news-slideshow .slideset, .news-carousel, .news-carousel .news-mask, .news-carousel .news-pagination ul a, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .inquiry-email-form .input-holder, .radio-checks-holder {
   overflow: hidden;
 }
@@ -2277,6 +2282,7 @@ input[type='submit'] {
 .agent-detail-page .info-blockProperty,
 .propertyDetail-page .info-blockAgent,
 .propertyDetail-page .info-blockProperty {
+  background: #dee1e3;
   position: absolute;
   top: 0;
   right: 0;
@@ -2311,8 +2317,10 @@ input[type='submit'] {
 }
 
 .agent-detail-page .info-blockAgent .pull-left, .agent-detail-page .info-blockAgent .listing-page #aside, .listing-page .agent-detail-page .info-blockAgent #aside, .agent-detail-page .info-blockAgent .listing-page #content, .listing-page .agent-detail-page .info-blockAgent #content, .agent-detail-page .info-blockAgent .listing-page .publicProperty-post .image-holder, .listing-page .publicProperty-post .agent-detail-page .info-blockAgent .image-holder, .agent-detail-page .info-blockAgent .listing-page .publicProperty-post .caption .quick-links, .listing-page .publicProperty-post .caption .agent-detail-page .info-blockAgent .quick-links, .agent-detail-page .info-blockAgent .overview-section .small-heading, .agent-detail-page .overview-section .info-blockAgent .small-heading,
-.propertyDetail-page .overview-section .agent-detail-page .info-blockAgent .small-heading, .agent-detail-page .info-blockAgent .addProperty-form .tips, .addProperty-form .agent-detail-page .info-blockAgent .tips, .agent-detail-page .info-blockAgent .pull-right, .agent-detail-page .info-blockAgent .listing-page .publicProperty-post .caption .company-logo, .listing-page .publicProperty-post .caption .agent-detail-page .info-blockAgent .company-logo, .agent-detail-page .info-blockAgent .overview-section .btn-hollow, .agent-detail-page .overview-section .info-blockAgent .btn-hollow,
-.propertyDetail-page .overview-section .agent-detail-page .info-blockAgent .btn-hollow,
+.propertyDetail-page .overview-section .agent-detail-page .info-blockAgent .small-heading, .agent-detail-page .info-blockAgent .agent-picture, .agent-detail-page .info-blockAgent .agent-description .left-side, .agent-detail-page .agent-description .info-blockAgent .left-side,
+.propertyDetail-page .agent-description .agent-detail-page .info-blockAgent .left-side, .agent-detail-page .info-blockAgent .col, .agent-detail-page .info-blockAgent .addProperty-form .tips, .addProperty-form .agent-detail-page .info-blockAgent .tips, .agent-detail-page .info-blockAgent .pull-right, .agent-detail-page .info-blockAgent .listing-page .publicProperty-post .caption .company-logo, .listing-page .publicProperty-post .caption .agent-detail-page .info-blockAgent .company-logo, .agent-detail-page .info-blockAgent .overview-section .btn-hollow, .agent-detail-page .overview-section .info-blockAgent .btn-hollow,
+.propertyDetail-page .overview-section .agent-detail-page .info-blockAgent .btn-hollow, .agent-detail-page .info-blockAgent .agent-description .right-side, .agent-detail-page .agent-description .info-blockAgent .right-side,
+.propertyDetail-page .agent-description .agent-detail-page .info-blockAgent .right-side,
 .agent-detail-page .info-blockProperty .pull-left,
 .agent-detail-page .info-blockProperty .listing-page #aside, .listing-page
 .agent-detail-page .info-blockProperty #aside,
@@ -2323,14 +2331,18 @@ input[type='submit'] {
 .agent-detail-page .info-blockProperty .listing-page .publicProperty-post .caption .quick-links, .listing-page .publicProperty-post .caption
 .agent-detail-page .info-blockProperty .quick-links, .agent-detail-page .info-blockProperty .overview-section .small-heading, .agent-detail-page .overview-section .info-blockProperty .small-heading,
 .propertyDetail-page .overview-section
-.agent-detail-page .info-blockProperty .small-heading,
+.agent-detail-page .info-blockProperty .small-heading, .agent-detail-page .info-blockProperty .agent-picture, .agent-detail-page .info-blockProperty .agent-description .left-side, .agent-detail-page .agent-description .info-blockProperty .left-side,
+.propertyDetail-page .agent-description
+.agent-detail-page .info-blockProperty .left-side, .agent-detail-page .info-blockProperty .col,
 .agent-detail-page .info-blockProperty .addProperty-form .tips, .addProperty-form
 .agent-detail-page .info-blockProperty .tips,
 .agent-detail-page .info-blockProperty .pull-right,
 .agent-detail-page .info-blockProperty .listing-page .publicProperty-post .caption .company-logo, .listing-page .publicProperty-post .caption
 .agent-detail-page .info-blockProperty .company-logo, .agent-detail-page .info-blockProperty .overview-section .btn-hollow, .agent-detail-page .overview-section .info-blockProperty .btn-hollow,
 .propertyDetail-page .overview-section
-.agent-detail-page .info-blockProperty .btn-hollow,
+.agent-detail-page .info-blockProperty .btn-hollow, .agent-detail-page .info-blockProperty .agent-description .right-side, .agent-detail-page .agent-description .info-blockProperty .right-side,
+.propertyDetail-page .agent-description
+.agent-detail-page .info-blockProperty .right-side,
 .propertyDetail-page .info-blockAgent .pull-left,
 .propertyDetail-page .info-blockAgent .listing-page #aside, .listing-page
 .propertyDetail-page .info-blockAgent #aside,
@@ -2343,6 +2355,12 @@ input[type='submit'] {
 .propertyDetail-page .info-blockAgent .small-heading,
 .propertyDetail-page .info-blockAgent .overview-section .small-heading,
 .propertyDetail-page .overview-section .info-blockAgent .small-heading,
+.propertyDetail-page .info-blockAgent .agent-picture, .agent-detail-page .agent-description
+.propertyDetail-page .info-blockAgent .left-side,
+.propertyDetail-page .info-blockAgent .agent-description .left-side,
+.propertyDetail-page .agent-description .info-blockAgent .left-side,
+.propertyDetail-page .info-blockAgent .agent-detail-page .col, .agent-detail-page
+.propertyDetail-page .info-blockAgent .col,
 .propertyDetail-page .info-blockAgent .addProperty-form .tips, .addProperty-form
 .propertyDetail-page .info-blockAgent .tips,
 .propertyDetail-page .info-blockAgent .pull-right,
@@ -2350,7 +2368,10 @@ input[type='submit'] {
 .propertyDetail-page .info-blockAgent .company-logo, .agent-detail-page .overview-section
 .propertyDetail-page .info-blockAgent .btn-hollow,
 .propertyDetail-page .info-blockAgent .overview-section .btn-hollow,
-.propertyDetail-page .overview-section .info-blockAgent .btn-hollow,
+.propertyDetail-page .overview-section .info-blockAgent .btn-hollow, .agent-detail-page .agent-description
+.propertyDetail-page .info-blockAgent .right-side,
+.propertyDetail-page .info-blockAgent .agent-description .right-side,
+.propertyDetail-page .agent-description .info-blockAgent .right-side,
 .propertyDetail-page .info-blockProperty .pull-left,
 .propertyDetail-page .info-blockProperty .listing-page #aside, .listing-page
 .propertyDetail-page .info-blockProperty #aside,
@@ -2363,6 +2384,12 @@ input[type='submit'] {
 .propertyDetail-page .info-blockProperty .small-heading,
 .propertyDetail-page .info-blockProperty .overview-section .small-heading,
 .propertyDetail-page .overview-section .info-blockProperty .small-heading,
+.propertyDetail-page .info-blockProperty .agent-picture, .agent-detail-page .agent-description
+.propertyDetail-page .info-blockProperty .left-side,
+.propertyDetail-page .info-blockProperty .agent-description .left-side,
+.propertyDetail-page .agent-description .info-blockProperty .left-side,
+.propertyDetail-page .info-blockProperty .agent-detail-page .col, .agent-detail-page
+.propertyDetail-page .info-blockProperty .col,
 .propertyDetail-page .info-blockProperty .addProperty-form .tips, .addProperty-form
 .propertyDetail-page .info-blockProperty .tips,
 .propertyDetail-page .info-blockProperty .pull-right,
@@ -2370,7 +2397,10 @@ input[type='submit'] {
 .propertyDetail-page .info-blockProperty .company-logo, .agent-detail-page .overview-section
 .propertyDetail-page .info-blockProperty .btn-hollow,
 .propertyDetail-page .info-blockProperty .overview-section .btn-hollow,
-.propertyDetail-page .overview-section .info-blockProperty .btn-hollow {
+.propertyDetail-page .overview-section .info-blockProperty .btn-hollow, .agent-detail-page .agent-description
+.propertyDetail-page .info-blockProperty .right-side,
+.propertyDetail-page .info-blockProperty .agent-description .right-side,
+.propertyDetail-page .agent-description .info-blockProperty .right-side {
   width: 50%;
 }
 
@@ -2833,7 +2863,7 @@ input[type='submit'] {
 .propertyDetail-page .extra-feature-section {
   margin: 10px;
   border-radius: 8px;
-  border: 1px solid #6c6d70;
+  border: 1px solid rgba(108, 109, 112, 0.5);
   padding: 20px;
 }
 
@@ -2847,7 +2877,7 @@ input[type='submit'] {
 
 .agent-detail-page .extra-feature-section .small-heading,
 .propertyDetail-page .extra-feature-section .small-heading {
-  border-bottom: 1px solid #6c6d70;
+  border-bottom: 1px solid rgba(108, 109, 112, 0.5);
   margin: 0 0 20px;
   padding: 0 0 20px;
 }
@@ -2945,28 +2975,507 @@ input[type='submit'] {
 .propertyDetail-page .agent-societies {
   overflow: hidden;
   position: relative;
+  border: 1px solid rgba(119, 119, 119, 0.7);
+  border-radius: 8px;
+  padding: 10px;
 }
 
 .agent-detail-page .agent-societies .agent-mask,
 .propertyDetail-page .agent-societies .agent-mask {
   overflow: hidden;
+  position: relative;
+  margin: 0 -5px;
 }
 
 .agent-detail-page .agent-societies .agent-slideset,
 .propertyDetail-page .agent-societies .agent-slideset {
-  width: 999999px;
-  float: left;
+  width: 100% !important;
+  white-space: nowrap;
+  font: 0 !important;
+  line-height: 0 !important;
+  letter-spacing: -7px !important;
 }
 
 .agent-detail-page .agent-societies .agent-slide,
 .propertyDetail-page .agent-societies .agent-slide {
-  width: 600px;
-  float: left;
+  display: inline-block !important;
+  vertical-align: top !important;
+  letter-spacing: 0 !important;
+  font-size: 12px !important;
+  line-height: 15px !important;
+  width: 20% !important;
+  padding: 0 5px;
+  white-space: normal;
+}
+
+@media (max-width: 1199px) {
+  .agent-detail-page .agent-societies .agent-slide,
+  .propertyDetail-page .agent-societies .agent-slide {
+    width: 33.33% !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  .agent-detail-page .agent-societies .agent-slide,
+  .propertyDetail-page .agent-societies .agent-slide {
+    width: 50%  !important;
+    text-align: center;
+    background: #fff;
+  }
+}
+
+@media (max-width: 767px) {
+  .agent-detail-page .agent-societies .agent-slide,
+  .propertyDetail-page .agent-societies .agent-slide {
+    width: 100% !important;
+  }
 }
 
 .agent-detail-page .agent-societies .agent-slide a,
 .propertyDetail-page .agent-societies .agent-slide a {
   display: block;
+  width: 100px;
+  height: 100px;
+  white-space: nowrap;
+  background: #fff;
+  padding: 3px;
+  margin: 0 auto;
+}
+
+.agent-detail-page .agent-societies .agent-slide a:after,
+.propertyDetail-page .agent-societies .agent-slide a:after {
+  height: 100px;
+  margin: 0 0 0 -5px;
+  display: inline-block;
+  vertical-align: middle;
+  content: '';
+  width: 1px;
+}
+
+.agent-detail-page .agent-societies .agent-slide a img,
+.propertyDetail-page .agent-societies .agent-slide a img {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+}
+
+.agent-detail-page .agent-societies .small-heading,
+.propertyDetail-page .agent-societies .small-heading {
+  font-size: 14px;
+  line-height: 17px;
+  padding: 0 0 5px;
+}
+
+@media (max-width: 1023px) {
+  .agent-detail-page .agent-societies .small-heading,
+  .propertyDetail-page .agent-societies .small-heading {
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+  }
+}
+
+.agent-detail-page .agent-societies .btn-prev, .agent-detail-page .agent-societies .btn-next,
+.propertyDetail-page .agent-societies .btn-prev,
+.propertyDetail-page .agent-societies .btn-next {
+  text-decoration: none;
+  color: #30ce20;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  margin: -4px 0 0;
+}
+
+@media (max-width: 1023px) {
+  .agent-detail-page .agent-societies .btn-prev, .agent-detail-page .agent-societies .btn-next,
+  .propertyDetail-page .agent-societies .btn-prev,
+  .propertyDetail-page .agent-societies .btn-next {
+    left: 0;
+  }
+}
+
+.agent-detail-page .agent-societies .btn-prev span[class^="icon-"], .agent-detail-page .agent-societies .btn-prev span[class*="icon-"], .agent-detail-page .agent-societies .btn-next span[class^="icon-"], .agent-detail-page .agent-societies .btn-next span[class*="icon-"],
+.propertyDetail-page .agent-societies .btn-prev span[class^="icon-"],
+.propertyDetail-page .agent-societies .btn-prev span[class*="icon-"],
+.propertyDetail-page .agent-societies .btn-next span[class^="icon-"],
+.propertyDetail-page .agent-societies .btn-next span[class*="icon-"] {
+  font-size: 25px;
+  line-height: 0;
+}
+
+.agent-detail-page .agent-societies .btn-next,
+.propertyDetail-page .agent-societies .btn-next {
+  left: auto;
+  right: 10px;
+}
+
+@media (max-width: 1023px) {
+  .agent-detail-page .agent-societies .btn-next,
+  .propertyDetail-page .agent-societies .btn-next {
+    right: 0;
+  }
+}
+
+.agent-detail-page .agent-picture,
+.propertyDetail-page .agent-picture {
+  width: 260px;
+  height: 260px;
+  position: relative;
+  background: #fff;
+  white-space: nowrap;
+}
+
+@media (max-width: 1023px) {
+  .agent-detail-page .agent-picture,
+  .propertyDetail-page .agent-picture {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 767px) {
+  .agent-detail-page .agent-picture,
+  .propertyDetail-page .agent-picture {
+    float: none !important;
+    margin: 0 auto 10px;
+    width: 100%;
+  }
+}
+
+.agent-detail-page .agent-picture:after,
+.propertyDetail-page .agent-picture:after {
+  height: 260px;
+  overflow: hidden;
+  margin: 0 0 0 -5px;
+  display: inline-block;
+  vertical-align: middle;
+  content: '';
+}
+
+@media (max-width: 1023px) {
+  .agent-detail-page .agent-picture:after,
+  .propertyDetail-page .agent-picture:after {
+    height: 150px;
+  }
+}
+
+.agent-detail-page .agent-picture img,
+.propertyDetail-page .agent-picture img {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+}
+
+.agent-detail-page .agent-picture .premiumProperty,
+.propertyDetail-page .agent-picture .premiumProperty {
+  top: 20px;
+  width: 165px;
+}
+
+.agent-detail-page .agent-description,
+.propertyDetail-page .agent-description {
+  padding: 0 0 0 10px;
+}
+
+@media (max-width: 767px) {
+  .agent-detail-page .agent-description,
+  .propertyDetail-page .agent-description {
+    padding: 0;
+  }
+}
+
+.agent-detail-page .agent-description h1,
+.propertyDetail-page .agent-description h1 {
+  margin: 0 0 5px;
+}
+
+@media (max-width: 1023px) {
+  .agent-detail-page .agent-description h1,
+  .propertyDetail-page .agent-description h1 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.agent-detail-page .agent-description .location,
+.propertyDetail-page .agent-description .location {
+  padding: 0 0 5px;
+  display: block;
+}
+
+.agent-detail-page .agent-description .left-side,
+.propertyDetail-page .agent-description .left-side {
+  width: 75%;
+}
+
+@media (max-width: 1199px) {
+  .agent-detail-page .agent-description .left-side,
+  .propertyDetail-page .agent-description .left-side {
+    width: 65%;
+  }
+}
+
+@media (max-width: 1023px) {
+  .agent-detail-page .agent-description .left-side,
+  .propertyDetail-page .agent-description .left-side {
+    width: 50%;
+  }
+}
+
+.agent-detail-page .agent-description .right-side,
+.propertyDetail-page .agent-description .right-side {
+  width: 25%;
+}
+
+@media (max-width: 1199px) {
+  .agent-detail-page .agent-description .right-side,
+  .propertyDetail-page .agent-description .right-side {
+    width: 35%;
+  }
+}
+
+@media (max-width: 1023px) {
+  .agent-detail-page .agent-description .right-side,
+  .propertyDetail-page .agent-description .right-side {
+    width: 50%;
+  }
+}
+
+.agent-detail-page .agent-description .trusted-agent,
+.propertyDetail-page .agent-description .trusted-agent {
+  margin: 15px 0 20px 40px;
+}
+
+@media (max-width: 767px) {
+  .agent-detail-page .agent-description .trusted-agent,
+  .propertyDetail-page .agent-description .trusted-agent {
+    float: right;
+    margin: 15px 24px 20px 40px;
+  }
+}
+
+.agent-detail-page .agent-description .star-rating,
+.propertyDetail-page .agent-description .star-rating {
+  float: none !important;
+  margin: 0 auto 10px;
+}
+
+.agent-detail-page .col {
+  width: 50%;
+  padding: 0 5px;
+  border-left: 1px solid rgba(108, 109, 112, 0.5);
+}
+
+@media (max-width: 767px) {
+  .agent-detail-page .col {
+    width: 100%;
+    border-left: 0;
+    border-top: 1px solid rgba(108, 109, 112, 0.5);
+    padding: 10px 5px;
+  }
+}
+
+.agent-detail-page .col:first-child {
+  border: 0;
+}
+
+.agent-detail-page .col .small-heading {
+  margin: 0;
+  padding: 0 0 10px;
+  border: 0;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.agent-detail-page .col .list {
+  font-size: 17px;
+  line-height: 20px;
+  font-family: "Open Sans", "Arial", sans-serif;
+}
+
+@media (max-width: 1023px) {
+  .agent-detail-page .col .list {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.agent-detail-page .col .list li {
+  position: relative;
+  display: block;
+  color: #6c6d70;
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+  padding: 0 10px 10px;
+}
+
+.agent-detail-page .col .list li > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 17px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+@media (max-width: 1023px) {
+  .agent-detail-page .col .list li {
+    font-size: 0;
+    line-height: 0;
+    letter-spacing: -4px;
+  }
+  .agent-detail-page .col .list li > * {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0;
+  }
+}
+
+.agent-detail-page .col .list li > span {
+  width: 40%;
+  position: relative;
+  font-weight: bold;
+}
+
+.agent-detail-page .col .list li > span:first-child {
+  width: 60%;
+  padding: 0 0 0 30px;
+  font-weight: normal;
+}
+
+.agent-detail-page .col .list li span[class^="icon-"], .agent-detail-page .col .list li span[class*="icon-"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 20px;
+  line-height: 1;
+}
+
+@media (max-width: 1023px) {
+  .agent-detail-page .col .list li span[class^="icon-"], .agent-detail-page .col .list li span[class*="icon-"] {
+    font-size: 16px;
+  }
+}
+
+.agent-detail-page .overview-section .small-heading {
+  padding: 0 0 20px;
+}
+
+.agent-detail-page .agentDetail-list {
+  color: #6c6d70;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 21px;
+  margin: 0 0 30px;
+}
+
+@media (max-width: 1023px) {
+  .agent-detail-page .agentDetail-list {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.agent-detail-page .agentDetail-list li {
+  display: block;
+  position: relative;
+  padding: 5px 5px 5px 40px;
+}
+
+.agent-detail-page .agentDetail-list li:after {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  bottom: 0;
+  width: 1px;
+  background: #b0b2b5;
+  content: '';
+}
+
+.agent-detail-page .agentDetail-list li span[class^="icon-"], .agent-detail-page .agentDetail-list li span[class*="icon-"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 20px;
+  line-height: 1;
+  color: #b0b2b5;
+}
+
+.agent-detail-page .agentDetail-list li address {
+  font-style: normal;
+}
+
+.agent-detail-page .agentDetail-list li a {
+  color: #6c6d70;
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+}
+
+.agent-detail-page .agentDetail-list li a:hover {
+  color: #2092d0;
+}
+
+.agent-detail-page .info-blockAgent .small-heading,
+.agent-detail-page .info-blockAgent .heading {
+  padding: 10px;
+  margin: 0 0 10px;
+  box-shadow: 0 7px 7px -5px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 767px) {
+  .agent-detail-page .inquiry-email-form {
+    max-width: inherit;
+  }
+}
+
+.agent-detail-page .inquiry-email-form .field-holder {
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+}
+
+.agent-detail-page .inquiry-email-form .field-holder > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0;
+}
+
+@media (max-width: 1023px) {
+  .agent-detail-page .inquiry-email-form .field-holder {
+    font-size: 0;
+    line-height: 0;
+    letter-spacing: -4px;
+  }
+  .agent-detail-page .inquiry-email-form .field-holder > * {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0;
+  }
+}
+
+@media (max-width: 1023px) {
+  .agent-detail-page .inquiry-email-form button[type="submit"] {
+    width: 165px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .agent-detail-page .extra-feature-section {
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .agent-detail-page .agent-detail-holder {
+    padding: 5px 0 0;
+  }
 }
 
 .addProperty-form {
@@ -8478,6 +8987,16 @@ h1 span {
 
 .forgot-pass:hover {
   color: #2092d0;
+}
+
+.rate-us {
+  color: #6c6d70;
+  font-size: 13px;
+  line-height: 16px;
+  display: block;
+  font-weight: bold;
+  font-family: "Open Sans", "Arial", sans-serif;
+  padding: 0 0 5px;
 }
 
 .resize-active * {

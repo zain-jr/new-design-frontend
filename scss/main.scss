@@ -2583,6 +2583,14 @@ h1 {
 
     &:hover { color: $p42-color;}
 }
+.rate-us {
+  color: $p42-default-grey;
+  @include font (13,16);
+  display: block;
+  font-weight: bold;
+  font-family: $open-sans;
+  padding: 0 0 5px; 
+}
 .resize-active * {
   transition: none;
   -webkit-transition: none;
