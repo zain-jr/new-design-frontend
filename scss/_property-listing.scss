@@ -349,11 +349,58 @@
   }
 }
 .agent-listing-page {
+
+  .artical-holder {
+    @extend %layout;
+    margin: 0 -3px;
+  }
+  
   #content {
     @extend .layout;
+    padding: 0 0 0 10px;
   }
   .publicAgent-post {
     width: 50%;
+    @extend .pull-left;
+    background: transparent;
+    padding: 0 3px 6px;;
+
+    .post-holder {
+      @extend %clearfix;
+      background: $white;
+      padding: 5px 3px;
+    }
+    .caption {
+      padding: 0 0 5px 5px; 
+
+      .btn-default {
+        padding: 7px 34px 8px 6px;
+        @include font(11,14);
+      }
+      .links-right,
+      .links-left {
+        width: 50%;
+      }
+      .quick-links {
+        padding: 0;
+        margin: 0;
+        float: none !important;
+
+        li {
+          width: 50%;
+          padding: 0;
+        }
+      }
+    }
+    .trusted-agent {
+      @include font(10,14);
+      @extend .pull-left;
+      margin: 15px 0 10px 0;
+    }
+    .star-rating {
+      @extend .pull-right;
+      margin: 10px 0 10px;
+    }
   }
   .links-holder {
     position: static !important;

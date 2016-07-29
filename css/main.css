@@ -708,7 +708,7 @@ th {
 .clearfix:after, .agent-listing-page .publicAgent-post .image-holder:after,
 .agent-listing-page .publicProperty-post .image-holder:after,
 .listing-page .publicAgent-post .image-holder:after,
-.listing-page .publicProperty-post .image-holder:after, #header .top-bar:after, .mainSearch-form:after {
+.listing-page .publicProperty-post .image-holder:after, .agent-listing-page .publicAgent-post .post-holder:after, #header .top-bar:after, .mainSearch-form:after {
   content: '';
   display: block;
   clear: both;
@@ -810,7 +810,7 @@ th {
 .listing-page .publicProperty-post .image-holder, .agent-listing-page .publicAgent-post .caption .quick-links,
 .agent-listing-page .publicProperty-post .caption .quick-links,
 .listing-page .publicAgent-post .caption .quick-links,
-.listing-page .publicProperty-post .caption .quick-links, .agent-detail-page .overview-section .small-heading,
+.listing-page .publicProperty-post .caption .quick-links, .agent-listing-page .publicAgent-post, .agent-listing-page .publicAgent-post .trusted-agent, .agent-detail-page .overview-section .small-heading,
 .propertyDetail-page .overview-section .small-heading, .agent-detail-page .agent-picture,
 .propertyDetail-page .agent-picture, .agent-detail-page .agent-description .left-side,
 .propertyDetail-page .agent-description .left-side, .agent-detail-page .col, .addProperty-form .tips, .agent-listing-page .publicAgent-post .caption .left-area,
@@ -826,7 +826,7 @@ th {
 .pull-right, .agent-listing-page .publicAgent-post .caption .company-logo,
 .agent-listing-page .publicProperty-post .caption .company-logo,
 .listing-page .publicAgent-post .caption .company-logo,
-.listing-page .publicProperty-post .caption .company-logo, .agent-detail-page .overview-section .btn-hollow,
+.listing-page .publicProperty-post .caption .company-logo, .agent-listing-page .publicAgent-post .star-rating, .agent-detail-page .overview-section .btn-hollow,
 .propertyDetail-page .overview-section .btn-hollow, .agent-detail-page .agent-description .right-side,
 .propertyDetail-page .agent-description .right-side, .agent-listing-page .publicAgent-post .caption .right-area,
 .agent-listing-page .publicProperty-post .caption .right-area,
@@ -854,7 +854,7 @@ th {
 .listing-page .publicProperty-post, .agent-listing-page .publicAgent-post .caption,
 .agent-listing-page .publicProperty-post .caption,
 .listing-page .publicAgent-post .caption,
-.listing-page .publicProperty-post .caption, .propertyNotFound, .agent-detail-page,
+.listing-page .publicProperty-post .caption, .agent-listing-page .artical-holder, .propertyNotFound, .agent-detail-page,
 .propertyDetail-page, .agent-detail-page .info-blockAgent .pictureHolder,
 .agent-detail-page .info-blockProperty .pictureHolder,
 .propertyDetail-page .info-blockAgent .pictureHolder,
@@ -2308,8 +2308,59 @@ input[type='submit'] {
   }
 }
 
+.agent-listing-page .artical-holder {
+  margin: 0 -3px;
+}
+
+.agent-listing-page #content {
+  padding: 0 0 0 10px;
+}
+
 .agent-listing-page .publicAgent-post {
   width: 50%;
+  background: transparent;
+  padding: 0 3px 6px;
+}
+
+.agent-listing-page .publicAgent-post .post-holder {
+  background: #fff;
+  padding: 5px 3px;
+}
+
+.agent-listing-page .publicAgent-post .caption {
+  padding: 0 0 5px 5px;
+}
+
+.agent-listing-page .publicAgent-post .caption .btn-default {
+  padding: 7px 34px 8px 6px;
+  font-size: 11px;
+  line-height: 14px;
+}
+
+.agent-listing-page .publicAgent-post .caption .links-right,
+.agent-listing-page .publicAgent-post .caption .links-left {
+  width: 50%;
+}
+
+.agent-listing-page .publicAgent-post .caption .quick-links {
+  padding: 0;
+  margin: 0;
+  float: none !important;
+}
+
+.agent-listing-page .publicAgent-post .caption .quick-links li {
+  width: 50%;
+  padding: 0;
+}
+
+.agent-listing-page .publicAgent-post .trusted-agent {
+  font-size: 10px;
+  line-height: 14px;
+  margin: 15px 0 10px 0;
+}
+
+.agent-listing-page .publicAgent-post .star-rating {
+  margin: 10px 0 10px;
 }
 
 .agent-listing-page .links-holder {
@@ -2520,7 +2571,7 @@ input[type='submit'] {
 .listing-page .publicAgent-post .caption .quick-links,
 .listing-page .publicAgent-post .caption .agent-detail-page .info-blockAgent .quick-links, .agent-detail-page .info-blockAgent
 .listing-page .publicProperty-post .caption .quick-links,
-.listing-page .publicProperty-post .caption .agent-detail-page .info-blockAgent .quick-links, .agent-detail-page .info-blockAgent .overview-section .small-heading, .agent-detail-page .overview-section .info-blockAgent .small-heading,
+.listing-page .publicProperty-post .caption .agent-detail-page .info-blockAgent .quick-links, .agent-detail-page .info-blockAgent .agent-listing-page .publicAgent-post, .agent-listing-page .agent-detail-page .info-blockAgent .publicAgent-post, .agent-detail-page .info-blockAgent .agent-listing-page .publicAgent-post .trusted-agent, .agent-listing-page .publicAgent-post .agent-detail-page .info-blockAgent .trusted-agent, .agent-detail-page .info-blockAgent .overview-section .small-heading, .agent-detail-page .overview-section .info-blockAgent .small-heading,
 .propertyDetail-page .overview-section .agent-detail-page .info-blockAgent .small-heading, .agent-detail-page .info-blockAgent .agent-picture, .agent-detail-page .info-blockAgent .agent-description .left-side, .agent-detail-page .agent-description .info-blockAgent .left-side,
 .propertyDetail-page .agent-description .agent-detail-page .info-blockAgent .left-side, .agent-detail-page .info-blockAgent .col, .agent-detail-page .info-blockAgent .addProperty-form .tips, .addProperty-form .agent-detail-page .info-blockAgent .tips, .agent-detail-page .info-blockAgent .pull-right, .agent-detail-page .info-blockAgent .agent-listing-page .publicAgent-post .caption .company-logo, .agent-listing-page .publicAgent-post .caption .agent-detail-page .info-blockAgent .company-logo, .agent-detail-page .info-blockAgent
 .agent-listing-page .publicProperty-post .caption .company-logo,
@@ -2528,7 +2579,7 @@ input[type='submit'] {
 .listing-page .publicAgent-post .caption .company-logo,
 .listing-page .publicAgent-post .caption .agent-detail-page .info-blockAgent .company-logo, .agent-detail-page .info-blockAgent
 .listing-page .publicProperty-post .caption .company-logo,
-.listing-page .publicProperty-post .caption .agent-detail-page .info-blockAgent .company-logo, .agent-detail-page .info-blockAgent .overview-section .btn-hollow, .agent-detail-page .overview-section .info-blockAgent .btn-hollow,
+.listing-page .publicProperty-post .caption .agent-detail-page .info-blockAgent .company-logo, .agent-detail-page .info-blockAgent .agent-listing-page .publicAgent-post .star-rating, .agent-listing-page .publicAgent-post .agent-detail-page .info-blockAgent .star-rating, .agent-detail-page .info-blockAgent .overview-section .btn-hollow, .agent-detail-page .overview-section .info-blockAgent .btn-hollow,
 .propertyDetail-page .overview-section .agent-detail-page .info-blockAgent .btn-hollow, .agent-detail-page .info-blockAgent .agent-description .right-side, .agent-detail-page .agent-description .info-blockAgent .right-side,
 .propertyDetail-page .agent-description .agent-detail-page .info-blockAgent .right-side,
 .agent-detail-page .info-blockProperty .pull-left,
@@ -2571,7 +2622,11 @@ input[type='submit'] {
 .agent-detail-page .info-blockProperty
 .listing-page .publicProperty-post .caption .quick-links,
 .listing-page .publicProperty-post .caption
-.agent-detail-page .info-blockProperty .quick-links, .agent-detail-page .info-blockProperty .overview-section .small-heading, .agent-detail-page .overview-section .info-blockProperty .small-heading,
+.agent-detail-page .info-blockProperty .quick-links,
+.agent-detail-page .info-blockProperty .agent-listing-page .publicAgent-post, .agent-listing-page
+.agent-detail-page .info-blockProperty .publicAgent-post,
+.agent-detail-page .info-blockProperty .agent-listing-page .publicAgent-post .trusted-agent, .agent-listing-page .publicAgent-post
+.agent-detail-page .info-blockProperty .trusted-agent, .agent-detail-page .info-blockProperty .overview-section .small-heading, .agent-detail-page .overview-section .info-blockProperty .small-heading,
 .propertyDetail-page .overview-section
 .agent-detail-page .info-blockProperty .small-heading, .agent-detail-page .info-blockProperty .agent-picture, .agent-detail-page .info-blockProperty .agent-description .left-side, .agent-detail-page .agent-description .info-blockProperty .left-side,
 .propertyDetail-page .agent-description
@@ -2592,7 +2647,9 @@ input[type='submit'] {
 .agent-detail-page .info-blockProperty
 .listing-page .publicProperty-post .caption .company-logo,
 .listing-page .publicProperty-post .caption
-.agent-detail-page .info-blockProperty .company-logo, .agent-detail-page .info-blockProperty .overview-section .btn-hollow, .agent-detail-page .overview-section .info-blockProperty .btn-hollow,
+.agent-detail-page .info-blockProperty .company-logo,
+.agent-detail-page .info-blockProperty .agent-listing-page .publicAgent-post .star-rating, .agent-listing-page .publicAgent-post
+.agent-detail-page .info-blockProperty .star-rating, .agent-detail-page .info-blockProperty .overview-section .btn-hollow, .agent-detail-page .overview-section .info-blockProperty .btn-hollow,
 .propertyDetail-page .overview-section
 .agent-detail-page .info-blockProperty .btn-hollow, .agent-detail-page .info-blockProperty .agent-description .right-side, .agent-detail-page .agent-description .info-blockProperty .right-side,
 .propertyDetail-page .agent-description
@@ -2637,7 +2694,11 @@ input[type='submit'] {
 .propertyDetail-page .info-blockAgent
 .listing-page .publicProperty-post .caption .quick-links,
 .listing-page .publicProperty-post .caption
-.propertyDetail-page .info-blockAgent .quick-links, .agent-detail-page .overview-section
+.propertyDetail-page .info-blockAgent .quick-links,
+.propertyDetail-page .info-blockAgent .agent-listing-page .publicAgent-post, .agent-listing-page
+.propertyDetail-page .info-blockAgent .publicAgent-post,
+.propertyDetail-page .info-blockAgent .agent-listing-page .publicAgent-post .trusted-agent, .agent-listing-page .publicAgent-post
+.propertyDetail-page .info-blockAgent .trusted-agent, .agent-detail-page .overview-section
 .propertyDetail-page .info-blockAgent .small-heading,
 .propertyDetail-page .info-blockAgent .overview-section .small-heading,
 .propertyDetail-page .overview-section .info-blockAgent .small-heading,
@@ -2663,7 +2724,9 @@ input[type='submit'] {
 .propertyDetail-page .info-blockAgent
 .listing-page .publicProperty-post .caption .company-logo,
 .listing-page .publicProperty-post .caption
-.propertyDetail-page .info-blockAgent .company-logo, .agent-detail-page .overview-section
+.propertyDetail-page .info-blockAgent .company-logo,
+.propertyDetail-page .info-blockAgent .agent-listing-page .publicAgent-post .star-rating, .agent-listing-page .publicAgent-post
+.propertyDetail-page .info-blockAgent .star-rating, .agent-detail-page .overview-section
 .propertyDetail-page .info-blockAgent .btn-hollow,
 .propertyDetail-page .info-blockAgent .overview-section .btn-hollow,
 .propertyDetail-page .overview-section .info-blockAgent .btn-hollow, .agent-detail-page .agent-description
@@ -2710,7 +2773,11 @@ input[type='submit'] {
 .propertyDetail-page .info-blockProperty
 .listing-page .publicProperty-post .caption .quick-links,
 .listing-page .publicProperty-post .caption
-.propertyDetail-page .info-blockProperty .quick-links, .agent-detail-page .overview-section
+.propertyDetail-page .info-blockProperty .quick-links,
+.propertyDetail-page .info-blockProperty .agent-listing-page .publicAgent-post, .agent-listing-page
+.propertyDetail-page .info-blockProperty .publicAgent-post,
+.propertyDetail-page .info-blockProperty .agent-listing-page .publicAgent-post .trusted-agent, .agent-listing-page .publicAgent-post
+.propertyDetail-page .info-blockProperty .trusted-agent, .agent-detail-page .overview-section
 .propertyDetail-page .info-blockProperty .small-heading,
 .propertyDetail-page .info-blockProperty .overview-section .small-heading,
 .propertyDetail-page .overview-section .info-blockProperty .small-heading,
@@ -2736,7 +2803,9 @@ input[type='submit'] {
 .propertyDetail-page .info-blockProperty
 .listing-page .publicProperty-post .caption .company-logo,
 .listing-page .publicProperty-post .caption
-.propertyDetail-page .info-blockProperty .company-logo, .agent-detail-page .overview-section
+.propertyDetail-page .info-blockProperty .company-logo,
+.propertyDetail-page .info-blockProperty .agent-listing-page .publicAgent-post .star-rating, .agent-listing-page .publicAgent-post
+.propertyDetail-page .info-blockProperty .star-rating, .agent-detail-page .overview-section
 .propertyDetail-page .info-blockProperty .btn-hollow,
 .propertyDetail-page .info-blockProperty .overview-section .btn-hollow,
 .propertyDetail-page .overview-section .info-blockProperty .btn-hollow, .agent-detail-page .agent-description
