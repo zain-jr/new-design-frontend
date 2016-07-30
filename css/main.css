@@ -745,7 +745,7 @@ th {
   overflow: hidden;
 }
 
-.text-center, .propertyNotFound, .agent-detail-page .info-blockAgent .price,
+.text-center, .agent-listing-page .publicAgent-post .caption .quick-links li, .propertyNotFound, .agent-detail-page .info-blockAgent .price,
 .agent-detail-page .info-blockProperty .price,
 .propertyDetail-page .info-blockAgent .price,
 .propertyDetail-page .info-blockProperty .price, .agent-detail-page .info-blockAgent .small-heading,
@@ -2320,6 +2320,13 @@ input[type='submit'] {
   width: 50%;
   background: transparent;
   padding: 0 3px 6px;
+  margin: 0 0 5px;
+}
+
+@media (max-width: 1199px) {
+  .agent-listing-page .publicAgent-post {
+    width: 100%;
+  }
 }
 
 .agent-listing-page .publicAgent-post .post-holder {
@@ -2327,36 +2334,102 @@ input[type='submit'] {
   padding: 5px 3px;
 }
 
+.agent-listing-page .publicAgent-post .image-holder img {
+  max-width: 190px;
+  min-height: 190px;
+  max-height: 190px;
+  min-height: 190px;
+}
+
 .agent-listing-page .publicAgent-post .caption {
   padding: 0 0 5px 5px;
 }
 
+.agent-listing-page .publicAgent-post .caption .layout, .agent-listing-page .publicAgent-post .caption #content {
+  position: relative;
+}
+
+.agent-listing-page .publicAgent-post .caption p {
+  min-height: 67px;
+}
+
+@media (max-width: 767px) {
+  .agent-listing-page .publicAgent-post .caption p {
+    min-height: 82px;
+  }
+}
+
+@media (max-width: 479px) {
+  .agent-listing-page .publicAgent-post .caption p {
+    min-height: inherit;
+  }
+}
+
 .agent-listing-page .publicAgent-post .caption .btn-default {
-  padding: 7px 34px 8px 6px;
-  font-size: 11px;
+  padding: 7px 21px 7px 5px;
+  font-size: 10px;
   line-height: 14px;
+  display: block;
+}
+
+@media (max-width: 1199px) {
+  .agent-listing-page .publicAgent-post .caption .btn-default {
+    padding: 7px 30px 7px 5px;
+  }
+}
+
+.agent-listing-page .publicAgent-post .caption .btn-default span[class^="icon-"], .agent-listing-page .publicAgent-post .caption .btn-default span[class*="icon-"] {
+  font-size: 16px;
+  right: 5px;
 }
 
 .agent-listing-page .publicAgent-post .caption .links-right,
 .agent-listing-page .publicAgent-post .caption .links-left {
   width: 50%;
+  padding: 0 5px;
+}
+
+@media (max-width: 1199px) {
+  .agent-listing-page .publicAgent-post .caption .links-right,
+  .agent-listing-page .publicAgent-post .caption .links-left {
+    width: auto;
+  }
 }
 
 .agent-listing-page .publicAgent-post .caption .quick-links {
   padding: 0;
   margin: 0;
   float: none !important;
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+}
+
+.agent-listing-page .publicAgent-post .caption .quick-links > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0;
 }
 
 .agent-listing-page .publicAgent-post .caption .quick-links li {
   width: 50%;
-  padding: 0;
+  padding: 0 3px;
 }
 
 .agent-listing-page .publicAgent-post .trusted-agent {
   font-size: 10px;
   line-height: 14px;
   margin: 15px 0 10px 0;
+  position: relative !important;
+  top: 0 !important;
+}
+
+@media (max-width: 767px) {
+  .agent-listing-page .publicAgent-post .trusted-agent {
+    margin: 14px 0 0 10px !important;
+  }
 }
 
 .agent-listing-page .publicAgent-post .star-rating {
@@ -8571,6 +8644,7 @@ h1 span {
   line-height: 0;
   letter-spacing: -4px;
   padding: 30px 0 0;
+  font-family: "Open Sans", "Arial", sans-serif;
 }
 
 .pager > * {
@@ -8598,7 +8672,7 @@ h1 span {
 }
 
 .pager li {
-  padding: 0 3px;
+  padding: 0 2px;
   margin: 0 0 5px;
 }
 

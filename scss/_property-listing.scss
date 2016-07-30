@@ -363,32 +363,76 @@
     width: 50%;
     @extend .pull-left;
     background: transparent;
-    padding: 0 3px 6px;;
+    padding: 0 3px 6px;
+    margin: 0 0 5px;
+
+    @include media('<widescreen'){
+      width: 100%;
+    }
 
     .post-holder {
       @extend %clearfix;
       background: $white;
       padding: 5px 3px;
     }
+    .image-holder {
+      img{
+        max-width: 190px;
+        min-height: 190px;
+        max-height: 190px;
+        min-height: 190px;
+      }
+    }
     .caption {
-      padding: 0 0 5px 5px; 
+      padding: 0 0 5px 5px;
+
+      .layout { position: relative;}
+
+      p {
+        min-height: 67px;
+
+        @include media('<tablet'){
+          min-height: 82px;
+        }
+
+        @include media('<phone'){
+          min-height: inherit;
+        }
+      }
 
       .btn-default {
-        padding: 7px 34px 8px 6px;
-        @include font(11,14);
+        padding: 7px 21px 7px 5px;
+        @include font(10,14);
+        display: block;
+
+        @include media('<widescreen'){
+          padding: 7px 30px 7px 5px;
+        }
+
+        span[class^="icon-"],span[class*="icon-"]{
+          font-size: 16px;
+          right: 5px;
+        }
       }
       .links-right,
       .links-left {
         width: 50%;
+        padding: 0 5px; 
+
+        @include media('<widescreen'){
+          width: auto;
+        }
       }
       .quick-links {
         padding: 0;
         margin: 0;
         float: none !important;
+        @include align-reset(top, 16,16);
 
         li {
           width: 50%;
-          padding: 0;
+          padding: 0 3px;
+          @extend %text-center;
         }
       }
     }
@@ -396,6 +440,12 @@
       @include font(10,14);
       @extend .pull-left;
       margin: 15px 0 10px 0;
+      position: relative !important;
+      top:  0 !important;
+
+      @include media('<tablet'){
+        margin: 14px 0 0 10px !important;
+      }
     }
     .star-rating {
       @extend .pull-right;
