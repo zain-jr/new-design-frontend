@@ -2316,6 +2316,12 @@ input[type='submit'] {
   padding: 0 0 0 10px;
 }
 
+@media (max-width: 1023px) {
+  .agent-listing-page #content {
+    padding: 0;
+  }
+}
+
 .agent-listing-page .publicAgent-post {
   width: 50%;
   background: transparent;

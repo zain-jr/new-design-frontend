@@ -358,6 +358,8 @@
   #content {
     @extend .layout;
     padding: 0 0 0 10px;
+
+    @include media('<desktop'){ padding: 0;}
   }
   .publicAgent-post {
     width: 50%;
