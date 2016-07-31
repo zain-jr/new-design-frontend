@@ -395,8 +395,8 @@ th {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?wmlhou");
-  src: url("../fonts/icomoon.eot?wmlhou#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?wmlhou") format("truetype"), url("../fonts/icomoon.woff?wmlhou") format("woff"), url("../fonts/icomoon.svg?wmlhou#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?vrjqez");
+  src: url("../fonts/icomoon.eot?vrjqez#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?vrjqez") format("truetype"), url("../fonts/icomoon.woff?vrjqez") format("woff"), url("../fonts/icomoon.svg?vrjqez#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -413,6 +413,158 @@ th {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-warning:before {
+  content: "\e92e";
+}
+
+.icon-alert:before {
+  content: "\e92e";
+}
+
+.icon-bug:before {
+  content: "\e999";
+}
+
+.icon-mobile:before {
+  content: "\e929";
+}
+
+.icon-phone:before {
+  content: "\e929";
+}
+
+.icon-cellular:before {
+  content: "\e929";
+}
+
+.icon-eye:before {
+  content: "\e921";
+}
+
+.icon-views:before {
+  content: "\e921";
+}
+
+.icon-search:before {
+  content: "\e902";
+}
+
+.icon-location:before {
+  content: "\e92a";
+}
+
+.icon-map-marker:before {
+  content: "\e92a";
+}
+
+.icon-pin:before {
+  content: "\e92a";
+}
+
+.icon-user:before {
+  content: "\e92b";
+}
+
+.icon-profile:before {
+  content: "\e92b";
+}
+
+.icon-avatar:before {
+  content: "\e92b";
+}
+
+.icon-person:before {
+  content: "\e92b";
+}
+
+.icon-member:before {
+  content: "\e92b";
+}
+
+.icon-home2:before {
+  content: "\e92c";
+}
+
+.icon-house:before {
+  content: "\e92c";
+}
+
+.icon-info:before {
+  content: "\e923";
+}
+
+.icon-information:before {
+  content: "\e923";
+}
+
+.icon-instagram:before {
+  content: "\e903";
+}
+
+.icon-brand:before {
+  content: "\e903";
+}
+
+.icon-social:before {
+  content: "\e903";
+}
+
+.icon-twitter:before {
+  content: "\e904";
+}
+
+.icon-brand2:before {
+  content: "\e904";
+}
+
+.icon-tweet:before {
+  content: "\e904";
+}
+
+.icon-social2:before {
+  content: "\e904";
+}
+
+.icon-linkedin:before {
+  content: "\e905";
+}
+
+.icon-brand3:before {
+  content: "\e905";
+}
+
+.icon-social3:before {
+  content: "\e905";
+}
+
+.icon-facebook:before {
+  content: "\e906";
+}
+
+.icon-brand4:before {
+  content: "\e906";
+}
+
+.icon-social4:before {
+  content: "\e906";
+}
+
+.icon-thumbs-up:before {
+  content: "\e92f";
+}
+
+.icon-minus-square:before {
+  content: "\e91a";
+}
+
+.icon-plus-square:before {
+  content: "\e91b";
+}
+
+.icon-home:before {
+  content: "\e901";
 }
 
 .icon-domain:before {
@@ -542,142 +694,6 @@ th {
   content: "\e908";
 }
 
-.icon-mobile:before {
-  content: "\e929";
-}
-
-.icon-phone:before {
-  content: "\e929";
-}
-
-.icon-cellular:before {
-  content: "\e929";
-}
-
-.icon-eye:before {
-  content: "\e921";
-}
-
-.icon-views:before {
-  content: "\e921";
-}
-
-.icon-search:before {
-  content: "\e902";
-}
-
-.icon-location:before {
-  content: "\e92a";
-}
-
-.icon-map-marker:before {
-  content: "\e92a";
-}
-
-.icon-pin:before {
-  content: "\e92a";
-}
-
-.icon-user:before {
-  content: "\e92b";
-}
-
-.icon-profile:before {
-  content: "\e92b";
-}
-
-.icon-avatar:before {
-  content: "\e92b";
-}
-
-.icon-person:before {
-  content: "\e92b";
-}
-
-.icon-member:before {
-  content: "\e92b";
-}
-
-.icon-home2:before {
-  content: "\e92c";
-}
-
-.icon-house:before {
-  content: "\e92c";
-}
-
-.icon-info:before {
-  content: "\e923";
-}
-
-.icon-information:before {
-  content: "\e923";
-}
-
-.icon-instagram:before {
-  content: "\e903";
-}
-
-.icon-brand:before {
-  content: "\e903";
-}
-
-.icon-social:before {
-  content: "\e903";
-}
-
-.icon-twitter:before {
-  content: "\e904";
-}
-
-.icon-brand2:before {
-  content: "\e904";
-}
-
-.icon-tweet:before {
-  content: "\e904";
-}
-
-.icon-social2:before {
-  content: "\e904";
-}
-
-.icon-linkedin:before {
-  content: "\e905";
-}
-
-.icon-brand3:before {
-  content: "\e905";
-}
-
-.icon-social3:before {
-  content: "\e905";
-}
-
-.icon-facebook:before {
-  content: "\e906";
-}
-
-.icon-brand4:before {
-  content: "\e906";
-}
-
-.icon-social4:before {
-  content: "\e906";
-}
-
-.icon-minus-square:before {
-  content: "\e91a";
-}
-
-.icon-plus-square:before {
-  content: "\e91b";
-}
-
-.icon-home:before {
-  content: "\e901";
-}
-
 .icon-old-phone:before {
   content: "\e92d";
 }
@@ -762,7 +778,8 @@ th {
 .propertyDetail-page .overview-section, .agent-detail-page .extra-feature-section .small-heading,
 .propertyDetail-page .extra-feature-section .small-heading, .agent-detail-page .agent-picture,
 .propertyDetail-page .agent-picture, .addProperty-form .extra-features, .addProperty-form .existingOrNew-member li, .addProperty-form .list-extraFeatures .feature-heading, .registerNow .role-opener, .forgot-form .buttons-holder li a,
-.login-form .buttons-holder li a, .custom-withouChecks .fake-label, h1, .loginRegister li, .main-visualSection, #nav .main-navigation li, .news-carousel .news-pagination ul, .topSocities-holder .socities li a, .heading, .agents-logo li a, .premiumProperty, .public-ui-features li strong, .generic-lightbox, .login-heading,
+.login-form .buttons-holder li a, .global-error,
+.global-success, .custom-withouChecks .fake-label, h1, .loginRegister li, .main-visualSection, #nav .main-navigation li, .news-carousel .news-pagination ul, .topSocities-holder .socities li a, .heading, .agents-logo li a, .premiumProperty, .public-ui-features li strong, .generic-lightbox, .login-heading,
 .registerNow-heading,
 .add-pro-heading {
   text-align: center;
@@ -796,7 +813,8 @@ th {
 .text-capital, .propertyNotFound .no-heading, .addProperty-form .layout label, .addProperty-form .agent-listing-page #content label, .agent-listing-page .addProperty-form #content label, .addProperty-form .existingOrNew-member, .registerNow .layout label, .registerNow .agent-listing-page #content label, .agent-listing-page .registerNow #content label, .forgot-form .layout label, .forgot-form .agent-listing-page #content label, .agent-listing-page .forgot-form #content label,
 .login-form .layout label,
 .login-form .agent-listing-page #content label, .agent-listing-page
-.login-form #content label, .custom-withouChecks .fake-label, .select2-container .select2-selection--single .select2-selection__rendered, .mainSearch-form .subTypes, .views, .inquiry-email-form label, .login-heading,
+.login-form #content label, .global-error,
+.global-success, .custom-withouChecks .fake-label, .select2-container .select2-selection--single .select2-selection__rendered, .mainSearch-form .subTypes, .views, .inquiry-email-form label, .login-heading,
 .registerNow-heading,
 .add-pro-heading {
   text-transform: capitalize;
@@ -5484,6 +5502,11 @@ input[type='submit'] {
   }
 }
 
+.login-page .global-error,
+.login-page .global-success {
+  margin: 0 -15px;
+}
+
 .forgot-form,
 .login-form {
   padding: 50px 10px;
@@ -6186,6 +6209,39 @@ h1 {
     font-size: 25px;
     line-height: 28px;
   }
+}
+
+.global-error,
+.global-success {
+  position: relative;
+  display: block;
+  background: #30ce20;
+  font-size: 14px;
+  line-height: 17px;
+  position: relative;
+  color: #fff;
+  padding: 5px;
+  font-weight: 600;
+}
+
+.global-error:after,
+.global-success:after {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  content: "\e92f";
+  font-family: 'icomoon';
+  font-size: 18px;
+  line-height: 1;
+  margin: -9px 0 0;
+}
+
+.global-error {
+  background: #f20;
+}
+
+.global-error:after {
+  content: "\e92e";
 }
 
 .btn-default {

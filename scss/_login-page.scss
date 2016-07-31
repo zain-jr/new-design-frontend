@@ -8,6 +8,10 @@
     @include media('<tablet'){
         margin: 20px auto;
     }
+    .global-error,
+    .global-success {
+        margin: 0 -15px;
+    }
 }
 .forgot-form,
 .login-form {
