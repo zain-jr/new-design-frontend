@@ -1313,6 +1313,13 @@ h1 {
     }
   }
 }
+.searchByID {
+  @extend %layout;
+  @include squar(200px, 45px);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 .generic-section {
   padding: 50px 0;
   @extend %layout;
