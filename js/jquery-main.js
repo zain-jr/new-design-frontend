@@ -10,8 +10,14 @@ $(document).ready(function() {
 		$('.propertyNotFound').removeClass('hidden');
 	}
 	$('.addPro-type:first').trigger('change');
-	$('.list-extraFeatures').slideUp();
+	$('.list-extraFeatures, .agent-information').slideUp();
 	$('.registration-form').find('.role-listing').hide();
+
+	if($('.agent-slide').length > 5){
+		$('.agent-societies').find('.btn-prev, .btn-next').css({
+			'display':'block'
+		});
+	}
 });
 
 // page init
@@ -184,7 +190,8 @@ $(document).on('click', '.generic-lightbox>.close, .fancybox-close', function(){
 });
 
 $(document).keyup(function(e) {
-  if (e.keyCode === 27){ 
+  if (e.keyCode === 27){
+	  	$('.fancybox-overlay-fixed').hide();
   		$('#wrapper').removeClass('fancy-overlay');
 	}   // esc
 });
@@ -305,9 +312,12 @@ $(document).on('keyup', '#search-society', function(){
 $('.hidden-checkfield').change(function(){
     if($(this).is(":checked")) {
         $('.registration-form').addClass("agent-info");
+		$('.agent-information').slideDown();
+		
     } else {
         $('.registration-form').removeClass("agent-info");
 		$('.company-logo').removeClass('hover');
+		$('.agent-information').slideUp();
 		$('.picture-holder').css({
 			'display':'none'
 		});
@@ -341,12 +351,14 @@ $(document).on('change', '.agent-brokerCheckbox', function(){
 			$(this).prop('checked', true);
 		});
 		$('.registration-form').addClass('agent-info')
+		$('.agent-information').slideDown();
 	}
 	else {
 		$('.agent-brokerCheckbox').each(function(){
 			$(this).prop('checked', false);
 			$('.registration-form').removeClass('agent-info')
 		});
+		$('.agent-information').slideUp();
 	}
 	countCheckedRoles();
 });

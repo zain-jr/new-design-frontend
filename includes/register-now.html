@@ -4,8 +4,9 @@
         <div class="layout">
             <div class="layout-holder">
                 <label for="f-name">First Name</label>
-                <div class="input-holder">
+                <div class="input-holder error">
                     <input type="text" id="f-name" placeholder="First Name">
+                    <span class="error-text">please fill out this field</span>
                 </div>
             </div>
             <div class="layout-holder">
@@ -51,16 +52,16 @@
             </div>
         </div>
         <div class="layout two">
-            <div class="layout-holder">
-                <label for="address">Other Roles</label>
-                <div class="input-holder">
-                    <a class="role-opener">0 Selected</a>
-                </div>
-            </div>
-            <div class="layout-holder">
+            <div class="layout-holder phone-num">
                 <label for="p-number">Phone Number</label>
                 <div class="input-holder">
                     <input type="tel" id="p-number" placeholder="Phone Number">
+                </div>
+            </div>
+            <div class="layout-holder otherRole">
+                <label for="address">Other Roles</label>
+                <div class="input-holder">
+                    <a class="role-opener">0 Selected</a>
                 </div>
             </div>
         </div>
@@ -257,19 +258,19 @@
                 <div class="layout-holder">
                     <label for="compny-phone">Phone Number</label>
                     <div class="input-holder">
-                        <input type="tel" placeholder="Enter Company Phone Number" name="companyPhone" id="compny-phone" required>
+                        <input type="tel" placeholder="Company Phone Number" name="companyPhone" id="compny-phone" required>
                     </div>
                 </div>
                 <div class="layout-holder">
                     <label for="compny-mobile">Mobile Number</label>
                     <div class="input-holder">
-                        <input type="tel" placeholder="Enter Company Mobile Number" name="companyMobile" id="compny-mobile" required>
+                        <input type="tel" placeholder="Company Mobile Number" name="companyMobile" id="compny-mobile" required>
                     </div>
                 </div>
                 <div class="layout-holder">
                     <label for="compny-email">Company E-mail</label>
                     <div class="input-holder">
-                        <input type="email" placeholder="Enter Company Email" name="companyEmail" id="compny-email" required>
+                        <input type="email" placeholder="Company Email" name="companyEmail" id="compny-email" required>
                     </div>
                 </div>
             </div>
@@ -277,7 +278,7 @@
                 <div class="layout-holder">
                     <label for="compny-address">Company Address</label>
                     <div class="input-holder">
-                        <input type="text" placeholder="Enter Company Address" name="companyAddress" id="compny-address" required>
+                        <input type="text" placeholder="Company Address" name="companyAddress" id="compny-address" required>
                     </div>
                 </div>
             </div>

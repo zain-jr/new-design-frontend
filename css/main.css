@@ -776,7 +776,8 @@ th {
 .propertyDetail-page .propertyImage-slider .propertyImage-slide a,
 .propertyDetail-page .propertyImage-slider .slide a, .agent-detail-page .overview-section,
 .propertyDetail-page .overview-section, .agent-detail-page .extra-feature-section .small-heading,
-.propertyDetail-page .extra-feature-section .small-heading, .agent-detail-page .agent-picture,
+.propertyDetail-page .extra-feature-section .small-heading, .agent-detail-page .agent-societies .agent-slide a,
+.propertyDetail-page .agent-societies .agent-slide a, .agent-detail-page .agent-picture,
 .propertyDetail-page .agent-picture, .addProperty-form .extra-features, .addProperty-form .existingOrNew-member li, .addProperty-form .list-extraFeatures .feature-heading, .registerNow .role-opener, .forgot-form .buttons-holder li a,
 .login-form .buttons-holder li a, .global-error,
 .global-success, .custom-withouChecks .fake-label, h1, .loginRegister li, .main-visualSection, #nav .main-navigation li, .news-carousel .news-pagination ul, .topSocities-holder .socities li a, .heading, .agents-logo li a, .premiumProperty, .public-ui-features li strong, .generic-lightbox, .login-heading,
@@ -810,7 +811,8 @@ th {
   text-transform: lowercase;
 }
 
-.text-capital, .propertyNotFound .no-heading, .addProperty-form .layout label, .addProperty-form .agent-listing-page #content label, .agent-listing-page .addProperty-form #content label, .addProperty-form .existingOrNew-member, .registerNow .layout label, .registerNow .agent-listing-page #content label, .agent-listing-page .registerNow #content label, .forgot-form .layout label, .forgot-form .agent-listing-page #content label, .agent-listing-page .forgot-form #content label,
+.text-capital, .propertyNotFound .no-heading, .agent-detail-page .agent-societies .agent-slide .image-description,
+.propertyDetail-page .agent-societies .agent-slide .image-description, .addProperty-form .layout label, .addProperty-form .agent-listing-page #content label, .agent-listing-page .addProperty-form #content label, .addProperty-form .existingOrNew-member, .registerNow .layout label, .registerNow .agent-listing-page #content label, .agent-listing-page .registerNow #content label, .forgot-form .layout label, .forgot-form .agent-listing-page #content label, .agent-listing-page .forgot-form #content label,
 .login-form .layout label,
 .login-form .agent-listing-page #content label, .agent-listing-page
 .login-form #content label, .global-error,
@@ -873,7 +875,8 @@ th {
 .agent-listing-page .publicProperty-post .caption,
 .listing-page .publicAgent-post .caption,
 .listing-page .publicProperty-post .caption, .agent-listing-page .artical-holder, .propertyNotFound, .agent-detail-page,
-.propertyDetail-page, .agent-detail-page .info-blockAgent .pictureHolder,
+.propertyDetail-page, .agent-detail-page .detail-holder,
+.propertyDetail-page .detail-holder, .agent-detail-page .info-blockAgent .pictureHolder,
 .agent-detail-page .info-blockProperty .pictureHolder,
 .propertyDetail-page .info-blockAgent .pictureHolder,
 .propertyDetail-page .info-blockProperty .pictureHolder, .agent-detail-page .propertyImage-pagination,
@@ -2359,10 +2362,10 @@ input[type='submit'] {
 }
 
 .agent-listing-page .publicAgent-post .image-holder img {
-  max-width: 190px;
-  min-height: 190px;
-  max-height: 190px;
-  min-height: 190px;
+  max-width: 150px;
+  min-width: 150px;
+  max-height: 150px;
+  min-height: 150px;
 }
 
 .agent-listing-page .publicAgent-post .caption {
@@ -2374,12 +2377,18 @@ input[type='submit'] {
 }
 
 .agent-listing-page .publicAgent-post .caption p {
-  min-height: 67px;
+  min-height: 32px;
+}
+
+@media (max-width: 1199px) {
+  .agent-listing-page .publicAgent-post .caption p {
+    min-height: 27px;
+  }
 }
 
 @media (max-width: 767px) {
   .agent-listing-page .publicAgent-post .caption p {
-    min-height: 82px;
+    min-height: 42px;
   }
 }
 
@@ -2435,6 +2444,10 @@ input[type='submit'] {
   font-size: 16px;
   line-height: 16px;
   letter-spacing: 0;
+}
+
+.agent-listing-page .publicAgent-post .caption .quick-links span[class^="icon-empty-envelop"], .agent-listing-page .publicAgent-post .caption .quick-links span[class*="icon-empty-envelop"] {
+  margin: 0 0 0 -2px;
 }
 
 .agent-listing-page .publicAgent-post .caption .quick-links li {
@@ -2591,7 +2604,6 @@ input[type='submit'] {
   margin: 0 0 50px;
   position: relative;
   background: #dee1e3;
-  overflow: hidden;
 }
 
 @media (max-width: 1023px) {
@@ -3076,7 +3088,6 @@ input[type='submit'] {
 .propertyDetail-page .propertyImage-slider {
   position: relative;
   width: 100%;
-  padding: 5px 0 0;
 }
 
 .agent-detail-page .propertyImage-pagination .add-to-favorite,
@@ -3472,7 +3483,19 @@ input[type='submit'] {
 
 .agent-detail-page .feature-list li .text-feature,
 .propertyDetail-page .feature-list li .text-feature {
-  padding: 0 0 0 30px;
+  padding: 0 0 0 15px;
+}
+
+.agent-detail-page .feature-list li .text-feature:after,
+.propertyDetail-page .feature-list li .text-feature:after {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  border: 5px solid transparent;
+  border-left: 5px solid #6c6d70;
+  content: '';
+  width: 5px;
+  height: 5px;
 }
 
 .agent-detail-page .feature-list li .stataus,
@@ -3550,6 +3573,8 @@ input[type='submit'] {
   background: #fff;
   padding: 3px;
   margin: 0 auto;
+  text-decoration: none;
+  color: #2092d0;
 }
 
 .agent-detail-page .agent-societies .agent-slide a:after,
@@ -3567,6 +3592,19 @@ input[type='submit'] {
   display: inline-block;
   vertical-align: middle;
   white-space: normal;
+  margin: 0 0 0 -4px;
+}
+
+.agent-detail-page .agent-societies .agent-slide .image-description,
+.propertyDetail-page .agent-societies .agent-slide .image-description {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  word-break: break-all;
+  white-space: normal;
+  margin: 0 0 0 -4px;
 }
 
 .agent-detail-page .agent-societies .small-heading,
@@ -3594,6 +3632,7 @@ input[type='submit'] {
   top: 50%;
   left: 10px;
   margin: -4px 0 0;
+  display: none;
 }
 
 @media (max-width: 1023px) {
@@ -3768,6 +3807,10 @@ input[type='submit'] {
 .propertyDetail-page .agent-description .star-rating {
   float: none !important;
   margin: 0 auto 10px;
+}
+
+.agent-detail-page .detail-holder {
+  min-height: 710px;
 }
 
 .agent-detail-page .col {
@@ -4233,7 +4276,7 @@ input[type='submit'] {
   -ms-transition: opacity 0.4s ease, visibility 0.4s ease, color 0.4s ease;
   -moz-transition: opacity 0.4s ease, visibility 0.4s ease, color 0.4s ease;
   cursor: pointer;
-  color: #f20;
+  color: #ce2020;
   margin: -25px -25px 0 0;
 }
 
@@ -4383,7 +4426,7 @@ input[type='submit'] {
 .addProperty-form .layout label:after, .addProperty-form .agent-listing-page #content label:after, .agent-listing-page .addProperty-form #content label:after {
   display: inline-block;
   vertical-align: top;
-  color: #f20;
+  color: #ce2020;
   content: '*';
 }
 
@@ -4693,8 +4736,8 @@ input[type='submit'] {
   margin: 0 auto 30px;
 }
 
-.registerNow .registration-form.agent-info .agent-information {
-  display: block;
+.registerNow .registerNow-heading {
+  margin: 0 0 20px;
 }
 
 .registerNow .registration-form textarea,
@@ -4802,7 +4845,7 @@ input[type='submit'] {
   line-height: 22px;
   display: block;
   padding: 10px 35px;
-  margin: 15px 0 0;
+  margin: 15px 0 0 auto;
   transition: background 0.5s ease;
   -webkit-transition: background 0.5s ease;
   -moz-transition: background 0.5s ease;
@@ -4855,7 +4898,7 @@ input[type='submit'] {
 }
 
 .registerNow .layout.two .layout-holder, .registerNow .agent-listing-page .two#content .layout-holder, .agent-listing-page .registerNow .two#content .layout-holder {
-  width: 40%;
+  width: 29.5%;
 }
 
 @media (max-width: 1199px) {
@@ -4872,7 +4915,7 @@ input[type='submit'] {
 }
 
 .registerNow .layout.two .layout-holder:first-child, .registerNow .agent-listing-page .two#content .layout-holder:first-child, .agent-listing-page .registerNow .two#content .layout-holder:first-child {
-  width: 60%;
+  width: 70.5%;
 }
 
 @media (max-width: 1199px) {
@@ -4884,6 +4927,42 @@ input[type='submit'] {
 @media (max-width: 767px) {
   .registerNow .layout.two .layout-holder:first-child, .registerNow .agent-listing-page .two#content .layout-holder:first-child, .agent-listing-page .registerNow .two#content .layout-holder:first-child {
     width: 100%;
+    display: block;
+  }
+}
+
+.registerNow .layout.two .phone-num, .registerNow .agent-listing-page .two#content .phone-num, .agent-listing-page .registerNow .two#content .phone-num {
+  width: 29.5% !important;
+  float: right;
+}
+
+@media (max-width: 1199px) {
+  .registerNow .layout.two .phone-num, .registerNow .agent-listing-page .two#content .phone-num, .agent-listing-page .registerNow .two#content .phone-num {
+    width: 50% !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .registerNow .layout.two .phone-num, .registerNow .agent-listing-page .two#content .phone-num, .agent-listing-page .registerNow .two#content .phone-num {
+    width: 100% !important;
+    display: block;
+  }
+}
+
+.registerNow .layout.two .otherRole, .registerNow .agent-listing-page .two#content .otherRole, .agent-listing-page .registerNow .two#content .otherRole {
+  width: 70.5% !important;
+  float: left;
+}
+
+@media (max-width: 1199px) {
+  .registerNow .layout.two .otherRole, .registerNow .agent-listing-page .two#content .otherRole, .agent-listing-page .registerNow .two#content .otherRole {
+    width: 50% !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .registerNow .layout.two .otherRole, .registerNow .agent-listing-page .two#content .otherRole, .agent-listing-page .registerNow .two#content .otherRole {
+    width: 100% !important;
     display: block;
   }
 }
@@ -4982,7 +5061,7 @@ input[type='submit'] {
   font-size: 0;
   line-height: 0;
   letter-spacing: -4px;
-  margin: 0 0 10px;
+  margin: 0 0 20px;
 }
 
 .registerNow .layout .layout-holder .full-width > *, .registerNow .agent-listing-page #content .layout-holder .full-width > *, .agent-listing-page .registerNow #content .layout-holder .full-width > * {
@@ -5043,7 +5122,7 @@ input[type='submit'] {
 .registerNow .layout label:after, .registerNow .agent-listing-page #content label:after, .agent-listing-page .registerNow #content label:after {
   display: inline-block;
   vertical-align: top;
-  color: #f20;
+  color: #ce2020;
   content: '*';
 }
 
@@ -5304,7 +5383,7 @@ input[type='submit'] {
   top: 50%;
   left: 50%;
   z-index: 11;
-  color: #f20;
+  color: #ce2020;
   font-size: 30px;
   line-height: 1;
   margin: -15px 0 0 -15px;
@@ -5349,6 +5428,7 @@ input[type='submit'] {
   max-height: 115px;
   overflow-x: hidden;
   overflow-y: auto;
+  background: #dee1e3;
 }
 
 @media (max-width: 767px) {
@@ -5416,15 +5496,13 @@ input[type='submit'] {
   cursor: pointer;
 }
 
-.registerNow .packetData .delete:hover {
-  color: #f20;
-  border-color: #f20;
-}
-
 .registerNow .role-listing {
   font-size: 0;
   line-height: 0;
   letter-spacing: -4px;
+  background: #dee1e3;
+  padding: 10px 10px 0;
+  margin: 0 0 20px;
 }
 
 .registerNow .role-listing > * {
@@ -5447,15 +5525,15 @@ input[type='submit'] {
 }
 
 .registerNow .agent-information {
-  border: 1px solid #777;
+  border: 1px solid rgba(119, 119, 119, 0.5);
   border-radius: 8px;
   margin: 10px 0;
   padding: 5px;
-  display: none;
 }
 
 .registerNow .agent-information .registerNow-heading {
-  margin: 0 0 10px;
+  margin: 0 0 20px;
+  padding: 0 0 5px;
 }
 
 .registerNow .agree-with-terms {
@@ -5777,7 +5855,7 @@ input[type='submit'] {
 .login-form #content label:after {
   display: inline-block;
   vertical-align: top;
-  color: #f20;
+  color: #ce2020;
   content: '*';
 }
 
@@ -5876,6 +5954,11 @@ input[type='submit'] {
 .forgot-form button:hover,
 .login-form button:hover {
   background: #30ce20;
+}
+
+.forgot-form .buttons-holder li {
+  width: 100%;
+  display: block;
 }
 
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
@@ -6173,9 +6256,9 @@ html.nav-active {
 body {
   width: 100%;
   height: 100%;
-  background: url("../images/bg.jpg") no-repeat;
+  background: #525252 url("../images/bg.jpg") no-repeat;
   background-attachment: fixed;
-  background-size: 100% 100%;
+  background-size: 100% auto;
   z-index: 999999999;
   position: relative;
 }
@@ -6237,7 +6320,7 @@ h1 {
 }
 
 .global-error {
-  background: #f20;
+  background: #ce2020;
 }
 
 .global-error:after {
@@ -6254,6 +6337,7 @@ h1 {
   color: #fff;
   background: #2092d0;
   padding: 10px 25px;
+  border: 0;
   transition: background 0.4s ease;
   -webkit-transition: background 0.4s ease;
   -moz-transition: background 0.4s ease;
@@ -6947,6 +7031,17 @@ h1 span {
   right: 3px;
   z-index: 98;
   display: none;
+  padding: 10px 0 0;
+}
+
+.dropDown:after {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border: 5px solid transparent;
+  border-bottom: 5px solid #41a9e2;
+  content: '';
+  margin: 0 0 0 -4px;
 }
 
 @media (max-width: 767px) {
@@ -6981,19 +7076,10 @@ h1 span {
 }
 
 .dropDown li a {
+  border-width: 0 2px 0;
+  border-color: #2092d0;
+  border-style: solid;
   border-radius: 0;
-}
-
-.main-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
 }
 
 .main-bg-holder {
@@ -9506,16 +9592,20 @@ h1 span {
   width: 100%;
 }
 
-.error-text {
-  display: none;
-  font-size: 13px;
-  line-height: 16px;
-  color: #f20;
-  padding: 2px;
+.input-holder.error input[type="text"], .input-holder.error input[type="tel"], .input-holder.error input[type="password"], .input-holder.error input[type="url"], .input-holder.error input[type="email"], .input-holder.error input[type="number"] {
+  border: 1px solid #ce2020 !important;
 }
 
-.error .error-text {
+.input-holder.error .error-text {
   display: block;
+}
+
+.error-text {
+  display: none;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ce2020;
+  padding: 2px;
 }
 
 .login-heading,

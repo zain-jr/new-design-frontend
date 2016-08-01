@@ -50,9 +50,9 @@ html {
 body{
   width: 100%;
   height: 100%;
-  background: url('../images/bg.jpg') no-repeat;
+  background:#525252 url('../images/bg.jpg') no-repeat;
   background-attachment: fixed;
-  background-size: 100% 100%;
+  background-size: 100% auto;
   z-index: 999999999;
   position: relative;
 
@@ -119,6 +119,7 @@ h1 {
   color: $white;
   background: $p42-color;
   padding: 10px 25px;
+  border: 0;
   transition: background 0.4s ease;
   -webkit-transition: background 0.4s ease;
   -moz-transition: background 0.4s ease;
@@ -649,6 +650,17 @@ h1 {
   right: 3px;
   z-index: 98;
   display: none;
+  padding: 10px 0 0;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border: 5px solid transparent;
+    border-bottom: 5px solid lighten($p42-color, 10%);
+    content: '';
+    margin: 0 0 0 -4px;
+  }
 
   @include media('<tablet'){
     width: 150px;
@@ -676,21 +688,12 @@ h1 {
     }
 
     a {
+      border-width: 0 2px 0;
+      border-color: $p42-color;
+      border-style: solid;
       border-radius: 0;
     }
   }
-}
-.main-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-size: cover;
-  @extend img-res;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
 }
 .main-bg-holder {
   width: 100%;
@@ -2596,16 +2599,23 @@ h1 {
     }
   }
 }
-.error-text {
-  display: none;
-  @include font(13,16);
-  color: $red;
-  padding: 2px;
-
-  .error & {
-    display: block;
+.input-holder {
+  &.error{
+    input[type="text"],input[type="tel"],input[type="password"],input[type="url"], input[type="email"],input[type="number"]{
+      border: 1px solid $red !important;
+    }
+    .error-text {
+      display: block;
+    }
   }
 }
+.error-text {
+  display: none;
+  @include font(12,15);
+  color: $red;
+  padding: 2px;
+}
+
 .login-heading,
 .registerNow-heading,
 .add-pro-heading {

@@ -5,12 +5,13 @@
     padding: 20px 10px;
     margin: 0 auto 30px;
 
+    .registerNow-heading {
+        margin: 0 0 20px;
+    }
+
     .registration-form {
         @extend %layout;
-        
-        &.agent-info {
-            .agent-information { display: block;}
-        }
+
         textarea,
         input[type="text"],input[type="tel"],input[type="password"],input[type="number"],input[type="email"]{
             border: 0;
@@ -48,7 +49,7 @@
             @include font(18,22);
             display: block;
             padding: 10px 35px;
-            margin: 15px 0 0;
+            margin: 15px 0 0 auto;
             transition: background 0.5s ease;
             -webkit-transition: background 0.5s ease;
             -moz-transition: background 0.5s ease;
@@ -84,7 +85,7 @@
 
         &.two {
             .layout-holder {
-                width: 40%;
+                width: 29.5%;
                 
                 @include media('<widescreen'){
                     width: 50%;
@@ -95,7 +96,7 @@
                 }
                 
                 &:first-child{
-                    width: 60%;
+                    width: 70.5%;
 
                     @include media('<widescreen'){
                         width: 50%;
@@ -104,6 +105,30 @@
                        width: 100%;
                         display: block;
                     }
+                }
+            }
+            .phone-num {
+                width: 29.5% !important;
+                float: right;
+                
+                @include media('<widescreen'){
+                    width: 50% !important;
+                }
+                @include media('<tablet'){
+                    width: 100% !important;
+                    display: block;
+                }
+            }
+            .otherRole {
+                width: 70.5% !important;
+                float: left;
+
+                @include media('<widescreen'){
+                    width: 50% !important;
+                }
+                @include media('<tablet'){
+                    width: 100% !important;
+                    display: block;
                 }
             }
         }
@@ -158,7 +183,7 @@
 
             .full-width {
                 @include align-reset(top, 13, 16);
-                margin: 0 0 10px;
+                margin: 0 0 20px;
             }
         }
         .input-holder {
@@ -469,6 +494,7 @@
         max-height: 115px;
         overflow-x: hidden;
         overflow-y: auto;
+        background: $p42-background;
         
         @include media('<tablet'){
             padding: 0;
@@ -520,11 +546,6 @@
             margin: -8px 0 0;
             border: 1px solid $white;
             cursor: pointer;
-
-            &:hover {
-                color: $red;
-                border-color: $red;
-            }
         }
     }
 
@@ -532,6 +553,9 @@
         @extend %listreset;
         @extend %layout;
         @include align-reset(top,13,16);
+        background: $p42-background;
+        padding: 10px 10px 0;
+        margin: 0 0 20px;
 
         li {
             width: 25%;
@@ -544,15 +568,15 @@
     }
 
     .agent-information {
-        border: 1px solid $darken-grey;
+        border: 1px solid rgba($darken-grey, 0.5);
         border-radius: 8px;
         @extend %layout;
         margin: 10px 0;
         padding: 5px;
-        display: none;
 
         .registerNow-heading {
-            margin: 0 0 10px;
+            margin: 0 0 20px;
+            padding: 0 0 5px;
         }
     }
     .agree-with-terms {
