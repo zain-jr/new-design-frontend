@@ -390,15 +390,23 @@ h1 {
       }
     }
     .right-sideTop {
+
       @include media('<desktop'){
         width: 30%;
+
+        .loginRegister {
+          li {
+            a{
+              min-height: 50px;
+            }
+          }
+        }
       }
     }
     .social-icons {
-      padding: 15px 0 0;
 
        @include media('<desktop'){
-         padding: 35px 0 0;
+         padding: 50px 0 0;
       }
     }
   }
@@ -408,7 +416,7 @@ h1 {
     width: 100%;
     display: block;
     @extend %clearfix;
-    padding: 20px 12px 0;
+    padding: 8px 12px 0;
     transition: padding 0.5s ease;
     -webkit-transition: padding 0.5s ease;
     -moz-transition: padding 0.5s ease;
@@ -420,7 +428,19 @@ h1 {
   }
   .social-icons {
     float: left;
-    padding: 10px 0 0;
+    padding: 24px 0 0;
+
+    @include media('<tvscreen'){
+      padding:31px 0 0;
+    }
+
+    @include media('<widescreen'){
+      padding:36px 0 0;
+    }
+
+    li {
+      margin: 0 0 5px;
+    }
   }
   .right-sideTop {
     float: right;
@@ -1314,16 +1334,146 @@ h1 {
   }
 }
 .searchByID {
+  @include squar(200px, 37px);
   @extend %layout;
-  @include squar(200px, 45px);
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 35px;
+  left: 270px;
+  z-index: 981;
+
+  .byDefault-fixed &,
+  .fixed-position &{
+
+    @include media('<tvscreen'){
+      @include squar(150px, 45px);
+      left: 242px;
+
+      input[type="text"],input[type="search"]{
+        @include squar(100%, 45px);    
+      }
+    }
+
+    @include media('<widescreen'){
+      left: 205px;
+
+      button {
+        span[class^="icon-"],span[class*="icon-"]{
+          line-height: 45px;
+        }
+      }
+    }
+
+    @include media('<desktop'){
+      left: 20px;
+      top:10px;
+      @include squar(150px, 37px);
+
+      input[type="text"],input[type="search"]{
+        @include squar(100%, 37px);
+      }
+      button {
+        span[class^="icon-"],span[class*="icon-"]{
+          line-height: 37px;
+        }
+      }
+    }
+
+    @include media('<tablet'){
+      top: 10px;
+      left: 50%;
+      margin: 0 0 0 -75px;
+
+      input[type="text"],input[type="search"]{
+        color: $white;
+        border: 1px solid $white;
+      }
+      button {
+        color: $white;
+      }
+    }
+  }
+
+  @include media('<widescreen'){
+    left:200px;
+    top:35px;
+    @include squar(140px, 45px);
+  }
+
+  @include media('<desktop'){
+    @include squar(150px, 37px);
+  }
+
+  @include media('<tablet'){
+    top: 10px;
+    left: 50%;
+    margin: 0 0 0 -75px;
+  }
+
+  input[type="text"],input[type="search"]{
+    @include squar(100%, 37px);
+    display: block;
+    color: $p42-default-grey;
+    background: transparent;
+    padding: 8px 35px 8px 8px;
+    border-radius: 2px;
+    @include font(14,17);
+    font-weight: 700;
+    border: 1px solid $p42-default-grey;
+    opacity: 0.5;
+    
+    @include media('<widescreen'){
+      @include squar(100%, 37px);
+      padding: 8px 35px 8px 8px;
+    }
+
+    @include media('<tablet'){
+      color: $white;
+      border: 1px solid $white;
+    }
+
+    &:focus {
+      opacity: 1;
+
+      ~ button {
+        opacity: 1;
+      }
+    }
+
+    @include placeholder{
+      color: $p42-default-grey;
+
+      @include media('<tablet'){
+        color: $white;
+      }
+    }
+  }
 
   button{
     position: absolute;
-    top: 50%;
-    right: 0;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    border: 0;
+    background: transparent;
+    color: $p42-default-grey;
+    padding: 0;
+    opacity: 0.5;
+    
+    @include media('<tablet'){
+      color: $white;
+    }
+
+    span[class^="icon-"],span[class*="icon-"]{
+      font-size: 20px;
+      line-height: 37px;
+
+      @include media('<widescreen'){
+        line-height: 15px;
+      }
+      @include media('<desktop'){
+        line-height: 37px;
+      }
+    }
   }
 }
 .generic-section {

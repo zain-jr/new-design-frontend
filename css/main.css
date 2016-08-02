@@ -2369,7 +2369,7 @@ input[type='submit'] {
 }
 
 .agent-listing-page .publicAgent-post .caption {
-  padding: 0 0 5px 5px;
+  padding: 0 0 0 5px;
 }
 
 .agent-listing-page .publicAgent-post .caption .layout, .agent-listing-page .publicAgent-post .caption #content {
@@ -6650,15 +6650,14 @@ h1 span {
   .byDefault-fixed #header .right-sideTop, #header.fixed-position .right-sideTop {
     width: 30%;
   }
-}
-
-.byDefault-fixed #header .social-icons, #header.fixed-position .social-icons {
-  padding: 15px 0 0;
+  .byDefault-fixed #header .right-sideTop .loginRegister li a, #header.fixed-position .right-sideTop .loginRegister li a {
+    min-height: 50px;
+  }
 }
 
 @media (max-width: 1023px) {
   .byDefault-fixed #header .social-icons, #header.fixed-position .social-icons {
-    padding: 35px 0 0;
+    padding: 50px 0 0;
   }
 }
 
@@ -6666,7 +6665,7 @@ h1 span {
   position: relative;
   width: 100%;
   display: block;
-  padding: 20px 12px 0;
+  padding: 8px 12px 0;
   transition: padding 0.5s ease;
   -webkit-transition: padding 0.5s ease;
   -moz-transition: padding 0.5s ease;
@@ -6681,7 +6680,23 @@ h1 span {
 
 #header .social-icons {
   float: left;
-  padding: 10px 0 0;
+  padding: 24px 0 0;
+}
+
+@media (max-width: 1539px) {
+  #header .social-icons {
+    padding: 31px 0 0;
+  }
+}
+
+@media (max-width: 1199px) {
+  #header .social-icons {
+    padding: 36px 0 0;
+  }
+}
+
+#header .social-icons li {
+  margin: 0 0 5px;
 }
 
 #header .right-sideTop {
@@ -7869,16 +7884,226 @@ h1 span {
 
 .searchByID {
   width: 200px;
-  height: 45px;
+  height: 37px;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 35px;
+  left: 270px;
+  z-index: 981;
+}
+
+@media (max-width: 1539px) {
+  .byDefault-fixed .searchByID,
+  .fixed-position .searchByID {
+    width: 150px;
+    height: 45px;
+    left: 242px;
+  }
+  .byDefault-fixed .searchByID input[type="text"], .byDefault-fixed .searchByID input[type="search"],
+  .fixed-position .searchByID input[type="text"],
+  .fixed-position .searchByID input[type="search"] {
+    width: 100%;
+    height: 45px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .byDefault-fixed .searchByID,
+  .fixed-position .searchByID {
+    left: 205px;
+  }
+  .byDefault-fixed .searchByID button span[class^="icon-"], .byDefault-fixed .searchByID button span[class*="icon-"],
+  .fixed-position .searchByID button span[class^="icon-"],
+  .fixed-position .searchByID button span[class*="icon-"] {
+    line-height: 45px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .byDefault-fixed .searchByID,
+  .fixed-position .searchByID {
+    left: 20px;
+    top: 10px;
+    width: 150px;
+    height: 37px;
+  }
+  .byDefault-fixed .searchByID input[type="text"], .byDefault-fixed .searchByID input[type="search"],
+  .fixed-position .searchByID input[type="text"],
+  .fixed-position .searchByID input[type="search"] {
+    width: 100%;
+    height: 37px;
+  }
+  .byDefault-fixed .searchByID button span[class^="icon-"], .byDefault-fixed .searchByID button span[class*="icon-"],
+  .fixed-position .searchByID button span[class^="icon-"],
+  .fixed-position .searchByID button span[class*="icon-"] {
+    line-height: 37px;
+  }
+}
+
+@media (max-width: 767px) {
+  .byDefault-fixed .searchByID,
+  .fixed-position .searchByID {
+    top: 10px;
+    left: 50%;
+    margin: 0 0 0 -75px;
+  }
+  .byDefault-fixed .searchByID input[type="text"], .byDefault-fixed .searchByID input[type="search"],
+  .fixed-position .searchByID input[type="text"],
+  .fixed-position .searchByID input[type="search"] {
+    color: #fff;
+    border: 1px solid #fff;
+  }
+  .byDefault-fixed .searchByID button,
+  .fixed-position .searchByID button {
+    color: #fff;
+  }
+}
+
+@media (max-width: 1199px) {
+  .searchByID {
+    left: 200px;
+    top: 35px;
+    width: 140px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .searchByID {
+    width: 150px;
+    height: 37px;
+  }
+}
+
+@media (max-width: 767px) {
+  .searchByID {
+    top: 10px;
+    left: 50%;
+    margin: 0 0 0 -75px;
+  }
+}
+
+.searchByID input[type="text"], .searchByID input[type="search"] {
+  width: 100%;
+  height: 37px;
+  display: block;
+  color: #6c6d70;
+  background: transparent;
+  padding: 8px 35px 8px 8px;
+  border-radius: 2px;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+  border: 1px solid #6c6d70;
+  opacity: 0.5;
+}
+
+@media (max-width: 1199px) {
+  .searchByID input[type="text"], .searchByID input[type="search"] {
+    width: 100%;
+    height: 37px;
+    padding: 8px 35px 8px 8px;
+  }
+}
+
+@media (max-width: 767px) {
+  .searchByID input[type="text"], .searchByID input[type="search"] {
+    color: #fff;
+    border: 1px solid #fff;
+  }
+}
+
+.searchByID input[type="text"]:focus, .searchByID input[type="search"]:focus {
+  opacity: 1;
+}
+
+.searchByID input[type="text"]:focus ~ button, .searchByID input[type="search"]:focus ~ button {
+  opacity: 1;
+}
+
+.searchByID input[type="text"]::-webkit-input-placeholder, .searchByID input[type="search"]::-webkit-input-placeholder {
+  color: #6c6d70;
+}
+
+@media (max-width: 767px) {
+  .searchByID input[type="text"]::-webkit-input-placeholder, .searchByID input[type="search"]::-webkit-input-placeholder {
+    color: #fff;
+  }
+}
+
+.searchByID input[type="text"]::-moz-placeholder, .searchByID input[type="search"]::-moz-placeholder {
+  opacity: 1;
+  color: #6c6d70;
+}
+
+@media (max-width: 767px) {
+  .searchByID input[type="text"]::-moz-placeholder, .searchByID input[type="search"]::-moz-placeholder {
+    color: #fff;
+  }
+}
+
+.searchByID input[type="text"]:-moz-placeholder, .searchByID input[type="search"]:-moz-placeholder {
+  color: #6c6d70;
+}
+
+@media (max-width: 767px) {
+  .searchByID input[type="text"]:-moz-placeholder, .searchByID input[type="search"]:-moz-placeholder {
+    color: #fff;
+  }
+}
+
+.searchByID input[type="text"]:-ms-input-placeholder, .searchByID input[type="search"]:-ms-input-placeholder {
+  color: #6c6d70;
+}
+
+@media (max-width: 767px) {
+  .searchByID input[type="text"]:-ms-input-placeholder, .searchByID input[type="search"]:-ms-input-placeholder {
+    color: #fff;
+  }
+}
+
+.searchByID input[type="text"].placeholder, .searchByID input[type="search"].placeholder {
+  color: #6c6d70;
+}
+
+@media (max-width: 767px) {
+  .searchByID input[type="text"].placeholder, .searchByID input[type="search"].placeholder {
+    color: #fff;
+  }
 }
 
 .searchByID button {
   position: absolute;
-  top: 50%;
-  right: 0;
+  top: 0;
+  bottom: 0;
+  right: 10px;
+  border: 0;
+  background: transparent;
+  color: #6c6d70;
+  padding: 0;
+  opacity: 0.5;
+}
+
+@media (max-width: 767px) {
+  .searchByID button {
+    color: #fff;
+  }
+}
+
+.searchByID button span[class^="icon-"], .searchByID button span[class*="icon-"] {
+  font-size: 20px;
+  line-height: 37px;
+}
+
+@media (max-width: 1199px) {
+  .searchByID button span[class^="icon-"], .searchByID button span[class*="icon-"] {
+    line-height: 15px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .searchByID button span[class^="icon-"], .searchByID button span[class*="icon-"] {
+    line-height: 37px;
+  }
 }
 
 .generic-section {
