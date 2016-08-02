@@ -10,7 +10,6 @@ $(document).ready(function() {
 		$('.propertyNotFound').removeClass('hidden');
 	}
 	$('.addPro-type:first').trigger('change');
-	$('.list-extraFeatures, .agent-information').slideUp();
 	$('.registration-form').find('.role-listing').hide();
 
 	if($('.agent-slide').length > 5){
