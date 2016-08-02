@@ -774,8 +774,7 @@ th {
 .propertyDetail-page .propertyImage-pagination .propertyImage-slide a,
 .propertyDetail-page .propertyImage-pagination .slide a,
 .propertyDetail-page .propertyImage-slider .propertyImage-slide a,
-.propertyDetail-page .propertyImage-slider .slide a, .agent-detail-page .overview-section,
-.propertyDetail-page .overview-section, .agent-detail-page .extra-feature-section .small-heading,
+.propertyDetail-page .propertyImage-slider .slide a, .agent-detail-page .extra-feature-section .small-heading,
 .propertyDetail-page .extra-feature-section .small-heading, .agent-detail-page .agent-societies .agent-slide a,
 .propertyDetail-page .agent-societies .agent-slide a, .agent-detail-page .agent-picture,
 .propertyDetail-page .agent-picture, .addProperty-form .extra-features, .addProperty-form .existingOrNew-member li, .addProperty-form .list-extraFeatures .feature-heading, .registerNow .role-opener, .forgot-form .buttons-holder li a,
@@ -792,7 +791,8 @@ th {
 .listing-page .publicProperty-post .caption h1, .agent-detail-page .agent-detail-holder h1,
 .agent-detail-page .property-picture-holder h1,
 .propertyDetail-page .agent-detail-holder h1,
-.propertyDetail-page .property-picture-holder h1, .agent-detail-page .overview-section .small-heading,
+.propertyDetail-page .property-picture-holder h1, .agent-detail-page .overview-section,
+.propertyDetail-page .overview-section, .agent-detail-page .overview-section .small-heading,
 .propertyDetail-page .overview-section .small-heading, .agent-detail-page .feature .small-heading,
 .propertyDetail-page .feature .small-heading, .agent-detail-page .col .list li > span:first-child, .addProperty-form .existingOrNew-member li .slide, .mainSearch-form .inputsHolder, #nav, .topSocities-holder .socities li .caption .numberOfproperties, .inquiry-email-form, .information {
   text-align: left;
@@ -893,7 +893,7 @@ th {
 .propertyDetail-page .overview-section, .agent-detail-page .extra-feature-section,
 .propertyDetail-page .extra-feature-section, .agent-detail-page .feature,
 .propertyDetail-page .feature, .agent-detail-page .agent-description,
-.propertyDetail-page .agent-description, .addProperty-form, .addProperty-form .add-form-holder, .addProperty-form .main-form, .addProperty-form .tips, .addProperty-form .list-extraFeatures, .registerNow, .registerNow .registration-form, .registerNow .company-logo, .registerNow .company-logo .logo-holder, .registerNow .packetData, .registerNow .role-listing, .registerNow .agent-information, .login-page, .forgot-form,
+.propertyDetail-page .agent-description, .agent-detail-page .frame, .addProperty-form, .addProperty-form .add-form-holder, .addProperty-form .main-form, .addProperty-form .tips, .addProperty-form .list-extraFeatures, .registerNow, .registerNow .registration-form, .registerNow .company-logo, .registerNow .company-logo .logo-holder, .registerNow .packetData, .registerNow .role-listing, .registerNow .agent-information, .login-page, .forgot-form,
 .login-form, .fake-select, #wrapper, .logo, .main-visualSection, #main, .page-holder, .mainSearch-form .form-holder, .mainSearch-form .inputsHolder li .input-holder, .byDefault-fixed #nav .main-navigation li a span[class^="icon-"], .byDefault-fixed #nav .main-navigation li a span[class*="icon-"], #nav.fixed-position .main-navigation li a span[class^="icon-"], #nav.fixed-position .main-navigation li a span[class*="icon-"], .searchByID, .generic-section, .news-sliderHolder, .news-slideshow, .news-slideshow .mask, .news-slideshow .slideset, .news-carousel, .news-carousel .news-mask, .news-carousel .news-pagination ul a, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .inquiry-email-form .input-holder, .radio-checks-holder {
   overflow: hidden;
 }

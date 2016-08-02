@@ -311,7 +311,7 @@
     margin: 10px;
     display: block;
     padding: 20px;
-    @extend %text-center;
+    @extend %text-left;
     color: $p42-default-grey;
 
     @include media('<tablet'){
@@ -638,6 +638,8 @@
 .agent-detail-page {
   padding: 5px 5px 55px 5px;
   
+  .frame { @extend %layout;}
+
   .detail-holder {
     min-height: 930px;
     overflow: visible;
