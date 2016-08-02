@@ -41,7 +41,7 @@
     
     @include media('<tablet'){
       max-width: inherit;
-      position: static;
+      position: static !important;
       width: 100%;
       margin: 0 0 10px;
       box-shadow: none;
@@ -90,6 +90,16 @@
       @include font(21,24);
       font-weight: 700;
       margin: 0 0 10px;
+
+      a {
+        color: $p42-color;
+        text-decoration: none;
+        @include align(top);
+
+        &:hover {
+          color: $orange;
+        }
+      }
     }
     .quick-links {
       @extend %pull-right;
@@ -225,6 +235,26 @@
       @include media('<tablet'){
         max-height: inherit;
         min-height: inherit;
+      }
+    }
+  }
+  .propertyImage-slide {
+    &.active {
+      a{
+        &:after{ @extend .hidden;}
+      }
+    }
+    a{
+      position: relative;
+      &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 54;
+        background: rgba($white, 0.7);
+        content: '';
       }
     }
   }
@@ -606,8 +636,12 @@
   }
 }
 .agent-detail-page {
+  padding: 5px 5px 55px 5px;
+  
   .detail-holder {
-    min-height: 710px;
+    min-height: 930px;
+    overflow: visible;
+    @extend %clearfix;
   }
 
   .col {

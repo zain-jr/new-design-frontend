@@ -379,10 +379,11 @@
     }
     .image-holder {
       img{
+        @extend %img-res;
         max-width: 150px;
         min-width: 150px;
-        max-height: 150px;
-        min-height: 150px;
+        max-height: 153px;
+        min-height: 153px;
       }
     }
     .caption {

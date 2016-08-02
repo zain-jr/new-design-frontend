@@ -15,7 +15,7 @@
 </head>
 <body>
 	<div id="wrapper">
-		<div class="main-bg-holder">
+		<div class="main-bg-holder byDefault-fixed">
 			<header id="header">
 				<div class="top-bar">
 					<ul class="social-icons">
@@ -44,7 +44,7 @@
 				</div>
 				<div class="logo"><a href="#"><img src="images/logo.png" width="477" height="150" alt="Property42"></a></div>
 			</header>
-			<div class="main-visualSection">
+			<!--<div class="main-visualSection">
 				<div class="container">
 					<strong class="main-heading text-upparcase hidden-xs"><span class="blue">LIST</span> <span class="black">yOUR</span> PROPERTY</strong>
 					<p class="hidden-xs">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
@@ -128,7 +128,7 @@
 						</div>
 					</form>
 				</div>
-			</div>
+			</div>-->
 			<nav id="nav">
 				<form class="searchByID">
 					<input type="search" placeholder="Search by ID">
@@ -171,7 +171,7 @@
 		</div>
 		<main id="main" role="main">
 			<div class="page-holder">
-				<div class="index-page">
+				<!--<div class="index-page">
 					<section class="generic-section">
 						<div class="container">
 							<h1>News <span>Update</span></h1>
@@ -478,7 +478,7 @@
 							</form>
 						</div>
 					</section>
-				</div>
+				</div>-->
 				<!--<div class="listing-page">
 					<div class="container">
 						<a class="aside-opener-filters">More Filters <b>(Land Area / Price...)</b><span class="button"><b></b></span></a>
@@ -804,7 +804,7 @@
 										</ul>
 									</div>
 								</div>
-								<div class="info-blockProperty">
+								<div class="info-blockProperty" id="fixed-block">
 									<strong class="price"><span>Rs</span>1.25 lakh</strong>
 									<div class="pictureHolder"><a href="#"><img src="images/img03.jpg" alt="image description"></a></div>
 									<span class="heading">JR Property</span>
@@ -879,7 +879,7 @@
 							<div class="overview-section">
 								<div class="layout">
 									<span class="small-heading">Property Overview</span>
-									<a href="#" class="btn-hollow"><span class="icon-printer"></span>PRINT DETAILS</a>
+									<a href="#" onclick="window.print()" class="btn-hollow"><span class="icon-printer"></span>PRINT DETAILS</a>
 								</div>
 								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
 								<p>but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
@@ -1367,7 +1367,7 @@
 						</div>
 					</div>
 				</div>-->
-				<!--<div class="registerNow container">
+				<div class="registerNow container">
 					<form class="registration-form">
 						<h1>Register <span>Now</span></h1>
 						<div class="layout">
@@ -1676,7 +1676,7 @@
 							</div>
 						</div>
 					</form>
-				</div>-->
+				</div>
 				<!--<div class="login-page container">
 					<span class="global-success">You are SUCCESSFULLY Registered</span>
 					<span class="global-error">this is error</span>
@@ -1764,7 +1764,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="info-blockAgent">
+								<div class="info-blockAgent" id="fixed-block">
 									<span class="heading text-upparcase">Contact Details</span>
 									<ul class="agentDetail-list">
 										<li>
@@ -2250,6 +2250,38 @@
 		<footer id="footer">
 			<span class="copyright">Copyright, <a href="#">Property42.pk</a></span>
 		</footer>
+		<a href="#feedback" class="feedBack lightbox">Feedback</a>
+		<div class="popup-holder">
+			<div id="feedback" class="lightbox generic-lightbox">
+				<span class="lighbox-heading">Feedback</span>
+				<form class="inquiry-email-form">
+					<div class="field-holder">
+						<label for="feedback-name">Name</label>
+						<div class="input-holder"><input type="text" id="feedback-name"></div>
+					</div>
+					<div class="field-holder">
+						<label for="feedback-email">Email</label>
+						<div class="input-holder"><input type="email" id="feedback-email"></div>
+					</div>
+					<div class="field-holder">
+						<label for="feedback-phone">phone</label>
+						<div class="input-holder"><input type="tel" id="feedback-phone"></div>
+					</div>
+					<div class="field-holder">
+						<label for="feedback-subject">subject</label>
+						<div class="input-holder"><input type="text" id="feedback-subject"></div>
+					</div>
+					<div class="field-holder">
+						<label for="feedback-message">message</label>
+						<div class="input-holder">
+							<textarea id="feedback-message"></textarea>
+							<p>By submitting this form I agree to Terms of Use</p>
+						</div>
+					</div>
+					<button type="submit">SEND</button>
+				</form>
+			</div>
+		</div>
 	</div>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" defer></script>
 	<script type="text/javascript">window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js" defer><\/script>')</script>

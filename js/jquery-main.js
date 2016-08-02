@@ -141,6 +141,10 @@ function initFixedScrollBlock() {
 	jQuery('#wrapper').fixedScrollBlock({
 		slideBlock: '#header, #nav'
 	});
+	jQuery('#main').fixedScrollBlock({
+		slideBlock: '#fixed-block',
+		extraTop: 100
+	});
 }
 
 // accordion init
