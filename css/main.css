@@ -6680,7 +6680,7 @@ h1 span {
 
 #header .social-icons {
   float: left;
-  padding: 24px 0 0;
+  padding: 28px 0 0;
 }
 
 @media (max-width: 1539px) {
@@ -6692,6 +6692,12 @@ h1 span {
 @media (max-width: 1199px) {
   #header .social-icons {
     padding: 36px 0 0;
+  }
+}
+
+@media (max-width: 1023px) {
+  #header .social-icons {
+    padding: 33px 0 0;
   }
 }
 

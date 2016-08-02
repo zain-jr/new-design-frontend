@@ -428,7 +428,7 @@ h1 {
   }
   .social-icons {
     float: left;
-    padding: 24px 0 0;
+    padding: 28px 0 0;
 
     @include media('<tvscreen'){
       padding:31px 0 0;
@@ -437,7 +437,11 @@ h1 {
     @include media('<widescreen'){
       padding:36px 0 0;
     }
-
+    
+    @include media('<desktop'){
+      padding:33px 0 0;
+    }
+    
     li {
       margin: 0 0 5px;
     }
