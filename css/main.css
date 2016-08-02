@@ -899,7 +899,7 @@ th {
 }
 
 .hidden, .agent-detail-page .propertyImage-slide.active a:after,
-.propertyDetail-page .propertyImage-slide.active a:after, .paginationCurrent-num-1,
+.propertyDetail-page .propertyImage-slide.active a:after, .registerNow .layout label[for="address"]:after, .registerNow .agent-listing-page #content label[for="address"]:after, .agent-listing-page .registerNow #content label[for="address"]:after, .paginationCurrent-num-1,
 .current-num, .registerNow .company-logo.hover label span[class^="icon-"], .registerNow .company-logo.hover label span[class*="icon-"] {
   display: none !important;
 }
@@ -7037,7 +7037,7 @@ h1 span {
 @media (max-width: 767px) {
   .loginRegister li:first-child a .hidden, .loginRegister li:first-child a .agent-detail-page .propertyImage-slide.active a:after, .agent-detail-page .propertyImage-slide.active .loginRegister li:first-child a a:after, .loginRegister li:first-child a
   .propertyDetail-page .propertyImage-slide.active a:after,
-  .propertyDetail-page .propertyImage-slide.active .loginRegister li:first-child a a:after, .loginRegister li:first-child a .paginationCurrent-num-1, .loginRegister li:first-child a
+  .propertyDetail-page .propertyImage-slide.active .loginRegister li:first-child a a:after, .loginRegister li:first-child a .registerNow .layout label[for="address"]:after, .registerNow .layout .loginRegister li:first-child a label[for="address"]:after, .loginRegister li:first-child a .registerNow .agent-listing-page #content label[for="address"]:after, .registerNow .agent-listing-page #content .loginRegister li:first-child a label[for="address"]:after, .loginRegister li:first-child a .agent-listing-page .registerNow #content label[for="address"]:after, .agent-listing-page .registerNow #content .loginRegister li:first-child a label[for="address"]:after, .loginRegister li:first-child a .paginationCurrent-num-1, .loginRegister li:first-child a
   .current-num {
     display: inline-block !important;
     vertical-align: top;
@@ -7598,7 +7598,7 @@ h1 span {
 @media (max-width: 767px) {
   #nav .mobile-content.hidden, #nav .agent-detail-page .propertyImage-slide.active a.mobile-content:after, .agent-detail-page .propertyImage-slide.active #nav a.mobile-content:after, #nav
   .propertyDetail-page .propertyImage-slide.active a.mobile-content:after,
-  .propertyDetail-page .propertyImage-slide.active #nav a.mobile-content:after, #nav .mobile-content.paginationCurrent-num-1, #nav
+  .propertyDetail-page .propertyImage-slide.active #nav a.mobile-content:after, #nav .registerNow .layout label.mobile-content[for="address"]:after, .registerNow .layout #nav label.mobile-content[for="address"]:after, #nav .registerNow .agent-listing-page #content label.mobile-content[for="address"]:after, .registerNow .agent-listing-page #content #nav label.mobile-content[for="address"]:after, #nav .agent-listing-page .registerNow #content label.mobile-content[for="address"]:after, .agent-listing-page .registerNow #content #nav label.mobile-content[for="address"]:after, #nav .mobile-content.paginationCurrent-num-1, #nav
   .mobile-content.current-num {
     display: block !important;
   }
