@@ -1,5 +1,5 @@
 .registerNow {
-    background: rgba($p42-background, 0.5);
+    background: rgba($p42-background, 0.8);
     @extend %layout;
     box-shadow: 0 0 7px rgba($black , 0.22);
     padding: 20px 10px;
@@ -85,7 +85,7 @@
 
         &.two {
             .layout-holder {
-                width: 29.5%;
+                width: 33.5%;
                 
                 @include media('<widescreen'){
                     width: 50%;
@@ -96,7 +96,7 @@
                 }
                 
                 &:first-child{
-                    width: 70.5%;
+                    width: 66.5%;
 
                     @include media('<widescreen'){
                         width: 50%;
@@ -108,7 +108,7 @@
                 }
             }
             .phone-num {
-                width: 29.5% !important;
+                width: 33.5% !important;
                 float: right;
                 
                 @include media('<widescreen'){
@@ -120,7 +120,7 @@
                 }
             }
             .otherRole {
-                width: 70.5% !important;
+                width: 66.5% !important;
                 float: left;
 
                 @include media('<widescreen'){
@@ -187,7 +187,7 @@
             }
         }
         .input-holder {
-            width: calc(90% - 140px);
+            width: calc(100% - 140px);
             padding: 2px;
 
             @include media('<widescreen'){
@@ -530,6 +530,9 @@
         font-weight: 400;
         position: relative;
         padding: 5px 25px 5px 5px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        @extend %layout;
 
         @include media('<desktop'){
             @include font(12,15);

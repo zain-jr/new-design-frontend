@@ -893,7 +893,7 @@ th {
 .propertyDetail-page .overview-section, .agent-detail-page .extra-feature-section,
 .propertyDetail-page .extra-feature-section, .agent-detail-page .feature,
 .propertyDetail-page .feature, .agent-detail-page .agent-description,
-.propertyDetail-page .agent-description, .addProperty-form, .addProperty-form .add-form-holder, .addProperty-form .main-form, .addProperty-form .tips, .addProperty-form .list-extraFeatures, .registerNow, .registerNow .registration-form, .registerNow .company-logo, .registerNow .company-logo .logo-holder, .registerNow .role-listing, .registerNow .agent-information, .login-page, .forgot-form,
+.propertyDetail-page .agent-description, .addProperty-form, .addProperty-form .add-form-holder, .addProperty-form .main-form, .addProperty-form .tips, .addProperty-form .list-extraFeatures, .registerNow, .registerNow .registration-form, .registerNow .company-logo, .registerNow .company-logo .logo-holder, .registerNow .packetData, .registerNow .role-listing, .registerNow .agent-information, .login-page, .forgot-form,
 .login-form, .fake-select, #wrapper, .logo, .main-visualSection, #main, .page-holder, .mainSearch-form .form-holder, .mainSearch-form .inputsHolder li .input-holder, .byDefault-fixed #nav .main-navigation li a span[class^="icon-"], .byDefault-fixed #nav .main-navigation li a span[class*="icon-"], #nav.fixed-position .main-navigation li a span[class^="icon-"], #nav.fixed-position .main-navigation li a span[class*="icon-"], .searchByID, .generic-section, .news-sliderHolder, .news-slideshow, .news-slideshow .mask, .news-slideshow .slideset, .news-carousel, .news-carousel .news-mask, .news-carousel .news-pagination ul a, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .inquiry-email-form .input-holder, .radio-checks-holder {
   overflow: hidden;
 }
@@ -4777,7 +4777,7 @@ input[type='submit'] {
 }
 
 .registerNow {
-  background: rgba(222, 225, 227, 0.5);
+  background: rgba(222, 225, 227, 0.8);
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.22);
   padding: 20px 10px;
   margin: 0 auto 30px;
@@ -4945,7 +4945,7 @@ input[type='submit'] {
 }
 
 .registerNow .layout.two .layout-holder, .registerNow .agent-listing-page .two#content .layout-holder, .agent-listing-page .registerNow .two#content .layout-holder {
-  width: 29.5%;
+  width: 33.5%;
 }
 
 @media (max-width: 1199px) {
@@ -4962,7 +4962,7 @@ input[type='submit'] {
 }
 
 .registerNow .layout.two .layout-holder:first-child, .registerNow .agent-listing-page .two#content .layout-holder:first-child, .agent-listing-page .registerNow .two#content .layout-holder:first-child {
-  width: 70.5%;
+  width: 66.5%;
 }
 
 @media (max-width: 1199px) {
@@ -4979,7 +4979,7 @@ input[type='submit'] {
 }
 
 .registerNow .layout.two .phone-num, .registerNow .agent-listing-page .two#content .phone-num, .agent-listing-page .registerNow .two#content .phone-num {
-  width: 29.5% !important;
+  width: 33.5% !important;
   float: right;
 }
 
@@ -4997,7 +4997,7 @@ input[type='submit'] {
 }
 
 .registerNow .layout.two .otherRole, .registerNow .agent-listing-page .two#content .otherRole, .agent-listing-page .registerNow .two#content .otherRole {
-  width: 70.5% !important;
+  width: 66.5% !important;
   float: left;
 }
 
@@ -5120,7 +5120,7 @@ input[type='submit'] {
 }
 
 .registerNow .layout .input-holder, .registerNow .agent-listing-page #content .input-holder, .agent-listing-page .registerNow #content .input-holder {
-  width: calc(90% - 140px);
+  width: calc(100% - 140px);
   padding: 2px;
 }
 
@@ -5521,6 +5521,8 @@ input[type='submit'] {
   font-weight: 400;
   position: relative;
   padding: 5px 25px 5px 5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 @media (max-width: 1023px) {
