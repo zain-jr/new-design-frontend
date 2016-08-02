@@ -1,5 +1,5 @@
 .addProperty-form {
-    background: rgba($p42-background, 0.5);
+    background: rgba($p42-background, 0.8);
     @extend %layout;
     box-shadow: 0 0 7px rgba($black , 0.22);
     padding: 20px 10px;
@@ -489,6 +489,13 @@
         label {
             width: 50%;
             padding: 5px;
+
+            &:after { @extend %hidden;}
+        }
+        select {
+            width: 100%;
+            border: 0;
+            height: 28px;
         }
         .input-holder {
             width: 50%;
