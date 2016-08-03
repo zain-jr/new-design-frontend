@@ -5,6 +5,16 @@
     padding: 20px 10px;
     margin: 0 auto 30px;
 
+    &.successfully-saved {
+
+        .add-form-holder {
+            @extend .hidden;
+        }
+        .thankYou-message {
+            display: block;
+        }
+    }
+
     .select2-container {
         width:  100% !important;
     }
@@ -523,6 +533,52 @@
             margin: 0;
             text-align: center;
             display: block !important;
+        }
+    }
+    .thankYou-message {
+        display: none;
+        @extend %text-center;
+
+        .layout {
+            margin: 0;
+            padding: 0;
+            @extend %text-left;
+        }
+        .left {
+            width: 30%;
+            @extend %text-center;
+
+            @include media('<tablet'){
+                width: 100%;
+                display: block;
+            }
+
+            span {
+                color: $p42-color;
+                display: block;
+                font-size: 200px;
+                line-height: 1;
+
+                @include media('<desktop'){
+                    font-size: 150px;
+                }
+            }
+        }
+        .right {
+            width:70%;
+            @include font(16,20);
+            color: $dark-grey;
+
+            @include media('<desktop'){
+                @include font(14,17);
+                padding: 0 30px 0 0; 
+            }
+            @include media('<tablet'){
+                width: 100%;
+                display: block;
+                @include font(12,15);
+                padding: 0 20px;
+            }
         }
     }
 }
