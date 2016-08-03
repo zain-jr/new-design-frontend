@@ -2999,6 +2999,7 @@ h1 {
   color: $p42-default-grey;
 }
 .weAreWorking  {
+  @extend %layout;
   color: $white;
   @extend %text-center;
   width: 100%;
@@ -3011,6 +3012,13 @@ h1 {
   right: 0;
   left: 0;
   z-index: 9999999914;
+  transition: bottom 0.5s ease;
+  -webkit-transition: bottom 0.5s ease;
+  -moz-transition: bottom 0.5s ease;
+
+  &.hide{
+    bottom: -200px;
+  }
 
   p {
     @include font(22,25);
@@ -3020,16 +3028,16 @@ h1 {
     text-decoration: none;
     color: $white;
     @include align(top);
-
-    &:hover { text-decoration: underline;}
+    text-decoration: underline;
+    &:hover { text-decoration: none;}
   }
-  .btn-close {
+  .btn-close-working {
     background: $orange;
     padding:10px 30px;
+    text-decoration: none;
 
     &:hover {
       background: darken($orange, 10%);
-      text-decoration: none;
     }
   }
 }

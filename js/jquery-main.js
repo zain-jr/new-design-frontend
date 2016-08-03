@@ -403,3 +403,7 @@ $(document).on('click', '.packetData>.delete', function(){
 	$("#"+targetId).prop("checked", false);
 	$(this).closest('li').remove();
 });
+
+$(document).on('click', '.btn-close-working', function(){
+	$('.weAreWorking').addClass('hide');
+});
