@@ -10461,6 +10461,7 @@ h1 span {
 
 .weAreWorking {
   color: #fff;
+  margin: 0 auto !important;
   width: 100%;
   background: #2092d0;
   border-radius: 4px;
