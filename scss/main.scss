@@ -2998,6 +2998,34 @@ h1 {
   @include align(top);
   color: $p42-default-grey;
 }
+.weAreWorking  {
+  color: $white;
+  @extend %text-center;
+  width: 375px;
+  background: $p42-color;
+  border-radius: 4px;
+  padding: 10px;
+
+  p {
+    @include font(22,25);
+  }
+  span[class^="icon-"],span[class*="icon-"]{
+    display: block;
+    font-size: 50px;
+    line-height: 1;
+  }
+  a {
+    color: $white;
+    text-decoration: none;
+    background: $orange;
+    @include align(top);
+    padding:10px 30px;
+
+    &:hover {
+
+    }
+  }
+}
 @media print {
   * {
     background: none !important;
