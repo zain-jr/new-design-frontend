@@ -728,7 +728,7 @@ th {
 .listing-page .filterChecks, .agent-detail-page .feature-list,
 .propertyDetail-page .feature-list, .agent-detail-page .col .list, .agent-detail-page .agentDetail-list, .addProperty-form .error, .addProperty-form .image-uploading-area, .addProperty-form .existingOrNew-member, .registerNow .packetData-list,
 .registerNow .societiesBlock-listing, .registerNow .role-listing, .registerNow .agree-with-terms, .forgot-form .buttons-holder,
-.login-form .buttons-holder, .social-icons, .loginRegister, .dropDown, .main-visualSection .number-of-properties, .mainSearch-form .typeOfBuying, .mainSearch-form .subTypes, .mainSearch-form .inputsHolder, #nav .main-navigation, .news-carousel .news-pagination ul, .topSocities-holder .socities, .topSocities-holder .socities li .caption .numberOfproperties, .agents-logo, .pager, .quick-links, .public-ui-features, .sumery-list, .radio-checks-holder {
+.login-form .buttons-holder, .social-icons, .loginRegister, .dropDown, .main-visualSection .number-of-properties, .mainSearch-form .typeOfBuying, .mainSearch-form .subTypes, .mainSearch-form .inputsHolder, #nav .main-navigation, .news-carousel .news-pagination ul, .topSocities-holder .socities, .topSocities-holder .socities li .caption .numberOfproperties, .agents-logo, .pager, .quick-links, .public-ui-features, .sumery-list, .radio-checks-holder, .Ads {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -878,7 +878,8 @@ th {
 }
 
 .layout, .agent-listing-page #content, .agent-listing-page,
-.listing-page, .agent-listing-page .filter-form,
+.listing-page, .agent-listing-page .container,
+.listing-page .container, .agent-listing-page .filter-form,
 .listing-page .filter-form, .agent-listing-page .filters-links li .slide,
 .listing-page .filters-links li .slide, .agent-listing-page .fromTo,
 .listing-page .fromTo, .agent-listing-page .publicAgent-post,
@@ -908,7 +909,7 @@ th {
 .propertyDetail-page .feature, .agent-detail-page .agent-picture,
 .propertyDetail-page .agent-picture, .agent-detail-page .agent-description,
 .propertyDetail-page .agent-description, .agent-detail-page .frame, .addProperty-form, .addProperty-form .add-form-holder, .addProperty-form .main-form, .addProperty-form .tips, .addProperty-form .list-extraFeatures, .registerNow, .registerNow .registration-form, .registerNow .company-logo, .registerNow .company-logo .logo-holder, .registerNow .packetData, .registerNow .role-listing, .registerNow .agent-information, .login-page, .forgot-form,
-.login-form, .fake-select, #wrapper, .logo, .main-visualSection, #main, .page-holder, .mainSearch-form .form-holder, .mainSearch-form .inputsHolder li .input-holder, .byDefault-fixed #nav .main-navigation li a span[class^="icon-"], .byDefault-fixed #nav .main-navigation li a span[class*="icon-"], #nav.fixed-position .main-navigation li a span[class^="icon-"], #nav.fixed-position .main-navigation li a span[class*="icon-"], .searchByID, .generic-section, .news-sliderHolder, .news-slideshow, .news-slideshow .mask, .news-slideshow .slideset, .news-carousel, .news-carousel .news-mask, .news-carousel .news-pagination ul a, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .inquiry-email-form .input-holder, .radio-checks-holder {
+.login-form, .fake-select, #wrapper, .logo, .main-visualSection, #main, .page-holder, .mainSearch-form .form-holder, .mainSearch-form .inputsHolder li .input-holder, .byDefault-fixed #nav .main-navigation li a span[class^="icon-"], .byDefault-fixed #nav .main-navigation li a span[class*="icon-"], #nav.fixed-position .main-navigation li a span[class^="icon-"], #nav.fixed-position .main-navigation li a span[class*="icon-"], .searchByID, .generic-section, .news-sliderHolder, .news-slideshow, .news-slideshow .mask, .news-slideshow .slideset, .news-carousel, .news-carousel .news-mask, .news-carousel .news-pagination ul a, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .inquiry-email-form .input-holder, .radio-checks-holder, .add-holder-page {
   overflow: hidden;
 }
 
@@ -2239,21 +2240,21 @@ input[type='submit'] {
   padding: 35px 0 0;
 }
 
+@media (max-width: 1539px) {
+  .agent-listing-page .publicAgent-post .caption .links-left,
+  .agent-listing-page .publicProperty-post .caption .links-left,
+  .listing-page .publicAgent-post .caption .links-left,
+  .listing-page .publicProperty-post .caption .links-left {
+    width: 60%;
+  }
+}
+
 @media (max-width: 767px) {
   .agent-listing-page .publicAgent-post .caption .links-left,
   .agent-listing-page .publicProperty-post .caption .links-left,
   .listing-page .publicAgent-post .caption .links-left,
   .listing-page .publicProperty-post .caption .links-left {
     padding: 10px 0 0;
-  }
-}
-
-@media (max-width: 1199px) {
-  .agent-listing-page .publicAgent-post .caption .links-left,
-  .agent-listing-page .publicProperty-post .caption .links-left,
-  .listing-page .publicAgent-post .caption .links-left,
-  .listing-page .publicProperty-post .caption .links-left {
-    width: 60%;
   }
 }
 
@@ -2264,7 +2265,7 @@ input[type='submit'] {
   width: 30%;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1539px) {
   .agent-listing-page .publicAgent-post .caption .links-right,
   .agent-listing-page .publicProperty-post .caption .links-right,
   .listing-page .publicAgent-post .caption .links-right,
@@ -10222,6 +10223,45 @@ h1 span {
   transition: none;
   -webkit-transition: none;
   -moz-transition: none;
+}
+
+.add-holder-page .container-holder {
+  float: right;
+  width: 100%;
+  max-width: calc(100% - 215px);
+}
+
+@media (max-width: 1199px) {
+  .add-holder-page .container-holder {
+    max-width: calc(100% - 160px);
+  }
+}
+
+.add-holder-page .container-holder .container {
+  margin: 0;
+}
+
+.Ads {
+  float: left;
+  max-width: 215px;
+}
+
+@media (max-width: 1199px) {
+  .Ads {
+    max-width: 160px;
+  }
+}
+
+.Ads li {
+  display: block;
+}
+
+.Ads li a {
+  display: block;
+}
+
+.Ads li a:hover {
+  opacity: 0.8;
 }
 
 @media print {

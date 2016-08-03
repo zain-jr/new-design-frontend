@@ -4,6 +4,10 @@
   position: relative;
   padding: 5px;
 
+  .container {
+    @extend %layout;
+  }
+
   #aside {
     width: 25%;
     padding: 10px;
@@ -284,19 +288,20 @@
         width: 70%;
         padding: 35px 0 0;
 
+        @include media('<tvscreen'){
+          width: 60%;
+        }
+
         @include media('<tablet'){
           padding: 10px 0 0;
         }
 
-        @include media('<widescreen'){
-          width: 60%;
-        }
       }
       .links-right {
         @extend %pull-right;
         width: 30%;
 
-        @include media('<widescreen'){
+        @include media('<tvscreen'){
           width: 40%;
         }
       }

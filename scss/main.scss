@@ -2925,7 +2925,41 @@ h1 {
   -webkit-transition: none;
   -moz-transition: none;
 }
+.add-holder-page {
+  @extend %layout;
 
+  .container-holder {
+    float: right;
+    width: 100%;
+    max-width: calc(100% - 215px);
+
+    @include media('<widescreen'){
+      max-width: calc(100% - 160px);
+    }
+
+    .container { margin: 0;}
+  }
+}
+.Ads {
+  @extend %listreset;
+  float: left;
+  max-width: 215px;
+
+  @include media('<widescreen'){
+    max-width: 160px;
+  }
+
+  li {
+    display: block;
+
+    a {
+      display: block;
+      &:hover { opacity: 0.8;}
+
+      img { @extend %imf-res;}
+    }
+  }
+}
 @media print {
   * {
     background: none !important;
