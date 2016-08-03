@@ -534,8 +534,11 @@ h1 {
     }
     @include media('<widescreen'){
       max-width: 250px;
-      top: 11px;
+      top: 2px;
       margin: 0 auto;
+    }
+    @include media('<desktop'){
+      top: 7px;
     }
     @include media('<tablet'){
       max-width: 130px;
@@ -2158,10 +2161,9 @@ h1 {
   padding: 0 0 10px;
 
   @include media('<widescreen'){
-    @include font(22,25);
+    @include font(18,22);
   }
   @include media('<tablet'){
-    @include font(18,22);
     padding: 0 75px 10px 0;
   }
 
@@ -2437,6 +2439,9 @@ h1 {
       @include media('<desktop'){
         display:none;
       }
+      @include media('<tablet'){
+        display:inline-block;
+      }
     }
     b {
       @include align(top);
@@ -2460,6 +2465,10 @@ h1 {
       @extend %text-center;
       padding: 0 10px 10px;
       border-left: 1px solid $p42-default-grey;
+
+      @include media('<tablet'){
+        padding: 0 5px 5px;
+      }
 
       @include media('<tablet'){
         width: auto;

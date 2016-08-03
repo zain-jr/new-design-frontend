@@ -2149,6 +2149,15 @@ input[type='submit'] {
   padding: 0 0 10px 10px;
 }
 
+@media (max-width: 1199px) {
+  .agent-listing-page .publicAgent-post .caption,
+  .agent-listing-page .publicProperty-post .caption,
+  .listing-page .publicAgent-post .caption,
+  .listing-page .publicProperty-post .caption {
+    padding: 0 0 55px 10px;
+  }
+}
+
 .agent-listing-page .publicAgent-post .caption h1,
 .agent-listing-page .publicProperty-post .caption h1,
 .listing-page .publicAgent-post .caption h1,
@@ -2158,6 +2167,15 @@ input[type='submit'] {
   color: #2092d0;
   font-size: 18px;
   line-height: 21px;
+}
+
+@media (max-width: 1199px) {
+  .agent-listing-page .publicAgent-post .caption h1,
+  .agent-listing-page .publicProperty-post .caption h1,
+  .listing-page .publicAgent-post .caption h1,
+  .listing-page .publicProperty-post .caption h1 {
+    margin: 0 0 6px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -2410,6 +2428,19 @@ input[type='submit'] {
   min-height: 76px;
 }
 
+@media (max-width: 1199px) {
+  .agent-listing-page .publicAgent-post .caption .company-logo,
+  .agent-listing-page .publicProperty-post .caption .company-logo,
+  .listing-page .publicAgent-post .caption .company-logo,
+  .listing-page .publicProperty-post .caption .company-logo {
+    max-width: 60px;
+    max-height: 60px;
+    min-width: 60px;
+    min-height: 60px;
+    margin: 16px 10px 0;
+  }
+}
+
 @media (max-width: 767px) {
   .agent-listing-page .publicAgent-post .caption .company-logo,
   .agent-listing-page .publicProperty-post .caption .company-logo,
@@ -2484,8 +2515,17 @@ input[type='submit'] {
 .agent-listing-page .publicAgent-post .image-holder img {
   max-width: 150px;
   min-width: 150px;
-  max-height: 153px;
-  min-height: 153px;
+  max-height: 159px;
+  min-height: 159px;
+}
+
+@media (max-width: 1199px) {
+  .agent-listing-page .publicAgent-post .image-holder img {
+    max-width: 190px;
+    min-width: 190px;
+    max-height: 145px;
+    min-height: 145px;
+  }
 }
 
 .agent-listing-page .publicAgent-post .caption {
@@ -7096,8 +7136,15 @@ h1 span {
   .byDefault-fixed .logo,
   .fixed-position .logo {
     max-width: 250px;
-    top: 11px;
+    top: 2px;
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 1023px) {
+  .byDefault-fixed .logo,
+  .fixed-position .logo {
+    top: 7px;
   }
 }
 
@@ -9297,15 +9344,13 @@ h1 span {
 
 @media (max-width: 1199px) {
   .price {
-    font-size: 22px;
-    line-height: 25px;
+    font-size: 18px;
+    line-height: 22px;
   }
 }
 
 @media (max-width: 767px) {
   .price {
-    font-size: 18px;
-    line-height: 22px;
     padding: 0 75px 10px 0;
   }
 }
@@ -9661,6 +9706,12 @@ h1 span {
   }
 }
 
+@media (max-width: 767px) {
+  .public-ui-features li span[class^="icon-"], .public-ui-features li span[class*="icon-"] {
+    display: inline-block;
+  }
+}
+
 .public-ui-features li b {
   display: inline-block;
   vertical-align: top;
@@ -9692,6 +9743,12 @@ h1 span {
   font-weight: 700;
   padding: 0 10px 10px;
   border-left: 1px solid #6c6d70;
+}
+
+@media (max-width: 767px) {
+  .public-ui-features li strong {
+    padding: 0 5px 5px;
+  }
 }
 
 @media (max-width: 767px) {
