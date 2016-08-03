@@ -726,7 +726,7 @@ th {
 .agent-listing-page .filters-links,
 .listing-page .filters-links, .agent-listing-page .filterChecks,
 .listing-page .filterChecks, .agent-detail-page .feature-list,
-.propertyDetail-page .feature-list, .agent-detail-page .col .list, .agent-detail-page .agentDetail-list, .addProperty-form .image-uploading-area, .addProperty-form .existingOrNew-member, .registerNow .packetData-list,
+.propertyDetail-page .feature-list, .agent-detail-page .col .list, .agent-detail-page .agentDetail-list, .addProperty-form .error, .addProperty-form .image-uploading-area, .addProperty-form .existingOrNew-member, .registerNow .packetData-list,
 .registerNow .societiesBlock-listing, .registerNow .role-listing, .registerNow .agree-with-terms, .forgot-form .buttons-holder,
 .login-form .buttons-holder, .social-icons, .loginRegister, .dropDown, .main-visualSection .number-of-properties, .mainSearch-form .typeOfBuying, .mainSearch-form .subTypes, .mainSearch-form .inputsHolder, #nav .main-navigation, .news-carousel .news-pagination ul, .topSocities-holder .socities, .topSocities-holder .socities li .caption .numberOfproperties, .agents-logo, .pager, .quick-links, .public-ui-features, .sumery-list, .radio-checks-holder {
   margin: 0;
@@ -4101,6 +4101,63 @@ input[type='submit'] {
   margin: 0 auto 30px;
 }
 
+.addProperty-form .error {
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+  margin: 0 0 10px;
+}
+
+.addProperty-form .error > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0;
+}
+
+@media (max-width: 767px) {
+  .addProperty-form .error {
+    font-size: 0;
+    line-height: 0;
+    letter-spacing: -4px;
+  }
+  .addProperty-form .error > * {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0;
+  }
+}
+
+.addProperty-form .error li {
+  width: 33.33%;
+  padding: 0 3px 5px;
+}
+
+@media (max-width: 767px) {
+  .addProperty-form .error li {
+    width: 50%;
+  }
+}
+
+.addProperty-form .error span {
+  display: block;
+  padding: 5px 5px 5px 25px;
+  color: #fff;
+  background: #ce2020;
+  position: relative;
+}
+
+.addProperty-form .error span:after {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  content: "\e92e";
+  font-family: 'icomoon';
+}
+
 .addProperty-form.successfully-saved .thankYou-message {
   display: block;
 }
@@ -4723,7 +4780,6 @@ input[type='submit'] {
 
 .addProperty-form .list-extraFeatures {
   background: #dee1e3;
-  margin: 0 -5px;
   font-size: 0;
   line-height: 0;
   letter-spacing: -4px;
@@ -9391,7 +9447,6 @@ h1 span {
 }
 
 .clearfix {
-  width: 100%;
   display: block;
   overflow: visible;
 }
