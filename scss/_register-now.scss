@@ -219,16 +219,14 @@
                 @include font(12,15);
                 width: 80px;
             }
-
-            &:after {
-                @include align(top);
-                color: $red;
-                content: '*';
+            &.required-field{
+                &:after {
+                    @include align(top);
+                    color: $red;
+                    content: '*';
+                }
             }
-        }
-        label[for="address"]{
-            &:after{ @extend .hidden;}
-        }
+        }   
     }
 
     .role-opener {

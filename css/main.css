@@ -912,7 +912,7 @@ th {
 }
 
 .hidden, .agent-detail-page .propertyImage-slide.active a:after,
-.propertyDetail-page .propertyImage-slide.active a:after, .addProperty-form.successfully-saved .add-form-holder, .registerNow .layout label[for="address"]:after, .registerNow .agent-listing-page #content label[for="address"]:after, .agent-listing-page .registerNow #content label[for="address"]:after, .paginationCurrent-num-1,
+.propertyDetail-page .propertyImage-slide.active a:after, .addProperty-form.successfully-saved .add-form-holder, .paginationCurrent-num-1,
 .current-num, .addProperty-form .list-extraFeatures label:after, .registerNow .company-logo.hover label span[class^="icon-"], .registerNow .company-logo.hover label span[class*="icon-"] {
   display: none !important;
 }
@@ -4487,7 +4487,7 @@ input[type='submit'] {
   }
 }
 
-.addProperty-form .layout label:after, .addProperty-form .agent-listing-page #content label:after, .agent-listing-page .addProperty-form #content label:after {
+.addProperty-form .layout label.required-field:after, .addProperty-form .agent-listing-page #content label.required-field:after, .agent-listing-page .addProperty-form #content label.required-field:after {
   display: inline-block;
   vertical-align: top;
   color: #ce2020;
@@ -5247,7 +5247,7 @@ input[type='submit'] {
   }
 }
 
-.registerNow .layout label:after, .registerNow .agent-listing-page #content label:after, .agent-listing-page .registerNow #content label:after {
+.registerNow .layout label.required-field:after, .registerNow .agent-listing-page #content label.required-field:after, .agent-listing-page .registerNow #content label.required-field:after {
   display: inline-block;
   vertical-align: top;
   color: #ce2020;
@@ -7118,7 +7118,7 @@ h1 span {
 @media (max-width: 767px) {
   .loginRegister li:first-child a .hidden, .loginRegister li:first-child a .agent-detail-page .propertyImage-slide.active a:after, .agent-detail-page .propertyImage-slide.active .loginRegister li:first-child a a:after, .loginRegister li:first-child a
   .propertyDetail-page .propertyImage-slide.active a:after,
-  .propertyDetail-page .propertyImage-slide.active .loginRegister li:first-child a a:after, .loginRegister li:first-child a .addProperty-form.successfully-saved .add-form-holder, .addProperty-form.successfully-saved .loginRegister li:first-child a .add-form-holder, .loginRegister li:first-child a .registerNow .layout label[for="address"]:after, .registerNow .layout .loginRegister li:first-child a label[for="address"]:after, .loginRegister li:first-child a .registerNow .agent-listing-page #content label[for="address"]:after, .registerNow .agent-listing-page #content .loginRegister li:first-child a label[for="address"]:after, .loginRegister li:first-child a .agent-listing-page .registerNow #content label[for="address"]:after, .agent-listing-page .registerNow #content .loginRegister li:first-child a label[for="address"]:after, .loginRegister li:first-child a .paginationCurrent-num-1, .loginRegister li:first-child a
+  .propertyDetail-page .propertyImage-slide.active .loginRegister li:first-child a a:after, .loginRegister li:first-child a .addProperty-form.successfully-saved .add-form-holder, .addProperty-form.successfully-saved .loginRegister li:first-child a .add-form-holder, .loginRegister li:first-child a .paginationCurrent-num-1, .loginRegister li:first-child a
   .current-num {
     display: inline-block !important;
     vertical-align: top;
@@ -7679,7 +7679,7 @@ h1 span {
 @media (max-width: 767px) {
   #nav .mobile-content.hidden, #nav .agent-detail-page .propertyImage-slide.active a.mobile-content:after, .agent-detail-page .propertyImage-slide.active #nav a.mobile-content:after, #nav
   .propertyDetail-page .propertyImage-slide.active a.mobile-content:after,
-  .propertyDetail-page .propertyImage-slide.active #nav a.mobile-content:after, #nav .addProperty-form.successfully-saved .mobile-content.add-form-holder, .addProperty-form.successfully-saved #nav .mobile-content.add-form-holder, #nav .registerNow .layout label.mobile-content[for="address"]:after, .registerNow .layout #nav label.mobile-content[for="address"]:after, #nav .registerNow .agent-listing-page #content label.mobile-content[for="address"]:after, .registerNow .agent-listing-page #content #nav label.mobile-content[for="address"]:after, #nav .agent-listing-page .registerNow #content label.mobile-content[for="address"]:after, .agent-listing-page .registerNow #content #nav label.mobile-content[for="address"]:after, #nav .mobile-content.paginationCurrent-num-1, #nav
+  .propertyDetail-page .propertyImage-slide.active #nav a.mobile-content:after, #nav .addProperty-form.successfully-saved .mobile-content.add-form-holder, .addProperty-form.successfully-saved #nav .mobile-content.add-form-holder, #nav .mobile-content.paginationCurrent-num-1, #nav
   .mobile-content.current-num {
     display: block !important;
   }
@@ -9399,6 +9399,12 @@ h1 span {
     font-size: 21px;
     line-height: 23px;
   }
+}
+
+.clearfix {
+  width: 100%;
+  display: block;
+  overflow: visible;
 }
 
 .feedBack {

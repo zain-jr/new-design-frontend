@@ -2345,6 +2345,12 @@ h1 {
     }
   }
 }
+.clearfix {
+  width: 100%;
+  display: block;
+  overflow: visible;
+  @extend %clearfix;
+}
 .feedBack {
   @include font(16,20);
   color: $white;
