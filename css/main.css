@@ -1834,6 +1834,13 @@ input[type='submit'] {
   padding: 0 0 0 20px;
 }
 
+@media (max-width: 1199px) {
+  .agent-listing-page #content,
+  .listing-page #content {
+    padding: 0 0 0 10px;
+  }
+}
+
 @media (max-width: 1023px) {
   .agent-listing-page #content,
   .listing-page #content {
@@ -1854,6 +1861,14 @@ input[type='submit'] {
 .listing-page .filters-links {
   font-size: 14px;
   line-height: 17px;
+}
+
+@media (max-width: 1199px) {
+  .agent-listing-page .filters-links,
+  .listing-page .filters-links {
+    font-size: 13px;
+    line-height: 16px;
+  }
 }
 
 .agent-listing-page .filters-links li,
@@ -1879,6 +1894,13 @@ input[type='submit'] {
   -webkit-transition: color 0.5s ease, background 0.5s ease;
   -moz-transition: color 0.5s ease, background 0.5s ease;
   -ms-transition: color 0.5s ease, background 0.5s ease;
+}
+
+@media (max-width: 1199px) {
+  .agent-listing-page .filters-links li a,
+  .listing-page .filters-links li a {
+    padding: 8px 33px 8px 5px;
+  }
 }
 
 .agent-listing-page .filters-links li a:after,
@@ -2092,6 +2114,18 @@ input[type='submit'] {
   max-width: 180px;
 }
 
+@media (max-width: 1023px) {
+  .agent-listing-page .publicAgent-post .image-holder img,
+  .agent-listing-page .publicProperty-post .image-holder img,
+  .listing-page .publicAgent-post .image-holder img,
+  .listing-page .publicProperty-post .image-holder img {
+    max-height: 220px;
+    max-width: 220px;
+    min-height: 220px;
+    min-width: 220px;
+  }
+}
+
 @media (max-width: 767px) {
   .agent-listing-page .publicAgent-post .image-holder img,
   .agent-listing-page .publicProperty-post .image-holder img,
@@ -2210,6 +2244,15 @@ input[type='submit'] {
   right: 0;
 }
 
+@media (max-width: 1023px) {
+  .agent-listing-page .publicAgent-post .caption .links-holder,
+  .agent-listing-page .publicProperty-post .caption .links-holder,
+  .listing-page .publicAgent-post .caption .links-holder,
+  .listing-page .publicProperty-post .caption .links-holder {
+    left: 15px;
+  }
+}
+
 @media (max-width: 767px) {
   .agent-listing-page .publicAgent-post .caption .links-holder,
   .agent-listing-page .publicProperty-post .caption .links-holder,
@@ -2240,12 +2283,45 @@ input[type='submit'] {
   padding: 35px 0 0;
 }
 
+.agent-listing-page .publicAgent-post .caption .links-left .btn-default,
+.agent-listing-page .publicProperty-post .caption .links-left .btn-default,
+.listing-page .publicAgent-post .caption .links-left .btn-default,
+.listing-page .publicProperty-post .caption .links-left .btn-default {
+  padding: 10px 31px 10px 5px;
+}
+
+.agent-listing-page .publicAgent-post .caption .links-left .btn-default span[class^="icon-"], .agent-listing-page .publicAgent-post .caption .links-left .btn-default span[class*="icon-"],
+.agent-listing-page .publicProperty-post .caption .links-left .btn-default span[class^="icon-"],
+.agent-listing-page .publicProperty-post .caption .links-left .btn-default span[class*="icon-"],
+.listing-page .publicAgent-post .caption .links-left .btn-default span[class^="icon-"],
+.listing-page .publicAgent-post .caption .links-left .btn-default span[class*="icon-"],
+.listing-page .publicProperty-post .caption .links-left .btn-default span[class^="icon-"],
+.listing-page .publicProperty-post .caption .links-left .btn-default span[class*="icon-"] {
+  right: 5px;
+}
+
+.agent-listing-page .publicAgent-post .caption .links-left .trusted-agent,
+.agent-listing-page .publicProperty-post .caption .links-left .trusted-agent,
+.listing-page .publicAgent-post .caption .links-left .trusted-agent,
+.listing-page .publicProperty-post .caption .links-left .trusted-agent {
+  margin: 15px 0 0 5px;
+}
+
 @media (max-width: 1539px) {
   .agent-listing-page .publicAgent-post .caption .links-left,
   .agent-listing-page .publicProperty-post .caption .links-left,
   .listing-page .publicAgent-post .caption .links-left,
   .listing-page .publicProperty-post .caption .links-left {
     width: 60%;
+  }
+}
+
+@media (max-width: 1199px) {
+  .agent-listing-page .publicAgent-post .caption .links-left,
+  .agent-listing-page .publicProperty-post .caption .links-left,
+  .listing-page .publicAgent-post .caption .links-left,
+  .listing-page .publicProperty-post .caption .links-left {
+    width: 55%;
   }
 }
 
@@ -2271,6 +2347,15 @@ input[type='submit'] {
   .listing-page .publicAgent-post .caption .links-right,
   .listing-page .publicProperty-post .caption .links-right {
     width: 40%;
+  }
+}
+
+@media (max-width: 1199px) {
+  .agent-listing-page .publicAgent-post .caption .links-right,
+  .agent-listing-page .publicProperty-post .caption .links-right,
+  .listing-page .publicAgent-post .caption .links-right,
+  .listing-page .publicProperty-post .caption .links-right {
+    width: 45%;
   }
 }
 
@@ -9570,6 +9655,12 @@ h1 span {
   padding: 0;
 }
 
+@media (max-width: 1023px) {
+  .public-ui-features li span[class^="icon-"], .public-ui-features li span[class*="icon-"] {
+    display: none;
+  }
+}
+
 .public-ui-features li b {
   display: inline-block;
   vertical-align: top;
@@ -10237,6 +10328,15 @@ h1 span {
   }
 }
 
+@media (max-width: 767px) {
+  .add-holder-page .container-holder {
+    float: none;
+    max-width: inherit;
+    overflow: hidden;
+    width: 100%;
+  }
+}
+
 .add-holder-page .container-holder .container {
   margin: 0;
 }
@@ -10252,8 +10352,36 @@ h1 span {
   }
 }
 
+@media (max-width: 767px) {
+  .Ads {
+    float: none;
+    max-width: inherit;
+    overflow: hidden;
+    width: 100%;
+    font-size: 0;
+    line-height: 0;
+    letter-spacing: -4px;
+  }
+  .Ads > * {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0;
+  }
+}
+
 .Ads li {
   display: block;
+  padding: 0 5px 10px;
+}
+
+@media (max-width: 767px) {
+  .Ads li {
+    width: 33.33%;
+    display: inline-block;
+    vertical-align: top;
+  }
 }
 
 .Ads li a {

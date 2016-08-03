@@ -38,6 +38,10 @@
     @extend .pull-left;
     padding: 0 0 0 20px;
 
+    @include media('<widescreen'){
+      padding: 0 0 0 10px;
+    }
+
     @include media('<desktop'){
       width: 100%;
       overflow: hidden;
@@ -53,6 +57,10 @@
   .filters-links {
     @extend %listreset;
     @include font(14,17);
+
+    @include media('<widescreen'){
+      @include font(13,16);
+    }
 
     li {
       display: block;
@@ -75,6 +83,10 @@
         -webkit-transition: color 0.5s ease, background 0.5s ease;
         -moz-transition: color 0.5s ease, background 0.5s ease;
         -ms-transition: color 0.5s ease, background 0.5s ease;
+
+        @include media('<widescreen'){
+          padding: 8px 33px 8px 5px;
+        }
 
         &:after {
           position: absolute;
@@ -206,6 +218,13 @@
         max-width: 180px;
         @extend img-res;
 
+        @include media('<desktop'){
+          max-height: 220px;
+          max-width: 220px;
+          min-height: 220px;
+          min-width: 220px;
+        }
+
         @include media('<tablet'){
           max-height: 170px;
           max-width: 170px;
@@ -272,6 +291,10 @@
         left: 195px;
         right: 0;
 
+        @include media('<desktop'){
+          left: 15px;
+        }
+
         @include media('<tablet'){
           overflow: visible;
           clear: both;
@@ -288,8 +311,22 @@
         width: 70%;
         padding: 35px 0 0;
 
+        .btn-default {
+          padding: 10px 31px 10px 5px;
+
+          span[class^="icon-"],span[class*="icon-"]{
+            right: 5px;
+          }
+        }
+        .trusted-agent {
+          margin: 15px 0 0 5px;
+        }
+
         @include media('<tvscreen'){
           width: 60%;
+        }
+        @include media('<widescreen'){
+          width: 55%;
         }
 
         @include media('<tablet'){
@@ -303,6 +340,9 @@
 
         @include media('<tvscreen'){
           width: 40%;
+        }
+        @include media('<widescreen'){
+          width: 45%;
         }
       }
       .btn-default {
