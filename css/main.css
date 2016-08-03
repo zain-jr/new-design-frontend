@@ -905,7 +905,8 @@ th {
 .propertyDetail-page .propertyImage-slider .mask, .agent-detail-page .overview-section,
 .propertyDetail-page .overview-section, .agent-detail-page .extra-feature-section,
 .propertyDetail-page .extra-feature-section, .agent-detail-page .feature,
-.propertyDetail-page .feature, .agent-detail-page .agent-description,
+.propertyDetail-page .feature, .agent-detail-page .agent-picture,
+.propertyDetail-page .agent-picture, .agent-detail-page .agent-description,
 .propertyDetail-page .agent-description, .agent-detail-page .frame, .addProperty-form, .addProperty-form .add-form-holder, .addProperty-form .main-form, .addProperty-form .tips, .addProperty-form .list-extraFeatures, .registerNow, .registerNow .registration-form, .registerNow .company-logo, .registerNow .company-logo .logo-holder, .registerNow .packetData, .registerNow .role-listing, .registerNow .agent-information, .login-page, .forgot-form,
 .login-form, .fake-select, #wrapper, .logo, .main-visualSection, #main, .page-holder, .mainSearch-form .form-holder, .mainSearch-form .inputsHolder li .input-holder, .byDefault-fixed #nav .main-navigation li a span[class^="icon-"], .byDefault-fixed #nav .main-navigation li a span[class*="icon-"], #nav.fixed-position .main-navigation li a span[class^="icon-"], #nav.fixed-position .main-navigation li a span[class*="icon-"], .searchByID, .generic-section, .news-sliderHolder, .news-slideshow, .news-slideshow .mask, .news-slideshow .slideset, .news-carousel, .news-carousel .news-mask, .news-carousel .news-pagination ul a, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .inquiry-email-form .input-holder, .radio-checks-holder {
   overflow: hidden;
@@ -2084,10 +2085,10 @@ input[type='submit'] {
 .agent-listing-page .publicProperty-post .image-holder img,
 .listing-page .publicAgent-post .image-holder img,
 .listing-page .publicProperty-post .image-holder img {
-  max-height: 208px;
-  min-height: 208px;
-  min-width: 208px;
-  max-width: 208px;
+  max-height: 180px;
+  min-height: 180px;
+  min-width: 180px;
+  max-width: 180px;
 }
 
 @media (max-width: 767px) {
@@ -2204,7 +2205,7 @@ input[type='submit'] {
 .listing-page .publicProperty-post .caption .links-holder {
   position: absolute;
   bottom: 0;
-  left: 220px;
+  left: 195px;
   right: 0;
 }
 
@@ -3767,6 +3768,9 @@ input[type='submit'] {
   display: inline-block;
   vertical-align: middle;
   white-space: normal;
+  max-width: 100px;
+  max-height: 100px;
+  height: 100%;
 }
 
 .agent-detail-page .agent-picture .premiumProperty,
