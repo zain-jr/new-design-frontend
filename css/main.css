@@ -914,7 +914,7 @@ th {
 }
 
 .hidden, .agent-detail-page .propertyImage-slide.active a:after,
-.propertyDetail-page .propertyImage-slide.active a:after, .addProperty-form.successfully-saved .add-form-holder, .paginationCurrent-num-1,
+.propertyDetail-page .propertyImage-slide.active a:after, .paginationCurrent-num-1,
 .current-num, .addProperty-form .list-extraFeatures label:after, .registerNow .company-logo.hover label span[class^="icon-"], .registerNow .company-logo.hover label span[class*="icon-"] {
   display: none !important;
 }
@@ -4290,10 +4290,6 @@ input[type='submit'] {
   font-family: 'icomoon';
 }
 
-.addProperty-form.successfully-saved .thankYou-message {
-  display: block;
-}
-
 .addProperty-form .select2-container {
   width: 100% !important;
 }
@@ -4988,10 +4984,6 @@ input[type='submit'] {
     text-align: center;
     display: block !important;
   }
-}
-
-.addProperty-form .thankYou-message {
-  display: none;
 }
 
 .addProperty-form .thankYou-message .layout, .addProperty-form .thankYou-message .agent-listing-page #content, .agent-listing-page .addProperty-form .thankYou-message #content {
@@ -7302,7 +7294,7 @@ h1 span {
 @media (max-width: 767px) {
   .loginRegister li:first-child a .hidden, .loginRegister li:first-child a .agent-detail-page .propertyImage-slide.active a:after, .agent-detail-page .propertyImage-slide.active .loginRegister li:first-child a a:after, .loginRegister li:first-child a
   .propertyDetail-page .propertyImage-slide.active a:after,
-  .propertyDetail-page .propertyImage-slide.active .loginRegister li:first-child a a:after, .loginRegister li:first-child a .addProperty-form.successfully-saved .add-form-holder, .addProperty-form.successfully-saved .loginRegister li:first-child a .add-form-holder, .loginRegister li:first-child a .paginationCurrent-num-1, .loginRegister li:first-child a
+  .propertyDetail-page .propertyImage-slide.active .loginRegister li:first-child a a:after, .loginRegister li:first-child a .paginationCurrent-num-1, .loginRegister li:first-child a
   .current-num {
     display: inline-block !important;
     vertical-align: top;
@@ -7863,7 +7855,7 @@ h1 span {
 @media (max-width: 767px) {
   #nav .mobile-content.hidden, #nav .agent-detail-page .propertyImage-slide.active a.mobile-content:after, .agent-detail-page .propertyImage-slide.active #nav a.mobile-content:after, #nav
   .propertyDetail-page .propertyImage-slide.active a.mobile-content:after,
-  .propertyDetail-page .propertyImage-slide.active #nav a.mobile-content:after, #nav .addProperty-form.successfully-saved .mobile-content.add-form-holder, .addProperty-form.successfully-saved #nav .mobile-content.add-form-holder, #nav .mobile-content.paginationCurrent-num-1, #nav
+  .propertyDetail-page .propertyImage-slide.active #nav a.mobile-content:after, #nav .mobile-content.paginationCurrent-num-1, #nav
   .mobile-content.current-num {
     display: block !important;
   }

@@ -38,17 +38,6 @@
             }
         }
     }
-
-    &.successfully-saved {
-
-        .add-form-holder {
-            @extend .hidden;
-        }
-        .thankYou-message {
-            display: block;
-        }
-    }
-
     .select2-container {
         width:  100% !important;
     }
@@ -571,7 +560,6 @@
         }
     }
     .thankYou-message {
-        display: none;
         @extend %text-center;
 
         .layout {
