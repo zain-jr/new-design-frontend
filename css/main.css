@@ -10475,6 +10475,12 @@ h1 span {
   -moz-transition: bottom 0.5s ease;
 }
 
+@media (max-width: 1023px) {
+  .weAreWorking {
+    padding: 5px;
+  }
+}
+
 .weAreWorking.hide {
   bottom: -200px;
 }
@@ -10483,6 +10489,22 @@ h1 span {
   font-size: 22px;
   line-height: 25px;
   margin: 0 0 20px;
+}
+
+@media (max-width: 1023px) {
+  .weAreWorking p {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 0 5px;
+  }
+}
+
+@media (max-width: 767px) {
+  .weAreWorking p {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 0 5px;
+  }
 }
 
 .weAreWorking a {
@@ -10501,6 +10523,13 @@ h1 span {
   background: #d89429;
   padding: 10px 30px;
   text-decoration: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1023px) {
+  .weAreWorking .btn-close-working {
+    padding: 5px 25px;
+  }
 }
 
 .weAreWorking .btn-close-working:hover {

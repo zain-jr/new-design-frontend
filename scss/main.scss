@@ -3016,6 +3016,10 @@ h1 {
   -webkit-transition: bottom 0.5s ease;
   -moz-transition: bottom 0.5s ease;
 
+  @include media('<desktop'){
+   padding: 5px; 
+  }
+
   &.hide{
     bottom: -200px;
   }
@@ -3023,18 +3027,33 @@ h1 {
   p {
     @include font(22,25);
     margin: 0 0 20px;
+
+    @include media('<desktop'){
+      @include font(16,20);
+      margin: 0 0 5px;
+    }
+    @include media('<tablet'){
+      @include font(14,20);
+      margin: 0 0 5px;
+    }
   }
   a {
     text-decoration: none;
     color: $white;
     @include align(top);
     text-decoration: underline;
+
     &:hover { text-decoration: none;}
   }
   .btn-close-working {
     background: $orange;
     padding:10px 30px;
     text-decoration: none;
+    cursor: pointer;
+
+    @include media('<desktop'){
+      padding: 5px 25px;
+    }
 
     &:hover {
       background: darken($orange, 10%);
