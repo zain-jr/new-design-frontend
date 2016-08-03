@@ -3001,28 +3001,35 @@ h1 {
 .weAreWorking  {
   color: $white;
   @extend %text-center;
-  width: 375px;
+  width: 100%;
+  @extend %container;
   background: $p42-color;
   border-radius: 4px;
   padding: 10px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999999914;
 
   p {
     @include font(22,25);
-  }
-  span[class^="icon-"],span[class*="icon-"]{
-    display: block;
-    font-size: 50px;
-    line-height: 1;
+    margin: 0 0 20px;
   }
   a {
-    color: $white;
     text-decoration: none;
-    background: $orange;
+    color: $white;
     @include align(top);
+
+    &:hover { text-decoration: underline;}
+  }
+  .btn-close {
+    background: $orange;
     padding:10px 30px;
 
     &:hover {
-
+      background: darken($orange, 10%);
+      text-decoration: none;
     }
   }
 }

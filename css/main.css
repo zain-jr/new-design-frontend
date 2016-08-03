@@ -771,7 +771,7 @@ th {
   display: block;
 }
 
-.container, #nav {
+.container, #nav, .weAreWorking {
   max-width: 1170px;
   margin: 0 auto;
   padding: 0 15px;
@@ -10461,30 +10461,42 @@ h1 span {
 
 .weAreWorking {
   color: #fff;
-  width: 375px;
+  width: 100%;
   background: #2092d0;
   border-radius: 4px;
   padding: 10px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999999914;
 }
 
 .weAreWorking p {
   font-size: 22px;
   line-height: 25px;
-}
-
-.weAreWorking span[class^="icon-"], .weAreWorking span[class*="icon-"] {
-  display: block;
-  font-size: 50px;
-  line-height: 1;
+  margin: 0 0 20px;
 }
 
 .weAreWorking a {
-  color: #fff;
   text-decoration: none;
-  background: #d89429;
+  color: #fff;
   display: inline-block;
   vertical-align: top;
+}
+
+.weAreWorking a:hover {
+  text-decoration: underline;
+}
+
+.weAreWorking .btn-close {
+  background: #d89429;
   padding: 10px 30px;
+}
+
+.weAreWorking .btn-close:hover {
+  background: #ae7720;
+  text-decoration: none;
 }
 
 @media print {
