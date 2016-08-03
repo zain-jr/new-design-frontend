@@ -1121,6 +1121,7 @@ h1 {
     }
 
     .main-navigation {
+      @extend %text-center;
 
       li {
         vertical-align: bottom;
@@ -2773,6 +2774,10 @@ h1 {
 
       li {
         padding: 5px;
+
+        @include media('<phone'){
+          width: 50%;
+        }
       }
     }
   }
@@ -2786,7 +2791,7 @@ h1 {
       width: 33.33%;
     }
 
-    @include media('<desktop'){
+    @include media('<tablet'){
       padding: 10px 3px;
     }
 

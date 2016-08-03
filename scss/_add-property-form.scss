@@ -482,7 +482,7 @@
                 color: $white;
                 cursor: pointer;
                 background: $p42-color;
-                padding: 5px 25px;
+                padding: 5px 20px;
             }
 
             .layout{
@@ -500,7 +500,7 @@
             }
 
             .slide {
-                padding: 20px 0;
+                padding: 20px 5px;
                 @extend %text-left;
                 display: none;
                 margin: 0 -260px 0 50px; 

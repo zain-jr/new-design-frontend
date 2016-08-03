@@ -353,6 +353,7 @@
   .artical-holder {
     @extend %layout;
     margin: 0 -3px;
+    @include align-reset(top, 12,15);
   }
   
   #content {
@@ -363,7 +364,7 @@
   }
   .publicAgent-post {
     width: 50%;
-    @extend .pull-left;
+    float: none !important;
     background: transparent;
     padding: 0 3px 6px;
     margin: 0 0 5px;
