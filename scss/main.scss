@@ -2994,6 +2994,10 @@ h1 {
     }
   }
 }
+.termsOfUse {
+  @include align(top);
+  color: $p42-default-grey;
+}
 @media print {
   * {
     background: none !important;

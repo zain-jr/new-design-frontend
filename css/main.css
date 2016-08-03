@@ -10449,6 +10449,12 @@ h1 span {
   opacity: 0.8;
 }
 
+.termsOfUse {
+  display: inline-block;
+  vertical-align: top;
+  color: #6c6d70;
+}
+
 @media print {
   * {
     background: none !important;
