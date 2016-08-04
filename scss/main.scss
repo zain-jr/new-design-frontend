@@ -1490,7 +1490,6 @@ h1 {
     @include font(14,17);
     font-weight: 700;
     border: 1px solid $p42-default-grey;
-    opacity: 0.5;
     
     @include media('<widescreen'){
       @include squar(100%, 37px);
@@ -1503,10 +1502,14 @@ h1 {
     }
 
     &:focus {
-      opacity: 1;
-
+      border-color: $p42-color;
+      color: $p42-color;
+      
       ~ button {
-        opacity: 1;
+          color: $p42-color;
+      }
+      @include placeholder{
+        color: $p42-color;
       }
     }
 
@@ -1528,7 +1531,6 @@ h1 {
     background: transparent;
     color: $p42-default-grey;
     padding: 0;
-    opacity: 0.5;
     
     @include media('<tablet'){
       color: $white;
@@ -2403,7 +2405,7 @@ h1 {
   @include font(16,20);
   color: $white;
   text-decoration: none;
-  background: $orange;
+  background: $p42-color;
   position: relative;
   font-weight: 700;
   padding: 3px 34px 3px 15px;
@@ -2421,7 +2423,7 @@ h1 {
   -moz-transition: background 0.5s ease;
 
   &:hover {
-    background: $p42-color;
+    background: $orange;
   }
 
   &:after {
@@ -2475,6 +2477,7 @@ h1 {
 
     @include media('<tablet'){
       float: left;
+      @include align-reset(top, 11, 14);
     }
 
     span[class^="icon-"], span[class*="icon-"] {
@@ -2485,16 +2488,13 @@ h1 {
       @include media('<desktop'){
         display:none;
       }
-      @include media('<tablet'){
-        display:inline-block;
-      }
     }
     b {
       @include align(top);
       width: 65%;
       font-weight: 400;
 
-      @include media('<tablet'){ display: none;}
+      @include media('<tablet'){ width: auto;}
     }
     span {
       padding: 0 5px;
@@ -2699,6 +2699,7 @@ h1 {
 
     span{
       color: $p42-color;
+      font-weight: 400;
     }
 
     @include media('<tablet'){
@@ -2801,7 +2802,7 @@ h1 {
     @include font(18,22);
     font-weight: 700;
     padding: 10px;
-    margin: 0 3px 0 auto;
+    margin: 0 auto;
 
     @include media('<tablet'){
       width: 100%;

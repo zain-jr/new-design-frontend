@@ -8423,7 +8423,6 @@ h1 span {
   line-height: 17px;
   font-weight: 700;
   border: 1px solid #6c6d70;
-  opacity: 0.5;
 }
 
 @media (max-width: 1199px) {
@@ -8442,11 +8441,33 @@ h1 span {
 }
 
 .searchByID input[type="text"]:focus, .searchByID input[type="search"]:focus {
-  opacity: 1;
+  border-color: #2092d0;
+  color: #2092d0;
 }
 
 .searchByID input[type="text"]:focus ~ button, .searchByID input[type="search"]:focus ~ button {
+  color: #2092d0;
+}
+
+.searchByID input[type="text"]:focus::-webkit-input-placeholder, .searchByID input[type="search"]:focus::-webkit-input-placeholder {
+  color: #2092d0;
+}
+
+.searchByID input[type="text"]:focus::-moz-placeholder, .searchByID input[type="search"]:focus::-moz-placeholder {
   opacity: 1;
+  color: #2092d0;
+}
+
+.searchByID input[type="text"]:focus:-moz-placeholder, .searchByID input[type="search"]:focus:-moz-placeholder {
+  color: #2092d0;
+}
+
+.searchByID input[type="text"]:focus:-ms-input-placeholder, .searchByID input[type="search"]:focus:-ms-input-placeholder {
+  color: #2092d0;
+}
+
+.searchByID input[type="text"]:focus.placeholder, .searchByID input[type="search"]:focus.placeholder {
+  color: #2092d0;
 }
 
 .searchByID input[type="text"]::-webkit-input-placeholder, .searchByID input[type="search"]::-webkit-input-placeholder {
@@ -8509,7 +8530,6 @@ h1 span {
   background: transparent;
   color: #6c6d70;
   padding: 0;
-  opacity: 0.5;
 }
 
 @media (max-width: 767px) {
@@ -9678,7 +9698,7 @@ h1 span {
   line-height: 20px;
   color: #fff;
   text-decoration: none;
-  background: #d89429;
+  background: #2092d0;
   position: relative;
   font-weight: 700;
   padding: 3px 34px 3px 15px;
@@ -9697,7 +9717,7 @@ h1 span {
 }
 
 .feedBack:hover {
-  background: #2092d0;
+  background: #d89429;
 }
 
 .feedBack:after {
@@ -9775,6 +9795,16 @@ h1 span {
 @media (max-width: 767px) {
   .public-ui-features li {
     float: left;
+    font-size: 0;
+    line-height: 0;
+    letter-spacing: -4px;
+  }
+  .public-ui-features li > * {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 11px;
+    line-height: 14px;
+    letter-spacing: 0;
   }
 }
 
@@ -9791,12 +9821,6 @@ h1 span {
   }
 }
 
-@media (max-width: 767px) {
-  .public-ui-features li span[class^="icon-"], .public-ui-features li span[class*="icon-"] {
-    display: inline-block;
-  }
-}
-
 .public-ui-features li b {
   display: inline-block;
   vertical-align: top;
@@ -9806,7 +9830,7 @@ h1 span {
 
 @media (max-width: 767px) {
   .public-ui-features li b {
-    display: none;
+    width: auto;
   }
 }
 
@@ -10082,6 +10106,7 @@ h1 span {
 
 .generic-lightbox .lighbox-heading span {
   color: #2092d0;
+  font-weight: 400;
 }
 
 @media (max-width: 767px) {
@@ -10209,7 +10234,7 @@ h1 span {
   line-height: 22px;
   font-weight: 700;
   padding: 10px;
-  margin: 0 3px 0 auto;
+  margin: 0 auto;
 }
 
 @media (max-width: 767px) {
