@@ -71,6 +71,7 @@ $media-expressions: (
       max-width: 300px;
       max-height: 300px;
       margin: 0 auto;
+      pointer-events:none;
 
       @include media('<tablet'){
         max-width: 200px;
@@ -2277,13 +2278,13 @@ h1 {
 .pager {
 	@extend %listreset;
 	text-align: center;
-	@include align-reset(top,12,15);
+	@include align-reset(top,13,16);
 	padding: 30px 0 0;
   font-family: $open-sans;
 	
 	@include media('<tablet'){
 		padding: 30px 0;
-		@include align-reset(top,12,15);
+		@include align-reset(top,13,16);
 	}
 	
 	li {
@@ -2292,7 +2293,6 @@ h1 {
 		
 		&.active {
 			a{
-				color: $white;
 			}
 		}
 		
@@ -2300,28 +2300,12 @@ h1 {
 			display: block;
 			text-decoration: none;
 			color: $p42-color;
+      opacity: 0.5;
+      padding: 0 3px 2px;
       border-bottom: 4px solid transparent;
-			transition: color 0.4s ease, background 0.4s ease;
-			-webkit-transition: color 0.4s ease, background 0.4s ease;
-			-moz-transition: color 0.4s ease, background 0.4s ease;
-			-ms-transition: color 0.4s ease, background 0.4s ease;
-			
-			&.previous, &.next {
-				border: 0;
-				
-        @include media('<tablet'){ display: none;}
-
-				&:hover{
-					background: transparent;
-					color: $black;
-					opacity: 0.8;
-				}
-			}
 			
 			&:hover{
-				color: $white;
-        background: $p42-color;
-        border-color:$p42-color;
+        opacity: 1;
 			}
 		}
 	}

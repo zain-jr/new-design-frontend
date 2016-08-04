@@ -1,6 +1,5 @@
 jQuery(window).load(function(){
- jQuery('body').removeClass('loading-page');
-
+	$('.page-loader').fadeOut();
 });
 
 $(document).ready(function() {
