@@ -244,6 +244,10 @@
         padding: 0 0 55px 10px;
       }
 
+      @include media('<tablet'){
+        padding: 0;
+      }
+
       h1 {
         margin: 0 0 15px;
         font-weight: 700;
@@ -300,10 +304,13 @@
         right: 0;
 
         @include media('<desktop'){
-          left: 15px;
+          left: 0;
+          padding: 0 0 0 15px; 
+          background: rgba($white, 0.5);
         }
 
         @include media('<tablet'){
+          background: transparent;
           overflow: visible;
           clear: both;
           right: 10px;

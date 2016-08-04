@@ -1,3 +1,8 @@
+jQuery(window).load(function(){
+ jQuery('body').removeClass('loading-page');
+
+});
+
 $(document).ready(function() {
   $(".js-example-basic-single").select2();
   if (screen.width < 768){
@@ -263,6 +268,10 @@ $(document).on('focusout', '.PriceField', function(){
 $(document).on('click', '.call-agent-btn', function(){
 	var phoneNumber = $(this).attr('data-tel');
 	var placeToGo = $('.call-agent').find('p').text(phoneNumber);
+
+	if (screen.width < 768){
+		$('#wrapper').removeClass('fancy-overlay');
+	}
 });
 
 function previewAddPropertyImg(file, target)
@@ -407,3 +416,17 @@ $(document).on('click', '.packetData>.delete', function(){
 $(document).on('click', '.btn-close-working', function(){
 	$('.weAreWorking').addClass('hide');
 });
+
+
+$('html').bind("DOMSubtreeModified",function(){
+	if($('html').hasClass('fancybox-lock')){
+		
+	}
+});
+
+// $(document).bind('touchmove', function(e) {
+// 	e.preventDefault();
+// });
+// document.addEventListener('touchmove', function(e) {
+// 	e.preventDefault();
+// }, false);
