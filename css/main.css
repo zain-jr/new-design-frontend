@@ -820,7 +820,7 @@ th {
 .propertyDetail-page .agent-societies .agent-slide a, .agent-detail-page .agent-picture,
 .propertyDetail-page .agent-picture, .addProperty-form .extra-features, .addProperty-form .existingOrNew-member li, .addProperty-form .list-extraFeatures .feature-heading, .addProperty-form .thankYou-message, .addProperty-form .thankYou-message .left, .registerNow .role-opener, .forgot-form .buttons-holder li a,
 .login-form .buttons-holder li a, .page-loader, .global-error,
-.global-success, .custom-withouChecks .fake-label, h1, .loginRegister li, .main-visualSection, .byDefault-fixed #nav .main-navigation, #nav.fixed-position .main-navigation, #nav .main-navigation li, .news-carousel .news-pagination ul, .topSocities-holder .socities li a, .heading, .agents-logo li a, .premiumProperty, .public-ui-features li strong, .generic-lightbox, .login-heading,
+.global-success, .custom-withouChecks .fake-label, h1, .loginRegister li, .main-visualSection, #nav, .byDefault-fixed #nav .main-navigation, #nav.fixed-position .main-navigation, #nav .main-navigation li, .news-carousel .news-pagination ul, .topSocities-holder .socities li a, .heading, .agents-logo li a, .premiumProperty, .public-ui-features li strong, .generic-lightbox, .login-heading,
 .registerNow-heading,
 .add-pro-heading, .Ads, .weAreWorking {
   text-align: center;
@@ -835,7 +835,7 @@ th {
 .propertyDetail-page .property-picture-holder h1, .agent-detail-page .overview-section,
 .propertyDetail-page .overview-section, .agent-detail-page .overview-section .small-heading,
 .propertyDetail-page .overview-section .small-heading, .agent-detail-page .feature .small-heading,
-.propertyDetail-page .feature .small-heading, .agent-detail-page .col .list li > span:first-child, .addProperty-form .existingOrNew-member li .slide, .addProperty-form .thankYou-message .layout, .addProperty-form .thankYou-message .agent-listing-page #content, .agent-listing-page .addProperty-form .thankYou-message #content, .mainSearch-form .inputsHolder, #nav, .topSocities-holder .socities li .caption .numberOfproperties, .inquiry-email-form, .information {
+.propertyDetail-page .feature .small-heading, .agent-detail-page .col .list li > span:first-child, .addProperty-form .existingOrNew-member li .slide, .addProperty-form .thankYou-message .layout, .addProperty-form .thankYou-message .agent-listing-page #content, .agent-listing-page .addProperty-form .thankYou-message #content, .mainSearch-form .inputsHolder, .topSocities-holder .socities li .caption .numberOfproperties, .inquiry-email-form, .information {
   text-align: left;
 }
 

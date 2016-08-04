@@ -1073,7 +1073,7 @@ h1 {
   left: 0;
   right: 0;
   z-index: 99;
-  @extend %text-left;
+  @extend %text-center;
   @extend %container;
 
   @include media('<desktop'){ padding: 0;}
