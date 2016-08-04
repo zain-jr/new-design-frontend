@@ -781,7 +781,7 @@ th {
 .propertyDetail-page .propertyImage-pagination .propertyImage-slide img,
 .propertyDetail-page .propertyImage-pagination .slide img,
 .propertyDetail-page .propertyImage-slider .propertyImage-slide img,
-.propertyDetail-page .propertyImage-slider .slide img, .registerNow .company-logo .logo-holder .picture-holder img, .logo img, .news-carousel .news-slide img {
+.propertyDetail-page .propertyImage-slider .slide img, .registerNow .company-logo .logo-holder .picture-holder img, .page-loader .page-loader-holder img, .logo img, .news-carousel .news-slide img {
   width: 100%;
   height: auto;
   display: block;
@@ -6596,6 +6596,27 @@ input[type='submit'] {
   right: 0;
   bottom: 0;
   z-index: 2147483647;
+  display: none;
+}
+
+.page-loader:after {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  margin: 0 0 0 -5px;
+  content: '';
+  width: 1px;
+}
+
+.page-loader .page-loader-holder {
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.page-loader .page-loader-holder img {
+  max-width: 300px;
+  max-height: 300px;
 }
 
 html {
@@ -7007,6 +7028,15 @@ h1 span {
   .byDefault-fixed #header .right-sideTop .loginRegister li:first-child a, #header.fixed-position .right-sideTop .loginRegister li:first-child a {
     padding: 19px 23px 7px 7px;
   }
+}
+
+@media (max-width: 1023px) and (max-width: 767px) {
+  .byDefault-fixed #header .right-sideTop .loginRegister li:first-child a, #header.fixed-position .right-sideTop .loginRegister li:first-child a {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 1023px) {
   .byDefault-fixed #header .right-sideTop .loginRegister li a, #header.fixed-position .right-sideTop .loginRegister li a {
     min-height: 50px;
   }

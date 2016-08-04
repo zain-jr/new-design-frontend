@@ -416,14 +416,6 @@ $(document).on('click', '.packetData>.delete', function(){
 $(document).on('click', '.btn-close-working', function(){
 	$('.weAreWorking').addClass('hide');
 });
-
-
-$('html').bind("DOMSubtreeModified",function(){
-	if($('html').hasClass('fancybox-lock')){
-		
-	}
-});
-
 // $(document).bind('touchmove', function(e) {
 // 	e.preventDefault();
 // });

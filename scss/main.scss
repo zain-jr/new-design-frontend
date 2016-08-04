@@ -49,9 +49,10 @@ $media-expressions: (
   bottom: 0;
   z-index: 2147483647;
   @extend %text-center;
+  display: none;
 
   &:after {
-    @include alig(middle);
+    @include align(middle);
     overflow: hidden;
     margin: 0 0 0 -5px;
     content: '';
@@ -428,6 +429,10 @@ h1 {
               &:first-child {
                 a {
                   padding:19px 23px 7px 7px;
+
+                  @include media('<tablet'){
+                    padding: 5px;
+                  }
                 }
               }
             a{
