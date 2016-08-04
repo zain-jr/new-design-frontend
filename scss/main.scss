@@ -1504,12 +1504,19 @@ h1 {
     &:focus {
       border-color: $p42-color;
       color: $p42-color;
+
+      @include media('<tablet'){
+        border-color: $white;
+        color: $white;
+      }
       
       ~ button {
           color: $p42-color;
+          @include media('<tablet'){ color: $white;}
       }
       @include placeholder{
         color: $p42-color;
+        @include media('<tablet'){ color: $white;}
       }
     }
 

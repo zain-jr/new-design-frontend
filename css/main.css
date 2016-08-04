@@ -8445,12 +8445,31 @@ h1 span {
   color: #2092d0;
 }
 
+@media (max-width: 767px) {
+  .searchByID input[type="text"]:focus, .searchByID input[type="search"]:focus {
+    border-color: #fff;
+    color: #fff;
+  }
+}
+
 .searchByID input[type="text"]:focus ~ button, .searchByID input[type="search"]:focus ~ button {
   color: #2092d0;
 }
 
+@media (max-width: 767px) {
+  .searchByID input[type="text"]:focus ~ button, .searchByID input[type="search"]:focus ~ button {
+    color: #fff;
+  }
+}
+
 .searchByID input[type="text"]:focus::-webkit-input-placeholder, .searchByID input[type="search"]:focus::-webkit-input-placeholder {
   color: #2092d0;
+}
+
+@media (max-width: 767px) {
+  .searchByID input[type="text"]:focus::-webkit-input-placeholder, .searchByID input[type="search"]:focus::-webkit-input-placeholder {
+    color: #fff;
+  }
 }
 
 .searchByID input[type="text"]:focus::-moz-placeholder, .searchByID input[type="search"]:focus::-moz-placeholder {
@@ -8458,16 +8477,40 @@ h1 span {
   color: #2092d0;
 }
 
+@media (max-width: 767px) {
+  .searchByID input[type="text"]:focus::-moz-placeholder, .searchByID input[type="search"]:focus::-moz-placeholder {
+    color: #fff;
+  }
+}
+
 .searchByID input[type="text"]:focus:-moz-placeholder, .searchByID input[type="search"]:focus:-moz-placeholder {
   color: #2092d0;
+}
+
+@media (max-width: 767px) {
+  .searchByID input[type="text"]:focus:-moz-placeholder, .searchByID input[type="search"]:focus:-moz-placeholder {
+    color: #fff;
+  }
 }
 
 .searchByID input[type="text"]:focus:-ms-input-placeholder, .searchByID input[type="search"]:focus:-ms-input-placeholder {
   color: #2092d0;
 }
 
+@media (max-width: 767px) {
+  .searchByID input[type="text"]:focus:-ms-input-placeholder, .searchByID input[type="search"]:focus:-ms-input-placeholder {
+    color: #fff;
+  }
+}
+
 .searchByID input[type="text"]:focus.placeholder, .searchByID input[type="search"]:focus.placeholder {
   color: #2092d0;
+}
+
+@media (max-width: 767px) {
+  .searchByID input[type="text"]:focus.placeholder, .searchByID input[type="search"]:focus.placeholder {
+    color: #fff;
+  }
 }
 
 .searchByID input[type="text"]::-webkit-input-placeholder, .searchByID input[type="search"]::-webkit-input-placeholder {
