@@ -415,9 +415,3 @@ $(document).on('click', '.packetData>.delete', function(){
 $(document).on('click', '.btn-close-working', function(){
 	$('.weAreWorking').addClass('hide');
 });
-// $(document).bind('touchmove', function(e) {
-// 	e.preventDefault();
-// });
-// document.addEventListener('touchmove', function(e) {
-// 	e.preventDefault();
-// }, false);

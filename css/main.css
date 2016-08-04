@@ -6589,6 +6589,7 @@ input[type='submit'] {
 
 .page-loader {
   background: #525252 url("../images/bg.jpg") no-repeat;
+  background-size: 100% auto;
   height: 100vh;
   position: fixed;
   top: 0;
@@ -9580,6 +9581,12 @@ h1 span {
   border-bottom: 4px solid transparent;
 }
 
+@media (max-width: 767px) {
+  .pager li a {
+    padding: 0 5px;
+  }
+}
+
 .pager li a span {
   display: inline-block;
   vertical-align: middle;
@@ -9671,7 +9678,7 @@ h1 span {
   line-height: 20px;
   color: #fff;
   text-decoration: none;
-  background: #2092d0;
+  background: #d89429;
   position: relative;
   font-weight: 700;
   padding: 3px 34px 3px 15px;
@@ -9690,7 +9697,7 @@ h1 span {
 }
 
 .feedBack:hover {
-  background: #d89429;
+  background: #2092d0;
 }
 
 .feedBack:after {
@@ -10542,9 +10549,9 @@ h1 span {
   color: #fff;
   margin: 0 auto !important;
   width: 100%;
-  background: #2092d0;
+  background: rgba(32, 146, 208, 0.95);
   border-radius: 4px;
-  padding: 10px;
+  padding: 10px 10px 2px;
   position: fixed;
   bottom: 0;
   right: 0;
@@ -10565,7 +10572,13 @@ h1 span {
   bottom: -200px;
 }
 
+.weAreWorking b {
+  font-weight: 600;
+  display: block;
+}
+
 .weAreWorking p {
+  font-family: "Open Sans", "Arial", sans-serif;
   font-size: 22px;
   line-height: 25px;
   margin: 0 0 20px;
