@@ -6588,7 +6588,7 @@ input[type='submit'] {
 }
 
 .page-loader {
-  background: #6c6d70;
+  background: #f1f1f1;
   height: 100vh;
   position: fixed;
   top: 0;
@@ -6596,18 +6596,38 @@ input[type='submit'] {
   right: 0;
   bottom: 0;
   z-index: 2147483647;
+  height: 100vh;
+  white-space: nowrap;
+}
+
+.page-loader:after {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1px;
+  overflow: hidden;
+  margin: 0 0 0 -5px;
+  content: '';
+  height: 100vh;
 }
 
 .page-loader .page-loader-holder {
   width: 100%;
-  height: 100vh;
-  white-space: nowrap;
+  white-space: normal;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .page-loader .page-loader-holder img {
   max-width: 300px;
   max-height: 300px;
   margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .page-loader .page-loader-holder img {
+    max-width: 200px;
+    max-height: 200px;
+  }
 }
 
 html {

@@ -39,7 +39,7 @@ $media-expressions: (
 @import 'login-page';
 @import 'fancybox';
 .page-loader {
-  background: $p42-default-grey;
+  background: #f1f1f1;
   @extend %layout;
   height: 100vh;
   position: fixed;
@@ -49,21 +49,33 @@ $media-expressions: (
   bottom: 0;
   z-index: 2147483647;
   @extend %text-center;
+  height: 100vh;
+  white-space:nowrap;
+
+  &:after {
+    @include align(middle);
+    width: 1px;
+    overflow: hidden;
+    margin:  0 0 0 -5px;
+    content:'';
+    height: 100vh;
+  }
 
   .page-loader-holder {
     width: 100%;
-    height: 100vh;
-    white-space:nowrap;
-
-    &:after {
-      
-    }
+    white-space:normal;
+    @include align(middle);
     
     img {
       @extend %img-res;
       max-width: 300px;
       max-height: 300px;
       margin: 0 auto;
+
+      @include media('<tablet'){
+        max-width: 200px;
+        max-height: 200px;
+      }
     }
   }
 }
