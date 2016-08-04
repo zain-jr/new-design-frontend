@@ -6596,27 +6596,18 @@ input[type='submit'] {
   right: 0;
   bottom: 0;
   z-index: 2147483647;
-  display: none;
-}
-
-.page-loader:after {
-  display: inline-block;
-  vertical-align: middle;
-  overflow: hidden;
-  margin: 0 0 0 -5px;
-  content: '';
-  width: 1px;
 }
 
 .page-loader .page-loader-holder {
   width: 100%;
-  display: inline-block;
-  vertical-align: middle;
+  height: 100vh;
+  white-space: nowrap;
 }
 
 .page-loader .page-loader-holder img {
   max-width: 300px;
   max-height: 300px;
+  margin: 0 auto;
 }
 
 html {

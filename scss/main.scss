@@ -49,23 +49,21 @@ $media-expressions: (
   bottom: 0;
   z-index: 2147483647;
   @extend %text-center;
-  display: none;
 
-  &:after {
-    @include align(middle);
-    overflow: hidden;
-    margin: 0 0 0 -5px;
-    content: '';
-    width: 1px;
-  }
   .page-loader-holder {
     width: 100%;
-    @include align(middle);
+    height: 100vh;
+    white-space:nowrap;
+
+    &:after {
+      
+    }
     
     img {
       @extend %img-res;
       max-width: 300px;
       max-height: 300px;
+      margin: 0 auto;
     }
   }
 }
