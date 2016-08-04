@@ -6588,7 +6588,7 @@ input[type='submit'] {
 }
 
 .page-loader {
-  background: #f1f1f1;
+  background: #525252 url("../images/bg.jpg") no-repeat;
   height: 100vh;
   position: fixed;
   top: 0;
@@ -6598,6 +6598,18 @@ input[type='submit'] {
   z-index: 2147483647;
   height: 100vh;
   white-space: nowrap;
+}
+
+.page-loader:before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.85);
+  content: '';
+  z-index: -1;
+  pointer-events: none;
 }
 
 .page-loader:after {
@@ -9528,8 +9540,8 @@ h1 span {
 .pager > * {
   display: inline-block;
   vertical-align: top;
-  font-size: 13px;
-  line-height: 16px;
+  font-size: 15px;
+  line-height: 18px;
   letter-spacing: 0;
 }
 
@@ -9543,15 +9555,20 @@ h1 span {
   .pager > * {
     display: inline-block;
     vertical-align: top;
-    font-size: 13px;
-    line-height: 16px;
+    font-size: 15px;
+    line-height: 18px;
     letter-spacing: 0;
   }
 }
 
 .pager li {
-  padding: 0 2px;
   margin: 0 0 5px;
+}
+
+.pager li.active a {
+  opacity: 1;
+  border-bottom: 4px solid #2092d0;
+  font-weight: bold;
 }
 
 .pager li a {
@@ -9559,8 +9576,13 @@ h1 span {
   text-decoration: none;
   color: #2092d0;
   opacity: 0.5;
-  padding: 0 3px 2px;
+  padding: 0 7px;
   border-bottom: 4px solid transparent;
+}
+
+.pager li a span {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .pager li a:hover {
