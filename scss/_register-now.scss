@@ -592,6 +592,14 @@
             display: block;
             position: relative;
             margin: 0 0 10px;
+
+            .customCheckbox {
+                input{
+                    top: 0;
+                    left: 0;
+                    position: absolute;
+                }
+            }
         }
         label {
             width: 100%;

@@ -3594,6 +3594,7 @@ input[type='submit'] {
     float: none !important;
     padding: 0 0 10px;
     display: block;
+    text-align: center;
   }
 }
 
@@ -3602,6 +3603,7 @@ input[type='submit'] {
   .propertyDetail-page .overview-section .btn-hollow {
     float: none !important;
     display: block;
+    text-align: center;
   }
 }
 
@@ -5904,6 +5906,12 @@ input[type='submit'] {
   margin: 0 0 10px;
 }
 
+.registerNow .agree-with-terms li .customCheckbox input {
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
 .registerNow .agree-with-terms label {
   width: 100%;
   padding: 0 20px 0 30px;
@@ -7225,20 +7233,6 @@ h1 span {
   top: 4px;
   left: 0;
   right: 0;
-}
-
-@media (max-width: 1539px) {
-  .byDefault-fixed .logo,
-  .fixed-position .logo {
-    max-width: 280px;
-  }
-}
-
-@media (max-width: 1199px) {
-  .byDefault-fixed .logo,
-  .fixed-position .logo {
-    max-width: 250px;
-  }
 }
 
 @media (max-width: 1199px) {
@@ -10699,6 +10693,36 @@ h1 span {
 
 .weAreWorking .btn-close-working:hover {
   background: #d89429;
+}
+
+.please-wait {
+  position: relative;
+}
+
+.please-wait:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: 789;
+  content: '';
+}
+
+.please-wait:before {
+  background: url("../images/ring1.gif") no-repeat 50% 0;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 790;
+  width: 150px;
+  height: 150px;
+  content: 'Please wait...';
+  color: #000;
+  margin: -75px  0 0 -75px;
+  padding: 140px 0 0 30px;
 }
 
 @media print {

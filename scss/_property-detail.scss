@@ -328,6 +328,7 @@
         float: none !important;
         padding: 0 0 10px;
         display: block;
+        text-align: center;
       }
     }
     .btn-hollow {
@@ -336,6 +337,7 @@
       @include media('<tablet'){
         float: none !important;
         display: block;
+        text-align: center;
       }
     }
     .layout{

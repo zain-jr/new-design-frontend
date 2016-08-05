@@ -588,13 +588,7 @@ h1 {
     top: 4px;
     left: 0;
     right: 0;
-
-    @include media('<tvscreen'){
-      max-width: 280px;
-    }
-    @include media('<widescreen'){
-      max-width: 250px;
-    }
+    
     @include media('<widescreen'){
       max-width: 250px;
       top: 2px;
@@ -3124,6 +3118,33 @@ h1 {
     &:hover {
       background: $orange;
     }
+  }
+}
+.please-wait{
+  position: relative;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba($white, 0.7);
+    z-index: 789;
+    content: '';
+  }
+  &:before {
+    background: url('../images/ring1.gif') no-repeat 50% 0;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 790;
+    @include squar(150px,150px);
+    content: 'Please wait...';
+    color: $black;
+    margin: -75px  0 0 -75px;
+    padding: 140px 0 0 30px;
   }
 }
 @media print {
