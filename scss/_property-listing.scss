@@ -440,6 +440,13 @@
     @include media('<widescreen'){
       width: 100%;
     }
+    .caption {
+      .links-left {
+        .btn-default {
+          padding: 7px 31px 7px 5px;
+        }
+      }
+    }
 
     .post-holder {
       @extend %clearfix;

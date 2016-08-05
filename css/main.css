@@ -2547,6 +2547,10 @@ input[type='submit'] {
   }
 }
 
+.agent-listing-page .publicAgent-post .caption .links-left .btn-default {
+  padding: 7px 31px 7px 5px;
+}
+
 .agent-listing-page .publicAgent-post .post-holder {
   background: #fff;
   padding: 5px 3px;
