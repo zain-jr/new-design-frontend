@@ -7063,7 +7063,10 @@ h1 span {
     width: 30%;
   }
   .byDefault-fixed #header .right-sideTop .loginRegister li:first-child a, #header.fixed-position .right-sideTop .loginRegister li:first-child a {
-    padding: 19px 23px 7px 7px;
+    padding: 11px 23px 7px 7px;
+  }
+  .byDefault-fixed #header .right-sideTop .loginRegister li:first-child a span[class^="icon-"], .byDefault-fixed #header .right-sideTop .loginRegister li:first-child a span[class*="icon-"], #header.fixed-position .right-sideTop .loginRegister li:first-child a span[class^="icon-"], #header.fixed-position .right-sideTop .loginRegister li:first-child a span[class*="icon-"] {
+    display: none;
   }
 }
 
@@ -7577,6 +7580,22 @@ h1 span {
   padding: 0 0 20px;
 }
 
+@media (max-width: 1023px) {
+  .main-visualSection .main-heading {
+    font-size: 35px;
+    line-height: 38px;
+    padding: 13px 0 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-visualSection .main-heading {
+    font-size: 20px;
+    line-height: 23px;
+    padding: 0 0 5px;
+  }
+}
+
 .main-visualSection .main-heading .blue {
   color: #2092d0;
   font-weight: 800;
@@ -7593,6 +7612,15 @@ h1 span {
   font-size: 14px;
   line-height: 20px;
   font-weight: 300;
+}
+
+@media (max-width: 767px) {
+  .main-visualSection p {
+    font-size: 12px;
+    line-height: 15px;
+    max-width: inherit;
+    margin: 0 0 5px;
+  }
 }
 
 .main-visualSection .number-of-properties {
@@ -7612,9 +7640,45 @@ h1 span {
   letter-spacing: 0;
 }
 
+@media (max-width: 1023px) {
+  .main-visualSection .number-of-properties {
+    font-size: 0;
+    line-height: 0;
+    letter-spacing: -4px;
+  }
+  .main-visualSection .number-of-properties > * {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-visualSection .number-of-properties {
+    font-size: 0;
+    line-height: 0;
+    letter-spacing: -4px;
+  }
+  .main-visualSection .number-of-properties > * {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 11px;
+    line-height: 14px;
+    letter-spacing: 0;
+  }
+}
+
 .main-visualSection .number-of-properties li {
   width: 50%;
   margin: 0 0 25px;
+}
+
+@media (max-width: 767px) {
+  .main-visualSection .number-of-properties li {
+    margin: 0 0 10px;
+  }
 }
 
 .main-visualSection .number-of-properties li span, .main-visualSection .number-of-properties li strong {
@@ -7627,6 +7691,21 @@ h1 span {
   font-size: 40px;
   line-height: 43px;
   padding: 0 0 10px;
+}
+
+@media (max-width: 1023px) {
+  .main-visualSection .number-of-properties li .numberOfProperty {
+    font-size: 30px;
+    line-height: 33px;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-visualSection .number-of-properties li .numberOfProperty {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 0 0 5px;
+  }
 }
 
 #main {

@@ -452,7 +452,9 @@ h1 {
           li {
               &:first-child {
                 a {
-                  padding:19px 23px 7px 7px;
+                  padding:11px 23px 7px 7px;
+
+                  span[class^="icon-"],span[class*="icon-"]{ display: none;}
 
                   @include media('<tablet'){
                     padding: 5px;
@@ -588,7 +590,7 @@ h1 {
     top: 4px;
     left: 0;
     right: 0;
-    
+
     @include media('<widescreen'){
       max-width: 250px;
       top: 2px;
@@ -822,6 +824,16 @@ h1 {
     font-weight: 300;
     padding: 0 0 20px;
 
+    @include media('<desktop'){
+      @include font(35,38);
+      padding: 13px 0 12px;
+    }
+
+    @include media('<tablet'){
+      @include font(20,23);
+      padding:0 0 5px;
+    }
+
     .blue {
       color: $p42-color;
       font-weight: 800;
@@ -836,6 +848,12 @@ h1 {
     margin: 0 auto 10px;
     @include font(14,20);
     font-weight: 300;
+
+    @include media('<tablet'){
+      @include font(12,15);
+      max-width: inherit;
+      margin: 0 0 5px;
+    }
   }
   .number-of-properties {
     @extend %listreset;
@@ -844,9 +862,21 @@ h1 {
     @include align-reset(top, 16, 20);
     font-family: $open-sans;
 
+    @include media('<desktop'){
+      @include align-reset(top, 14, 17);
+    }
+
+    @include media('<tablet'){
+      @include align-reset(top, 11, 14);
+    }
+
     li {
       width: 50%;
       margin: 0 0 25px;
+
+      @include media('<tablet'){
+        margin: 0 0 10px;
+      }
 
       span, strong { display: block;}
 
@@ -855,6 +885,14 @@ h1 {
         font-weight: 800;
         @include font(40, 43);
         padding: 0 0 10px;
+
+        @include media('<desktop'){
+          @include font(30, 33);
+        }
+        @include media('<tablet'){
+          @include font(16, 20);
+          padding:  0 0 5px;
+        }
       }
     }
   }
