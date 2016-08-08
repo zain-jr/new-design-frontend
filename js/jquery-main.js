@@ -1,5 +1,6 @@
 jQuery(window).load(function(){
 	$('.page-loader').fadeOut();
+	$('body').removeClass('loading-page');
 });
 
 $(document).ready(function() {
@@ -135,6 +136,7 @@ function initCarousel() {
 		stretchSlideToMask: true,
 		switchTime: 2000,
 		step:1,
+		swipeGap: true,
 		animSpeed: 600
 	});
 }

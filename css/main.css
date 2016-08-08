@@ -6283,7 +6283,7 @@ input[type='submit'] {
 
 .forgot-form .buttons-holder li a:hover,
 .login-form .buttons-holder li a:hover {
-  background: #797a7d;
+  background: #d89429;
 }
 
 .forgot-form button,
@@ -6427,6 +6427,7 @@ input[type='submit'] {
   right: -10px;
   width: 30px;
   height: 30px;
+  text-decoration: none;
   cursor: pointer;
   z-index: 8040;
   color: #fff;
@@ -6673,6 +6674,11 @@ body {
   background-size: 100% auto;
   z-index: 999999999;
   position: relative;
+}
+
+body.loading-page {
+  height: 100vh;
+  overflow: hidden;
 }
 
 @media (max-width: 767px) {
@@ -7031,7 +7037,7 @@ h1 span {
   top: 0 !important;
   left: 0 !important;
   right: 0 !important;
-  z-index: 99981 !important;
+  z-index: 999 !important;
   background: rgba(222, 225, 227, 0.95) !important;
   box-shadow: 0 0 20px -1px rgba(0, 0, 0, 0.5);
 }
@@ -7231,7 +7237,7 @@ h1 span {
 
 .byDefault-fixed .logo,
 .fixed-position .logo {
-  max-width: 250px;
+  max-width: 230px;
   position: fixed;
   top: 4px;
   left: 0;
@@ -8001,7 +8007,7 @@ h1 span {
     width: 100% !important;
     overflow-y: auto !important;
     overflow-x: hidden !important;
-    z-index: 999999999 !important;
+    z-index: 999 !important;
     background: rgba(108, 109, 112, 0.9);
     transform: translateX(-100%);
     -webkit-transform: translateX(-100%);
@@ -8096,7 +8102,7 @@ h1 span {
   top: auto !important;
   left: 0 !important;
   right: 0 !important;
-  z-index: 999999999 !important;
+  z-index: 999 !important;
 }
 
 @media (max-width: 767px) {
@@ -10757,7 +10763,7 @@ h1 span {
   text-decoration: none;
 }
 
-.weAreWorking .btn-close-working {
+.weAreWorking .got-it {
   background: #6c6d70;
   padding: 10px 30px;
   text-decoration: none;
@@ -10765,13 +10771,30 @@ h1 span {
 }
 
 @media (max-width: 1023px) {
-  .weAreWorking .btn-close-working {
+  .weAreWorking .got-it {
     padding: 5px 25px;
   }
 }
 
-.weAreWorking .btn-close-working:hover {
+.weAreWorking .got-it:hover {
   background: #d89429;
+}
+
+.weAreWorking .close {
+  text-decoration: none;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 22px;
+  line-height: 1;
+}
+
+@media (max-width: 1023px) {
+  .weAreWorking .close {
+    top: 5px;
+    right: 5px;
+  }
 }
 
 .please-wait {
