@@ -8457,6 +8457,7 @@ h1 span {
     top: 10px;
     left: 50%;
     margin: 0 0 0 -75px;
+    position: absolute;
   }
   .byDefault-fixed .searchByID input[type="text"], .byDefault-fixed .searchByID input[type="search"],
   .fixed-position .searchByID input[type="text"],
@@ -10217,7 +10218,7 @@ h1 span {
 
 @media (max-width: 479px) {
   .generic-lightbox {
-    width: 320px;
+    width: 245px;
   }
 }
 

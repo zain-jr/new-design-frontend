@@ -1490,6 +1490,7 @@ h1 {
       top: 10px;
       left: 50%;
       margin: 0 0 0 -75px;
+      position: absolute;
 
       input[type="text"],input[type="search"]{
         color: $white;
@@ -2731,7 +2732,7 @@ h1 {
     width: 410px;
   }
   @include media('<phone'){
-    width: 320px;
+    width: 245px;
   }
 
   .lighbox-heading{
