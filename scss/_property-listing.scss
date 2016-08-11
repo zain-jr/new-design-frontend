@@ -4,8 +4,23 @@
   position: relative;
   padding: 5px;
 
+  @include media('<phone'){
+    padding:0; 
+  }
+
+  .premiumProperty{
+    @include media('<phone'){
+      @include font(12,15);
+      top: 21px;
+      left: -41px;
+    }
+  }
+
   .container {
     @extend %layout;
+    @include media('<phone'){
+       padding: 0;
+    }
   }
 
   #aside {
@@ -197,7 +212,7 @@
       margin: 0 0 10px;
     }
     @include media('<phone'){
-      padding: 10px 5px 0;
+      padding: 0;
     }
 
     .image-holder {
@@ -205,9 +220,10 @@
       position: relative;
       @extend %clearfix;
 
-      @include media('<phone'){
-        display: none;
-      }
+     @include media('<phone'){
+       min-height: 106px;
+       max-height: 106px;
+      } 
 
       a{ display: block;}
 
@@ -231,6 +247,12 @@
           min-height: 170px;
           min-width: 170px;
         }
+        @include media('<phone'){
+          max-height: 106px;
+          max-width: 106px;
+          min-height: 106px;
+          min-width: 106px;
+        }
       }
     }
     .caption {
@@ -245,7 +267,10 @@
       }
 
       @include media('<tablet'){
-        padding: 0;
+        padding: 0 0 0 20px;
+      }
+      @include media('<phone'){
+        padding: 0 5px;
       }
 
       h1 {
@@ -264,6 +289,10 @@
           margin: 0 0 2px;
         }
 
+        @include media('<phone'){
+          @include font(13,16);
+        }
+
         a {
           @include align(top);
           color: $p42-color;
@@ -272,7 +301,23 @@
           &:hover { color: $green;}
         }
       }
-
+      .price {
+        @include media('<phone'){
+          padding: 0 0 5px;
+          @include font(15,18);
+        }
+      }
+      .public-ui-features {
+        li {
+          strong,
+          span {
+            @include media('<phone'){
+              padding: 0 3px;
+              @include font(11,14);
+            }
+          }
+        }
+      }
       .left-area {
         @extend %pull-left;
         width: 70%;
@@ -319,6 +364,7 @@
         }
         @include  media('<phone'){
           position: static;
+          padding: 0;
         }
       }
       .links-left {
@@ -329,8 +375,16 @@
         .btn-default {
           padding: 10px 31px 10px 5px;
 
+          @include media('<phone'){
+            font-weight: 400;
+            @include font(10,13);
+            padding: 7px 25px 7px 5px;
+          }
+
           span[class^="icon-"],span[class*="icon-"]{
             right: 5px;
+            @include font(14,14);
+            margin: -7px 0 0;
           }
         }
         .trusted-agent {
@@ -346,6 +400,9 @@
 
         @include media('<tablet'){
           padding: 10px 0 0;
+        }
+        @include media('<phone'){
+          padding: 5px 0 0;
         }
 
       }
@@ -412,6 +469,18 @@
           padding: 10px 0 0;
           float: right !important;
         }
+        @include media('<phone'){
+          float: none !important;
+          @include align-reset(top, 12,15);
+           padding: 5px 0 0;
+           margin: 0;
+        }
+
+        li {
+          @include media('<phone'){
+            padding: 0 3px 3px;
+          }
+        }
       }
     }
   }
@@ -466,6 +535,12 @@
           min-width: 190px;
           max-height: 145px;
           min-height: 145px;
+        }
+        @include media('<phone'){
+          max-width: 100px;
+          min-width: 100px;
+          max-height: 100px;
+          min-height: 100px;
         }
       }
     }
