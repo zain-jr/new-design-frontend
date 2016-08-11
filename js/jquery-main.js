@@ -4,8 +4,8 @@ jQuery(window).load(function(){
 });
 
 $(document).ready(function() {
-  $(".js-example-basic-single").select2();
-  if (screen.width < 768){
+	$(".js-example-basic-single").select2();
+	if (screen.width < 768){
 		$('.call-agent-btn').each(function(){
 			var mobileNumber = $(this).attr('data-tel');
 			$(this).attr('href', 'tel:'+mobileNumber)
@@ -26,11 +26,11 @@ $(document).ready(function() {
 
 // page init
 jQuery(function(){
-	
+
 	if(screen.width >= 768){
 		initFixedScrollBlock();
 	}
-  	
+
 	initCarousel();
 	initSlideShow();
 	initAccordion();
@@ -76,7 +76,7 @@ function initCarousel() {
 		animSpeed: 600
 	});
 
-  jQuery('.agent-slider').scrollGallery({
+	jQuery('.agent-slider').scrollGallery({
 		mask: '.mask',
 		slider: '.slideset',
 		slides: '.slide',
@@ -105,7 +105,7 @@ function initCarousel() {
 		animSpeed: 500,
 		swipeGap: true
 	});
-	
+
 	jQuery('.propertyImage-pagination').scrollGallery({
 		mask: '.propertyImage-mask',
 		slider: '.propertyImage-slideset',
@@ -136,7 +136,6 @@ function initCarousel() {
 		stretchSlideToMask: true,
 		switchTime: 2000,
 		step:1,
-		swipeGap: true,
 		animSpeed: 600
 	});
 }
@@ -185,13 +184,13 @@ $(document).on('click', 'a.lightbox', function(){
 
 $(document).mouseup(function (e)
 {
-    var container = $(".fancybox-opened");
+	var container = $(".fancybox-opened");
 
-    if (!container.is(e.target) 
-        && container.has(e.target).length === 0) 
-    {
+	if (!container.is(e.target)
+		&& container.has(e.target).length === 0)
+	{
 		$('#wrapper').removeClass('fancy-overlay');
-    }
+	}
 });
 
 $(document).on('click', '.generic-lightbox>.close, .fancybox-close', function(){
@@ -199,15 +198,15 @@ $(document).on('click', '.generic-lightbox>.close, .fancybox-close', function(){
 });
 
 $(document).keyup(function(e) {
-  if (e.keyCode === 27){
-	  	$('.fancybox-overlay-fixed').hide();
-  		$('#wrapper').removeClass('fancy-overlay');
+	if (e.keyCode === 27){
+		$('.fancybox-overlay-fixed').hide();
+		$('#wrapper').removeClass('fancy-overlay');
 	}   // esc
 });
 
 $(document).on('change', '.addPro-type', function(){
 	$(this).closest('ul').find('li').removeClass('active');
-	
+
 	$('.addPro-type').each(function(){
 		if($(this).is(':checked')){
 			$(this).closest('li').addClass('active');
@@ -223,21 +222,21 @@ $(document).on('click', '.propertyImage-slider-btn-next, .propertyImage-slider-b
 	var currentSlideRemainderCeil = Math.ceil(currentSlideRemainder);
 	var currentSlideRemainderFloor = Math.floor(currentSlideNumber);
 	var currentWindowNumber = parseInt($('.paginationCurrent-num-1').text());
-	 
-	 if(currentSlideRemainderCeil > currentWindowNumber)
-	 {
+
+	if(currentSlideRemainderCeil > currentWindowNumber)
+	{
 		var stepsToMove = currentSlideRemainderCeil - currentWindowNumber;
 		for(var i = 0; i< stepsToMove; i++){
 			$('.propertyImage-pagination-btn-next-1').click();
-		}	 
-	 }
-	 else if(currentSlideRemainderCeil < currentWindowNumber)
-	 {
+		}
+	}
+	else if(currentSlideRemainderCeil < currentWindowNumber)
+	{
 		var stepsToMove = currentWindowNumber - currentSlideRemainderCeil;
 		for(var i = 0; i< stepsToMove; i++){
 			$('.propertyImage-pagination-btn-prev-1').click();
 		}
-	 }
+	}
 });
 
 $(document).on('click', '.navigation-toggler', function(){
@@ -276,34 +275,34 @@ $(document).on('click', '.call-agent-btn', function(){
 });
 
 function previewAddPropertyImg(file, target)
- {
+{
 	previewFile(file, target);
 	$(file).closest('li').addClass('image-loaded');
 	$(file).closest('li').find('.picture-name').focus();
- }
+}
 
 
 function previewFile(file, target) {
-  var preview = document.querySelector(target);
-  var file    = file.files[0];
-  var reader  = new FileReader();
+	var preview = document.querySelector(target);
+	var file    = file.files[0];
+	var reader  = new FileReader();
 
-  reader.onloadend = function () {
-    preview.src = reader.result;
-  }
+	reader.onloadend = function () {
+		preview.src = reader.result;
+	}
 
-  if (file) {
-    reader.readAsDataURL(file);
-  } else {
-    preview.src = "";
-  }
+	if (file) {
+		reader.readAsDataURL(file);
+	} else {
+		preview.src = "";
+	}
 }
 
 $(document).on('click', '.propertyDocumentCloseBtn', function(){
-	 $(this).closest('li').find('.picture-name').val('');
-	 $(this).closest('li').find('img').attr('src', '#');
-	 $(this).closest('li').removeClass('image-loaded');
- });
+	$(this).closest('li').find('.picture-name').val('');
+	$(this).closest('li').find('img').attr('src', '#');
+	$(this).closest('li').removeClass('image-loaded');
+});
 
 $(document).on('click', '.extra-features', function(){
 	$(this).toggleClass('active');
@@ -314,43 +313,39 @@ $(document).on('keyup', '#search-society', function(){
 	var searchValue = $(this).val();
 	$('.societiesBlock-listing').find('li').each( function(){
 		var re = new RegExp(searchValue, 'gi');
-		 if($(this).text().match(re) == null){
-		 	$(this).hide();
-		 }else{
-			 $(this).show();
-		 }
+		if($(this).text().match(re) == null){
+			$(this).hide();
+		}else{
+			$(this).show();
+		}
 	});
 });
 
 $('.hidden-checkfield').change(function(){
-    if($(this).is(":checked")) {
-        $('.registration-form').addClass("agent-info");
+	if($(this).is(":checked")) {
+		$('.registration-form').addClass("agent-info");
 		$('.agent-information').slideDown();
-		
-    } else {
-        $('.registration-form').removeClass("agent-info");
+
+	} else {
+		$('.registration-form').removeClass("agent-info");
 		$('.company-logo').removeClass('hover');
 		$('.agent-information').slideUp();
 		$('.picture-holder').css({
 			'display':'none'
 		});
-    }
+	}
 });
 
-$(document).on('click', '.role-opener', function(){
-	$('.registration-form').find('.role-listing').slideToggle();
-	$(this).toggleClass('active');
-});
 
 function countCheckedRoles(){
 	var totalCheckedRoles = 0;
 	$('.userRole-checkbox').each(function() {
-  		if($(this).is(':checked'))
-		  totalCheckedRoles++;
+		if($(this).is(':checked'))
+			totalCheckedRoles++;
 	});
 	if(totalCheckedRoles == 0)
 		$('.role-opener').html('Other Roles');
-	else	
+	else
 		$('.role-opener').html('Other Roles ( '+totalCheckedRoles+' Selected )');
 }
 
@@ -377,23 +372,23 @@ $(document).on('change', '.agent-brokerCheckbox', function(){
 });
 
 function companyLogoUploader(file, target)
- {
+{
 	previewFile(file, target);
 	$(file).closest('.company-logo').find('.picture-holder').css({
-		 'display':'block'
+		'display':'block'
 	});
 	$(file).closest('.company-logo').addClass('hover');
- }
- 
- $(document).on('click', '.company-logo-delete', function(){
-	 $(this).closest('.company-logo').find('.company-profileP').attr('src', '');
-	 $(this).closest('.company-logo').find('.company-profileP').attr('alt', '');
-	 $(this).closest('.company-logo').removeClass('hover');
-	 $(this).closest('.company-logo').find('.picture-holder').css({
-		 'display':'none'
-	 });
- });
- 
+}
+
+$(document).on('click', '.company-logo-delete', function(){
+	$(this).closest('.company-logo').find('.company-profileP').attr('src', '');
+	$(this).closest('.company-logo').find('.company-profileP').attr('alt', '');
+	$(this).closest('.company-logo').removeClass('hover');
+	$(this).closest('.company-logo').find('.picture-holder').css({
+		'display':'none'
+	});
+});
+
 $(document).on('change', '.selectSociety-checkbox', function(){
 	var targetId = $(this).attr('id');
 	if($(this).is(':checked')){
