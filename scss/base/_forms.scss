@@ -18,6 +18,10 @@ input[type='date'],
 textarea {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
+  -moz--webkit-border-radius: 0;
+  box-shadow: 0;
+  -webkit-box-shadow: 0;
+  -moz-box-shadow: 0;
   box-sizing: border-box;
   border: 1px solid $form-element-border-color;
   outline: none;

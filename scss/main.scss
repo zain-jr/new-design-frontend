@@ -210,9 +210,9 @@ h1 {
   }
 
   input[type="checkbox"], input[type="radio"]{
-    position: fixed;
-    top: -999px;
-    left: -999px;
+    position: absolute;
+    top: 0;
+    left: 0;
     opacity: 0;
     visibility: hidden;
 
@@ -373,6 +373,12 @@ h1 {
   @extend %text-capital;
 }
 .select2-container--default .select2-selection--single{  border: 0;}
+.select2-dropdown {
+  @include media('<widescreen'){
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
 h1 {
   display: block;
   @extend %text-center;
@@ -3094,6 +3100,7 @@ h1 {
   color: $p42-default-grey;
 }
 .weAreWorking  {
+  max-width: 700px;
   @extend %layout;
   color: $white;
   @extend %text-center;

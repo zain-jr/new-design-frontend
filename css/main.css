@@ -1067,6 +1067,10 @@ input[type='date'],
 textarea {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
+  -moz--webkit-border-radius: 0;
+  box-shadow: 0;
+  -webkit-box-shadow: 0;
+  -moz-box-shadow: 0;
   box-sizing: border-box;
   border: 1px solid #999;
   outline: none;
@@ -6798,9 +6802,9 @@ h1 {
 .customCheckbox input[type="checkbox"], .customCheckbox input[type="radio"],
 .customRadio input[type="checkbox"],
 .customRadio input[type="radio"] {
-  position: fixed;
-  top: -999px;
-  left: -999px;
+  position: absolute;
+  top: 0;
+  left: 0;
   opacity: 0;
   visibility: hidden;
 }
@@ -6975,6 +6979,13 @@ h1 {
 
 .select2-container--default .select2-selection--single {
   border: 0;
+}
+
+@media (max-width: 1199px) {
+  .select2-dropdown {
+    font-size: 13px;
+    line-height: 16px;
+  }
 }
 
 h1 {
@@ -10698,6 +10709,7 @@ h1 span {
 }
 
 .weAreWorking {
+  max-width: 700px;
   color: #fff;
   margin: 0 auto !important;
   width: 100%;
