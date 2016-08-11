@@ -205,9 +205,9 @@ h1 {
   }
 
   input[type="checkbox"], input[type="radio"]{
-    position: fixed;
-    top: -999px;
-    left: -999px;
+    position: absolute;
+    top: 0;
+    left: 0;
     opacity: 0;
     visibility: hidden;
 
@@ -2655,6 +2655,7 @@ h1 {
   }
 }
 .btn-hollow {
+  cursor: pointer;
   @include align(top);
   @extend %text-upparcase;
   @include font(14,18);
@@ -3056,6 +3057,7 @@ h1 {
   color: $p42-default-grey;
 }
 .weAreWorking  {
+  max-width: 700px;
   @extend %layout;
   color: $white;
   @extend %text-center;
@@ -3076,6 +3078,9 @@ h1 {
 
   @include media('<desktop'){
    padding: 5px; 
+  }
+  @include media('<tablet'){
+   padding: 5px 30px 5px 5px; 
   }
 
   &.hide{
@@ -3107,7 +3112,7 @@ h1 {
 
     &:hover { text-decoration: none;}
   }
-  .btn-close-working {
+  .got-it {
     background: $p42-default-grey;
     padding:10px 30px;
     text-decoration: none;
@@ -3124,6 +3129,47 @@ h1 {
     &:hover {
       background: $orange;
     }
+  }
+  .close {
+    text-decoration: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 22px;
+    line-height: 1;
+
+    @include media('<desktop'){
+      top: 5px;
+      right: 5px;
+    }
+  }
+}
+.please-wait{
+  position: relative;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba($white, 0.7);
+    z-index: 789;
+    content: '';
+  }
+  &:before {
+    background: url('../images/ring1.gif') no-repeat 50% 0;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 790;
+    @include squar(150px,150px);
+    content: 'Please wait...';
+    color: $black;
+    margin: -75px  0 0 -75px;
+    padding: 140px 0 0 30px;
   }
 }
 @media print {

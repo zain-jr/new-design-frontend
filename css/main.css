@@ -6946,9 +6946,9 @@ h1 {
 .customCheckbox input[type="checkbox"], .customCheckbox input[type="radio"],
 .customRadio input[type="checkbox"],
 .customRadio input[type="radio"] {
-  position: fixed;
-  top: -999px;
-  left: -999px;
+  position: absolute;
+  top: 0;
+  left: 0;
   opacity: 0;
   visibility: hidden;
 }
@@ -10255,6 +10255,7 @@ h1 span {
 }
 
 .btn-hollow {
+  cursor: pointer;
   display: inline-block;
   vertical-align: top;
   font-size: 14px;
@@ -10780,6 +10781,7 @@ h1 span {
 }
 
 .weAreWorking {
+  max-width: 700px;
   color: #fff;
   margin: 0 auto !important;
   width: 100%;
@@ -10799,6 +10801,12 @@ h1 span {
 @media (max-width: 1023px) {
   .weAreWorking {
     padding: 5px;
+  }
+}
+
+@media (max-width: 767px) {
+  .weAreWorking {
+    padding: 5px 30px 5px 5px;
   }
 }
 
@@ -10846,7 +10854,7 @@ h1 span {
   text-decoration: none;
 }
 
-.weAreWorking .btn-close-working {
+.weAreWorking .got-it {
   background: #6c6d70;
   padding: 10px 30px;
   text-decoration: none;
@@ -10854,13 +10862,60 @@ h1 span {
 }
 
 @media (max-width: 1023px) {
-  .weAreWorking .btn-close-working {
+  .weAreWorking .got-it {
     padding: 5px 25px;
   }
 }
 
-.weAreWorking .btn-close-working:hover {
+.weAreWorking .got-it:hover {
   background: #d89429;
+}
+
+.weAreWorking .close {
+  text-decoration: none;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 22px;
+  line-height: 1;
+}
+
+@media (max-width: 1023px) {
+  .weAreWorking .close {
+    top: 5px;
+    right: 5px;
+  }
+}
+
+.please-wait {
+  position: relative;
+}
+
+.please-wait:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: 789;
+  content: '';
+}
+
+.please-wait:before {
+  background: url("../images/ring1.gif") no-repeat 50% 0;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 790;
+  width: 150px;
+  height: 150px;
+  content: 'Please wait...';
+  color: #000;
+  margin: -75px  0 0 -75px;
+  padding: 140px 0 0 30px;
 }
 
 @media print {
