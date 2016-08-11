@@ -6829,11 +6829,6 @@ body {
   position: relative;
 }
 
-body.loading-page {
-  height: 100vh;
-  overflow: hidden;
-}
-
 @media (max-width: 767px) {
   body {
     background-size: 100% cover;
