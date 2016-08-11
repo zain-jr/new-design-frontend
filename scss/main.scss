@@ -110,6 +110,11 @@ body{
   z-index: 999999999;
   position: relative;
 
+  &.loading-page {
+    height: 100vh;
+    overflow: hidden;
+  }
+
   @include media('<tablet'){
     background-size: 100% cover;
   }
