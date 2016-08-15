@@ -15,12 +15,6 @@ $(document).ready(function() {
 	}
 	$('.addPro-type:first').trigger('change');
 	$('.registration-form').find('.role-listing').hide();
-
-	if($('.agent-slide').length > 5){
-		$('.agent-societies').find('.btn-prev, .btn-next').css({
-			'display':'block'
-		});
-	}
 });
 
 // page init
@@ -142,7 +136,7 @@ function initCarousel() {
 // initialize fixed blocks on scroll
 function initFixedScrollBlock() {
 	jQuery('#wrapper').fixedScrollBlock({
-		slideBlock: '#header, #nav'
+		slideBlock: '#header'
 	});
 	jQuery('#main').fixedScrollBlock({
 		slideBlock: '#fixed-block',

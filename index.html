@@ -20,17 +20,14 @@
 		</div>
 	</div>
 	<div id="wrapper">
-		<div class="main-bg-holder byDefault-fixed">
+		<div class="main-bg-holder">
 			<header id="header">
 				<div class="top-bar">
-					<ul class="social-icons">
-						<li><a href="#"><span class="icon-facebook"></span></a></li>
-						<li><a href="#"><span class="icon-google-plus-symbol"></span></a></li>
-						<li><a href="#"><span class="icon-linkedin"></span></a></li>
-						<li><a href="#"><span class="icon-twitter"></span></a></li>
-						<li><a href="#"><span class="icon-instagram"></span></a></li>
-					</ul>
 					<a class="navigation-toggler nav-opener"><span></span></a>
+					<form class="searchByID">
+						<input type="search" placeholder="Search by ID">
+						<button type="submit"><span class="icon-search"></span></button>
+					</form>
 					<div class="right-sideTop text-right">
 						<a class="mail" href="mailto:&#105;&#110;&#102;&#111;&#064;&#112;&#114;&#111;&#112;&#101;&#114;&#116;&#121;&#052;&#050;&#046;&#112;&#107;">&#105;&#110;&#102;&#111;&#064;&#112;&#114;&#111;&#112;&#101;&#114;&#116;&#121;&#052;&#050;&#046;&#112;&#107;</a>
 						<ul class="loginRegister text-upparcase text-left">
@@ -135,39 +132,37 @@
 				</div>
 			</div>
 			<nav id="nav">
-				<form class="searchByID">
+				<a class="navigation-toggler close"><span class="icon-cross"></span></a>
+				<form class="searchByID hidden">
 					<input type="search" placeholder="Search by ID">
 					<button type="submit"><span class="icon-search"></span></button>
 				</form>
-				<div class="nav-holder">
-					<a class="navigation-toggler close"><span class="icon-cross"></span></a>
-					<ul class="main-navigation text-upparcase">
-						<li class="active">
-							<a href="#"><span class="middle-align"><span class="icon-home"></span>HOME</span></a>
-						</li>
-						<li>
-							<a href="#"><span class="middle-align"><span class="icon-d-building"></span>Properties</span></a>
-						</li>
-						<li>
-							<a href="#"><span class="middle-align"><span class="icon-male-close-up-silhouette-with-tie"></span>AGENTS</span></a>
-						</li>
-						<li>
-							<a href="#about-us" class="scroll"><span class="middle-align"><span class="icon-light-bulb"></span>ABOUT</span></a>
-						</li>
-						<li>
-							<a href="#contact-us" class="scroll"><span class="middle-align"><span class="icon-close-envelope"></span>CONTACT</span></a>
-						</li>
+				<ul class="main-navigation text-upparcase">
+					<li class="active">
+						<a href="#">HOME</a>
+					</li>
+					<li>
+						<a href="#">Properties</a>
+					</li>
+					<li>
+						<a href="#">AGENTS</a>
+					</li>
+					<li>
+						<a href="#about-us" class="scroll">ABOUT</a>
+					</li>
+					<li>
+						<a href="#contact-us" class="scroll">CONTACT</a>
+					</li>
+				</ul>
+				<div class="mobile-content text-center">
+					<ul class="social-icons">
+						<li><a href="#"><span class="icon-facebook"></span></a></li>
+						<li><a href="#"><span class="icon-google-plus-symbol"></span></a></li>
+						<li><a href="#"><span class="icon-linkedin"></span></a></li>
+						<li><a href="#"><span class="icon-twitter"></span></a></li>
+						<li><a href="#"><span class="icon-instagram"></span></a></li>
 					</ul>
-					<div class="mobile-content text-center hidden">
-						<ul class="social-icons">
-							<li><a href="#"><span class="icon-facebook"></span></a></li>
-							<li><a href="#"><span class="icon-google-plus-symbol"></span></a></li>
-							<li><a href="#"><span class="icon-linkedin"></span></a></li>
-							<li><a href="#"><span class="icon-twitter"></span></a></li>
-							<li><a href="#"><span class="icon-instagram"></span></a></li>
-						</ul>
-						<span class="copyright">Copyright, <a href="#">Property42.pk</a></span>
-					</div>
+					<span class="copyright">Copyright, <a href="#">Property42.pk</a></span>
 				</div>
 			</nav>
 		</div>
@@ -1398,7 +1393,7 @@
 						<a href="#" class="btn-default">Got it !</a>
 					</div>
 				</div>-->
-				<div class="registerNow container">
+				<!--<div class="registerNow container">
 					<form class="registration-form">
 						<h1>Register <span>Now</span></h1>
 						<div class="layout">
@@ -1707,7 +1702,7 @@
 							</div>
 						</div>
 					</form>
-				</div>
+				</div>-->
 				<!--<div class="login-page container">
 					<span class="global-success">You are SUCCESSFULLY Registered</span>
 					<span class="global-error">this is error</span>
