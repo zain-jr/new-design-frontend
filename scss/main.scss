@@ -434,6 +434,12 @@ h1 {
     left: 100px;
     z-index: 1012;
     margin: -6px 0 0;
+
+    @include media('<desktop'){
+      left: 60px;
+    }
+
+    @include media('<tablet'){ display: none;}
   }
 
   .byDefault-fixed &,
