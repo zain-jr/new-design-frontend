@@ -236,6 +236,10 @@ $(document).on('click', '.navigation-toggler', function(){
 	$('html').toggleClass('nav-active');
 });
 
+$(document).on('click', '.togglerSearchButton', function(){
+	$('html').toggleClass('filters-active');
+});
+
 $(document).on('click', '.filters-links-opener', function(){
 	$(this).closest('li').toggleClass('active');
 
@@ -245,9 +249,6 @@ $(document).on('click', '.filters-links-opener', function(){
 	else {
 		$(this).closest('li').find('.slide').slideUp();
 	}
-});
-$(document).on('click', '.aside-opener-filters', function(){
-	$('#aside').slideToggle('active');
 });
 
 $(document).on('focusin', '.PriceField', function(){

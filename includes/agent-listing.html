@@ -1,7 +1,11 @@
 <div class="agent-listing-page">
     <div class="container">
-        <a class="aside-opener-filters">More Filters <b>(Land Area / Price...)</b><span class="button"><b></b></span></a>
-        <aside id="aside" class="hideOnMobile">
+        <a class="aside-opener-filters togglerSearchButton">More Filters <b>(Land Area / Price...)</b><span class="button"><b></b></span></a>
+        <aside id="aside">
+            <div class="top-head">
+                <p>Search Filters</p>
+                <a class="close togglerSearchButton"><span class="icon-cross"></span></a>
+            </div>
             <form class="filter-form">
                 <ul class="filters-links text-upparcase">
                     <li class="active">
@@ -129,7 +133,6 @@
                                 <div class="field-holder">
                                     <input type="number" placeholder="To">
                                 </div>
-                                <button type="submit">Go</button>
                             </div>
                         </div>
                     </li>
@@ -143,12 +146,12 @@
                                 <div class="field-holder">
                                     <input type="number" placeholder="To" class="PriceField">
                                 </div>
-                                <button type="submit">Go</button>
                             </div>
                             <span class="calculatedPrice">Please enter the price</span>
                         </div>
                     </li>
                 </ul>
+                <button type="submit">Apply filters</button>
             </form>
         </aside>
         <section id="content">
