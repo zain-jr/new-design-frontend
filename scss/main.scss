@@ -1106,37 +1106,35 @@ h1 {
   position: fixed !important;
   top: 0 !important;
   left: 0 !important;
+  bottom: 0 !important;
   width: 320px;
   z-index: 999 !important;
-  height: 100vh !important;
-  overflow-y: auto !important;
-  overflow-x: hidden !important;
-  background: $white;
+  padding: 0 0 90px;
+  background: rgba($p42-default-grey, 0.90);
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  transition: transform 0.5s ease;
   
   @include media('<tablet'){
     right: 0 !important;
     bottom: 0 !important;
     width: 100% !important;
     background: rgba($p42-default-grey, 0.90);
-    transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
-    -moz-transform: translateX(-100%);
-    transition: transform 0.5s ease;
-
-    .nav-active & {
-      transform: translateX(0);
-      -webkit-transform: translateX(0);
-      -moz-transform: translateX(0);
-    }
+  }
+  .nav-active & {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
   }
 
   .close {
-    color: $orange;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: $white;
     text-decoration: none;
-    float: right;
     cursor: pointer;
-
-    @include media('>=tablet'){ display: none;}
     
     &:hover {
       color: lighten($orange, 10%);
@@ -1150,7 +1148,11 @@ h1 {
   
   .mobile-content {
     color: $white;
-    padding: 20px 0;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
     &.hidden{ @include media('<tablet'){ display: block !important;} }
     .social-icons {
@@ -1177,11 +1179,14 @@ h1 {
   .main-navigation {
     @extend %listreset;
     @include font(16,20);
+    margin: 50px 0 0;
+    overflow-y: auto;
+     overflow-x: hidden;
+     height: 78vh;
 
     @include media('<tablet'){
       width: 100%;
       display: block;
-      overflow: hidden;
     }
 
     li{
@@ -1202,38 +1207,52 @@ h1 {
 
       &.active {
         a{
+          background:$p42-color;
 
-          @include media('<tablet'){
-            background: none;
-            color: $orange;
+          &:after {
+            left: 25%;
+            right: 25%;
           }
         }
       }
 
       a {
-        color: $p42-color;
+        color: $white;
         display: block;
-        padding: 25px 10px;
+        padding: 20px 10px;
         text-decoration: none;
         transition: background 0.5s ease;
         -webkit-transition: background 0.5s ease;
         -moz-transition: background 0.5s ease;
         -ms-transition: background 0.5s ease;
         position: relative;
-        background: $white;
-
+        
         @include media('<tablet'){
           background: none;
           box-shadow: none;
           color: $white;
-          padding: 5px;
+          padding: 15px;
+        }
+
+        &:after {
+          position: absolute;
+          bottom: 5px;
+          left: 10%;
+          right: 10%;
+          height: 2px;
+          background: $white;
+          content: '';
+          transition: left 0.5s ease, right 0.5s ease;
+          -webkit-transition: left 0.5s ease, right 0.5s ease;
+          -moz-transition: left 0.5s ease, right 0.5s ease;
         }
 
         &:hover {
+          background: rgba($p42-color, 0.5);
 
-          @include media('<tablet'){
-            background: none;
-            color: $orange;
+          &:after {
+            left: 25%;
+            right: 25%;
           }
         }
       }

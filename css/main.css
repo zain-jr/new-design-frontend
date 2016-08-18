@@ -1866,6 +1866,7 @@ input[type='submit'] {
 @media (max-width: 1023px) {
   .agent-listing-page #aside,
   .listing-page #aside {
+    overflow: auto;
     width: 100%;
     display: block;
     margin: 0 0 20px;
@@ -1876,15 +1877,15 @@ input[type='submit'] {
     left: 0;
     right: 0;
     bottom: 0;
-    height: 100vh;
     z-index: 999;
     padding: 0;
     border: 10px solid #2092d0;
     border-bottom: 0;
     border-top: 0;
-    transform: translateY(-100%);
-    -webkit-transform: translateY(-100%);
-    -moz-transform: translateY(-100%);
+    margin: 0;
+    transform: translateY(-105%);
+    -webkit-transform: translateY(-105%);
+    -moz-transform: translateY(-105%);
     transition: transform 0.5s linear;
     -webkit-transition: transform 0.5s linear;
     -moz-transition: transform 0.5s linear;
@@ -1968,11 +1969,6 @@ input[type='submit'] {
   }
 }
 
-.agent-listing-page .filter-form,
-.listing-page .filter-form {
-  position: relative;
-}
-
 .agent-listing-page .filter-form button,
 .listing-page .filter-form button {
   width: 215px;
@@ -1991,7 +1987,7 @@ input[type='submit'] {
   .agent-listing-page .filter-form button,
   .listing-page .filter-form button {
     width: 90%;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 10px;
     right: 10px;
@@ -2021,7 +2017,7 @@ input[type='submit'] {
 @media (max-width: 1023px) {
   .agent-listing-page .filters-links,
   .listing-page .filters-links {
-    height: 80vh;
+    height: 77vh;
     overflow: auto;
   }
 }
@@ -8236,12 +8232,15 @@ h1 span {
   position: fixed !important;
   top: 0 !important;
   left: 0 !important;
+  bottom: 0 !important;
   width: 320px;
   z-index: 999 !important;
-  height: 100vh !important;
-  overflow-y: auto !important;
-  overflow-x: hidden !important;
-  background: #fff;
+  padding: 0 0 90px;
+  background: rgba(108, 109, 112, 0.9);
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  transition: transform 0.5s ease;
 }
 
 @media (max-width: 767px) {
@@ -8250,29 +8249,22 @@ h1 span {
     bottom: 0 !important;
     width: 100% !important;
     background: rgba(108, 109, 112, 0.9);
-    transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
-    -moz-transform: translateX(-100%);
-    transition: transform 0.5s ease;
   }
-  .nav-active #nav {
-    transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-  }
+}
+
+.nav-active #nav {
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
 }
 
 #nav .close {
-  color: #d89429;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
   text-decoration: none;
-  float: right;
   cursor: pointer;
-}
-
-@media (min-width: 768px) {
-  #nav .close {
-    display: none;
-  }
 }
 
 #nav .close:hover {
@@ -8286,7 +8278,11 @@ h1 span {
 
 #nav .mobile-content {
   color: #fff;
-  padding: 20px 0;
+  padding: 10px 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 @media (max-width: 767px) {
@@ -8334,13 +8330,16 @@ h1 span {
 #nav .main-navigation {
   font-size: 16px;
   line-height: 20px;
+  margin: 50px 0 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 78vh;
 }
 
 @media (max-width: 767px) {
   #nav .main-navigation {
     width: 100%;
     display: block;
-    overflow: hidden;
   }
 }
 
@@ -8365,24 +8364,25 @@ h1 span {
   border: 0;
 }
 
-@media (max-width: 767px) {
-  #nav .main-navigation li.active a {
-    background: none;
-    color: #d89429;
-  }
+#nav .main-navigation li.active a {
+  background: #2092d0;
+}
+
+#nav .main-navigation li.active a:after {
+  left: 25%;
+  right: 25%;
 }
 
 #nav .main-navigation li a {
-  color: #2092d0;
+  color: #fff;
   display: block;
-  padding: 25px 10px;
+  padding: 20px 10px;
   text-decoration: none;
   transition: background 0.5s ease;
   -webkit-transition: background 0.5s ease;
   -moz-transition: background 0.5s ease;
   -ms-transition: background 0.5s ease;
   position: relative;
-  background: #fff;
 }
 
 @media (max-width: 767px) {
@@ -8390,15 +8390,30 @@ h1 span {
     background: none;
     box-shadow: none;
     color: #fff;
-    padding: 5px;
+    padding: 15px;
   }
 }
 
-@media (max-width: 767px) {
-  #nav .main-navigation li a:hover {
-    background: none;
-    color: #d89429;
-  }
+#nav .main-navigation li a:after {
+  position: absolute;
+  bottom: 5px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: #fff;
+  content: '';
+  transition: left 0.5s ease, right 0.5s ease;
+  -webkit-transition: left 0.5s ease, right 0.5s ease;
+  -moz-transition: left 0.5s ease, right 0.5s ease;
+}
+
+#nav .main-navigation li a:hover {
+  background: rgba(32, 146, 208, 0.5);
+}
+
+#nav .main-navigation li a:hover:after {
+  left: 25%;
+  right: 25%;
 }
 
 .searchByID {

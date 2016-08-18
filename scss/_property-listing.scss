@@ -32,6 +32,7 @@
     box-shadow: 0 0 20px -9px rgba($black, 0.5);
 
     @include media('<desktop'){
+      overflow: auto;
       width: 100%;
       display: block;
       margin: 0 0 20px;
@@ -42,15 +43,15 @@
       left: 0;
       right: 0;
       bottom: 0;
-      height: 100vh;
       z-index: 999;
       padding: 0;
       border: 10px solid $p42-color;
       border-bottom: 0;
       border-top: 0;
-      transform: translateY(-100%);
-      -webkit-transform: translateY(-100%);
-      -moz-transform: translateY(-100%);
+      margin: 0;
+      transform: translateY(-105%);
+      -webkit-transform: translateY(-105%);
+      -moz-transform: translateY(-105%);
       transition: transform 0.5s linear;
       -webkit-transition: transform 0.5s linear;
       -moz-transition: transform 0.5s linear;
@@ -117,7 +118,6 @@
     }
   }
   .filter-form {
-    position: relative;
     @extend %layout;
 
     button {
@@ -134,7 +134,7 @@
 
       @include media('<desktop'){
         width: 90%;
-        position: fixed;
+        position: absolute;
         bottom: 0;
         left: 10px;
         right: 10px;
@@ -155,7 +155,7 @@
     }
 
     @include media('<desktop'){
-      height: 80vh;
+      height: 77vh;
       overflow: auto;
     }
 
