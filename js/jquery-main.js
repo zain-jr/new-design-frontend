@@ -131,6 +131,23 @@ function initCarousel() {
 		step:1,
 		animSpeed: 600
 	});
+
+	jQuery('.agent-logos').scrollGallery({
+		mask: '.mask',
+		slider: '.slideset',
+		slides: '.slide',
+		currentNumber: 'span.cur-num',
+		totalNumber: 'span.all-num',
+		disableWhileAnimating: true,
+		circularRotation: true,
+		pauseOnHover: true,
+		autoRotation: true,
+		maskAutoSize: false,
+		stretchSlideToMask: true,
+		switchTime: 2000,
+		step:1,
+		animSpeed: 600
+	});
 }
 
 // initialize fixed blocks on scroll
