@@ -155,7 +155,11 @@
     }
 
     @include media('<desktop'){
-      height: 77vh;
+      position: absolute;
+      top: 44px;
+      left: 0;
+      right: 0;
+      bottom: 50px;
       overflow: auto;
     }
 
@@ -351,6 +355,10 @@
       }
       @include media('<phone'){
         padding: 0 5px;
+      }
+
+      .price {
+        @extend %text-right;
       }
 
       h1 {
