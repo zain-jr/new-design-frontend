@@ -1,9 +1,5 @@
 .addProperty-form {
-    background: rgba($p42-background, 0.8);
     @extend %layout;
-    box-shadow: 0 0 7px rgba($black , 0.22);
-    padding: 20px 10px;
-    margin: 0 auto 30px;
 
     .error {
         @extend %listreset;
@@ -56,19 +52,17 @@
     }
     
     .main-form {
+        background: rgba($p42-background, 0.8);
+        box-shadow: 0 0 7px rgba($black , 0.22);
+        padding: 20px 10px;
+        margin: 0 0 30px;
         @extend %layout;
-        width: 75%;
+        @extend %container;
         margin: 0 auto;
 
         @include media('<desktop'){
             width: 100%;
         }
-    }
-    .tips {
-        @extend %layout;
-        @extend .pull-left;
-        width: 25%;
-        display: none;
     }
     .image-uploading-area{
 		@extend %listreset;
@@ -560,7 +554,11 @@
         }
     }
     .thankYou-message {
+        background: rgba($p42-background, 0.8);
+        box-shadow: 0 0 7px rgba($black , 0.22);
         @extend %text-center;
+        @extend %container;
+        padding: 50px 10px;
 
         .layout {
             margin: 0;

@@ -3,6 +3,27 @@
   @extend %layout;
   padding: 5px;
 
+  .add-holder-page {
+    .Ads,
+    .container-holder {
+      @include media('<desktop'){
+        float: none;
+        max-width: inherit;
+        overflow: hidden;
+        width: 100%;
+        @include align-reset(top, 14,20);
+      }
+    }
+    .Ads {
+      li {
+        @include media('<desktop'){
+          width: 33.33%;
+          @include align(top);
+        }
+      }
+    }
+  }
+
   .detail-holder {
     box-shadow: 0 5px 13px rgba($black , 0.5);
     padding: 0 305px 10px 0;
