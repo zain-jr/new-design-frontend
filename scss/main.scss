@@ -365,6 +365,7 @@ h1 {
   @extend %layout;
   width: 100%;
   height: 100%;
+  min-height: 100vh;
 
   &.fancy-overlay {
     filter: blur(20px);
@@ -376,6 +377,7 @@ h1 {
 .w1-holder {
   width: 100%;
   height: 100%;
+  min-height: 100vh;
   background:#525252 url('../images/bg.jpg') no-repeat;
   background-attachment: fixed;
   background-size: 100% auto;
@@ -402,7 +404,7 @@ h1 {
   @extend %layout;
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: table;
   table-layout: fixed;
   border-collapse: collapse;
@@ -1146,6 +1148,9 @@ h1 {
       bottom: 0;
       background: rgba($white, 0.9);
       content: '';
+      @include media('<tablet'){
+        display: none;
+      }
     }
   }
 
@@ -1655,6 +1660,9 @@ h1 {
     @include media('<widescreen'){
       left: 30px;
     }
+    @include media('<desktop'){
+      left: 60px;
+    }
 
     @include media('<tablet'){ display: none;}
 
@@ -1675,6 +1683,9 @@ h1 {
     
     @include media('<widescreen'){
       right: 30px;
+    }
+    @include media('<desktop'){
+      right: 60px;
     }
   }
 }
@@ -1875,6 +1886,10 @@ h1 {
     height: 450px;
     white-space: nowrap;
 
+    @include media('<tvscreen'){
+      width: 30%;
+    }
+
     @include media('<desktop'){
       float: none !important;
       height: auto;
@@ -1907,6 +1922,10 @@ h1 {
   width: 60%;
   padding: 0 10px;
   
+  @include media('<tvscreen'){
+    width: 70%;
+  }
+
   @include media('<desktop'){
     width: 100%;
     float: none !important;
@@ -1916,11 +1935,11 @@ h1 {
     @extend %layout;
     position: relative;
     width: 100%;
-    max-width: 880px;
+    max-width: 680px;
     margin: 0 auto;
 
     @include media('<tvscreen'){
-      max-width: 600px;
+      max-width: 550px;
     }
     @include media('<widescreen'){
       max-width: 500px;
