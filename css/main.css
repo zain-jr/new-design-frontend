@@ -781,7 +781,7 @@ th {
 .propertyDetail-page .propertyImage-pagination .propertyImage-slide img,
 .propertyDetail-page .propertyImage-pagination .slide img,
 .propertyDetail-page .propertyImage-slider .propertyImage-slide img,
-.propertyDetail-page .propertyImage-slider .slide img, .registerNow .company-logo .logo-holder .picture-holder img, .page-loader .page-loader-holder img, .logo img, .news-carousel .news-slide img {
+.propertyDetail-page .propertyImage-slider .slide img, .registerNow .company-logo .logo-holder .picture-holder img, .page-loader .page-loader-holder img, .logo img, .agent-logos .slide a img, .news-carousel .news-slide img {
   width: 100%;
   height: auto;
   display: block;
@@ -8961,7 +8961,7 @@ h1 span {
   background: #fff;
   height: 150px;
   white-space: nowrap;
-  padding: 10px;
+  padding: 5px;
 }
 
 @media (max-width: 767px) {
@@ -8983,6 +8983,7 @@ h1 span {
   display: inline-block;
   vertical-align: middle;
   white-space: normal;
+  max-width: 125px;
 }
 
 .news-carousel {

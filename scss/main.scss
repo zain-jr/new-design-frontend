@@ -1564,7 +1564,7 @@ h1 {
       height: 150px;
       white-space: nowrap;
       @extend %text-center;
-      padding: 10px;
+      padding: 5px;
 
       @include media('<tablet'){
         padding:5px 10px;
@@ -1580,8 +1580,10 @@ h1 {
       }
 
       img {
+        @extend  %img-res;
         @include align(middle);
         white-space: normal;
+        max-width: 125px;
       }
     }
   }
