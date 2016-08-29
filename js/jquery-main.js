@@ -36,7 +36,23 @@ jQuery(function(){
 
 // slideshow init
 function initSlideShow() {
+	
 	jQuery('.news-slideshow').fadeGallery({
+		useSwipe: true,
+		slides: '.slide',
+		currentNumber: 'span.cur-num',
+		totalNumber: 'span.all-num',
+		switchSimultaneously: true,
+		disableWhileAnimating: false,
+		generatePagination: '.pagination',
+		autoRotation: true,
+		autoHeight: true,
+		pauseOnHover: true,
+		switchTime: 5000,
+		animSpeed: 600
+	});
+	
+	jQuery('.ads-slideshow').fadeGallery({
 		useSwipe: true,
 		slides: '.slide',
 		currentNumber: 'span.cur-num',

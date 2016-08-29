@@ -805,11 +805,9 @@ h1 {
 
   &.byDefault-fixed {
     padding: 110px 0 0;
-    margin: 0 0 50px;
 
     @include media('<widescreen'){
       padding: 92px 0 0;
-      margin: 0 0 30px;
     }
     @include media('<tablet'){
       padding: 40px 0 0;
@@ -1460,6 +1458,7 @@ h1 {
 
   @include media('<tablet'){ padding: 0;}
 }
+.ads-slideshow,
 .news-slideshow {
   @extend %layout;
 
@@ -1500,6 +1499,22 @@ h1 {
     &.active {
       z-index: 5 !important;
     }
+  }
+}
+.ads-slideshow {
+  @extend %container;
+  margin:  0 auto 20px;
+  @extend %text-center;
+
+  a, img {
+    @extend %text-center;
+    display: block;
+  }
+  img {
+    display: block;
+    max-height: 100px;
+    max-width: 1024px;
+    margin: 0 auto;
   }
 }
 .agent-logos {

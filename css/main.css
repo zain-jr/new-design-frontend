@@ -787,7 +787,7 @@ th {
   display: block;
 }
 
-.container, .addProperty-form .main-form, .addProperty-form .thankYou-message, .weAreWorking {
+.container, .addProperty-form .main-form, .addProperty-form .thankYou-message, .ads-slideshow, .weAreWorking {
   max-width: 1170px;
   margin: 0 auto;
   padding: 0 15px;
@@ -795,7 +795,7 @@ th {
 }
 
 @media (max-width: 1023px) {
-  .container, .addProperty-form .main-form, .addProperty-form .thankYou-message, .weAreWorking {
+  .container, .addProperty-form .main-form, .addProperty-form .thankYou-message, .ads-slideshow, .weAreWorking {
     max-width: 100%;
   }
 }
@@ -826,7 +826,7 @@ th {
 .propertyDetail-page .agent-societies .agent-slide a, .agent-detail-page .agent-picture,
 .propertyDetail-page .agent-picture, .addProperty-form .extra-features, .addProperty-form .existingOrNew-member li, .addProperty-form .list-extraFeatures .feature-heading, .addProperty-form .thankYou-message, .addProperty-form .thankYou-message .left, .registerNow .role-opener, .forgot-form .buttons-holder li a,
 .login-form .buttons-holder li a, .page-loader, .global-error,
-.global-success, .custom-withouChecks .fake-label, h1, .loginRegister li, .main-visualSection, #nav .main-navigation li, .agent-logos .slide a, .news-carousel .news-pagination ul, .topSocities-holder .socities li a, .heading, .agents-logo li a, .premiumProperty, .public-ui-features li strong, .generic-lightbox, .login-heading,
+.global-success, .custom-withouChecks .fake-label, h1, .loginRegister li, .main-visualSection, #nav .main-navigation li, .ads-slideshow, .ads-slideshow a, .ads-slideshow img, .agent-logos .slide a, .news-carousel .news-pagination ul, .topSocities-holder .socities li a, .heading, .agents-logo li a, .premiumProperty, .public-ui-features li strong, .generic-lightbox, .login-heading,
 .registerNow-heading,
 .add-pro-heading, .Ads, .weAreWorking {
   text-align: center;
@@ -889,7 +889,8 @@ th {
 .listing-page .publicProperty-post .caption .left-area, .agent-listing-page .publicAgent-post .caption .links-left,
 .agent-listing-page .publicProperty-post .caption .links-left,
 .listing-page .publicAgent-post .caption .links-left,
-.listing-page .publicProperty-post .caption .links-left, .news-slideshow .slide .caption, .agents .left-side {
+.listing-page .publicProperty-post .caption .links-left, .ads-slideshow .slide .caption,
+.news-slideshow .slide .caption, .agents .left-side {
   float: left !important;
 }
 
@@ -947,7 +948,10 @@ th {
 .propertyDetail-page .feature, .agent-detail-page .agent-picture,
 .propertyDetail-page .agent-picture, .agent-detail-page .agent-description,
 .propertyDetail-page .agent-description, .agent-detail-page .frame, .addProperty-form, .addProperty-form .add-form-holder, .addProperty-form .main-form, .addProperty-form .list-extraFeatures, .registerNow, .registerNow .registration-form, .registerNow .company-logo, .registerNow .company-logo .logo-holder, .registerNow .packetData, .registerNow .role-listing, .registerNow .agent-information, .login-page, .forgot-form,
-.login-form, .page-loader, .fake-select, #wrapper, .w1, .logo, .main-visualSection, #main, .page-holder, .mainSearch-form .form-holder, .mainSearch-form .inputsHolder li .input-holder, .searchByID, .generic-section, .news-sliderHolder, .news-slideshow, .news-slideshow .mask, .news-slideshow .slideset, .agent-logos, .agent-logos .mask, .agent-logos .slide a:after, .news-carousel, .news-carousel .news-mask, .news-carousel .news-pagination ul a, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .inquiry-email-form .input-holder, .radio-checks-holder, .add-holder-page, .weAreWorking {
+.login-form, .page-loader, .fake-select, #wrapper, .w1, .logo, .main-visualSection, #main, .page-holder, .mainSearch-form .form-holder, .mainSearch-form .inputsHolder li .input-holder, .searchByID, .generic-section, .news-sliderHolder, .ads-slideshow,
+.news-slideshow, .ads-slideshow .mask,
+.news-slideshow .mask, .ads-slideshow .slideset,
+.news-slideshow .slideset, .agent-logos, .agent-logos .mask, .agent-logos .slide a:after, .news-carousel, .news-carousel .news-mask, .news-carousel .news-pagination ul a, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .inquiry-email-form .input-holder, .radio-checks-holder, .add-holder-page, .weAreWorking {
   overflow: hidden;
 }
 
@@ -7893,13 +7897,11 @@ h1 span {
 
 .main-bg-holder.byDefault-fixed {
   padding: 110px 0 0;
-  margin: 0 0 50px;
 }
 
 @media (max-width: 1199px) {
   .main-bg-holder.byDefault-fixed {
     padding: 92px 0 0;
-    margin: 0 0 30px;
   }
 }
 
@@ -8850,15 +8852,18 @@ h1 span {
   }
 }
 
+.ads-slideshow .mask,
 .news-slideshow .mask {
   position: relative;
   height: 1%;
 }
 
+.ads-slideshow .slideset,
 .news-slideshow .slideset {
   width: 100%;
 }
 
+.ads-slideshow .slide,
 .news-slideshow .slide {
   position: absolute;
   top: 0;
@@ -8871,18 +8876,21 @@ h1 span {
 }
 
 @media (max-width: 767px) {
+  .ads-slideshow .slide,
   .news-slideshow .slide {
     font-size: 16px;
     line-height: 25px;
   }
 }
 
+.ads-slideshow .slide .caption,
 .news-slideshow .slide .caption {
   width: 50%;
   padding: 0 20px 0 0;
 }
 
 @media (max-width: 1023px) {
+  .ads-slideshow .slide .caption,
   .news-slideshow .slide .caption {
     width: 100%;
     float: none !important;
@@ -8890,8 +8898,24 @@ h1 span {
   }
 }
 
+.ads-slideshow .slide.active,
 .news-slideshow .slide.active {
   z-index: 5 !important;
+}
+
+.ads-slideshow {
+  margin: 0 auto 20px;
+}
+
+.ads-slideshow a, .ads-slideshow img {
+  display: block;
+}
+
+.ads-slideshow img {
+  display: block;
+  max-height: 100px;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 .agent-logos {
