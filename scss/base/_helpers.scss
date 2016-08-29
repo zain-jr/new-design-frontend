@@ -23,6 +23,8 @@
 	margin:0 auto;
 	padding:0 15px;
   clear: both;
+
+  @include media('<desktop'){ max-width: 100%;}
 }
 .container {
   @extend %container;

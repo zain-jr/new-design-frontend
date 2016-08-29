@@ -32,11 +32,16 @@
     background: $p42-background;
     @extend %layout;
 
-    @include media('<desktop'){
+    @include media('<tvscreen'){
       padding: 0 255px 10px 0;
     }
+    
+    @include media('<widescreen'){
+      padding: 0 230px 10px 0;
+    }
+    
     @include media('<tablet'){
-      padding: 0 10px 0;
+      padding: 0 10px 0 !important;
     }
   }
   .frame {
@@ -56,16 +61,20 @@
     padding: 8px;
     overflow: hidden;
     
-    @include media('<desktop'){
+    @include media('<tvscreen'){
       max-width: 250px;
+    }
+    
+    @include media('<widescreen'){
+      max-width: 230px;
     }
     
     @include media('<tablet'){
       max-width: inherit;
       position: static !important;
-      width: 100%;
-      margin: 0 0 10px;
-      box-shadow: none;
+      width: 100% !important;
+      margin: 0 0 10px !important;
+      box-shadow: none !important;
     }
     .pull-left, .pull-right {
       width: 50%;
@@ -79,8 +88,8 @@
       margin: 0 0 20px;
       margin: -10px -10px 20px;
 
-      @include media('<desktop'){
-        @include font(30,33);
+      @include media('<widescreen'){
+        @include font(22,28);
       }
     }
     .pictureHolder {
@@ -493,7 +502,7 @@
 
       a {
         display: block;
-        @include squar(100px, 100px);
+        @include squar(95px, 95px);
         white-space: nowrap;
         background: $white;
         padding: 3px;
@@ -501,13 +510,21 @@
         text-decoration: none;
         color: $p42-color;
         @extend %text-center;
+        
+        @include media('<tvscreen'){
+            @include squar(100px, 100px);
+        }
 
         &:after {
-          height: 100px;
+          height: 95px;
           margin: 0 0 0 -5px;
           @include align(middle);
           content: '';
           width: 1px;
+
+          @include media('<tvscreen'){
+            height: 100px;
+          }
         }
         img {
           @include align(middle);
@@ -569,11 +586,11 @@
     white-space: nowrap;
     @extend %layout;
 
-    @include media('<desktop'){
+    @include media('<tvscreen'){
       @include squar(150px, 150px);
     }
 
-    @include media('<tablet'){
+    @include media('<tvscreen'){
       float: none !important;
       margin: 0 auto 10px;
       width: 100%;
@@ -586,7 +603,7 @@
       @include align(middle);
       content: '';
 
-      @include media('<desktop'){
+      @include media('<tvscreen'){
         height: 150px;
       }
     }
@@ -791,7 +808,13 @@
       }
     }
   }
+  .detail-holder {
+    @include media('<tvscreen'){ padding: 0 230px 10px 0;}
+  }
   .info-blockAgent {
+    @include media('<tvscreen'){ max-width: 230px;}
+    @include media('<tablet'){ max-width: 100%;}
+
     .small-heading,
     .heading  {
       padding: 10px;
@@ -804,11 +827,7 @@
       max-width: inherit;
     }
     .field-holder {
-      @include align-reset(top, 14,18);
-
-      @include media('<desktop'){
-        @include align-reset(top, 12,15);
-      }
+      @include align-reset(top, 12,15);
     }
     button[type="submit"] {
       @include media('<desktop'){

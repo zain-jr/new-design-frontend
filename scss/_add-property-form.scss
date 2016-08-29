@@ -285,6 +285,10 @@
             label {
                 width: 12.2%;
 
+                @include media('<desktop'){
+                    width: 17.2%;
+                }
+                
                 @include media('<tablet'){
                     width: 35%;
                 }
@@ -292,9 +296,6 @@
             .input-holder {
                 width: 80.5%;
 
-                @include media('<desktop'){
-                    width: 87.5%;
-                }
                 @include media('<tablet'){
                     width: 65%;
                 }
@@ -323,7 +324,7 @@
             @include font(13,16);
             padding: 7px 0 0;
 
-            @include media('<tablet'){
+            @include media('<desktop'){
                 @include font(12,15);
                 width: 35%;
             }
@@ -504,7 +505,7 @@
             padding: 0 5px;
             margin: 0 0 20px;
 
-            @include media('<tablet'){
+            @include media('<desktop'){
                 width: 100%;
                 display: block;
                 overflow: hidden;

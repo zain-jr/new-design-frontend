@@ -433,8 +433,12 @@
       .links-holder {
         position: absolute;
         bottom: 0;
-        left: 195px;
+        left: 190px;
         right: 0;
+
+        @include media('<tvscreen'){ left: 63px;}
+
+        @include media('<widescreen'){ left: 5px;}
 
         @include media('<desktop'){
           left: 0;
@@ -588,7 +592,7 @@
     @include media('<desktop'){ padding: 0;}
   }
   .publicAgent-post {
-    width: 50%;
+    width: 100%;
     float: none !important;
     background: transparent;
     padding: 0 3px 6px;
@@ -656,7 +660,6 @@
       .btn-default {
         padding: 7px 21px 7px 5px;
         @include font(10,14);
-        display: block;
 
         @include media('<widescreen'){
           padding: 7px 30px 7px 5px;
@@ -679,7 +682,7 @@
       .quick-links {
         padding: 0;
         margin: 0;
-        float: none !important;
+        float: right !important;
         @include align-reset(top, 16,16);
 
         span[class^="icon-empty-envelop"],span[class*="icon-empty-envelop"]{
@@ -692,6 +695,8 @@
           @extend %text-center;
         }
       }
+    }
+    .links-right {
     }
     .trusted-agent {
       @include font(10,14);
