@@ -10928,6 +10928,7 @@ h1 span {
   width: 15%;
   float: left;
   text-align: center;
+  margin: 1px 0 0;
 }
 
 @media (max-width: 767px) {
