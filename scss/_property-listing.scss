@@ -121,13 +121,13 @@
     @extend %layout;
 
     button {
-      width: 215px;
+      width: 100%;
       display: block;
       border: 0;
       color: $white;
       background: $green;
       padding: 10px;
-      margin: 0 auto 10px;
+      margin: 10px 0;
       transition: background 0.5s ease;
       -webkit-transition: background 0.5s ease;
       -moz-transition: background 0.5s ease;
