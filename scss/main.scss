@@ -1955,6 +1955,8 @@ h1 {
   position: relative;
   @extend %layout;
   padding: 0 10px;
+  @extend %container;
+  max-width: 1024px;
   
   @include media('<tvscreen'){
     width: 70%;

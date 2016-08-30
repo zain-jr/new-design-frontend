@@ -788,7 +788,7 @@ th {
   display: block;
 }
 
-.container, .addProperty-form .main-form, .addProperty-form .thankYou-message, .ads-slideshow, .weAreWorking {
+.container, .addProperty-form .main-form, .addProperty-form .thankYou-message, .ads-slideshow, .agent-slider, .weAreWorking {
   max-width: 1170px;
   margin: 0 auto;
   padding: 0 15px;
@@ -796,7 +796,7 @@ th {
 }
 
 @media (max-width: 1023px) {
-  .container, .addProperty-form .main-form, .addProperty-form .thankYou-message, .ads-slideshow, .weAreWorking {
+  .container, .addProperty-form .main-form, .addProperty-form .thankYou-message, .ads-slideshow, .agent-slider, .weAreWorking {
     max-width: 100%;
   }
 }
@@ -6256,6 +6256,7 @@ input[type='submit'] {
   display: block;
   position: relative;
   margin: 0 0 10px;
+  padding: 0 !important;
 }
 
 .registerNow .agree-with-terms li .customCheckbox input {
@@ -9494,6 +9495,7 @@ h1 span {
 .agent-slider {
   position: relative;
   padding: 0 10px;
+  max-width: 1024px;
 }
 
 @media (max-width: 1539px) {
