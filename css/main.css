@@ -910,7 +910,7 @@ th {
 .propertyDetail-page .info-blockProperty .quick-links, .agent-detail-page .agent-detail-holder .star-rating,
 .agent-detail-page .property-picture-holder .star-rating,
 .propertyDetail-page .agent-detail-holder .star-rating,
-.propertyDetail-page .property-picture-holder .star-rating, .news-carousel, .agent-slider {
+.propertyDetail-page .property-picture-holder .star-rating, .news-carousel {
   float: right !important;
 }
 
@@ -7391,7 +7391,7 @@ h1 span {
   #header {
     position: fixed !important;
     z-index: 999 !important;
-    background: #fff !important;
+    background: rgba(222, 225, 227, 0.95) !important;
     box-shadow: 0 0 20px -1px rgba(0, 0, 0, 0.5);
     min-width: 320px;
   }
@@ -7400,6 +7400,12 @@ h1 span {
 @media (max-width: 767px) and (max-width: 767px) {
   #header .social-icons {
     display: none;
+  }
+}
+
+@media (max-width: 767px) and (max-width: 767px) {
+  #header .nav-opener {
+    margin: -22px 2px 0;
   }
 }
 
@@ -7497,7 +7503,7 @@ h1 span {
 
 @media (max-width: 767px) {
   #header .top-bar {
-    padding: 10px 5px 3px;
+    padding: 9px 12px;
   }
 }
 
@@ -7528,7 +7534,7 @@ h1 span {
 
 @media (max-width: 767px) {
   #header .right-sideTop {
-    width: 35%;
+    width: 30%;
   }
 }
 
@@ -9487,7 +9493,6 @@ h1 span {
 
 .agent-slider {
   position: relative;
-  width: 60%;
   padding: 0 10px;
 }
 

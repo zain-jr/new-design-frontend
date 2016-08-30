@@ -421,13 +421,19 @@ h1 {
   @include media('<tablet'){
     position: fixed !important;
     z-index: 999 !important;
-    background: $white !important;
+    background: rgba($p42-background, 0.95) !important;
     box-shadow: 0 0 20px -1px rgba($black, 0.5);
     min-width: 320px;
     
     .social-icons {
       @include media('<tablet'){
         display: none;
+      }
+    }
+
+    .nav-opener {
+      @include media('<tablet'){
+        margin: -22px 2px 0;
       }
     }
   }
@@ -513,7 +519,7 @@ h1 {
     -ms-transition: padding 0.5s ease;
 
     @include media('<tablet'){
-      padding: 10px 5px 3px;
+      padding:9px 12px;
     }
   }
   .right-sideTop {
@@ -531,7 +537,7 @@ h1 {
       width: 50%;
     }
     @include media('<tablet'){
-      width: 35%;
+      width: 30%;
     }
 
     .mail {
@@ -1948,8 +1954,6 @@ h1 {
 .agent-slider {
   position: relative;
   @extend %layout;
-  @extend %pull-right;
-  width: 60%;
   padding: 0 10px;
   
   @include media('<tvscreen'){
