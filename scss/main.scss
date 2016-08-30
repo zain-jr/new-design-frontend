@@ -483,26 +483,17 @@ h1 {
                 a {
                   padding:11px 23px 7px 7px;
 
-                  span[class^="icon-"],span[class*="icon-"]{ display: none;}
-
                   @include media('<tablet'){
                     padding: 5px;
                   }
                 }
               }
-            a{
-              min-height: 50px;
-
-              @include media('<tablet'){
-                min-height: inherit;
-              }
-            }
           }
         }
       }
     }
     .nav-opener {
-      margin: -9px 4px 0;
+      margin: -12px 4px 0;
 
       @include media('<tablet'){
         margin: -22px 2px 0;
@@ -612,6 +603,7 @@ h1 {
     }
     @include media('<desktop'){
       top: 7px;
+      max-width: 210px;
     }
     @include media('<tablet'){
       max-width: 130px;
@@ -715,10 +707,13 @@ h1 {
       @include media('<tvscreen'){
         padding: 10px 20px 10px 5px;
       }
-
+      @include media('<desktop'){
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
       @include media('<tablet'){
         padding:5px;
-        min-height: 40px;
       }
 
       span[class^="icon-"],span[class*="icon-"]{
@@ -728,6 +723,10 @@ h1 {
         font-size: 14px;
         line-height: 1;
         margin: -7px 0 0;
+
+        @include media('<desktop'){
+          right: 5px;
+        }
 
         @include media('<tablet'){
           position: static;
@@ -782,8 +781,7 @@ h1 {
       margin: -2px 0 0 !important;
 
       @include media('<tablet'){
-        font-size: 12px !important;
-        margin: 0 !important;
+        display: none !important;
       }
     }
 
@@ -792,6 +790,10 @@ h1 {
       border-color: $p42-color;
       border-style: solid;
       border-radius: 0;
+
+      @include media('<tablet'){
+        padding: 10px !important;
+      }
     }
   }
 }
@@ -2446,6 +2448,7 @@ h1 {
   @extend %clearfix;
 }
 .feedBack {
+  box-shadow:0 0 10px 0 rgba($black, 0.5);
   @include font(16,20);
   color: $white;
   text-decoration: none;
@@ -3101,6 +3104,7 @@ h1 {
   color: $p42-default-grey;
 }
 .weAreWorking  {
+  min-width: 320px;
   max-width: 700px;
   @extend %layout;
   color: $white;
@@ -3109,6 +3113,7 @@ h1 {
   width: 100%;
   @extend %container;
   background: rgba($p42-color, 0.95);
+  box-shadow:0 0 10px 0 rgba($black, 0.5);
   border-radius: 4px;
   padding: 10px 10px 2px;
   position: fixed;

@@ -847,10 +847,7 @@ th {
   text-align: left;
 }
 
-.text-right, .agent-listing-page .publicAgent-post .caption .price,
-.agent-listing-page .publicProperty-post .caption .price,
-.listing-page .publicAgent-post .caption .price,
-.listing-page .publicProperty-post .caption .price, .agent-detail-page .feature-list li .stataus,
+.text-right, .agent-detail-page .feature-list li .stataus,
 .propertyDetail-page .feature-list li .stataus, .agent-detail-page .col .list li > span, .topSocities-holder .socities li .caption .numberOfproperties li span:last-child, #footer .copyright, .sumery-list li .quantity {
   text-align: right;
 }
@@ -3122,7 +3119,7 @@ input[type='submit'] {
 .propertyDetail-page .detail-holder {
   box-shadow: 0 5px 13px rgba(0, 0, 0, 0.5);
   padding: 0 305px 10px 0;
-  margin: 0 0 50px;
+  margin: 0 auto 50px;
   position: relative;
   background: #dee1e3;
 }
@@ -6676,6 +6673,18 @@ input[type='submit'] {
   background: #30ce20;
 }
 
+@media (max-width: 767px) {
+  .login-form label {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .login-form .input-holder {
+    width: 100% !important;
+  }
+}
+
 .forgot-form .buttons-holder li {
   width: 100%;
   display: block;
@@ -7457,9 +7466,6 @@ h1 span {
   .byDefault-fixed #header .right-sideTop .loginRegister li:first-child a, #header.fixed-position .right-sideTop .loginRegister li:first-child a {
     padding: 11px 23px 7px 7px;
   }
-  .byDefault-fixed #header .right-sideTop .loginRegister li:first-child a span[class^="icon-"], .byDefault-fixed #header .right-sideTop .loginRegister li:first-child a span[class*="icon-"], #header.fixed-position .right-sideTop .loginRegister li:first-child a span[class^="icon-"], #header.fixed-position .right-sideTop .loginRegister li:first-child a span[class*="icon-"] {
-    display: none;
-  }
 }
 
 @media (max-width: 1023px) and (max-width: 767px) {
@@ -7468,20 +7474,8 @@ h1 span {
   }
 }
 
-@media (max-width: 1023px) {
-  .byDefault-fixed #header .right-sideTop .loginRegister li a, #header.fixed-position .right-sideTop .loginRegister li a {
-    min-height: 50px;
-  }
-}
-
-@media (max-width: 1023px) and (max-width: 767px) {
-  .byDefault-fixed #header .right-sideTop .loginRegister li a, #header.fixed-position .right-sideTop .loginRegister li a {
-    min-height: inherit;
-  }
-}
-
 .byDefault-fixed #header .nav-opener, #header.fixed-position .nav-opener {
-  margin: -9px 4px 0;
+  margin: -12px 4px 0;
 }
 
 @media (max-width: 767px) {
@@ -7626,6 +7620,7 @@ h1 span {
   .byDefault-fixed .logo,
   .fixed-position .logo {
     top: 7px;
+    max-width: 210px;
   }
 }
 
@@ -7811,10 +7806,17 @@ h1 span {
   }
 }
 
+@media (max-width: 1023px) {
+  .loginRegister li a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
 @media (max-width: 767px) {
   .loginRegister li a {
     padding: 5px;
-    min-height: 40px;
   }
 }
 
@@ -7825,6 +7827,12 @@ h1 span {
   font-size: 14px;
   line-height: 1;
   margin: -7px 0 0;
+}
+
+@media (max-width: 1023px) {
+  .loginRegister li a span[class^="icon-"], .loginRegister li a span[class*="icon-"] {
+    right: 5px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -7888,8 +7896,7 @@ h1 span {
 
 @media (max-width: 767px) {
   .dropDown li span[class^="icon-login"], .dropDown li span[class*="icon-login"] {
-    font-size: 12px !important;
-    margin: 0 !important;
+    display: none !important;
   }
 }
 
@@ -7898,6 +7905,12 @@ h1 span {
   border-color: #2092d0;
   border-style: solid;
   border-radius: 0;
+}
+
+@media (max-width: 767px) {
+  .dropDown li a {
+    padding: 10px !important;
+  }
 }
 
 .main-bg-holder {
@@ -10158,6 +10171,7 @@ h1 span {
 }
 
 .feedBack {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   font-size: 16px;
   line-height: 20px;
   color: #fff;
@@ -11037,11 +11051,13 @@ h1 span {
 }
 
 .weAreWorking {
+  min-width: 320px;
   max-width: 700px;
   color: #fff;
   margin: 0 auto !important;
   width: 100%;
   background: rgba(32, 146, 208, 0.95);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   border-radius: 4px;
   padding: 10px 10px 2px;
   position: fixed;

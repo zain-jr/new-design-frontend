@@ -157,6 +157,14 @@
         }
     }
 }
+.login-form {
+    label {
+        @include media('<tablet'){ display: none !important;}
+    }
+    .input-holder {
+        @include media('<tablet'){ width:  100% !important;}
+    }
+}
 .forgot-form {
     .buttons-holder {
         li {
