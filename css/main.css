@@ -756,7 +756,8 @@ th {
 .listing-page .filterChecks, .agent-detail-page .feature-list,
 .propertyDetail-page .feature-list, .agent-detail-page .col .list, .agent-detail-page .agentDetail-list, .addProperty-form .error, .addProperty-form .image-uploading-area, .addProperty-form .existingOrNew-member, .registerNow .packetData-list,
 .registerNow .societiesBlock-listing, .registerNow .role-listing, .registerNow .agree-with-terms, .forgot-form .buttons-holder,
-.login-form .buttons-holder, .social-icons, .loginRegister, .dropDown, .main-visualSection .number-of-properties, .mainSearch-form .typeOfBuying, .mainSearch-form .subTypes, .mainSearch-form .inputsHolder, #nav .main-navigation, .news-carousel .news-pagination ul, .topSocities-holder .socities, .topSocities-holder .socities li .caption .numberOfproperties, .agents-logo, .pager, .quick-links, .public-ui-features, .sumery-list, .radio-checks-holder, .Ads {
+.login-form .buttons-holder, .social-icons, .loginRegister, .dropDown, .main-visualSection .number-of-properties, .mainSearch-form .typeOfBuying, .mainSearch-form .subTypes, .mainSearch-form .inputsHolder, #nav .main-navigation, .pagination ul,
+.news-pagination ul, .topSocities-holder .socities, .topSocities-holder .socities li .caption .numberOfproperties, .agents-logo, .pager, .quick-links, .public-ui-features, .sumery-list, .radio-checks-holder, .Ads {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -826,7 +827,8 @@ th {
 .propertyDetail-page .agent-societies .agent-slide a, .agent-detail-page .agent-picture,
 .propertyDetail-page .agent-picture, .addProperty-form .extra-features, .addProperty-form .existingOrNew-member li, .addProperty-form .list-extraFeatures .feature-heading, .addProperty-form .thankYou-message, .addProperty-form .thankYou-message .left, .registerNow .role-opener, .forgot-form .buttons-holder li a,
 .login-form .buttons-holder li a, .page-loader, .global-error,
-.global-success, .custom-withouChecks .fake-label, h1, .loginRegister li, .main-visualSection, #nav .main-navigation li, .ads-slideshow, .ads-slideshow a, .ads-slideshow img, .agent-logos .slide a, .news-carousel .news-pagination ul, .topSocities-holder .socities li a, .heading, .agents-logo li a, .premiumProperty, .public-ui-features li strong, .generic-lightbox, .login-heading,
+.global-success, .custom-withouChecks .fake-label, h1, .loginRegister li, .main-visualSection, #nav .main-navigation li, .ads-slideshow, .ads-slideshow a, .ads-slideshow img, .agent-logos .slide a, .pagination ul,
+.news-pagination ul, .topSocities-holder .socities li a, .heading, .agents-logo li a, .premiumProperty, .public-ui-features li strong, .generic-lightbox, .login-heading,
 .registerNow-heading,
 .add-pro-heading, .Ads, .weAreWorking {
   text-align: center;
@@ -841,7 +843,7 @@ th {
 .propertyDetail-page .property-picture-holder h1, .agent-detail-page .overview-section,
 .propertyDetail-page .overview-section, .agent-detail-page .overview-section .small-heading,
 .propertyDetail-page .overview-section .small-heading, .agent-detail-page .feature .small-heading,
-.propertyDetail-page .feature .small-heading, .agent-detail-page .col .list li > span:first-child, .addProperty-form .existingOrNew-member li .slide, .addProperty-form .thankYou-message .layout, .addProperty-form .thankYou-message .agent-listing-page #content, .agent-listing-page .addProperty-form .thankYou-message #content, .mainSearch-form .inputsHolder, .topSocities-holder .socities li .caption .numberOfproperties, .inquiry-email-form, .information {
+.propertyDetail-page .feature .small-heading, .agent-detail-page .col .list li > span:first-child, .addProperty-form .existingOrNew-member li .slide, .addProperty-form .thankYou-message .layout, .addProperty-form .thankYou-message .agent-listing-page #content, .agent-listing-page .addProperty-form .thankYou-message #content, .mainSearch-form .inputsHolder, .ads-slideshow .caption, .topSocities-holder .socities li .caption .numberOfproperties, .inquiry-email-form, .information {
   text-align: left;
 }
 
@@ -947,11 +949,12 @@ th {
 .propertyDetail-page .extra-feature-section, .agent-detail-page .feature,
 .propertyDetail-page .feature, .agent-detail-page .agent-picture,
 .propertyDetail-page .agent-picture, .agent-detail-page .agent-description,
-.propertyDetail-page .agent-description, .agent-detail-page .frame, .addProperty-form, .addProperty-form .add-form-holder, .addProperty-form .main-form, .addProperty-form .list-extraFeatures, .registerNow, .registerNow .registration-form, .registerNow .company-logo, .registerNow .company-logo .logo-holder, .registerNow .packetData, .registerNow .role-listing, .registerNow .agent-information, .login-page, .forgot-form,
+.propertyDetail-page .agent-description, .agent-detail-page .frame, .addProperty-form, .addProperty-form .add-form-holder, .addProperty-form .main-form, .addProperty-form .list-extraFeatures, .addProperty-form .thankYou-message .right, .registerNow, .registerNow .registration-form, .registerNow .company-logo, .registerNow .company-logo .logo-holder, .registerNow .packetData, .registerNow .role-listing, .registerNow .agent-information, .login-page, .forgot-form,
 .login-form, .page-loader, .fake-select, #wrapper, .w1, .logo, .main-visualSection, #main, .page-holder, .mainSearch-form .form-holder, .mainSearch-form .inputsHolder li .input-holder, .searchByID, .generic-section, .news-sliderHolder, .ads-slideshow,
 .news-slideshow, .ads-slideshow .mask,
 .news-slideshow .mask, .ads-slideshow .slideset,
-.news-slideshow .slideset, .agent-logos, .agent-logos .mask, .agent-logos .slide a:after, .news-carousel, .news-carousel .news-mask, .news-carousel .news-pagination ul a, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .inquiry-email-form .input-holder, .radio-checks-holder, .add-holder-page, .weAreWorking {
+.news-slideshow .slideset, .agent-logos, .agent-logos .mask, .agent-logos .slide a:after, .pagination ul a,
+.news-pagination ul a, .news-carousel, .news-carousel .news-mask, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .inquiry-email-form .input-holder, .radio-checks-holder, .add-holder-page, .weAreWorking {
   overflow: hidden;
 }
 
@@ -5368,22 +5371,35 @@ input[type='submit'] {
 .addProperty-form .thankYou-message {
   background: rgba(222, 225, 227, 0.8);
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.22);
-  padding: 50px 10px;
+  padding: 15px 10px;
 }
 
 .addProperty-form .thankYou-message .layout, .addProperty-form .thankYou-message .agent-listing-page #content, .agent-listing-page .addProperty-form .thankYou-message #content {
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 .addProperty-form .thankYou-message .left {
-  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  margin: -100px 0 0;
+}
+
+@media (max-width: 1023px) {
+  .addProperty-form .thankYou-message .left {
+    margin: -50px 0 0;
+    left: 30px;
+  }
 }
 
 @media (max-width: 767px) {
   .addProperty-form .thankYou-message .left {
     width: 100%;
     display: block;
+    position: static;
+    margin: 0;
   }
 }
 
@@ -5396,22 +5412,22 @@ input[type='submit'] {
 
 @media (max-width: 1023px) {
   .addProperty-form .thankYou-message .left span {
-    font-size: 150px;
+    font-size: 100px;
   }
 }
 
 .addProperty-form .thankYou-message .right {
-  width: 70%;
   font-size: 16px;
   line-height: 20px;
   color: #555;
+  padding: 10px 0 40px 340px;
 }
 
 @media (max-width: 1023px) {
   .addProperty-form .thankYou-message .right {
     font-size: 14px;
     line-height: 17px;
-    padding: 0 30px 0 0;
+    padding: 10px 0 10px 160px;
   }
 }
 
@@ -6712,7 +6728,7 @@ input[type='submit'] {
 }
 
 .fancybox-inner {
-  overflow: hidden;
+  overflow: auto;
 }
 
 .fancybox-type-iframe .fancybox-inner {
@@ -6877,7 +6893,6 @@ input[type='submit'] {
 
 .fancybox-lock .fancybox-overlay {
   overflow: auto;
-  overflow-y: scroll;
 }
 
 /* Title helper */
@@ -7299,14 +7314,11 @@ h1 span {
   font-weight: 700;
 }
 
-.fancybox-overlay {
-  z-index: 999999999 !important;
-}
-
 #wrapper {
   width: 100%;
   height: 100%;
   min-height: 100vh;
+  position: relative;
 }
 
 #wrapper.fancy-overlay {
@@ -7469,7 +7481,13 @@ h1 span {
 }
 
 .byDefault-fixed #header .nav-opener, #header.fixed-position .nav-opener {
-  margin: -9px 0 0;
+  margin: -9px 4px 0;
+}
+
+@media (max-width: 767px) {
+  .byDefault-fixed #header .nav-opener, #header.fixed-position .nav-opener {
+    margin: -22px 2px 0;
+  }
 }
 
 #header .top-bar {
@@ -7615,7 +7633,7 @@ h1 span {
   .byDefault-fixed .logo,
   .fixed-position .logo {
     max-width: 130px;
-    position: fixed;
+    position: absolute;
     top: 9px;
     left: 0;
     right: 60px;
@@ -7908,6 +7926,7 @@ h1 span {
 @media (max-width: 767px) {
   .main-bg-holder.byDefault-fixed {
     padding: 40px 0 0;
+    margin: 0 0 40px;
   }
 }
 
@@ -7975,6 +7994,7 @@ h1 span {
     line-height: 15px;
     max-width: inherit;
     margin: 0 0 5px;
+    display: none;
   }
 }
 
@@ -8895,6 +8915,11 @@ h1 span {
     width: 100%;
     float: none !important;
     padding: 0;
+    text-align: center;
+  }
+  .ads-slideshow .slide .caption p,
+  .news-slideshow .slide .caption p {
+    text-align: left;
   }
 }
 
@@ -8986,6 +9011,54 @@ h1 span {
   max-width: 125px;
 }
 
+.pagination,
+.news-pagination {
+  padding: 28px 0 0;
+}
+
+.pagination ul,
+.news-pagination ul {
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+}
+
+.pagination ul > *,
+.news-pagination ul > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0;
+}
+
+.pagination ul li,
+.news-pagination ul li {
+  padding: 0 5px;
+  margin: 0 0 10px;
+}
+
+.pagination ul li.active a,
+.news-pagination ul li.active a {
+  background: #2092d0;
+}
+
+.pagination ul a,
+.news-pagination ul a {
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: #aaa;
+  text-indent: -99999px;
+  border-radius: 100%;
+  text-decoration: none;
+}
+
+.pagination ul a:hover,
+.news-pagination ul a:hover {
+  background: #2092d0;
+}
+
 .news-carousel {
   position: relative;
   width: 50%;
@@ -9037,47 +9110,6 @@ h1 span {
     min-width: 400px;
     min-height: 300px;
   }
-}
-
-.news-carousel .news-pagination {
-  padding: 28px 0 0;
-}
-
-.news-carousel .news-pagination ul {
-  font-size: 0;
-  line-height: 0;
-  letter-spacing: -4px;
-}
-
-.news-carousel .news-pagination ul > * {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 12px;
-  line-height: 12px;
-  letter-spacing: 0;
-}
-
-.news-carousel .news-pagination ul li {
-  padding: 0 5px;
-  margin: 0 0 10px;
-}
-
-.news-carousel .news-pagination ul li.active a {
-  background: #2092d0;
-}
-
-.news-carousel .news-pagination ul a {
-  display: block;
-  width: 14px;
-  height: 14px;
-  background: #aaa;
-  text-indent: -99999px;
-  border-radius: 100%;
-  text-decoration: none;
-}
-
-.news-carousel .news-pagination ul a:hover {
-  background: #2092d0;
 }
 
 .news-carousel .news-btn-prev, .news-carousel .news-btn-next {
@@ -9889,8 +9921,8 @@ h1 span {
 }
 
 .nav-opener {
-  width: 33px;
-  height: 30px;
+  width: 38px;
+  height: 38px;
   display: block;
   position: absolute;
   top: 50%;
@@ -10518,6 +10550,7 @@ h1 span {
   width: 475px;
   position: relative;
   padding: 30px 0 0;
+  z-index: 9999999 !important;
 }
 
 @media (max-width: 767px) {
@@ -10528,7 +10561,7 @@ h1 span {
 
 @media (max-width: 479px) {
   .generic-lightbox {
-    width: 245px;
+    width: 235px;
   }
 }
 
@@ -10574,7 +10607,6 @@ h1 span {
 }
 
 .inquiry-email-form {
-  overflow: hidden;
   padding: 3px;
   max-width: 375px;
   margin: 0 auto;
@@ -10680,6 +10712,7 @@ h1 span {
   .inquiry-email-form button[type="submit"] {
     width: 100%;
     margin: 0;
+    left: 0;
   }
 }
 
@@ -11056,6 +11089,7 @@ h1 span {
     font-size: 14px;
     line-height: 20px;
     margin: 0 0 5px;
+    padding: 0 12px;
   }
 }
 

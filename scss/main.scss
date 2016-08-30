@@ -358,14 +358,12 @@ h1 {
     font-weight: 700;
   }
 }
-.fancybox-overlay {
-  z-index: 999999999 !important;
-}
 #wrapper {
   @extend %layout;
   width: 100%;
   height: 100%;
   min-height: 100vh;
+  position: relative;
 
   &.fancy-overlay {
     filter: blur(20px);
@@ -504,7 +502,11 @@ h1 {
       }
     }
     .nav-opener {
-      margin: -9px 0 0;
+      margin: -9px 4px 0;
+
+      @include media('<tablet'){
+        margin: -22px 2px 0;
+      }
     }
   }
 
@@ -613,7 +615,7 @@ h1 {
     }
     @include media('<tablet'){
       max-width: 130px;
-      position: fixed;
+      position: absolute;
       top: 9px;
       left: 0;
       right: 60px;
@@ -811,6 +813,7 @@ h1 {
     }
     @include media('<tablet'){
       padding: 40px 0 0;
+      margin: 0 0 40px;
     }
   }
 }
@@ -863,6 +866,7 @@ h1 {
       @include font(12,15);
       max-width: inherit;
       margin: 0 0 5px;
+      display: none;
     }
   }
   .number-of-properties {
@@ -1493,6 +1497,9 @@ h1 {
         width: 100%;
         float: none !important;
         padding: 0;
+        text-align: center;
+
+        p { text-align: left;}
       }
     }
 
@@ -1505,7 +1512,10 @@ h1 {
   @extend %container;
   margin:  0 auto 20px;
   @extend %text-center;
-
+  
+  .caption {
+    @extend %text-left;
+  }
   a, img {
     @extend %text-center;
     display: block;
@@ -1588,6 +1598,39 @@ h1 {
     }
   }
 }
+.pagination,
+.news-pagination {
+  padding: 28px 0 0;
+  ul{
+    @extend %listreset;
+    @include align-reset(top, 12, 12);
+    @extend %text-center;
+
+    li {
+      padding: 0 5px;
+      margin: 0 0 10px;
+
+      &.active {
+        a{
+          background: $p42-color;
+        }
+      }
+    }
+    a {
+      display: block;
+      @include squar(14px, 14px);
+      background: $dim-grey;
+      @extend %layout;
+      text-indent: -99999px;
+      border-radius: 100%;
+      text-decoration: none;
+
+      &:hover {
+        background: $p42-color;
+      }
+    }
+  }
+}
 .news-carousel {
   position: relative;
   @extend %layout;
@@ -1632,38 +1675,6 @@ h1 {
         max-height: 300px;
         min-width: 400px;
         min-height: 300px;
-      }
-    }
-  }
-  .news-pagination {
-    padding: 28px 0 0;
-    ul{
-      @extend %listreset;
-      @include align-reset(top, 12, 12);
-      @extend %text-center;
-
-      li {
-        padding: 0 5px;
-        margin: 0 0 10px;
-
-        &.active {
-          a{
-            background: $p42-color;
-          }
-        }
-      }
-      a {
-        display: block;
-        @include squar(14px, 14px);
-        background: $dim-grey;
-        @extend %layout;
-        text-indent: -99999px;
-        border-radius: 100%;
-        text-decoration: none;
-
-        &:hover {
-          background: $p42-color;
-        }
       }
     }
   }
@@ -2245,7 +2256,7 @@ h1 {
   }
 }
 .nav-opener {
-  @include squar(33px, 30px);
+  @include squar(38px, 38px);
   display: block;
   position: absolute;
   top: 50%;
@@ -2720,12 +2731,13 @@ h1 {
   @extend %text-center;
   position: relative;
   padding: 30px 0 0;
+  z-index: 9999999 !important;
 
   @include media('<tablet'){
     width: 410px;
   }
   @include media('<phone'){
-    width: 245px;
+    width: 235px;
   }
 
   .lighbox-heading{
@@ -2767,7 +2779,6 @@ h1 {
 }
 .inquiry-email-form {
   @extend %text-left;
-  overflow: hidden;
   padding: 3px;
   max-width: 375px;
   margin: 0 auto;
@@ -2847,6 +2858,7 @@ h1 {
     @include media('<tablet'){
       width: 100%;
       margin: 0;
+      left: 0;
     }
 
     &:hover {
@@ -3131,6 +3143,7 @@ h1 {
     @include media('<tablet'){
       @include font(14,20);
       margin: 0 0 5px;
+      padding: 0 12px;
     }
   }
   a {

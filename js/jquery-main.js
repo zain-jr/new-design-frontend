@@ -48,6 +48,7 @@ function initSlideShow() {
 		autoRotation: true,
 		autoHeight: true,
 		pauseOnHover: true,
+		circularRotation: false,
 		switchTime: 5000,
 		animSpeed: 600
 	});
@@ -100,6 +101,7 @@ function initCarousel() {
 		autoRotation: false,
 		maskAutoSize: false,
 		stretchSlideToMask: true,
+		generatePagination: '.pagination',
 		switchTime: 2000,
 		animSpeed: 600
 	});

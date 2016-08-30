@@ -46,7 +46,7 @@
 }
 
 .fancybox-inner {
-	overflow: hidden;
+	overflow: auto;
 }
 
 .fancybox-type-iframe .fancybox-inner {
@@ -210,7 +210,6 @@
 
 .fancybox-lock .fancybox-overlay {
 	overflow: auto;
-	overflow-y: scroll;
 }
 
 /* Title helper */

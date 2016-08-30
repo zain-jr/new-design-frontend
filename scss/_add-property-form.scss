@@ -559,20 +559,31 @@
         box-shadow: 0 0 7px rgba($black , 0.22);
         @extend %text-center;
         @extend %container;
-        padding: 50px 10px;
+        padding: 15px 10px;
 
         .layout {
             margin: 0;
             padding: 0;
             @extend %text-left;
+            position: relative;
         }
         .left {
-            width: 30%;
             @extend %text-center;
+            position: absolute;
+            top: 50%;
+            left: 100px;
+            margin: -100px 0 0;
+
+            @include media('<desktop'){
+                margin: -50px 0 0;
+                left: 30px;
+            }
 
             @include media('<tablet'){
                 width: 100%;
                 display: block;
+                position: static;
+                margin: 0;
             }
 
             span {
@@ -582,18 +593,19 @@
                 line-height: 1;
 
                 @include media('<desktop'){
-                    font-size: 150px;
+                    font-size: 100px;
                 }
             }
         }
         .right {
-            width:70%;
+            @extend %layout;
             @include font(16,20);
             color: $dark-grey;
+            padding: 10px 0 40px 340px;
 
             @include media('<desktop'){
                 @include font(14,17);
-                padding: 0 30px 0 0; 
+                padding: 10px 0 10px 160px;
             }
             @include media('<tablet'){
                 width: 100%;
