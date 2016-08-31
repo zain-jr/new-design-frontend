@@ -2266,6 +2266,7 @@ h1 {
   }
 }
 .nav-opener {
+  color: $p42-color;
   @include squar(38px, 38px);
   display: block;
   position: absolute;
@@ -2610,7 +2611,7 @@ h1 {
     padding: 0 5px;
   }
 }
-
+.notlogged-rating,
 .star-rating {
 	list-style:none;
 	margin:0px;

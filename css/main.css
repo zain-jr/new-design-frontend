@@ -9962,6 +9962,7 @@ h1 span {
 }
 
 .nav-opener {
+  color: #2092d0;
   width: 38px;
   height: 38px;
   display: block;
@@ -10409,6 +10410,7 @@ h1 span {
   padding: 0 5px;
 }
 
+.notlogged-rating,
 .star-rating {
   list-style: none;
   margin: 0px;
