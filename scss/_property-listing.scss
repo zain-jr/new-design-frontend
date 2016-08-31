@@ -86,7 +86,7 @@
         top: 50%;
         right: 10px;
         cursor: pointer;
-        margin: -11px 0 0;
+        margin: -12px 0 0;
 
         span {
           display: block;
@@ -318,11 +318,11 @@
         max-width: 180px;
         @extend img-res;
 
-        @include media('<desktop'){
-          max-height: 220px;
-          max-width: 220px;
-          min-height: 220px;
-          min-width: 220px;
+        @include media('<widescreen'){
+          max-height: 150px;
+          max-width: 150px;
+          min-height: 150px;
+          min-width: 150px;
         }
 
         @include media('<tablet'){
@@ -344,7 +344,7 @@
       font-family: $open-sans;
       @include font(13,16);
       color: $p42-default-grey;
-      padding: 0 0 10px 10px;
+      padding: 0 0 58px 10px;
 
       @include media('<widescreen'){
         padding: 0 0 55px 10px;
@@ -386,6 +386,10 @@
         }
       }
       .price {
+        @include media('<widescreen'){
+          @include font(14,17);
+        }
+
         @include media('<phone'){
           padding: 0 0 5px;
           @include font(15,18);
@@ -407,6 +411,13 @@
         width: 70%;
         padding: 0 10px 0 0;
 
+        @include media('<widescreen'){
+          min-height: 145px;
+        }
+        @include media('<tablet'){
+         min-height: inherit; 
+        }
+          
         @include media('<tablet'){
           padding: 0;
           float: none !important;
@@ -439,7 +450,6 @@
         @include media('<desktop'){
           left: 0;
           padding: 0 0 0 15px; 
-          background: rgba($white, 0.5);
         }
 
         @include media('<tablet'){
@@ -533,10 +543,11 @@
       .company-logo {
         @extend img-res;
         @extend .pull-right;
-        max-width: 76px;
-        max-height: 76px;
-        min-width: 76px;
-        min-height: 76px;
+        max-width: 70px;
+        max-height: 70px;
+        min-width: 70px;
+        min-height: 70px;
+        margin: 6px 0 0;
 
         @include media('<widescreen'){
           max-width: 60px;

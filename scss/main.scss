@@ -1774,6 +1774,8 @@ h1 {
         @extend %text-center;
         position: relative;
         overflow: hidden;
+        text-decoration: none;
+        color: $white;
 
         @include media('<desktop'){
           height: 255px;
@@ -2549,8 +2551,9 @@ h1 {
     }
     b {
       @include align(top);
-      width: 65%;
       font-weight: 400;
+      display: block;
+      @extend %text-right;
 
       @include media('<tablet'){ width: auto;}
     }

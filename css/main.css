@@ -848,7 +848,7 @@ th {
 }
 
 .text-right, .agent-detail-page .feature-list li .stataus,
-.propertyDetail-page .feature-list li .stataus, .agent-detail-page .col .list li > span, .topSocities-holder .socities li .caption .numberOfproperties li span:last-child, #footer .copyright, .sumery-list li .quantity {
+.propertyDetail-page .feature-list li .stataus, .agent-detail-page .col .list li > span, .topSocities-holder .socities li .caption .numberOfproperties li span:last-child, #footer .copyright, .public-ui-features li b, .sumery-list li .quantity {
   text-align: right;
 }
 
@@ -1943,7 +1943,7 @@ input[type='submit'] {
   top: 50%;
   right: 10px;
   cursor: pointer;
-  margin: -11px 0 0;
+  margin: -12px 0 0;
 }
 
 .agent-listing-page #aside .top-head .close span,
@@ -2281,15 +2281,15 @@ input[type='submit'] {
   max-width: 180px;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1199px) {
   .agent-listing-page .publicAgent-post .image-holder img,
   .agent-listing-page .publicProperty-post .image-holder img,
   .listing-page .publicAgent-post .image-holder img,
   .listing-page .publicProperty-post .image-holder img {
-    max-height: 220px;
-    max-width: 220px;
-    min-height: 220px;
-    min-width: 220px;
+    max-height: 150px;
+    max-width: 150px;
+    min-height: 150px;
+    min-width: 150px;
   }
 }
 
@@ -2325,7 +2325,7 @@ input[type='submit'] {
   font-size: 13px;
   line-height: 16px;
   color: #6c6d70;
-  padding: 0 0 10px 10px;
+  padding: 0 0 58px 10px;
 }
 
 @media (max-width: 1199px) {
@@ -2413,6 +2413,16 @@ input[type='submit'] {
   color: #30ce20;
 }
 
+@media (max-width: 1199px) {
+  .agent-listing-page .publicAgent-post .caption .price,
+  .agent-listing-page .publicProperty-post .caption .price,
+  .listing-page .publicAgent-post .caption .price,
+  .listing-page .publicProperty-post .caption .price {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
 @media (max-width: 479px) {
   .agent-listing-page .publicAgent-post .caption .price,
   .agent-listing-page .publicProperty-post .caption .price,
@@ -2445,6 +2455,24 @@ input[type='submit'] {
 .listing-page .publicProperty-post .caption .left-area {
   width: 70%;
   padding: 0 10px 0 0;
+}
+
+@media (max-width: 1199px) {
+  .agent-listing-page .publicAgent-post .caption .left-area,
+  .agent-listing-page .publicProperty-post .caption .left-area,
+  .listing-page .publicAgent-post .caption .left-area,
+  .listing-page .publicProperty-post .caption .left-area {
+    min-height: 145px;
+  }
+}
+
+@media (max-width: 767px) {
+  .agent-listing-page .publicAgent-post .caption .left-area,
+  .agent-listing-page .publicProperty-post .caption .left-area,
+  .listing-page .publicAgent-post .caption .left-area,
+  .listing-page .publicProperty-post .caption .left-area {
+    min-height: inherit;
+  }
 }
 
 @media (max-width: 767px) {
@@ -2520,7 +2548,6 @@ input[type='submit'] {
   .listing-page .publicProperty-post .caption .links-holder {
     left: 0;
     padding: 0 0 0 15px;
-    background: rgba(255, 255, 255, 0.5);
   }
 }
 
@@ -2701,10 +2728,11 @@ input[type='submit'] {
 .agent-listing-page .publicProperty-post .caption .company-logo,
 .listing-page .publicAgent-post .caption .company-logo,
 .listing-page .publicProperty-post .caption .company-logo {
-  max-width: 76px;
-  max-height: 76px;
-  min-width: 76px;
-  min-height: 76px;
+  max-width: 70px;
+  max-height: 70px;
+  min-width: 70px;
+  min-height: 70px;
+  margin: 6px 0 0;
 }
 
 @media (max-width: 1199px) {
@@ -9251,6 +9279,8 @@ h1 span {
   white-space: nowrap;
   position: relative;
   overflow: hidden;
+  text-decoration: none;
+  color: #fff;
 }
 
 @media (max-width: 1023px) {
@@ -10314,8 +10344,8 @@ h1 span {
 .public-ui-features li b {
   display: inline-block;
   vertical-align: top;
-  width: 65%;
   font-weight: 400;
+  display: block;
 }
 
 @media (max-width: 767px) {
