@@ -441,7 +441,7 @@ h1 {
   .searchByID {
     position: absolute;
     top: 50%;
-    left: 100px;
+    left: 120px;
     z-index: 1012;
     margin: -6px 0 0;
 
@@ -499,7 +499,7 @@ h1 {
       }
     }
     .nav-opener {
-      margin: -12px 4px 0;
+      margin: -12px 10px 0;
 
       @include media('<tablet'){
         margin: -22px 2px 0;
@@ -2274,6 +2274,7 @@ h1 {
   background: darken($p42-default-grey, 10%);
   border-radius: 4px;
   cursor: pointer;
+  margin: -6px 0 0;
 
   @include media('>=desktop'){
     background: transparent;

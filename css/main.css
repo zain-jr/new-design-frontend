@@ -7432,7 +7432,7 @@ h1 span {
 #header .searchByID {
   position: absolute;
   top: 50%;
-  left: 100px;
+  left: 120px;
   z-index: 1012;
   margin: -6px 0 0;
 }
@@ -7501,7 +7501,7 @@ h1 span {
 }
 
 .byDefault-fixed #header .nav-opener, #header.fixed-position .nav-opener {
-  margin: -12px 4px 0;
+  margin: -12px 10px 0;
 }
 
 @media (max-width: 767px) {
@@ -9971,6 +9971,7 @@ h1 span {
   background: #535456;
   border-radius: 4px;
   cursor: pointer;
+  margin: -6px 0 0;
 }
 
 @media (min-width: 1024px) {
