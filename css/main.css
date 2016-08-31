@@ -4831,7 +4831,7 @@ input[type='submit'] {
 }
 
 .addProperty-form .image-uploading-area li .file-uploader:hover:after {
-  color: #30ce20;
+  color: #d89429;
 }
 
 .addProperty-form .image-uploading-area li .file-uploader:after {
@@ -5009,13 +5009,7 @@ input[type='submit'] {
 
 @media (max-width: 1023px) {
   .addProperty-form .layout.full-width label, .addProperty-form .agent-listing-page .full-width#content label, .agent-listing-page .addProperty-form .full-width#content label {
-    width: 17.2%;
-  }
-}
-
-@media (max-width: 767px) {
-  .addProperty-form .layout.full-width label, .addProperty-form .agent-listing-page .full-width#content label, .agent-listing-page .addProperty-form .full-width#content label {
-    width: 35%;
+    width: 100%;
   }
 }
 
@@ -5023,9 +5017,9 @@ input[type='submit'] {
   width: 80.5%;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .addProperty-form .layout.full-width .input-holder, .addProperty-form .agent-listing-page .full-width#content .input-holder, .agent-listing-page .addProperty-form .full-width#content .input-holder {
-    width: 65%;
+    width: 100%;
   }
 }
 
@@ -5078,7 +5072,9 @@ input[type='submit'] {
   .addProperty-form .layout label, .addProperty-form .agent-listing-page #content label, .agent-listing-page .addProperty-form #content label {
     font-size: 12px;
     line-height: 15px;
-    width: 35%;
+    width: 100%;
+    display: block;
+    padding: 0 0 10px;
   }
 }
 
@@ -5096,7 +5092,8 @@ input[type='submit'] {
 
 @media (max-width: 1023px) {
   .addProperty-form .input-holder {
-    width: 65%;
+    width: 100%;
+    padding: 0;
   }
 }
 
@@ -5828,7 +5825,8 @@ input[type='submit'] {
 
 @media (max-width: 767px) {
   .registerNow .layout .input-holder, .registerNow .agent-listing-page #content .input-holder, .agent-listing-page .registerNow #content .input-holder {
-    width: calc(100% - 80px);
+    width: 100%;
+    padding: 0;
   }
 }
 
@@ -5852,7 +5850,9 @@ input[type='submit'] {
   .registerNow .layout label, .registerNow .agent-listing-page #content label, .agent-listing-page .registerNow #content label {
     font-size: 12px;
     line-height: 15px;
-    width: 80px;
+    width: 100%;
+    display: block;
+    padding: 0 0 5px;
   }
 }
 
@@ -6567,7 +6567,8 @@ input[type='submit'] {
   .login-form .layout .input-holder,
   .login-form .agent-listing-page #content .input-holder, .agent-listing-page
   .login-form #content .input-holder {
-    width: calc(100% - 90px);
+    width: 100%;
+    padding: 0;
   }
 }
 
@@ -6591,7 +6592,9 @@ input[type='submit'] {
   .login-form #content label {
     font-size: 12px;
     line-height: 15px;
-    width: 90px;
+    width: 100%;
+    display: block;
+    padding: 0 0 5px;
   }
 }
 
@@ -6700,18 +6703,6 @@ input[type='submit'] {
 .forgot-form button:hover,
 .login-form button:hover {
   background: #30ce20;
-}
-
-@media (max-width: 767px) {
-  .login-form label {
-    display: none !important;
-  }
-}
-
-@media (max-width: 767px) {
-  .login-form .input-holder {
-    width: 100% !important;
-  }
 }
 
 .forgot-form .buttons-holder li {

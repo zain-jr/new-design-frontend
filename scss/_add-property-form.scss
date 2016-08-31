@@ -146,7 +146,7 @@
                 }
 
                 &:hover{
-                    &:after{ color: $green;}
+                    &:after{ color: $orange;}
                 }
                 
                 &:after{
@@ -286,18 +286,14 @@
                 width: 12.2%;
 
                 @include media('<desktop'){
-                    width: 17.2%;
-                }
-                
-                @include media('<tablet'){
-                    width: 35%;
+                    width: 100%;
                 }
             }
             .input-holder {
                 width: 80.5%;
 
-                @include media('<tablet'){
-                    width: 65%;
+                @include media('<desktop'){
+                    width: 100%;
                 }
             }
         }
@@ -326,7 +322,9 @@
 
             @include media('<desktop'){
                 @include font(12,15);
-                width: 35%;
+                width: 100%;
+                display: block;
+                padding: 0 0 10px;
             }
 
             &.required-field {
@@ -343,7 +341,8 @@
         padding: 2px;
 
         @include media('<desktop'){
-            width: 65%;
+            width: 100%;
+            padding: 0;
         }
     }
     .fake-select {

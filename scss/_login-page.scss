@@ -76,7 +76,8 @@
             padding: 2px;
 
             @include media('<tablet'){
-                width: calc(100% - 90px);
+                width: 100%;
+                padding: 0;
             }
         }
         label {
@@ -90,7 +91,9 @@
 
             @include media('<tablet'){
                 @include font(12,15);
-                width: 90px;
+                width: 100%;
+                display: block;
+                padding: 0 0 5px;
             }
 
             &:after {
@@ -155,14 +158,6 @@
         &:hover {
             background: $green;
         }
-    }
-}
-.login-form {
-    label {
-        @include media('<tablet'){ display: none !important;}
-    }
-    .input-holder {
-        @include media('<tablet'){ width:  100% !important;}
     }
 }
 .forgot-form {

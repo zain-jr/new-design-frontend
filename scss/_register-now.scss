@@ -199,7 +199,8 @@
             }
 
             @include media('<tablet'){
-                width: calc(100% - 80px);
+                width: 100%;
+                padding: 0;
             }
         }
         label {
@@ -217,7 +218,9 @@
 
             @include media('<tablet'){
                 @include font(12,15);
-                width: 80px;
+                width: 100%;
+                display: block;
+                padding: 0 0 5px;
             }
             &.required-field{
                 &:after {
