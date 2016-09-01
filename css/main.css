@@ -951,7 +951,7 @@ th {
 .news-slideshow, .ads-slideshow .mask,
 .news-slideshow .mask, .ads-slideshow .slideset,
 .news-slideshow .slideset, .agent-logos, .agent-logos .mask, .agent-logos .slide a:after, .pagination ul a,
-.news-pagination ul a, .news-carousel, .news-carousel .news-mask, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .inquiry-email-form .input-holder, .radio-checks-holder, .add-holder-page, .weAreWorking {
+.news-pagination ul a, .news-carousel, .news-carousel .news-mask, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .mobile-app, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .inquiry-email-form .input-holder, .radio-checks-holder, .add-holder-page, .weAreWorking {
   overflow: hidden;
 }
 
@@ -9484,6 +9484,9 @@ h1 span {
 
 .agents {
   background: #fff;
+  padding: 0;
+  margin: 0 0 50px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .agents .left-side {
@@ -9527,6 +9530,21 @@ h1 span {
   display: inline-block;
   vertical-align: middle;
   white-space: normal;
+}
+
+.mobile-app {
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-app .container {
+  position: relative;
+}
+
+.mobile-app .appPicture {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .agent-slider {

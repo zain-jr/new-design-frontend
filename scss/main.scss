@@ -1914,8 +1914,11 @@ h1 {
     }
   }
 .agents {
-  background: $white;
   @extend %layout;
+  background: $white;
+  padding: 0;
+  margin: 0 0 50px;
+  box-shadow: 0 0 20px rgba($black, 0.20);
 
   .left-side {
     @extend %pull-left;
@@ -1951,6 +1954,18 @@ h1 {
       @include align(middle);
       white-space: normal;
     }
+  }
+}
+.mobile-app {
+  background: $white;
+  box-shadow: 0 0 20px rgba($black, 0.20);
+  @extend %layout;
+
+  .container { position: relative;}
+  .appPicture {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
 .agent-slider {

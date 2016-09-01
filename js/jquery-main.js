@@ -20,7 +20,7 @@ $(document).ready(function() {
 	}
 	$('.news-slideshow .slide').each(function(){
 		if($(this).find('.news-slide').length == 1){
-			$(this).find('.news-pagination, .news-btn-prev, .news-btn-next').remove();
+			$(this).find('.news-pagination').remove();
 		}
 	});
 });
