@@ -830,7 +830,7 @@ th {
 .global-success, .custom-withouChecks .fake-label, h1, .loginRegister li, .main-visualSection, #nav .main-navigation li, .ads-slideshow, .ads-slideshow a, .ads-slideshow img, .agent-logos .slide a, .pagination ul,
 .news-pagination ul, .topSocities-holder .socities li a, .heading, .agents-logo li a, .premiumProperty, .public-ui-features li strong, .generic-lightbox, .login-heading,
 .registerNow-heading,
-.add-pro-heading, .Ads, .weAreWorking {
+.add-pro-heading, .Ads, .weAreWorking, .between-banner {
   text-align: center;
 }
 
@@ -11220,6 +11220,11 @@ h1 span {
   color: #000;
   margin: -75px  0 0 -75px;
   padding: 140px 0 0 30px;
+}
+
+.between-banner {
+  display: block;
+  margin: 0 0 20px;
 }
 
 @media print {
