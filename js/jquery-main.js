@@ -18,6 +18,11 @@ $(document).ready(function() {
 	if($('.Ads li').length == 0){
 		$('.page-holder').addClass('no-ads');
 	}
+	$('.news-slideshow .slide').each(function(){
+		if($(this).find('.news-slide').length == 1){
+			$(this).find('.news-pagination, .news-btn-prev, .news-btn-next').remove();
+		}
+	});
 });
 
 // page init
