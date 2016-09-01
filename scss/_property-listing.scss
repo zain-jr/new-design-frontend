@@ -436,6 +436,12 @@
           width: 100%;
           overflow: hidden;
         }
+        .price {
+          text-align: right;
+          @include media('<tablet'){
+            text-align: left;
+          }
+        }
       }
       .links-holder {
         position: absolute;

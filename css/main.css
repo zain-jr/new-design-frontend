@@ -2513,6 +2513,22 @@ input[type='submit'] {
   }
 }
 
+.agent-listing-page .publicAgent-post .caption .right-area .price,
+.agent-listing-page .publicProperty-post .caption .right-area .price,
+.listing-page .publicAgent-post .caption .right-area .price,
+.listing-page .publicProperty-post .caption .right-area .price {
+  text-align: right;
+}
+
+@media (max-width: 767px) {
+  .agent-listing-page .publicAgent-post .caption .right-area .price,
+  .agent-listing-page .publicProperty-post .caption .right-area .price,
+  .listing-page .publicAgent-post .caption .right-area .price,
+  .listing-page .publicProperty-post .caption .right-area .price {
+    text-align: left;
+  }
+}
+
 .agent-listing-page .publicAgent-post .caption .links-holder,
 .agent-listing-page .publicProperty-post .caption .links-holder,
 .listing-page .publicAgent-post .caption .links-holder,
