@@ -7437,24 +7437,9 @@ h1 span {
   }
 }
 
-@media (max-width: 767px) and (max-width: 767px) {
-  #header .nav-opener {
-    margin: -22px 2px 0;
-  }
-}
-
 #header .searchByID {
-  position: absolute;
-  top: 50%;
-  left: 136px;
-  z-index: 1012;
-  margin: -6px 0 0;
-}
-
-@media (max-width: 1023px) {
-  #header .searchByID {
-    left: 60px;
-  }
+  float: left;
+  margin: 0 0 0 6px;
 }
 
 @media (max-width: 767px) {
@@ -7495,10 +7480,6 @@ h1 span {
   }
 }
 
-.byDefault-fixed #header .searchByID, #header.fixed-position .searchByID {
-  margin: -11px 0 0;
-}
-
 @media (max-width: 1023px) {
   .byDefault-fixed #header .right-sideTop, #header.fixed-position .right-sideTop {
     width: 30%;
@@ -7529,6 +7510,43 @@ h1 span {
   #header .top-bar {
     padding: 9px 12px;
   }
+}
+
+#header .left-side {
+  float: left;
+  width: 30%;
+  position: relative;
+}
+
+@media (max-width: 1023px) {
+  #header .left-side {
+    width: 40%;
+  }
+}
+
+#header .left-side .phone {
+  width: 100%;
+  display: block;
+  margin: 0 0 10px;
+  color: #6c6d70;
+}
+
+@media (max-width: 767px) {
+  #header .left-side .phone {
+    display: none;
+  }
+}
+
+#header .left-side .phone a {
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  color: #6c6d70;
+}
+
+#header .left-side .phone a span {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 #header .right-sideTop {
@@ -7573,6 +7591,12 @@ h1 span {
   -moz-transition: color 0.4s ease;
   -ms-transition: color 0.4s ease;
   margin: 0 20px 10px 0;
+}
+
+#header .right-sideTop .mail span {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 4px;
 }
 
 @media (max-width: 767px) {
@@ -7623,7 +7647,7 @@ h1 span {
     position: fixed;
     top: 9px;
     left: 0;
-    right: 60px;
+    right: 48px;
     margin: 0 auto;
   }
 }
@@ -7633,7 +7657,7 @@ h1 span {
   max-width: 230px;
   position: fixed;
   top: 4px;
-  left: 0;
+  left: -50px;
   right: 0;
 }
 
@@ -7651,6 +7675,7 @@ h1 span {
   .fixed-position .logo {
     top: 7px;
     max-width: 210px;
+    left: 50px;
   }
 }
 
@@ -8614,78 +8639,8 @@ h1 span {
   position: relative;
 }
 
-@media (max-width: 1539px) {
-  .byDefault-fixed .searchByID,
-  .fixed-position .searchByID {
-    width: 150px;
-    height: 45px;
-    left: 242px;
-  }
-  .byDefault-fixed .searchByID input[type="text"], .byDefault-fixed .searchByID input[type="search"],
-  .fixed-position .searchByID input[type="text"],
-  .fixed-position .searchByID input[type="search"] {
-    width: 100%;
-    height: 45px;
-  }
-}
-
-@media (max-width: 1199px) {
-  .byDefault-fixed .searchByID,
-  .fixed-position .searchByID {
-    left: 205px;
-  }
-  .byDefault-fixed .searchByID button span[class^="icon-"], .byDefault-fixed .searchByID button span[class*="icon-"],
-  .fixed-position .searchByID button span[class^="icon-"],
-  .fixed-position .searchByID button span[class*="icon-"] {
-    line-height: 45px;
-  }
-}
-
-@media (max-width: 1023px) {
-  .byDefault-fixed .searchByID,
-  .fixed-position .searchByID {
-    left: 20px;
-    top: 10px;
-    width: 150px;
-    height: 37px;
-  }
-  .byDefault-fixed .searchByID input[type="text"], .byDefault-fixed .searchByID input[type="search"],
-  .fixed-position .searchByID input[type="text"],
-  .fixed-position .searchByID input[type="search"] {
-    width: 100%;
-    height: 37px;
-  }
-  .byDefault-fixed .searchByID button span[class^="icon-"], .byDefault-fixed .searchByID button span[class*="icon-"],
-  .fixed-position .searchByID button span[class^="icon-"],
-  .fixed-position .searchByID button span[class*="icon-"] {
-    line-height: 37px;
-  }
-}
-
-@media (max-width: 767px) {
-  .byDefault-fixed .searchByID,
-  .fixed-position .searchByID {
-    top: 10px;
-    left: 50%;
-    margin: 0 0 0 -75px;
-    position: absolute;
-  }
-  .byDefault-fixed .searchByID input[type="text"], .byDefault-fixed .searchByID input[type="search"],
-  .fixed-position .searchByID input[type="text"],
-  .fixed-position .searchByID input[type="search"] {
-    color: #fff;
-    border: 1px solid #fff;
-  }
-  .byDefault-fixed .searchByID button,
-  .fixed-position .searchByID button {
-    color: #fff;
-  }
-}
-
 @media (max-width: 1199px) {
   .searchByID {
-    left: 200px;
-    top: 35px;
     width: 140px;
     height: 45px;
   }
@@ -10108,24 +10063,15 @@ h1 span {
   border-radius: 4px;
   cursor: pointer;
   padding: 8px 58px 8px 9px;
-  margin: 25px 0 0 7px;
-}
-
-@media (max-width: 1023px) {
-  .nav-opener {
-    margin: -8px 0 0;
-  }
+  float: left;
 }
 
 @media (max-width: 767px) {
   .nav-opener {
-    margin: -11px 0 0;
-  }
-}
-
-@media (max-width: 1023px) {
-  .nav-opener .hidden-xs {
-    display: none;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    margin: 1px 0 0;
   }
 }
 
@@ -10146,6 +10092,14 @@ h1 span {
   -moz-transition: right 0.5s ease;
 }
 
+@media (max-width: 767px) {
+  .nav-opener span, .nav-opener:after, .nav-opener:before {
+    width: auto;
+    right: 20%;
+    left: 20%;
+  }
+}
+
 .nav-opener:before {
   top: auto;
   bottom: 25%;
@@ -10156,6 +10110,13 @@ h1 span {
   margin: -2px 0 0;
   right: 15%;
   width: 29px;
+}
+
+@media (max-width: 767px) {
+  .nav-opener span {
+    width: auto;
+    right: 20%;
+  }
 }
 
 .nav-opener strong {
