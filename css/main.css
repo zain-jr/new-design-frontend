@@ -782,7 +782,7 @@ th {
 .propertyDetail-page .propertyImage-pagination .propertyImage-slide img,
 .propertyDetail-page .propertyImage-pagination .slide img,
 .propertyDetail-page .propertyImage-slider .propertyImage-slide img,
-.propertyDetail-page .propertyImage-slider .slide img, .registerNow .company-logo .logo-holder .picture-holder img, .page-loader .page-loader-holder img, .logo img, .agent-logos .slide a img, .news-carousel .news-slide img {
+.propertyDetail-page .propertyImage-slider .slide img, .registerNow .company-logo .logo-holder .picture-holder img, .page-loader .page-loader-holder img, .logo img, .agent-logos .slide a img, .news-carousel .news-slide img, .back-to-top img {
   width: 100%;
   height: auto;
   display: block;
@@ -6182,6 +6182,8 @@ input[type='submit'] {
   overflow-x: hidden;
   overflow-y: auto;
   background: #dee1e3;
+  box-shadow: 0 0 23px rgba(0, 0, 0, 0.2) inset;
+  margin: 0 0 20px;
 }
 
 @media (max-width: 767px) {
@@ -10350,6 +10352,34 @@ h1 span {
   font-size: 14px;
   line-height: 1;
   font-weight: 400;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 42px;
+  right: 103px;
+  z-index: 999999999;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+}
+
+@media (max-width: 1539px) {
+  .back-to-top {
+    right: 75px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .back-to-top {
+    right: 65px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .back-to-top {
+    right: 45px;
+  }
 }
 
 .quick-links {

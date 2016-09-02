@@ -2561,6 +2561,26 @@ h1 {
     font-weight: 400;
   }
 }
+.back-to-top {
+  position: fixed;
+  bottom: 42px;
+  right: 103px;
+  z-index: 999999999;
+  text-decoration: none;
+  @include squar(40px,40px);
+
+  @include media('<tvscreen'){
+    right: 75px;
+  }
+  @include media('<widescreen'){
+    right:65px;
+  }
+  @include media('<desktop'){
+    right:45px;
+  }
+
+  img { @extend %img-res;}
+}
 .quick-links {
   @extend %listreset;
   @include align-reset(top, 25,25);

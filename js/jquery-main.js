@@ -203,6 +203,9 @@ function initAccordion() {
 }
 // smooth anchor links
 function initAnchors() {
+	new SmoothScroll({
+		anchorLinks: '.back-to-top'
+	});
 	// common case:
 	new SmoothScroll({
 		extraOffset: $('#header').height() || 20,

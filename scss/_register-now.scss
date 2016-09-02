@@ -499,6 +499,8 @@
         overflow-x: hidden;
         overflow-y: auto;
         background: $p42-background;
+        box-shadow:0 0 23px rgba($black, 0.2) inset;
+        margin: 0 0 20px;
         
         @include media('<tablet'){
             padding: 0;
