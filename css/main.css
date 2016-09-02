@@ -757,7 +757,7 @@ th {
 .propertyDetail-page .feature-list, .agent-detail-page .col .list, .agent-detail-page .agentDetail-list, .addProperty-form .error, .addProperty-form .image-uploading-area, .addProperty-form .existingOrNew-member, .registerNow .packetData-list,
 .registerNow .societiesBlock-listing, .registerNow .role-listing, .registerNow .agree-with-terms, .forgot-form .buttons-holder,
 .login-form .buttons-holder, .social-icons, .loginRegister, .dropDown, .main-visualSection .number-of-properties, .mainSearch-form .typeOfBuying, .mainSearch-form .subTypes, .mainSearch-form .inputsHolder, #nav .main-navigation, .pagination ul,
-.news-pagination ul, .topSocities-holder .socities, .topSocities-holder .socities li .caption .numberOfproperties, .agents-logo, .pager, .quick-links, .public-ui-features, .sumery-list, .radio-checks-holder, .Ads {
+.news-pagination ul, .topSocities-holder .socities, .topSocities-holder .socities li .caption .numberOfproperties, .mobile-app .details-cap .links, .agents-logo, .pager, .quick-links, .public-ui-features, .sumery-list, .radio-checks-holder, .Ads {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -843,7 +843,7 @@ th {
 .propertyDetail-page .property-picture-holder h1, .agent-detail-page .overview-section,
 .propertyDetail-page .overview-section, .agent-detail-page .overview-section .small-heading,
 .propertyDetail-page .overview-section .small-heading, .agent-detail-page .feature .small-heading,
-.propertyDetail-page .feature .small-heading, .agent-detail-page .col .list li > span:first-child, .addProperty-form .existingOrNew-member li .slide, .addProperty-form .thankYou-message .layout, .addProperty-form .thankYou-message .agent-listing-page #content, .agent-listing-page .addProperty-form .thankYou-message #content, .mainSearch-form .inputsHolder, .ads-slideshow .caption, .topSocities-holder .socities li .caption .numberOfproperties, .inquiry-email-form, .information {
+.propertyDetail-page .feature .small-heading, .agent-detail-page .col .list li > span:first-child, .addProperty-form .existingOrNew-member li .slide, .addProperty-form .thankYou-message .layout, .addProperty-form .thankYou-message .agent-listing-page #content, .agent-listing-page .addProperty-form .thankYou-message #content, .mainSearch-form .inputsHolder, .ads-slideshow .caption, .topSocities-holder .socities li .caption .numberOfproperties, .mobile-app .details-cap, .mobile-app .details-cap h1, .inquiry-email-form, .information {
   text-align: left;
 }
 
@@ -865,7 +865,7 @@ th {
 .login-form .layout label,
 .login-form .agent-listing-page #content label, .agent-listing-page
 .login-form #content label, .global-error,
-.global-success, .custom-withouChecks .fake-label, .select2-container .select2-selection--single .select2-selection__rendered, .mainSearch-form .subTypes, .nav-opener strong, .views, .inquiry-email-form label, .login-heading,
+.global-success, .custom-withouChecks .fake-label, .select2-container .select2-selection--single .select2-selection__rendered, .mainSearch-form .subTypes, .mobile-app .details-cap .p42, .nav-opener strong, .views, .inquiry-email-form label, .login-heading,
 .registerNow-heading,
 .add-pro-heading {
   text-transform: capitalize;
@@ -9485,7 +9485,7 @@ h1 span {
 .agents {
   background: #fff;
   padding: 0;
-  margin: 0 0 50px;
+  margin: 0 auto 50px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -9535,6 +9535,7 @@ h1 span {
 .mobile-app {
   background: #fff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  padding: 100px 0;
 }
 
 .mobile-app .container {
@@ -9543,8 +9544,117 @@ h1 span {
 
 .mobile-app .appPicture {
   position: absolute;
-  top: 0;
+  top: 50%;
+  left: 20px;
+  margin: -207px 0 0;
+}
+
+@media (max-width: 1539px) {
+  .mobile-app .appPicture {
+    max-width: 300px;
+    margin: -126px 0 0;
+  }
+}
+
+@media (max-width: 1023px) {
+  .mobile-app .appPicture {
+    position: static;
+    margin: 0;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.mobile-app .details-cap {
+  padding: 0 0 0 550px;
+}
+
+@media (max-width: 1539px) {
+  .mobile-app .details-cap {
+    padding: 0 0 0 340px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .mobile-app .details-cap {
+    padding: 0;
+    text-align: center;
+  }
+}
+
+.mobile-app .details-cap h1 {
+  margin: 0 0 10px;
+}
+
+@media (max-width: 1023px) {
+  .mobile-app .details-cap h1 {
+    text-align: center;
+  }
+}
+
+.mobile-app .details-cap strong {
+  color: #6c6d70;
+  display: block;
+  font-size: 37px;
+  line-height: 39px;
+  margin: 0 0 30px;
+}
+
+.mobile-app .details-cap .p42 {
+  display: block;
+  position: relative;
+  font-size: 26px;
+  line-height: 29px;
+  color: #2092d0;
+  font-family: "Open Sans", "Arial", sans-serif;
+  padding: 0 0 0 80px;
+  margin: 0 0 30px;
+}
+
+@media (max-width: 1023px) {
+  .mobile-app .details-cap .p42 {
+    max-width: 230px;
+    margin: 30px auto;
+  }
+}
+
+.mobile-app .details-cap .p42:after {
+  position: absolute;
+  top: 50%;
   left: 0;
+  margin: -37px 0 0;
+  content: '';
+  background: url("../images/ico01.png") no-repeat;
+  background-size: cover;
+  width: 75px !important;
+  height: 75px !important;
+}
+
+.mobile-app .details-cap .links {
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+  margin: 0 -5px;
+}
+
+.mobile-app .details-cap .links > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0;
+}
+
+.mobile-app .details-cap .links li {
+  padding: 0 5px 10px;
+}
+
+.mobile-app .details-cap .links li a {
+  display: block;
+}
+
+.mobile-app .details-cap .links li a:hover {
+  opacity: 0.8;
 }
 
 .agent-slider {
@@ -9788,6 +9898,12 @@ h1 span {
 .submit-query .input-holder {
   width: 33.33%;
   padding: 2px 10px 20px;
+}
+
+@media (max-width: 1023px) {
+  .submit-query .input-holder {
+    padding: 2px 2px 20px;
+  }
 }
 
 @media (max-width: 767px) {
