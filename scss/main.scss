@@ -441,7 +441,7 @@ h1 {
   .searchByID {
     position: absolute;
     top: 50%;
-    left: 120px;
+    left: 136px;
     z-index: 1012;
     margin: -6px 0 0;
 
@@ -496,13 +496,6 @@ h1 {
               }
           }
         }
-      }
-    }
-    .nav-opener {
-      margin: -12px 10px 0;
-
-      @include media('<tablet'){
-        margin: -22px 2px 0;
       }
     }
   }
@@ -2366,22 +2359,14 @@ h1 {
   }
 }
 .nav-opener {
-  color: $p42-color;
-  @include squar(38px, 38px);
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 7px;
-  background: darken($p42-default-grey, 10%);
+  color: $white;
+  background: $p42-color;
+  @include align(top);
+  position: relative;
   border-radius: 4px;
   cursor: pointer;
-  margin: -6px 0 0;
-
-  @include media('>=desktop'){
-    background: transparent;
-    border-radius: 0;
-    left: 50px;
-  }
+  padding: 8px 58px 8px 9px;
+  margin: 25px 0 0 7px;
 
   @include media('<desktop'){
     margin: -8px 0 0;
@@ -2397,26 +2382,20 @@ h1 {
     }
   }
 
+  &:hover { background: $orange;}
+
   span,
   &:after, &:before {
     position: absolute;
     top: 20%;
-    left: 20%;
-    right: 20%;
+    right: 10%;
     height: 2px;
     background: $white;
+    width: 35px;
     content: '';
     transition: right 0.5s ease;
     -webkit-transition: right 0.5s ease;
     -moz-transition: right 0.5s ease;
-
-    @include media('>=desktop'){
-      background: $p42-color;
-    }
-
-    .nav-active & {
-      right: 25%;
-    }
   }
   &:before{
     top: auto;
@@ -2424,17 +2403,14 @@ h1 {
   }
   span {
     top: 50%;
-    right: 40%;
     margin: -2px 0 0;
+    right: 15%;
+    width: 29px;
   }
   strong {
-    font-weight: 400;
+    font-weight: 600;
     @extend %text-capital;
-    position: absolute;
-    top: 50%;
-    left: -40px;
     @include font(16,20);
-    margin: -12px 0 0;
   }
 }
 .calculatedPrice {

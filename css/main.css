@@ -7448,7 +7448,7 @@ h1 span {
 #header .searchByID {
   position: absolute;
   top: 50%;
-  left: 120px;
+  left: 136px;
   z-index: 1012;
   margin: -6px 0 0;
 }
@@ -7513,16 +7513,6 @@ h1 span {
 @media (max-width: 1023px) and (max-width: 767px) {
   .byDefault-fixed #header .right-sideTop .loginRegister li:first-child a, #header.fixed-position .right-sideTop .loginRegister li:first-child a {
     padding: 5px;
-  }
-}
-
-.byDefault-fixed #header .nav-opener, #header.fixed-position .nav-opener {
-  margin: -12px 10px 0;
-}
-
-@media (max-width: 767px) {
-  .byDefault-fixed #header .nav-opener, #header.fixed-position .nav-opener {
-    margin: -22px 2px 0;
   }
 }
 
@@ -10112,25 +10102,15 @@ h1 span {
 }
 
 .nav-opener {
-  color: #2092d0;
-  width: 38px;
-  height: 38px;
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 7px;
-  background: #535456;
+  color: #fff;
+  background: #2092d0;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
   border-radius: 4px;
   cursor: pointer;
-  margin: -6px 0 0;
-}
-
-@media (min-width: 1024px) {
-  .nav-opener {
-    background: transparent;
-    border-radius: 0;
-    left: 50px;
-  }
+  padding: 8px 58px 8px 9px;
+  margin: 25px 0 0 7px;
 }
 
 @media (max-width: 1023px) {
@@ -10151,27 +10131,21 @@ h1 span {
   }
 }
 
+.nav-opener:hover {
+  background: #d89429;
+}
+
 .nav-opener span, .nav-opener:after, .nav-opener:before {
   position: absolute;
   top: 20%;
-  left: 20%;
-  right: 20%;
+  right: 10%;
   height: 2px;
   background: #fff;
+  width: 35px;
   content: '';
   transition: right 0.5s ease;
   -webkit-transition: right 0.5s ease;
   -moz-transition: right 0.5s ease;
-}
-
-@media (min-width: 1024px) {
-  .nav-opener span, .nav-opener:after, .nav-opener:before {
-    background: #2092d0;
-  }
-}
-
-.nav-active .nav-opener span, .nav-active .nav-opener:after, .nav-active .nav-opener:before {
-  right: 25%;
 }
 
 .nav-opener:before {
@@ -10181,18 +10155,15 @@ h1 span {
 
 .nav-opener span {
   top: 50%;
-  right: 40%;
   margin: -2px 0 0;
+  right: 15%;
+  width: 29px;
 }
 
 .nav-opener strong {
-  font-weight: 400;
-  position: absolute;
-  top: 50%;
-  left: -40px;
+  font-weight: 600;
   font-size: 16px;
   line-height: 20px;
-  margin: -12px 0 0;
 }
 
 .calculatedPrice {
