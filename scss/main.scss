@@ -368,6 +368,13 @@ h1 {
     -webkit-filter: blur(20px);
     -moz-filter: blur(20px);
     -ms-filter: blur(20px);
+
+    @include media('<desktop'){
+      filter: blur(2.5px);
+      -webkit-filter: blur(2.5px);
+      -moz-filter: blur(2.5px);
+      -ms-filter: blur(2.5px);
+    }
   }
 }
 .w1-holder {
@@ -479,6 +486,9 @@ h1 {
           }
         }
       }
+      @include media('<tablet'){
+        width: 100px;
+      }
     }
   }
 
@@ -505,6 +515,9 @@ h1 {
 
     @include media('<desktop'){
       width: 40%;
+    }
+    @include media('<tablet'){
+      width: auto;
     }
 
     .phone {
@@ -544,7 +557,7 @@ h1 {
       width: 50%;
     }
     @include media('<tablet'){
-      width: 30%;
+      width: 100px;
     }
 
     .mail {
@@ -599,10 +612,10 @@ h1 {
   
   @include media('<tablet'){
     max-width: 130px;
-    position: fixed;
+    position: absolute;
     top: 9px;
     left: 0;
-    right: 48px;
+    right: 55px;
     margin: 0 auto;
   }
 
@@ -629,7 +642,7 @@ h1 {
       position: absolute;
       top: 9px;
       left: 0;
-      right: 60px;
+      right: 55px;
       margin: 0 auto;
     }
   }
@@ -3185,11 +3198,24 @@ h1 {
   -moz-transition: bottom 0.5s ease;
 
   @include media('<desktop'){
-   padding: 5px; 
+   padding: 38px 5px;
+   max-width: 300px;
+   min-height: 150px;
+   bottom: auto;
+   left: 50%;
+   top: 50%;
+   border-radius: 0;
+   margin: -65px 0 0 -150px !important;
+   min-width: 250px;
   }
 
   &.hide{
     bottom: -200px;
+
+    @include media('<desktop'){
+      bottom: auto;
+      display: none;
+    }
   }
   b {
     font-weight: 600;

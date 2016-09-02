@@ -7371,6 +7371,15 @@ h1 span {
   -ms-filter: blur(20px);
 }
 
+@media (max-width: 1023px) {
+  #wrapper.fancy-overlay {
+    filter: blur(2.5px);
+    -webkit-filter: blur(2.5px);
+    -moz-filter: blur(2.5px);
+    -ms-filter: blur(2.5px);
+  }
+}
+
 .w1-holder {
   width: 100%;
   height: 100%;
@@ -7495,6 +7504,12 @@ h1 span {
   }
 }
 
+@media (max-width: 767px) {
+  .byDefault-fixed #header .right-sideTop, #header.fixed-position .right-sideTop {
+    width: 100px;
+  }
+}
+
 #header .top-bar {
   position: relative;
   width: 100%;
@@ -7521,6 +7536,12 @@ h1 span {
 @media (max-width: 1023px) {
   #header .left-side {
     width: 40%;
+  }
+}
+
+@media (max-width: 767px) {
+  #header .left-side {
+    width: auto;
   }
 }
 
@@ -7576,7 +7597,7 @@ h1 span {
 
 @media (max-width: 767px) {
   #header .right-sideTop {
-    width: 30%;
+    width: 100px;
   }
 }
 
@@ -7644,10 +7665,10 @@ h1 span {
 @media (max-width: 767px) {
   .logo {
     max-width: 130px;
-    position: fixed;
+    position: absolute;
     top: 9px;
     left: 0;
-    right: 48px;
+    right: 55px;
     margin: 0 auto;
   }
 }
@@ -7686,7 +7707,7 @@ h1 span {
     position: absolute;
     top: 9px;
     left: 0;
-    right: 60px;
+    right: 55px;
     margin: 0 auto;
   }
 }
@@ -11189,12 +11210,27 @@ h1 span {
 
 @media (max-width: 1023px) {
   .weAreWorking {
-    padding: 5px;
+    padding: 38px 5px;
+    max-width: 300px;
+    min-height: 150px;
+    bottom: auto;
+    left: 50%;
+    top: 50%;
+    border-radius: 0;
+    margin: -65px 0 0 -150px !important;
+    min-width: 250px;
   }
 }
 
 .weAreWorking.hide {
   bottom: -200px;
+}
+
+@media (max-width: 1023px) {
+  .weAreWorking.hide {
+    bottom: auto;
+    display: none;
+  }
 }
 
 .weAreWorking b {
