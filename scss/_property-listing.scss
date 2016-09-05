@@ -25,9 +25,8 @@
 
   #aside {
     width: 25%;
-    padding: 10px;
-    // border-top: 4px solid $p42-color;
-    border: 2px solid $p42-color;
+    padding: 10px 10px 40px;
+    position: relative;
     @extend .pull-left;
     overflow: hidden;
     box-shadow: 0 0 20px -9px rgba($black, 0.5);
@@ -121,6 +120,50 @@
       padding: 0;
     }
   }
+  .filter-btn{
+    @extend %listreset;
+    width: 100%;
+    @include align-reset(top, 16,20);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 11px;
+    
+    @include media('<desktop'){
+        width: 94% !important;
+        position: absolute !important;
+        bottom: 0;
+        left: 10px !important;
+        right: 10px !important;
+        z-index: 1000 !important;
+        margin: 0 auto !important;
+      }
+
+    &.srchBtnFxd {
+      position: fixed;
+      bottom: 0;
+      z-index: 57;
+      width: 260px;
+      padding: 0;
+
+      @include media('<desktop'){
+        width: 94% !important;
+        position: absolute;
+        bottom: 0;
+        left: 10px !important;
+        right: 10px !important;
+        z-index: 1000 !important;
+        margin: 0 auto !important;
+      }
+    }
+
+    li {
+      width: 50%;
+
+      &:last-child{ button{ background: $p42-default-grey;}}
+    }
+  }
   .filter-form {
     @extend %layout;
 
@@ -131,19 +174,9 @@
       color: $white;
       background: $green;
       padding: 10px;
-      margin: 10px 0;
       transition: background 0.5s ease;
       -webkit-transition: background 0.5s ease;
       -moz-transition: background 0.5s ease;
-
-      @include media('<desktop'){
-        width: 90%;
-        position: absolute;
-        bottom: 0;
-        left: 10px;
-        right: 10px;
-        z-index: 545;
-      }
 
       &:hover {
         background: darken($green, 5%);
