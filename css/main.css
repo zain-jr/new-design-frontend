@@ -1871,7 +1871,7 @@ input[type='submit'] {
 .listing-page #aside {
   width: 25%;
   padding: 10px;
-  border-top: 4px solid #2092d0;
+  border: 2px solid #2092d0;
   overflow: hidden;
   box-shadow: 0 0 20px -9px rgba(0, 0, 0, 0.5);
 }
@@ -1924,7 +1924,8 @@ input[type='submit'] {
 @media (min-width: 1024px) {
   .agent-listing-page #aside .top-head,
   .listing-page #aside .top-head {
-    display: none;
+    margin: -10px -10px 0;
+    text-align: center;
   }
 }
 
@@ -1944,6 +1945,13 @@ input[type='submit'] {
   right: 10px;
   cursor: pointer;
   margin: -12px 0 0;
+}
+
+@media (min-width: 1024px) {
+  .agent-listing-page #aside .top-head .close,
+  .listing-page #aside .top-head .close {
+    display: none;
+  }
 }
 
 .agent-listing-page #aside .top-head .close span,
@@ -10362,6 +10370,21 @@ h1 span {
   text-decoration: none;
   width: 40px;
   height: 40px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  -webkit-transition: opacity 0.5s ease, visibility 0.5s ease;
+  -moz-transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.filters-active .back-to-top,
+.nav-active .back-to-top {
+  display: none;
+}
+
+.back-to-top.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 @media (max-width: 1539px) {

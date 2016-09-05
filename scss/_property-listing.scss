@@ -26,7 +26,8 @@
   #aside {
     width: 25%;
     padding: 10px;
-    border-top: 4px solid $p42-color;
+    // border-top: 4px solid $p42-color;
+    border: 2px solid $p42-color;
     @extend .pull-left;
     overflow: hidden;
     box-shadow: 0 0 20px -9px rgba($black, 0.5);
@@ -72,7 +73,8 @@
       padding: 10px 40px 10px 10px;
 
       @include media('>=desktop'){
-        display: none;
+        margin: -10px -10px 0;
+        text-align: center;
       }
 
       p { margin: 0;}
@@ -87,6 +89,8 @@
         right: 10px;
         cursor: pointer;
         margin: -12px 0 0;
+
+        @include media('>=desktop'){ display: none;}
 
         span {
           display: block;

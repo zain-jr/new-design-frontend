@@ -2568,6 +2568,21 @@ h1 {
   z-index: 999999999;
   text-decoration: none;
   @include squar(40px,40px);
+  opacity: 0;
+  visibility: hidden;
+  transition:opacity 0.5s ease, visibility 0.5s ease;
+  -webkit-transition:opacity 0.5s ease, visibility 0.5s ease;
+  -moz-transition:opacity 0.5s ease, visibility 0.5s ease;
+
+  .filters-active &,
+  .nav-active & {
+    display: none;
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  } 
 
   @include media('<tvscreen'){
     right: 75px;
