@@ -268,6 +268,15 @@
         max-height: inherit;
         min-height: inherit;
       }
+
+      img {
+        &.landscape {
+          width: auto !important;
+          max-width: inherit !important;
+          max-height: inherit !important;
+          height: 460px !important;
+        }
+      }
     }
   }
   .propertyImage-slide {
@@ -589,12 +598,17 @@
     @extend %layout;
 
     @include media('<tvscreen'){
-      @include squar(150px, 150px);
-    }
-
-    @include media('<tvscreen'){
       float: none !important;
       margin: 0 auto 10px;
+      width: 50%;
+    }
+    @include media('<widescreen'){
+      width: 75%;
+    }
+    @include media('<desktop'){
+      width: 85%;
+    }
+    @include media('<tablet'){
       width: 100%;
     }
     
@@ -604,10 +618,6 @@
       margin: 0 0 0 -5px;
       @include align(middle);
       content: '';
-
-      @include media('<tvscreen'){
-        height: 150px;
-      }
     }
 
     img {
@@ -843,6 +853,9 @@
     }
   }
   .agent-detail-holder {
+    @include media('<tvscreen'){
+      padding: 0 10px 10px;
+    }
     @include media('<tablet'){
       padding: 5px 0 0;
     }

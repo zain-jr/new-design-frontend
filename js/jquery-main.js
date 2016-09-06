@@ -25,12 +25,20 @@ $(document).ready(function() {
 		}
 	});
 	$(window).trigger('scroll');
+	imageAdjustment();
 });
-
-function imagesAdjustment(){
-	
+function imageAdjustment(){
+	$('.propertyImage-slider .slide').find('img').each(function(){
+		var imgWdht = $(this).width();
+		var imghght = $(this).height();
+		if (imgWdht > imghght){
+			$(this).addClass('landscape');
+		}
+		else {
+			$(this).addClass('portrait');
+		}
+	});
 }
-
 $( window ).resize(function() {
   if (screen.width > 1024){
 	  searchBtnFix();

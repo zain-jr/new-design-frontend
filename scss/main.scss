@@ -363,6 +363,7 @@ h1 {
   min-height: 100vh;
   position: relative;
 
+  .nav-active &,
   &.fancy-overlay {
     filter: blur(20px);
     -webkit-filter: blur(20px);
@@ -1155,9 +1156,9 @@ h1 {
   left: 0 !important;
   bottom: 0 !important;
   width: 320px;
-  z-index: 999 !important;
+  z-index: 999999999 !important;
   padding: 0 0 90px;
-  background: rgba($p42-default-grey, 0.90);
+  background: $dark-grey;
   transform: translateX(-100%);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1167,7 +1168,7 @@ h1 {
     right: 0 !important;
     bottom: 0 !important;
     width: 100% !important;
-    background: rgba($p42-default-grey, 0.90);
+    background: $dark-grey;
   }
 
   .nav-active & {
@@ -1313,6 +1314,85 @@ h1 {
           }
         }
       }
+    }
+  }
+}
+.nav-blur-area {
+  position: fixed;
+  top: 0;
+  left: 320px;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: 999999999;
+  white-space: nowrap;
+  @extend %layout;
+  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transition:transform 0.5s ease;
+  -webkit-transition:  transform 0.5s ease;
+  -moz-transition:  transform 0.5s ease;
+
+  @include media('<tablet'){ display: none !important;}
+
+  .nav-active &{
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+  }
+
+  &:after {
+    height: 100vh;
+    content: '';
+    @include align(middle);
+    overflow: hidden;
+    margin: 0 0 0 -5px;
+  }
+  .logo-holder {
+    @include align(middle);
+    white-space: normal;
+    width: 100%;
+    @extend %text-center;
+
+    img {
+      max-width: 550px;
+
+      @include media('<desktop'){
+        max-width: 300px;
+      }
+    }
+  }
+  .bottom-links {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    @extend %listreset;
+    @include align-reset(top,30,33);
+    font-family: $open-sans;
+
+    @include media('<widescreen'){
+      @include align-reset(top,20,23);
+    }
+    
+    li {
+      width: 50%;
+      background: $dark-grey;
+      @extend %text-right;
+      padding: 5px 20px 20px;
+
+      @include media('<widescreen'){
+        padding: 5px 20px 10px;
+      }
+
+      &:first-child { @extend %text-left;}
+    }
+    a {
+      text-decoration: none;
+      color: $white;
     }
   }
 }
