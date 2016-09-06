@@ -942,7 +942,8 @@ th {
 .propertyDetail-page .propertyImage-pagination .propertyImage-mask,
 .propertyDetail-page .propertyImage-pagination .mask,
 .propertyDetail-page .propertyImage-slider .propertyImage-mask,
-.propertyDetail-page .propertyImage-slider .mask, .agent-detail-page .overview-section,
+.propertyDetail-page .propertyImage-slider .mask, .agent-detail-page .slide a,
+.propertyDetail-page .slide a, .agent-detail-page .overview-section,
 .propertyDetail-page .overview-section, .agent-detail-page .extra-feature-section,
 .propertyDetail-page .extra-feature-section, .agent-detail-page .feature,
 .propertyDetail-page .feature, .agent-detail-page .agent-picture,
@@ -3883,23 +3884,24 @@ input[type='submit'] {
   }
 }
 
-.agent-detail-page .slide img,
-.propertyDetail-page .slide img {
+.agent-detail-page .slide a,
+.propertyDetail-page .slide a {
+  display: block;
   min-height: 457px;
   max-height: 457px;
 }
 
 @media (max-width: 1023px) {
-  .agent-detail-page .slide img,
-  .propertyDetail-page .slide img {
+  .agent-detail-page .slide a,
+  .propertyDetail-page .slide a {
     max-height: 335px;
     min-height: 335px;
   }
 }
 
 @media (max-width: 767px) {
-  .agent-detail-page .slide img,
-  .propertyDetail-page .slide img {
+  .agent-detail-page .slide a,
+  .propertyDetail-page .slide a {
     max-height: inherit;
     min-height: inherit;
   }
@@ -8541,22 +8543,6 @@ h1 span {
   transform: translateX(0);
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
-}
-
-.nav-active #nav:after {
-  position: absolute;
-  top: 0;
-  left: 320px;
-  right: -99999px;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.9);
-  content: '';
-}
-
-@media (max-width: 767px) {
-  .nav-active #nav:after {
-    display: none;
-  }
 }
 
 #nav .close {

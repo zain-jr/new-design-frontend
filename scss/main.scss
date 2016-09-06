@@ -1174,20 +1174,6 @@ h1 {
     transform: translateX(0);
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
-
-    
-    &:after {
-      position: absolute;
-      top: 0;
-      left: 320px;
-      right: -99999px;
-      bottom: 0;
-      background: rgba($white, 0.9);
-      content: '';
-      @include media('<tablet'){
-        display: none;
-      }
-    }
   }
 
   .close {

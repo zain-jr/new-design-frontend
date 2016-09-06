@@ -4,7 +4,7 @@ jQuery(window).load(function(){
 
 $(document).ready(function() {
 	$(".js-example-basic-single").select2();
-	if ($(window).width() < 768){
+	if (screen.width < 768){
 		$('.call-agent-btn').each(function(){
 			var mobileNumber = $(this).attr('data-tel');
 			$(this).attr('href', 'tel:'+mobileNumber)
@@ -27,20 +27,23 @@ $(document).ready(function() {
 	$(window).trigger('scroll');
 });
 
+function imagesAdjustment(){
+	
+}
+
 $( window ).resize(function() {
-  if ($(window).width() > 1024){
+  if (screen.width > 1024){
 	  searchBtnFix();
   }
 });
-$(window).scroll(function(evt) {    
+$(window).scroll(function() {    
     activateBackToTop();
-	if ($(window).width() > 1024){ handleSearchBtnPosition(); }
-}); 
-
+	if (screen.width > 1024){ handleSearchBtnPosition(); }
+});
 // page init
 jQuery(function(){
-
-	if($(window).width() >= 768){
+	
+	if(screen.width >= 768){
 		initFixedScrollBlock();
 	}
 
@@ -226,7 +229,7 @@ function searchBtnFix()
 {
 	var asideFromLeft = $('#aside').position().left;
 	$('.filter-btn').css({
-		'left':asideFromLeft+13,
+		'left':asideFromLeft+15,
 		'width':$('#aside').width()
 	});
 }
@@ -238,7 +241,11 @@ function searchBtnUnFix()
 		'width':'auto'
 	});
 }
-function handleSearchBtnPosition(evt){
+function handleSearchBtnPosition(){
+	if(!$('.listing-page').length){
+        return;	
+	}
+
 	if($(window).scrollTop()+$(window).height()-50 >= $('#aside').height()+$('#aside').offset().top){
 		$('.filter-btn').removeClass('srchBtnFxd');
 		searchBtnUnFix();
@@ -357,7 +364,7 @@ $(document).on('click', '.call-agent-btn', function(){
 	var phoneNumber = $(this).attr('data-tel');
 	var placeToGo = $('.call-agent').find('p').text(phoneNumber);
 
-	if ($(window).width() < 768){
+	if (screen.width < 768){
 		$('#wrapper').removeClass('fancy-overlay');
 	}
 });

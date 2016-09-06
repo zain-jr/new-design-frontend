@@ -254,7 +254,9 @@
     }
   }
   .slide {
-    img {
+    a {
+      @extend %layout;
+      display: block;
       min-height: 457px;
       max-height: 457px;
 
