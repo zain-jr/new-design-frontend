@@ -1371,7 +1371,7 @@ h1 {
     left: 0;
     right: 0;
     @extend %listreset;
-    @include align-reset(top,30,33);
+    @include align-reset(top,22,24);
     font-family: $open-sans;
 
     @include media('<widescreen'){
@@ -1382,7 +1382,7 @@ h1 {
       width: 50%;
       background: $dark-grey;
       @extend %text-right;
-      padding: 5px 20px 20px;
+      padding: 5px 20px;
 
       @include media('<widescreen'){
         padding: 5px 20px 10px;
