@@ -13,6 +13,7 @@ $(document).ready(function() {
 	}
 	if($('.publicProperty-post, .publicAgent-post').length == 0){
 		$('.propertyNotFound').removeClass('hidden');
+		$('.pager').remove();
 	}
 	$('.addPro-type:first').trigger('change');
 	$('.registration-form').find('.role-listing').hide();
