@@ -1499,6 +1499,7 @@ h1 {
     padding: 20px 0 0;
   }
 }
+.projects-sliderHolder,
 .news-sliderHolder  {
   @extend %layout;
   padding: 20px 0 0;
@@ -1508,6 +1509,7 @@ h1 {
   @include media('<tablet'){ padding: 0;}
 }
 .ads-slideshow,
+.projects-slideshow,
 .news-slideshow {
   @extend %layout;
 
@@ -1553,6 +1555,16 @@ h1 {
     }
   }
 }
+
+.projects-slideshow {
+  .slide {
+    .caption {
+      float: right !important;
+      padding: 0 0 0 10px;
+    }
+  }
+}
+
 .ads-slideshow {
   @extend %container;
   margin:  0 auto 20px;
@@ -1644,6 +1656,7 @@ h1 {
   }
 }
 .pagination,
+.projects-pagination,
 .news-pagination {
   padding: 28px 0 0;
   ul{
@@ -1676,6 +1689,7 @@ h1 {
     }
   }
 }
+.projects-carousel,
 .news-carousel {
   position: relative;
   @extend %layout;
@@ -1689,6 +1703,7 @@ h1 {
     margin: 0 auto;
   }
 
+  .projects-mask,
   .news-mask {
     @extend %layout;
     position: relative;
@@ -1700,10 +1715,12 @@ h1 {
       max-width: 360px;
     }
   }
+  .projects-slideset,
   .news-slideset{
     float: left;
     width: 99999px;
   }
+  .projects-slide,
   .news-slide{
 	  float: left;
     width: 100%;
@@ -1723,6 +1740,7 @@ h1 {
       }
     }
   }
+  .projects-btn-prev, .projects-btn-next,
   .news-btn-prev, .news-btn-next {
     text-decoration: none;
     color: $dim-grey;
@@ -1750,6 +1768,7 @@ h1 {
       }
     }
   }
+  .projects-btn-next,
   .news-btn-next {
     left: auto;
     right: 0;
@@ -1762,6 +1781,11 @@ h1 {
     }
   }
 }
+
+.projects-carousel{
+  float: left !important;
+}
+
 .topSocities-holder {
   @extend %layout;
 
@@ -1935,6 +1959,7 @@ h1 {
     }
   }
 }
+
 .heading {
     display: block;
     @extend %text-center;

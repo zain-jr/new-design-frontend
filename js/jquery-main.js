@@ -81,6 +81,21 @@ function initSlideShow() {
 		switchTime: 5000,
 		animSpeed: 600
 	});
+	jQuery('.projects-slideshow').fadeGallery({
+		useSwipe: true,
+		slides: '.slide',
+		currentNumber: 'span.cur-num',
+		totalNumber: 'span.all-num',
+		switchSimultaneously: true,
+		disableWhileAnimating: false,
+		generatePagination: '.pagination',
+		autoRotation: true,
+		autoHeight: true,
+		pauseOnHover: true,
+		circularRotation: false,
+		switchTime: 5000,
+		animSpeed: 600
+	});
 	
 	jQuery('.ads-slideshow').fadeGallery({
 		useSwipe: true,
@@ -114,6 +129,24 @@ function initCarousel() {
 		stretchSlideToMask: true,
 		btnPrev: '.news-btn-prev',
 		btnNext: '.news-btn-next',
+		switchTime: 4000,
+		animSpeed: 600
+	});
+	jQuery('.projects-carousel').scrollGallery({
+		mask: '.projects-mask',
+		slider: '.projects-slideset',
+		slides: '.projects-slide',
+		currentNumber: 'span.cur-num',
+		totalNumber: 'span.all-num',
+		disableWhileAnimating: true,
+		generatePagination: '.projects-pagination',
+		circularRotation: true,
+		pauseOnHover: true,
+		autoRotation: true,
+		maskAutoSize: true,
+		stretchSlideToMask: true,
+		btnPrev: '.projects-btn-prev',
+		btnNext: '.projects-btn-next',
 		switchTime: 4000,
 		animSpeed: 600
 	});

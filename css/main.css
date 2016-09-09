@@ -758,6 +758,7 @@ th {
 .propertyDetail-page .feature-list, .agent-detail-page .col .list, .agent-detail-page .agentDetail-list, .addProperty-form .error, .addProperty-form .image-uploading-area, .addProperty-form .existingOrNew-member, .registerNow .packetData-list,
 .registerNow .societiesBlock-listing, .registerNow .role-listing, .registerNow .agree-with-terms, .forgot-form .buttons-holder,
 .login-form .buttons-holder, .social-icons, .loginRegister, .dropDown, .main-visualSection .number-of-properties, .mainSearch-form .typeOfBuying, .mainSearch-form .subTypes, .mainSearch-form .inputsHolder, #nav .main-navigation, .nav-blur-area .bottom-links, .pagination ul,
+.projects-pagination ul,
 .news-pagination ul, .topSocities-holder .socities, .topSocities-holder .socities li .caption .numberOfproperties, .mobile-app .details-cap .links, .agents-logo, .pager, .quick-links, .public-ui-features, .sumery-list, .radio-checks-holder, .Ads {
   margin: 0;
   padding: 0;
@@ -783,7 +784,10 @@ th {
 .propertyDetail-page .propertyImage-pagination .propertyImage-slide img,
 .propertyDetail-page .propertyImage-pagination .slide img,
 .propertyDetail-page .propertyImage-slider .propertyImage-slide img,
-.propertyDetail-page .propertyImage-slider .slide img, .registerNow .company-logo .logo-holder .picture-holder img, .page-loader .page-loader-holder img, .logo img, .agent-logos .slide a img, .news-carousel .news-slide img, .back-to-top img {
+.propertyDetail-page .propertyImage-slider .slide img, .registerNow .company-logo .logo-holder .picture-holder img, .page-loader .page-loader-holder img, .logo img, .agent-logos .slide a img, .projects-carousel .projects-slide img,
+.projects-carousel .news-slide img,
+.news-carousel .projects-slide img,
+.news-carousel .news-slide img, .back-to-top img {
   width: 100%;
   height: auto;
   display: block;
@@ -829,6 +833,7 @@ th {
 .propertyDetail-page .agent-picture, .addProperty-form .extra-features, .addProperty-form .existingOrNew-member li, .addProperty-form .list-extraFeatures .feature-heading, .addProperty-form .thankYou-message, .addProperty-form .thankYou-message .left, .registerNow .role-opener, .forgot-form .buttons-holder li a,
 .login-form .buttons-holder li a, .page-loader, .global-error,
 .global-success, .custom-withouChecks .fake-label, h1, .loginRegister li, .main-visualSection, #nav .main-navigation li, .nav-blur-area .logo-holder, .ads-slideshow, .ads-slideshow a, .ads-slideshow img, .agent-logos .slide a, .pagination ul,
+.projects-pagination ul,
 .news-pagination ul, .topSocities-holder .socities li a, .heading, .agents-logo li a, .premiumProperty, .public-ui-features li strong, .generic-lightbox, .login-heading,
 .registerNow-heading,
 .add-pro-heading, .Ads, .weAreWorking, .between-banner {
@@ -890,6 +895,7 @@ th {
 .agent-listing-page .publicProperty-post .caption .links-left,
 .listing-page .publicAgent-post .caption .links-left,
 .listing-page .publicProperty-post .caption .links-left, .ads-slideshow .slide .caption,
+.projects-slideshow .slide .caption,
 .news-slideshow .slide .caption, .agents .left-side {
   float: left !important;
 }
@@ -911,7 +917,8 @@ th {
 .propertyDetail-page .info-blockProperty .quick-links, .agent-detail-page .agent-detail-holder .star-rating,
 .agent-detail-page .property-picture-holder .star-rating,
 .propertyDetail-page .agent-detail-holder .star-rating,
-.propertyDetail-page .property-picture-holder .star-rating, .news-carousel {
+.propertyDetail-page .property-picture-holder .star-rating, .projects-carousel,
+.news-carousel {
   float: right !important;
 }
 
@@ -949,11 +956,20 @@ th {
 .propertyDetail-page .feature, .agent-detail-page .agent-picture,
 .propertyDetail-page .agent-picture, .agent-detail-page .agent-description,
 .propertyDetail-page .agent-description, .agent-detail-page .frame, .addProperty-form, .addProperty-form .add-form-holder, .addProperty-form .main-form, .addProperty-form .list-extraFeatures, .addProperty-form .thankYou-message .right, .registerNow, .registerNow .registration-form, .registerNow .company-logo, .registerNow .company-logo .logo-holder, .registerNow .packetData-list, .registerNow .packetData, .registerNow .role-listing, .registerNow .agent-information, .login-page, .forgot-form,
-.login-form, .page-loader, .fake-select, #wrapper, .w1, .logo, .main-visualSection, #main, .page-holder, .mainSearch-form .form-holder, .mainSearch-form .inputsHolder li .input-holder, .nav-blur-area, .searchByID, .generic-section, .news-sliderHolder, .ads-slideshow,
+.login-form, .page-loader, .fake-select, #wrapper, .w1, .logo, .main-visualSection, #main, .page-holder, .mainSearch-form .form-holder, .mainSearch-form .inputsHolder li .input-holder, .nav-blur-area, .searchByID, .generic-section, .projects-sliderHolder,
+.news-sliderHolder, .ads-slideshow,
+.projects-slideshow,
 .news-slideshow, .ads-slideshow .mask,
+.projects-slideshow .mask,
 .news-slideshow .mask, .ads-slideshow .slideset,
+.projects-slideshow .slideset,
 .news-slideshow .slideset, .agent-logos, .agent-logos .mask, .agent-logos .slide a:after, .pagination ul a,
-.news-pagination ul a, .news-carousel, .news-carousel .news-mask, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .mobile-app, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .inquiry-email-form .input-holder, .radio-checks-holder, .add-holder-page, .weAreWorking {
+.projects-pagination ul a,
+.news-pagination ul a, .projects-carousel,
+.news-carousel, .projects-carousel .projects-mask,
+.projects-carousel .news-mask,
+.news-carousel .projects-mask,
+.news-carousel .news-mask, .topSocities-holder, .topSocities-holder .socities li a:after, .agents, .mobile-app, .agent-slider, .agent-slider .mask, .agents-logo li a:after, .submit-query, #footer, .inquiry-email-form .input-holder, .radio-checks-holder, .add-holder-page, .weAreWorking {
   overflow: hidden;
 }
 
@@ -9067,6 +9083,7 @@ h1 span {
   }
 }
 
+.projects-sliderHolder,
 .news-sliderHolder {
   padding: 20px 0 0;
   position: relative;
@@ -9074,23 +9091,27 @@ h1 span {
 }
 
 @media (max-width: 767px) {
+  .projects-sliderHolder,
   .news-sliderHolder {
     padding: 0;
   }
 }
 
 .ads-slideshow .mask,
+.projects-slideshow .mask,
 .news-slideshow .mask {
   position: relative;
   height: 1%;
 }
 
 .ads-slideshow .slideset,
+.projects-slideshow .slideset,
 .news-slideshow .slideset {
   width: 100%;
 }
 
 .ads-slideshow .slide,
+.projects-slideshow .slide,
 .news-slideshow .slide {
   position: absolute;
   top: 0;
@@ -9104,6 +9125,7 @@ h1 span {
 
 @media (max-width: 767px) {
   .ads-slideshow .slide,
+  .projects-slideshow .slide,
   .news-slideshow .slide {
     font-size: 16px;
     line-height: 25px;
@@ -9111,6 +9133,7 @@ h1 span {
 }
 
 .ads-slideshow .slide .caption,
+.projects-slideshow .slide .caption,
 .news-slideshow .slide .caption {
   width: 50%;
   padding: 0 20px 0 0;
@@ -9118,6 +9141,7 @@ h1 span {
 
 @media (max-width: 1023px) {
   .ads-slideshow .slide .caption,
+  .projects-slideshow .slide .caption,
   .news-slideshow .slide .caption {
     width: 100%;
     float: none !important;
@@ -9125,14 +9149,21 @@ h1 span {
     text-align: center;
   }
   .ads-slideshow .slide .caption p,
+  .projects-slideshow .slide .caption p,
   .news-slideshow .slide .caption p {
     text-align: left;
   }
 }
 
 .ads-slideshow .slide.active,
+.projects-slideshow .slide.active,
 .news-slideshow .slide.active {
   z-index: 5 !important;
+}
+
+.projects-slideshow .slide .caption {
+  float: right !important;
+  padding: 0 0 0 10px;
 }
 
 .ads-slideshow {
@@ -9219,11 +9250,13 @@ h1 span {
 }
 
 .pagination,
+.projects-pagination,
 .news-pagination {
   padding: 28px 0 0;
 }
 
 .pagination ul,
+.projects-pagination ul,
 .news-pagination ul {
   font-size: 0;
   line-height: 0;
@@ -9231,6 +9264,7 @@ h1 span {
 }
 
 .pagination ul > *,
+.projects-pagination ul > *,
 .news-pagination ul > * {
   display: inline-block;
   vertical-align: top;
@@ -9240,17 +9274,20 @@ h1 span {
 }
 
 .pagination ul li,
+.projects-pagination ul li,
 .news-pagination ul li {
   padding: 0 5px;
   margin: 0 0 10px;
 }
 
 .pagination ul li.active a,
+.projects-pagination ul li.active a,
 .news-pagination ul li.active a {
   background: #2092d0;
 }
 
 .pagination ul a,
+.projects-pagination ul a,
 .news-pagination ul a {
   display: block;
   width: 14px;
@@ -9262,16 +9299,19 @@ h1 span {
 }
 
 .pagination ul a:hover,
+.projects-pagination ul a:hover,
 .news-pagination ul a:hover {
   background: #2092d0;
 }
 
+.projects-carousel,
 .news-carousel {
   position: relative;
   width: 50%;
 }
 
 @media (max-width: 1023px) {
+  .projects-carousel,
   .news-carousel {
     width: 100%;
     float: none !important;
@@ -9280,6 +9320,9 @@ h1 span {
   }
 }
 
+.projects-carousel .projects-mask,
+.projects-carousel .news-mask,
+.news-carousel .projects-mask,
 .news-carousel .news-mask {
   position: relative;
   width: 100%;
@@ -9288,21 +9331,33 @@ h1 span {
 }
 
 @media (max-width: 1199px) {
+  .projects-carousel .projects-mask,
+  .projects-carousel .news-mask,
+  .news-carousel .projects-mask,
   .news-carousel .news-mask {
     max-width: 360px;
   }
 }
 
+.projects-carousel .projects-slideset,
+.projects-carousel .news-slideset,
+.news-carousel .projects-slideset,
 .news-carousel .news-slideset {
   float: left;
   width: 99999px;
 }
 
+.projects-carousel .projects-slide,
+.projects-carousel .news-slide,
+.news-carousel .projects-slide,
 .news-carousel .news-slide {
   float: left;
   width: 100%;
 }
 
+.projects-carousel .projects-slide img,
+.projects-carousel .news-slide img,
+.news-carousel .projects-slide img,
 .news-carousel .news-slide img {
   max-width: 460px;
   max-height: 340px;
@@ -9311,6 +9366,9 @@ h1 span {
 }
 
 @media (max-width: 1199px) {
+  .projects-carousel .projects-slide img,
+  .projects-carousel .news-slide img,
+  .news-carousel .projects-slide img,
   .news-carousel .news-slide img {
     max-width: 400px;
     max-height: 300px;
@@ -9319,7 +9377,12 @@ h1 span {
   }
 }
 
-.news-carousel .news-btn-prev, .news-carousel .news-btn-next {
+.projects-carousel .projects-btn-prev, .projects-carousel .projects-btn-next,
+.projects-carousel .news-btn-prev, .projects-carousel .news-btn-next,
+.news-carousel .projects-btn-prev,
+.news-carousel .projects-btn-next,
+.news-carousel .news-btn-prev,
+.news-carousel .news-btn-next {
   text-decoration: none;
   color: #aaa;
   position: absolute;
@@ -9328,47 +9391,90 @@ h1 span {
 }
 
 @media (max-width: 1199px) {
-  .news-carousel .news-btn-prev, .news-carousel .news-btn-next {
+  .projects-carousel .projects-btn-prev, .projects-carousel .projects-btn-next,
+  .projects-carousel .news-btn-prev, .projects-carousel .news-btn-next,
+  .news-carousel .projects-btn-prev,
+  .news-carousel .projects-btn-next,
+  .news-carousel .news-btn-prev,
+  .news-carousel .news-btn-next {
     left: 30px;
   }
 }
 
 @media (max-width: 1023px) {
-  .news-carousel .news-btn-prev, .news-carousel .news-btn-next {
+  .projects-carousel .projects-btn-prev, .projects-carousel .projects-btn-next,
+  .projects-carousel .news-btn-prev, .projects-carousel .news-btn-next,
+  .news-carousel .projects-btn-prev,
+  .news-carousel .projects-btn-next,
+  .news-carousel .news-btn-prev,
+  .news-carousel .news-btn-next {
     left: 60px;
   }
 }
 
 @media (max-width: 767px) {
-  .news-carousel .news-btn-prev, .news-carousel .news-btn-next {
+  .projects-carousel .projects-btn-prev, .projects-carousel .projects-btn-next,
+  .projects-carousel .news-btn-prev, .projects-carousel .news-btn-next,
+  .news-carousel .projects-btn-prev,
+  .news-carousel .projects-btn-next,
+  .news-carousel .news-btn-prev,
+  .news-carousel .news-btn-next {
     display: none;
   }
 }
 
-.news-carousel .news-btn-prev:hover, .news-carousel .news-btn-next:hover {
+.projects-carousel .projects-btn-prev:hover, .projects-carousel .projects-btn-next:hover,
+.projects-carousel .news-btn-prev:hover, .projects-carousel .news-btn-next:hover,
+.news-carousel .projects-btn-prev:hover,
+.news-carousel .projects-btn-next:hover,
+.news-carousel .news-btn-prev:hover,
+.news-carousel .news-btn-next:hover {
   color: #2092d0;
 }
 
-.news-carousel .news-btn-prev span[class^="icon-"]:before, .news-carousel .news-btn-prev span[class*="icon-"]:before, .news-carousel .news-btn-next span[class^="icon-"]:before, .news-carousel .news-btn-next span[class*="icon-"]:before {
+.projects-carousel .projects-btn-prev span[class^="icon-"]:before, .projects-carousel .projects-btn-prev span[class*="icon-"]:before, .projects-carousel .projects-btn-next span[class^="icon-"]:before, .projects-carousel .projects-btn-next span[class*="icon-"]:before,
+.projects-carousel .news-btn-prev span[class^="icon-"]:before,
+.projects-carousel .news-btn-prev span[class*="icon-"]:before, .projects-carousel .news-btn-next span[class^="icon-"]:before, .projects-carousel .news-btn-next span[class*="icon-"]:before,
+.news-carousel .projects-btn-prev span[class^="icon-"]:before,
+.news-carousel .projects-btn-prev span[class*="icon-"]:before,
+.news-carousel .projects-btn-next span[class^="icon-"]:before,
+.news-carousel .projects-btn-next span[class*="icon-"]:before,
+.news-carousel .news-btn-prev span[class^="icon-"]:before,
+.news-carousel .news-btn-prev span[class*="icon-"]:before,
+.news-carousel .news-btn-next span[class^="icon-"]:before,
+.news-carousel .news-btn-next span[class*="icon-"]:before {
   font-size: 42px;
   line-height: 1;
 }
 
+.projects-carousel .projects-btn-next,
+.projects-carousel .news-btn-next,
+.news-carousel .projects-btn-next,
 .news-carousel .news-btn-next {
   left: auto;
   right: 0;
 }
 
 @media (max-width: 1199px) {
+  .projects-carousel .projects-btn-next,
+  .projects-carousel .news-btn-next,
+  .news-carousel .projects-btn-next,
   .news-carousel .news-btn-next {
     right: 30px;
   }
 }
 
 @media (max-width: 1023px) {
+  .projects-carousel .projects-btn-next,
+  .projects-carousel .news-btn-next,
+  .news-carousel .projects-btn-next,
   .news-carousel .news-btn-next {
     right: 60px;
   }
+}
+
+.projects-carousel {
+  float: left !important;
 }
 
 @media (max-width: 767px) {
