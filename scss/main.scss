@@ -32,12 +32,8 @@ $media-expressions: (
 @import 'base/typography';
 @import 'base/forms';
 @import 'select2-min';
-@import 'property-listing';
-@import 'property-detail';
-@import 'add-property-form';
-@import 'register-now';
-@import 'login-page';
 @import 'fancybox';
+
 .page-loader {
   background:#525252 url('../images/bg.jpg') no-repeat;
   background-size: 100% auto;
