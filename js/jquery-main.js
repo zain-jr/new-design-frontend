@@ -57,16 +57,14 @@ $(window).scroll(function() {
 });
 // page init
 jQuery(function(){
-	
+	initAnchors();
 	if(screen.width >= 768){
 		initFixedScrollBlock();
 	}
-
 	initCarousel();
 	initSlideShow();
 	initAccordion();
 	initLightbox();
-	initAnchors();
 });
 
 // slideshow init

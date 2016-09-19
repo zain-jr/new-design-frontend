@@ -21,16 +21,10 @@ $media-expressions: (
 // ligatured operators ≥ ≤
 
 @import 'vendors/include-media';
-@import 'vendors/normalize';
-@import 'vendors/fonts';
 
 @import 'base/variables';
-@import 'base/functions';
 @import 'base/mixins';
 @import 'base/helpers';
-@import 'base/reset';
-@import 'base/typography';
-@import 'base/forms';
 
 .addProperty-form {
     @extend %layout;
