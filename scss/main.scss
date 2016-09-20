@@ -592,7 +592,8 @@ html, body {
   max-width: 477px;
   margin: 0 auto !important;
   position: relative;
-  top: -40px;
+  top: -50px;
+  right: 30px;
   @extend %layout;
   transition: position 0.5s ease, top 0.5s ease,  max-width 0.54s ease;
   -webkit-transition: position 0.5s ease, top 0.5s ease,  max-width 0.54s ease;
@@ -608,7 +609,7 @@ html, body {
   @include media('<desktop'){
     top: 0;
     position: static;
-    margin: 20px auto 0;
+    margin: 30px auto 0 !important;
   }
   
   @include media('<tablet'){
@@ -617,34 +618,37 @@ html, body {
     top: 9px;
     left: 0;
     right: 55px;
-    margin: 0 auto;
+    margin: 0 auto !important;
   }
 
   .byDefault-fixed &,
   .fixed-position & {
     max-width: 230px;
     position: fixed;
-    top: 4px;
+    top: 12px;
     left: -50px;
     right: 0;
 
+    @include media('<tvscreen'){ top: 16px;}
+
     @include media('<widescreen'){
       max-width: 250px;
-      top: 2px;
+      top: 12px;
       margin: 0 auto;
     }
     @include media('<desktop'){
-      top: 7px;
+      top: 12px;
       max-width: 210px;
-      left: 50px;
+      left: 43px;
+      margin:0 auto !important;
     }
     @include media('<tablet'){
       max-width: 130px;
       position: absolute;
-      top: 9px;
+      top: 11px;
       left: 0;
       right: 55px;
-      margin: 0 auto;
+      margin: 0 auto !important;
     }
   }
 
@@ -958,9 +962,16 @@ html, body {
   .Ads {
     margin: 60px 0 0;
   }
+  .ads-slideshow {
+
+    img {
+      max-width: 800px;
+      max-height: 200px;
+    }
+  }
 }
 .mainSearch-form {
-  max-width: 675px;
+  max-width: 800px;
   margin: 0 auto 30px;
   @extend %clearfix;
 
@@ -1499,6 +1510,73 @@ html, body {
     padding: 20px 0 0;
   }
 }
+.cities {
+  @extend %layout;
+  margin: 0 -10px;
+
+  .common,
+  .majorDiv {
+    width: 50%;
+    padding: 0 10px;
+  }
+  .majorDiv {
+    background: $white;
+    
+    a {
+      min-height: 610px;
+      white-space: nowrap;
+      display: block;
+      background: $white;
+      @extend %text-center;
+
+      &:after {
+        height: 610px;
+        @include align(middle);
+        margin: 0 0 0 -5px;
+        content: '';
+        overflow: hidden;
+        width: 1px;
+      }
+    }
+    img {
+      @include align(middle);
+      white-space: normal;
+    }
+  }
+  .common {
+    @extend %listreset;
+    @include align-reset(top, 12 , 12);
+    margin: 0 -5px;
+    padding: 0;
+
+    li {
+      width: 50%;
+      padding: 0 5px 10px;
+
+      a{
+        display: block;
+        background: $white;
+        white-space: nowrap;
+        min-height: 300px;
+        @extend %text-center;
+
+        &:after {
+          height: 300px;
+          @include align(middle);
+          margin: 0 0 0 -5px;
+          overflow: hidden;
+          width: 1px;
+          content: '';
+        }
+        img {
+          @include align(middle);
+          white-space: normal;
+          max-width: 200px;
+        }
+      }
+    }
+  }
+}
 .projects-sliderHolder,
 .news-sliderHolder  {
   @extend %layout;
@@ -1786,179 +1864,6 @@ html, body {
   float: left !important;
 }
 
-.topSocities-holder {
-  @extend %layout;
-
-  @include media('<tablet'){
-    padding: 0 5px;
-  }
-
-  .socities {
-    @extend %listreset;
-    @include align-reset(top, 18, 21);
-
-    li {
-      width: 33.33%;
-      padding: 0 5px 10px;
-      overflow: hidden;
-
-      @include media('<tvscreen'){
-        width: 33.33%;
-      }
-      
-      @include media('<widescreen'){
-        width: 50%;
-        padding: 0 2px 4px;
-      }
-
-
-      &.double-width {
-        width: 50%;
-
-        @include media('<tvscreen'){
-          width: 33.33%;
-        }
-         @include media('<widescreen'){
-          width: 50%;
-        }
-      }
-
-      .heading {
-        @include font(30,35);
-      }
-
-      a{
-        display: block;
-        background: $white;
-        height: 300px;
-        white-space: nowrap;
-        @extend %text-center;
-        position: relative;
-        overflow: hidden;
-        text-decoration: none;
-        color: $white;
-
-        @include media('<desktop'){
-          height: 255px;
-        }
-
-        @include media('<tablet'){
-          height: 150px;
-        }
-        
-        &:hover {
-          .caption{
-            opacity: 1;
-            z-index: 9;
-            visibility: visible;
-          }
-
-          img {
-            transform: scale(1.1);
-            -webkit-transform: scale(1.1);
-            -moz-transform: scale(1.1);
-            -ms-transform: scale(1.1);
-          }
-        }
-
-        &:after {
-          content: '';
-          @include align(middle);
-          width: 1px;
-          margin: 0 0 0 -5px;
-          height: 300px;
-          @extend %layout;
-
-          @include media('<desktop'){
-            height: 255px;
-          }
-          @include media('<tablet'){
-            height: 150px;
-          }
-        }
-        img {
-          @include align(middle);
-          white-space: normal;
-          margin: 0 0 0 -5px;
-          max-width: 240px;
-          transform: scale(1);
-          -moz-transform: scale(1);
-          -webkit-transform: scale(1);
-          -ms-transform: scale(1);
-          transition: transform 0.5s ease;
-          -webkit-transition: transform 0.5s ease;
-          -moz-transition: transform 0.5s ease;
-          -ms-transition: transform 0.5s ease;
-
-          @include media('<widescreen'){
-            max-width: 200px;
-          }
-          @include media('<desktop'){
-            max-width: 150px;
-          }
-          @include media('<tablet'){
-            max-width: 100px;
-          }
-        }
-      }
-      .caption{
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba($p42-color, 0.8);
-        content: '';
-        z-index: -1;
-        opacity: 0;
-        visibility: hidden;
-        padding: 65px 10px;
-        color: $white;
-        transition: opacity 0.6s ease,visibility 0.6s ease,z-index 0.6s ease;
-        -webkit-transition: opacity 0.6s ease,visibility 0.6s ease,z-index 0.6s ease;
-        -moz-transition: opacity 0.6s ease,visibility 0.6s ease,z-index 0.6s ease;
-        -ms-transition: opacity 0.6s ease,visibility 0.6s ease,z-index 0.6s ease;
-
-        @include media('<desktop'){ display: none;}
-
-        @include media('<tablet'){
-          padding: 5px;
-        }
-
-        .numberOfproperties {
-          @extend %listreset;
-          @extend %text-left;
-          max-width: 270px;
-          margin: 0 auto;
-
-          li {
-            display: block;
-            @include align-reset(top, 18,22);
-            width:  100%;
-            padding: 0 0 10px;
-            
-            @include media('<widescreen'){
-               @include align-reset(top, 16,20);
-            }
-            @include media('<widescreen'){
-               @include align-reset(top, 14,18);
-               padding: 0 0 5px;
-            }
-
-            span {
-              font-weight: 700;
-              width: 50%;
-
-              &:last-child{
-                @extend %text-right;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
 
 .heading {
     display: block;
