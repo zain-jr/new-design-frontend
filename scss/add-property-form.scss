@@ -83,10 +83,9 @@ $media-expressions: (
         background: rgba($p42-background, 0.8);
         box-shadow: 0 0 7px rgba($black , 0.22);
         padding: 20px 10px;
-        margin: 0 0 30px;
         @extend %layout;
         @extend %container;
-        margin: 0 auto;
+        margin: 0 auto 30px;
 
         @include media('<desktop'){
             width: 100%;
