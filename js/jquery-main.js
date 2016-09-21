@@ -58,8 +58,8 @@ $(window).scroll(function() {
 // page init
 jQuery(function(){
 	initLightbox();
-	initAnchors();
 	initCarousel();
+	initAnchors();
 	initSlideShow();
 	if(screen.width >= 768){
 		initFixedScrollBlock();
