@@ -25,7 +25,6 @@ $(document).ready(function() {
 	if($('.index-page').length){
        if (screen.width < 1024){ $('#wrapper').addClass('fancy-overlay'); } 
 	}
-
 	$('.news-slideshow .slide').each(function(){
 		if($(this).find('.news-slide').length == 1){
 			$(this).find('.news-pagination').remove();

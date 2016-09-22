@@ -1517,16 +1517,32 @@ html, body {
   .majorDiv {
     width: 50%;
     padding: 0 10px;
+
+    @include media('<desktop'){
+      width: 100% !important;
+      float: none !important;
+      display: block;
+    }
   }
+
   .majorDiv {
     background: $white;
     
+    @include media('<tvscreen'){
+      width: 45%;
+    }
+
     a {
       min-height: 610px;
       white-space: nowrap;
       display: block;
       background: $white;
       @extend %text-center;
+
+      @include media('<desktop'){
+        min-height: 300px;
+        margin: 0 0 10px;
+      }
 
       &:after {
         height: 610px;
@@ -1535,6 +1551,8 @@ html, body {
         content: '';
         overflow: hidden;
         width: 1px;
+
+        @include media('<desktop'){ height: 300px;}
       }
     }
     img {
@@ -1548,6 +1566,10 @@ html, body {
     margin: 0 -5px;
     padding: 0;
 
+    @include media('<tvscreen'){
+      width: 55%;
+    }
+    
     li {
       width: 50%;
       padding: 0 5px 10px;
@@ -1571,6 +1593,13 @@ html, body {
           @include align(middle);
           white-space: normal;
           max-width: 200px;
+
+          @include media('<tvscreen'){
+            max-width: 170px;
+          }
+          @include media('<widescreen'){
+            max-width: 150px;
+          }
         }
       }
     }
@@ -1667,18 +1696,6 @@ html, body {
 
   .mask {
     @extend %layout;
-
-    &:hover {
-
-      .slide {
-        a:hover img {
-          filter: grayscale(0);
-        }
-        img {
-          filter: grayscale(100%);
-        }
-      }
-    }
   }
   .slideset {
     width: 100% !important;
@@ -1714,6 +1731,12 @@ html, body {
         padding:5px 10px;
       }
 
+      &:hover {
+        img {
+          filter: grayscale(0);
+        }
+      }
+
       &:after {
         content: '';
         @include align(middle);
@@ -1728,6 +1751,7 @@ html, body {
         @include align(middle);
         white-space: normal;
         max-width: 125px;
+        filter: grayscale(1);
       }
     }
   }
@@ -1886,40 +1910,8 @@ html, body {
   margin: 0 auto 50px;
   box-shadow: 0 0 20px rgba($black, 0.20);
 
-  .left-side {
-    @extend %pull-left;
-    width: 40%;
-    padding: 0 10px;
-    height: 450px;
-    white-space: nowrap;
-
-    @include media('<tvscreen'){
-      width: 30%;
-    }
-
-    @include media('<desktop'){
-      float: none !important;
-      height: auto;
-      width: 100%;
-    }
-
-    &:after {
-      @include align(middle);
-      overflow: hidden;
-      width: 1px;
-      margin: 0 0 0 -5px;
-      height: 450px;
-      content: '';
-
-      @include media('<desktop'){
-        display: none;
-      }
-    }
-
-    h1 {
-      @include align(middle);
-      white-space: normal;
-    }
+  h1 {
+    margin: 30px 0 10px;
   }
 }
 .mobile-app {
