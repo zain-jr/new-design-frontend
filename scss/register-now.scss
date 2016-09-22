@@ -594,6 +594,7 @@ $media-expressions: (
         @extend %layout;
         @include align-reset(top,13,16);
         background: $p42-background;
+        box-shadow:0 0 23px rgba($black, 0.2) inset;
         padding: 10px 10px 0;
         margin: 0 0 20px;
 
