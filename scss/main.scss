@@ -1079,7 +1079,7 @@ html, body {
 
     li {
       padding: 0 12px;
-      width: 35%;
+      width: 33.33%;
 
       @include media('<tablet'){
         width: 100%;
@@ -1087,43 +1087,15 @@ html, body {
         padding: 0 0 10px;
       }
 
-      &:first-child{
-        width: 65%;
-         @include align-reset(top, 14, 18);
-         margin: 7px 0 0;
-
-         @include media('<tablet'){
-          width: 100%;
-          display: block;
-        }
-      }
-
       .label {
         width: 35%;
         
         @include media('<tablet'){ display: none;}
       }
-      .input-holder {
-        @extend %layout;
-        width: 65%;
-
-
-        @include media('<tablet'){
-          width: 100%;
-          display: block;
-          text-align: center;
-        }
-
-        .select2-container {
-          width: 262px !important;
-
-          @include media('<desktop'){
-            width: 245px !important;
-          } 
-          @include media('<desktop'){
-            margin: 0 auto !important;
-          }  
-        }
+      
+      .select2-container {
+        width: 100% !important;
+        margin: 8px 0 0;
       }
     }
   }
@@ -1159,6 +1131,9 @@ html, body {
       @include align(middle);
     }
   }
+}
+.select2-loader {
+  display: block;
 }
 #nav{
   position: fixed !important;
@@ -2014,6 +1989,14 @@ html, body {
   @extend %container;
   max-width: 1024px;
   
+  .no-ads & {
+    max-width: inherit;
+
+    .mask {
+      max-width: inherit;
+    }
+  }
+
   @include media('<tvscreen'){
     width: 70%;
   }
